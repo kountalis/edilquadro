@@ -1,0 +1,35 @@
+/* Fix for iPad mode - Force mobile menu and action buttons to display */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Force hamburger menu to show on iPad */
+  .md\:hidden.flex.items-center {
+    display: flex !important;
+  }
+  
+  /* Force action buttons to display */
+  .navbar-actions {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: absolute !important;
+    right: 80px !important;
+    z-index: 9999 !important;
+  }
+  
+  /* Ensure buttons are visible */
+  .navbar-actions > * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+  }
+  
+  /* Override any Tailwind classes that might hide elements */
+  .hidden {
+    display: block !important;
+  }
+  
+  /* Disable transitions in throttling mode */
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

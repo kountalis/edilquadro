@@ -1,0 +1,6 @@
+/* Hide scrollbar on desktop */
+@media (min-width: 1025px) {
+  body {
+    /* Default scrollbar behavior */
+  }
+}

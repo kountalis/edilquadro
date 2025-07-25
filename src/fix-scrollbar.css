@@ -1,0 +1,6 @@
+/* Adjust scrollbar visibility for desktop */
+@media (min-width: 1025px) {
+  html, body {
+    overflow-x: hidden;
+  }
+}

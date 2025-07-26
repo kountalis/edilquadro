@@ -2,67 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://edilquadro.it/</loc>
+    <loc>https://www.edilquadro.it/</loc>
     <lastmod>2025-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <video:video>
-      <video:content_loc>https://edilquadro.it/hero-video.mp4</video:content_loc>
+      <video:content_loc>https://www.edilquadro.it/hero-video.mp4</video:content_loc>
       <video:title>Video di Sottofondo</video:title>
       <video:description>Video di sottofondo della homepage di Edilquadro.</video:description>
-      <video:thumbnail_loc>https://edilquadro.it/hero-video-thumb.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://www.edilquadro.it/hero-video-thumb.jpg</video:thumbnail_loc>
     </video:video>
   </url>
   <url>
-    <loc>https://edilquadro.it/servizi</loc>
+    <loc>https://www.edilquadro.it/servizi</loc>
     <lastmod>2025-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/servizi/casa</loc>
+    <loc>https://www.edilquadro.it/servizi/casa</loc>
     <lastmod>2025-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/servizi/commerciale</loc>
+    <loc>https://www.edilquadro.it/servizi/commerciale</loc>
     <lastmod>2025-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/servizi/edifici</loc>
+    <loc>https://www.edilquadro.it/servizi/edifici</loc>
     <lastmod>2025-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/portfolio</loc>
+    <loc>https://www.edilquadro.it/portfolio</loc>
     <lastmod>2025-07-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/contatti</loc>
+    <loc>https://www.edilquadro.it/contatti</loc>
     <lastmod>2025-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <video:video>
-      <video:content_loc>https://edilquadro.it/cinemtic2.mp4</video:content_loc>
+      <video:content_loc>https://www.edilquadro.it/cinemtic2.mp4</video:content_loc>
       <video:title>Video di Contatto</video:title>
       <video:description>Video di sottofondo della pagina contatti di Edilquadro.</video:description>
-      <video:thumbnail_loc>https://edilquadro.it/cinemtic2-thumb.jpg</video:thumbnail_loc>
+      <video:thumbnail_loc>https://www.edilquadro.it/cinemtic2-thumb.jpg</video:thumbnail_loc>
     </video:video>
   </url>
   <url>
-    <loc>https://edilquadro.it/privacy</loc>
+    <loc>https://www.edilquadro.it/privacy</loc>
     <lastmod>2025-07-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/cookie-policy</loc>
+    <loc>https://www.edilquadro.it/cookie-policy</loc>
     <lastmod>2025-07-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

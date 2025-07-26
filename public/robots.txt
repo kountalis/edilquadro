@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://edilquadro.it/sitemap.xml
+Sitemap: https://www.edilquadro.it/sitemap.xml

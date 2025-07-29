@@ -1,0 +1,1 @@
+// Deprecated: scroll-to-top logic moved to React component

@@ -226,6 +226,26 @@ const Home = () => {
             "url": "https://edilquadro.it/"
           }
         `}</script>
+        {/* Google Ads Conversion Tag */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17331965831"></script>
+        <script>{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17331965831');
+          function gtag_report_conversion(url) {
+            var callback = function () {
+              if (typeof(url) != 'undefined') {
+                window.location = url;
+              }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17331965831/FVh8CPCEuO0aEIefw8hA',
+                'event_callback': callback
+            });
+            return false;
+          }
+        `}</script>
       </Helmet>
       <main className="bg-grayBg relative">
         {/* Hero Section with Video */}
@@ -246,7 +266,7 @@ const Home = () => {
 
           {/* Hero Content */}
           {/* Reserve space for the animated title and subtitle */}
-          <div className="relative z-10 min-h-screen flex items-center justify-center pt-32">
+          <div className="relative z-10 min-h-screen flex items-center justify-center">
             <div className="container mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0 }}

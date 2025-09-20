@@ -7,6 +7,7 @@
     "start": "npm run dev",
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "copy deploy-files\\.htaccess dist\\.htaccess && copy deploy-files\\sitemap.xml dist\\sitemap.xml",
     "preview": "vite preview"
   },
   "dependencies": {

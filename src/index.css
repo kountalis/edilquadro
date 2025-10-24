@@ -22,10 +22,22 @@
     box-sizing: border-box;
   }
 
+  :root {
+    /* height used to reserve space for the fixed navbar when needed */
+    --navbar-height: 5rem; /* 80px typical */
+  }
+
   body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #7d7d7d;
+    /* Darken the page background so the semi-transparent navbar doesn't reveal
+       a distracting light strip — use a color close to the navbar's dark tone. */
+    background-color: #1c1c1c; /* matches theme color 'dark' */
     /* background-image: none; */
+  }
+
+  /* Add this class when you want to reserve space for the fixed navbar (applied via JS from Navbar) */
+  .has-navbar-offset {
+    padding-top: var(--navbar-height) !important;
   }
 
   /* Custom scrollbar styling */

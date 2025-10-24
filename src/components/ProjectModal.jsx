@@ -182,7 +182,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+          className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
           onClick={onClose}
         >
           {/* Modal Content */}
@@ -221,7 +221,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               <img
                 src={currentImage}
                 alt={`${project.title} - Immagine ${currentImageIndex + 1}`}
-                className="modal-image-contain"
+                className="w-full h-full object-contain object-center"
                 onLoad={() => {
                   setIsLoading(false);
                   setIsTransitioning(false);

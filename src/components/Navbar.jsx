@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { FaWhatsapp, FaEnvelope, FaPhone } from 'react-icons/fa';
@@ -9,6 +10,7 @@ import MobileMenuPortal from './MobileMenuPortal';
 
 const Navbar = ({ isOpen, setIsOpen }) => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,30 +19,40 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Reserve space for the navbar to prevent layout shifts
-    document.body.style.paddingTop = '80px';
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      document.body.style.paddingTop = '0';
+      // restore any overflow modifications
       document.body.style.overflow = '';
     };
   }, []);
 
-  // Blocca lo scroll e padding-top quando il menu mobile è aperto
+  // Blocca lo scroll quando il menu mobile è aperto
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-      document.body.style.paddingTop = '0';
     } else {
       document.body.style.overflow = '';
-      document.body.style.paddingTop = '80px';
     }
     return () => {
       document.body.style.overflow = '';
-      document.body.style.paddingTop = '0';
     };
   }, [isOpen]);
+
+  // Ensure pages other than home reserve space for the fixed navbar so titles
+  // and anchors are not hidden behind it. We keep the navbar transparent but
+  // add a CSS offset on the body for non-home routes.
+  useEffect(() => {
+    if (location && location.pathname === '/') {
+      document.body.classList.remove('has-navbar-offset');
+    } else {
+      document.body.classList.add('has-navbar-offset');
+    }
+    return () => {
+      // cleanup: remove the class when component unmounts
+      // (safe to leave otherwise)
+      document.body.classList.remove('has-navbar-offset');
+    };
+  }, [location && location.pathname]);
 
   const handleServiziClick = (e) => {
     if (window.location.pathname === '/servizi') {
@@ -65,7 +77,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     <motion.nav
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-dark/50 backdrop-blur-[10px]'
           : 'bg-dark/30 backdrop-blur-[5px]'
@@ -74,7 +86,12 @@ const Navbar = ({ isOpen, setIsOpen }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center gap-2 md:gap-3 min-w-[200px] max-w-[400px] md:min-w-[240px] md:max-w-[480px] relative z-10" style={{ textDecoration: 'none', whiteSpace: 'nowrap' }}>
+            <Link
+              to="/"
+              className="flex-shrink-0 flex items-center gap-2 md:gap-3 min-w-[200px] max-w-[400px] md:min-w-[240px] md:max-w-[480px] relative z-10 group"
+              style={{ textDecoration: 'none', whiteSpace: 'nowrap' }}
+              aria-label="Vai alla home"
+            >
               <img
                 src={logo}
                 alt="Edilquadro Logo"
@@ -82,7 +99,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                 style={{ filter: 'invert(27%) sepia(90%) saturate(2160%) hue-rotate(106deg) brightness(97%) contrast(105%)' }}
               />
               <span
-                className="text-2xl md:text-4xl font-bold text-white navbar-title"
+                className="text-2xl md:text-4xl font-bold navbar-title transition-all duration-200 bg-clip-text"
                 style={{
                   textDecoration: 'none',
                   borderBottom: 'none',
@@ -93,9 +110,12 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                   textOverflow: 'clip',
                   fontSize: '2.3rem',
                   lineHeight: 1.1,
+                  color: 'white'
                 }}
               >
-                edilquadro
+                <span className="group-hover:bg-gradient-to-r group-hover:from-green-400 group-hover:to-green-600 group-hover:text-transparent group-hover:bg-clip-text">
+                  edilquadro
+                </span>
               </span>
             </Link>
           </div>
@@ -117,7 +137,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                 >
                   <Link
                     to={item.path}
-                    className="text-white hover:text-gray-300 px-4 py-2 text-xl font-medium rounded-full transition-colors no-underline"
+                    className="text-white px-4 py-2 text-xl font-medium rounded-full transition-all duration-200 no-underline hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-green-400 hover:to-green-600"
                   >
                     {item.name}
                   </Link>

@@ -187,7 +187,7 @@ const HomeServices = () => {
       </Helmet>
       <header className="absolute inset-0 w-full h-full z-0" style={{ background: '#222831' }}></header>
       <main className="flex-grow relative z-10" role="main" aria-label="Sezione principale servizi casa edilquadro">
-        <section className="container mx-auto px-4 pt-32">
+  <section className="container mx-auto px-4 pt-8">
           <header>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -238,14 +238,14 @@ const HomeServices = () => {
             <h2 className="text-3xl font-bold text-white mb-12 text-center">
               Lavori
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-16 md:px-32 lg:px-48">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto px-8 md:px-16 lg:px-24">
               {images.map((image, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5 }}
-                  className="relative overflow-hidden rounded-lg group aspect-[4/3]"
+                  className="relative overflow-hidden rounded-lg group aspect-[4/3] scale-150"
                 >
                   <LazyImage
                     src={image.fallback}

@@ -295,7 +295,7 @@ const Portfolio = () => {
         <div className="absolute inset-0 bg-black/60 z-20"></div>
         {/* Contenuto principale SOPRA tutto */}
         <main className="relative z-30">
-          <header className="container mx-auto px-4 pt-32">
+          <header className="container mx-auto px-4 pt-8">
             {/* Reserve space for the animated header to prevent layout shifts */}
             <div style={{ minHeight: '200px' }}>
               <motion.div
@@ -372,7 +372,16 @@ const Portfolio = () => {
                           : undefined
                       }
                       alt={project.title + (project.location ? `, ${project.location}` : '') + ' - Edilquadro Portfolio'}
-                      className="w-full h-full object-cover object-center force-object-center transition-transform duration-500 hover:scale-110"
+                      className="w-full h-full"
+                      imageClassName={`transition-transform duration-500 hover:scale-110 ${
+                        project.title === "Negozio di Abbigliamento" 
+                          ? "object-cover object-center" 
+                          : "object-cover object-center"
+                      }`}
+                      imageStyle={{
+                        objectPosition: '50% 30%',
+                        transform: project.title === "Negozio di Abbigliamento" ? 'scale(1.05)' : 'none'
+                      }}
                       width="600"
                       height="320"
                       loading="lazy"

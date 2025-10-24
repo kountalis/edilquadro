@@ -115,7 +115,7 @@ const Contact = () => {
       </Helmet>
 
       <main className="flex-grow relative z-10" role="main" aria-label="Sezione principale contatti edilquadro">
-        <section className="container mx-auto px-4 pt-32">
+  <section className="container mx-auto px-4 pt-8">
           <header>
             {/* HERO CON VIDEO DI SFONDO COERENTE */}
             <section className="relative min-h-[60vh] flex items-center justify-center bg-black/80">

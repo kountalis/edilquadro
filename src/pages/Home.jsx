@@ -72,6 +72,7 @@ const ProjectGallery = ({ projects }) => {
             {/* Image Container */}
             <div className="relative h-72 overflow-hidden">
               <LazyImage
+                className="h-full"
                 src={project.images ? project.images[0] : project.image}
                 webpSrc={
                   project.images && project.images[0] && project.images[0].match(/\.(jpg|jpeg|png)$/i)
@@ -79,7 +80,8 @@ const ProjectGallery = ({ projects }) => {
                     : undefined
                 }
                 alt={project.title + (project.location ? `, ${project.location}` : '') + ' - Edilquadro Home'}
-                className="w-full h-full object-cover"
+                imageClassName="w-full h-full object-cover"
+                imageStyle={project.title && project.title.toLowerCase().includes('abbigliamento') ? { objectPosition: '50% 30%', transform: 'scale(1.05)' } : { objectPosition: '50% 30%' }}
                 width="600"
                 height="320"
                 loading="lazy"

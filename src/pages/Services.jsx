@@ -142,7 +142,7 @@ const Services = () => {
       </Helmet>
       <header className="absolute inset-0 w-full h-full z-0" style={{ background: '#222831' }}></header>
       <main className="flex-grow relative z-10" role="main" aria-label="Sezione principale servizi edilquadro">
-        <section className="container mx-auto px-4 pt-32">
+  <section className="container mx-auto px-4 pt-8">
           {/* Header Section */}
           <header>
             <motion.div

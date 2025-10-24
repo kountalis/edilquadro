@@ -22,9 +22,9 @@ export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
       >
         <span style={{fontSize: 28, lineHeight: 1}}>&#10005;</span>
       </button>
-      {/* Tendina mobile semitrasparente, solo alta quanto serve */}
+      {/* Tendina mobile semitrasparente: uso position:fixed così appare sempre in cima alla viewport */}
       <div
-        className="absolute top-0 left-0 w-full z-[1010] bg-dark/95 flex flex-col items-start pt-8 pb-6 px-4 rounded-b-2xl shadow-xl"
+        className="fixed top-0 left-0 w-full z-[1010] bg-dark/95 flex flex-col items-start pt-8 pb-6 px-4 rounded-b-2xl shadow-xl"
         style={{paddingTop: 32, paddingBottom: 24, boxShadow: '0 8px 32px rgba(0,0,0,0.25)'}}
       >
         {/* Voci di menu */}
@@ -33,11 +33,13 @@ export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
             <a
               key={item.name}
               href={item.path}
-              className="block w-11/12 max-w-md text-center text-2xl font-bold text-white py-4 rounded-xl hover:bg-green-600 transition-colors mb-2 no-underline"
+              className="block w-11/12 max-w-md text-center text-2xl font-bold text-white py-4 rounded-xl transition-all duration-200 mb-2 no-underline"
               style={{ fontSize: '2.2rem', textDecoration: 'none' }}
               onClick={onClose}
             >
-              {item.name}
+              <span className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-green-400 hover:to-green-600">
+                {item.name}
+              </span>
             </a>
           ))}
         </nav>

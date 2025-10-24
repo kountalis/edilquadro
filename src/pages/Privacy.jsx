@@ -9,7 +9,7 @@ export default function Privacy() {
   }, []);
   return (
     <div className="min-h-screen bg-gray-900">
-      <div className="container mx-auto px-4 py-16 pt-32 text-white">
+  <div className="container mx-auto px-4 py-16 pt-8 text-white">
         <Helmet>
           <title>Privacy Policy | Edilquadro</title>
           <meta name="description" content="Informativa sulla privacy di Edilquadro: come trattiamo i dati personali dei nostri clienti e visitatori." />

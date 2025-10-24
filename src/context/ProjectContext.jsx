@@ -102,6 +102,62 @@ export const ProjectProvider = ({ children }) => {
           "/projects/Yoga Hatha 9.webp",
           "/projects/Yoga Hatha 10.webp"
         ]
+      },
+      {
+        id: 13,
+        title: "Casa Moderna",
+        category: "casa",
+        description: "Ristrutturazione completa di una casa residenziale con design moderno",
+        images: [
+          "/projects/casaleucade1.webp",
+          "/projects/casaleucade2.webp",
+          "/projects/casaleucade3.webp",
+          "/projects/casaleucade4.webp",
+          "/projects/casaleucade5.webp"
+        ]
+      },
+      {
+        id: 14,
+        title: "Ristorante",
+        category: "commerciale",
+        description: "Progettazione e ristrutturazione di un ristorante con un design moderno e funzionale per ottimizzare lo spazio e migliorare l'esperienza dei clienti.",
+        images: [
+          "/projects/Ristorante 1.webp",
+          "/projects/Ristorante 2.webp",
+          "/projects/Ristorante 3.webp",
+          "/projects/Ristorante 4.webp",
+          "/projects/Ristorante 5.webp"
+        ]
+      },
+      {
+        id: 15,
+        title: "Negozio di Abbigliamento",
+        category: "commerciale",
+        description: "Restyling completo di un negozio di abbigliamento con un design elegante e moderno per valorizzare l'esposizione dei prodotti.",
+        images: [
+          "/projects/ABBIGLIAMENTO 1.webp",
+          "/projects/ABBIGLIAMENTO 2.webp",
+          "/projects/ABBIGLIAMENTO 3.webp",
+          "/projects/ABBIGLIAMENTO 4.webp",
+          "/projects/ABBIGLIAMENTO 5.webp",
+          "/projects/ABBIGLIAMENTO 6.webp",
+          "/projects/ABBIGLIAMENTO 7.webp",
+          "/projects/ABBIGLIAMENTO 8.webp",
+          "/projects/ABBIGLIAMENTO 9.webp"
+        ]
+      },
+      {
+        id: 16,
+        title: "Complesso Residenziale",
+        category: "edifici",
+        description: "Ristrutturazione di un complesso residenziale con interventi su facciate, tetti e parti comuni per migliorare l'efficienza energetica e l'estetica dell'edificio.",
+        images: [
+          "/projects/pomezia1.webp",
+          "/projects/pomezia2.webp",
+          "/projects/pomezia3.webp",
+          "/projects/pomezia4.webp",
+          "/projects/pomezia5.webp"
+        ]
       }
     ];
     

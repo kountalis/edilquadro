@@ -6,6 +6,7 @@ const LazyImage = ({
   alt, 
   className, 
   imageClassName,
+  imageStyle,
   width = '600', 
   height = '400',
   loading = 'lazy',
@@ -58,6 +59,14 @@ const LazyImage = ({
             fetchpriority={fetchpriority}
             onLoad={() => setIsLoaded(true)}
             className={`w-full h-full ${imageClassName || ''} ${!isLoaded ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}`}
+            // Ensure images always fill their container unless explicitly overridden
+            style={{
+              display: 'block',
+              objectFit: (imageStyle && imageStyle.objectFit) || 'cover',
+              objectPosition: (imageStyle && imageStyle.objectPosition) || '50% 50%',
+              // Apply any additional inline styles (like transform) from imageStyle
+              ...(imageStyle || {})
+            }}
           />
         </picture>
       )}

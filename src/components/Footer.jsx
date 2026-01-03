@@ -2,8 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaPhone, FaWhatsapp, FaEnvelope, FaViber } from 'react-icons/fa';
 import { trackGAEvent } from '../utils/gaEvents';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-gray-800 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -11,31 +14,31 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Edilquadro</h3>
             <p className="text-gray-300">
-              Esperti in ristrutturazioni di qualità dal 1998.
+              {t('footer.description')}
             </p>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Collegamenti Rapidi</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.quick_links')}</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white no-underline" title="Home Edilquadro Roma">Home</Link>
+                <Link to="/" className="text-gray-300 hover:text-green-400 transition-colors no-underline" title="Home Edilquadro Roma">{t('footer.home')}</Link>
               </li>
               <li>
-                <Link to="/servizi" className="text-gray-300 hover:text-white no-underline" title="Servizi Edilquadro Roma">Servizi</Link>
+                <Link to="/servizi" className="text-gray-300 hover:text-green-400 transition-colors no-underline" title="Servizi Edilquadro Roma">{t('footer.services')}</Link>
               </li>
               <li>
-                <Link to="/portfolio" className="text-gray-300 hover:text-white no-underline" title="Portfolio lavori Edilquadro Roma">Portfolio</Link>
+                <Link to="/portfolio" className="text-gray-300 hover:text-green-400 transition-colors no-underline" title="Portfolio lavori Edilquadro Roma">{t('footer.portfolio')}</Link>
               </li>
               <li>
-                <Link to="/contatti" className="text-gray-300 hover:text-white no-underline" title="Contatti Edilquadro Roma">Contatti</Link>
+                <Link to="/contatti" className="text-gray-300 hover:text-green-400 transition-colors no-underline" title="Contatti Edilquadro Roma">{t('footer.contact')}</Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-gray-300 hover:text-white no-underline" title="Privacy Policy Edilquadro Roma">Privacy Policy</Link>
+                <Link to="/privacy" className="text-gray-300 hover:text-green-400 transition-colors no-underline" title="Privacy Policy Edilquadro Roma">{t('footer.privacy_policy')}</Link>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contattaci</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('nav.contact')}</h4>
             <div className="flex flex-wrap gap-4">
               <a
                 href="tel:+393333377320"
@@ -43,7 +46,7 @@ const Footer = () => {
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Footer - Telefono' })}
               >
                 <FaPhone className="w-4 h-4" />
-                Chiama Ora
+                {t('home.cta.call_us')}
               </a>
               <a
                 href="mailto:edilquadroroma@gmail.com"

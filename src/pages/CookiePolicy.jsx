@@ -1,56 +1,59 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { useEffect } from "react";
+import { useTranslation, Trans } from 'react-i18next';
 
 export default function CookiePolicy() {
+  const { t, i18n } = useTranslation();
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
+
   return (
     <div className="min-h-screen bg-gray-900">
-  <div className="container mx-auto px-4 py-16 pt-8 text-white">
+      <div className="container mx-auto px-4 py-16 pt-8 text-white">
         <Helmet>
-          <title>Cookie Policy | Edilquadro</title>
-          <meta name="description" content="Informativa sull'uso dei cookie di Edilquadro: cookie tecnici e di terze parti (Google Analytics)." />
+          <title>{t('cookie_policy_page.meta_title')}</title>
+          <meta name="description" content={t('cookie_policy_page.meta_description')} />
           <link rel="canonical" href="https://edilquadro.it/cookie-policy" />
-          <meta property="og:title" content="Cookie Policy | Edilquadro" />
-          <meta property="og:description" content="Informativa sull'uso dei cookie di Edilquadro: cookie tecnici e di terze parti (Google Analytics)." />
+          <meta property="og:title" content={t('cookie_policy_page.meta_title')} />
+          <meta property="og:description" content={t('cookie_policy_page.meta_description')} />
           <meta property="og:image" content="https://edilquadro.it/logo192.png" />
           <meta property="og:url" content="https://edilquadro.it/cookie-policy" />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Cookie Policy | Edilquadro" />
-          <meta name="twitter:description" content="Informativa sull'uso dei cookie di Edilquadro: cookie tecnici e di terze parti (Google Analytics)." />
+          <meta name="twitter:title" content={t('cookie_policy_page.meta_title')} />
+          <meta name="twitter:description" content={t('cookie_policy_page.meta_description')} />
           <meta name="twitter:image" content="https://edilquadro.it/logo192.png" />
           <meta name="twitter:site" content="@edilquadro" />
-          <html lang="it" />
+          <html lang={i18n.language} />
         </Helmet>
-        <h1 className="text-4xl font-bold mb-6">Cookie Policy</h1>
+        <h1 className="text-4xl font-bold mb-6">{t('cookie_policy_page.title')}</h1>
         <p className="mb-4">
-          Questa pagina descrive l'uso dei cookie sul sito <strong>edilquadro.it</strong>, ai sensi del Regolamento UE 2016/679 (GDPR) e della normativa italiana.
+          <Trans i18nKey="cookie_policy_page.intro" components={{ 1: <strong /> }} />
         </p>
-        <h2 className="text-2xl font-bold mt-8 mb-2">Cosa sono i cookie?</h2>
+        <h2 className="text-2xl font-bold mt-8 mb-2">{t('cookie_policy_page.what_are_cookies_title')}</h2>
         <p className="mb-4">
-          I cookie sono piccoli file di testo che i siti visitati dagli utenti inviano ai loro dispositivi, dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla visita successiva.
+          {t('cookie_policy_page.what_are_cookies_text')}
         </p>
-        <h2 className="text-2xl font-bold mt-8 mb-2">Tipologie di cookie utilizzati</h2>
+        <h2 className="text-2xl font-bold mt-8 mb-2">{t('cookie_policy_page.types_of_cookies_title')}</h2>
         <ul className="list-disc ml-6 mb-4">
-          <li><strong>Cookie tecnici:</strong> necessari per il corretto funzionamento del sito e per fornire il servizio richiesto dall'utente. Non richiedono consenso.</li>
-          <li><strong>Cookie di terze parti:</strong> il sito può utilizzare Google Analytics per raccogliere informazioni statistiche anonime e aggregate sull'uso del sito. I dati raccolti non permettono di identificare personalmente l'utente.</li>
+          <li><Trans i18nKey="cookie_policy_page.technical_cookies" components={{ 0: <strong /> }} /></li>
+          <li><Trans i18nKey="cookie_policy_page.third_party_cookies" components={{ 0: <strong /> }} /></li>
         </ul>
-        <h2 className="text-2xl font-bold mt-8 mb-2">Gestione dei cookie</h2>
+        <h2 className="text-2xl font-bold mt-8 mb-2">{t('cookie_policy_page.cookie_management_title')}</h2>
         <p className="mb-4">
-          Puoi gestire le preferenze sui cookie direttamente dal tuo browser, bloccando o cancellando i cookie già presenti. La disabilitazione dei cookie tecnici può compromettere il funzionamento del sito.
+          {t('cookie_policy_page.cookie_management_text')}
         </p>
-        <h2 className="text-2xl font-bold mt-8 mb-2">Cookie di Google Analytics</h2>
+        <h2 className="text-2xl font-bold mt-8 mb-2">{t('cookie_policy_page.google_analytics_title')}</h2>
         <p className="mb-4">
-          Questo sito utilizza Google Analytics, un servizio di analisi web fornito da Google Inc. Google Analytics utilizza i cookie per raccogliere informazioni statistiche anonime sull'uso del sito. Puoi consultare l'informativa sulla privacy di Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-green-600 underline">qui</a> e la pagina di disattivazione di Google Analytics <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-green-600 underline">qui</a>.
+          <Trans i18nKey="cookie_policy_page.google_analytics_text" components={{ 1: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-green-600 underline" />, 3: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="text-green-600 underline" /> }} />
         </p>
-        <h2 className="text-2xl font-bold mt-8 mb-2">Contatti</h2>
+        <h2 className="text-2xl font-bold mt-8 mb-2">{t('cookie_policy_page.contacts_title')}</h2>
         <p>
-          Per qualsiasi domanda sull'uso dei cookie puoi scrivere a <a href="mailto:edilquadroroma@gmail.com" className="text-green-600 underline">edilquadroroma@gmail.com</a>.
+          <Trans i18nKey="cookie_policy_page.contacts_text" components={{ 1: <a href="mailto:edilquadroroma@gmail.com" className="text-green-600 underline" /> }} />
         </p>
       </div>
     </div>
   );
-} 
+}

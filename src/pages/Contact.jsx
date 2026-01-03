@@ -5,8 +5,10 @@ import { Helmet } from 'react-helmet-async';
 import emailjs from '@emailjs/browser';
 import { trackGAEvent } from '../utils/gaEvents';
 import { generateLocalBusinessSchema } from "../utils/seo";
+import { useTranslation, Trans } from 'react-i18next';
 
 const Contact = () => {
+  const { t, i18n } = useTranslation();
   const formRef = useRef();
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -22,102 +24,100 @@ const Contact = () => {
     }
   }, [sent]);
 
+  const contactPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": t('contact_page.meta_title'),
+    "description": t('contact_page.meta_description'),
+    "url": "https://edilquadro.it/contatti"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": t('contact_page.breadcrumb_home'),
+        "item": "https://edilquadro.it/",
+        "@id": "https://edilquadro.it/#breadcrumb-home"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": t('contact_page.breadcrumb_contact'),
+        "item": "https://edilquadro.it/contatti",
+        "@id": "https://edilquadro.it/contatti#breadcrumb-contatti"
+      }
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": t('contact_page.faq1_question'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('contact_page.faq1_answer')
+        }
+      },
+      {
+        "@type": "Question",
+        "name": t('contact_page.faq2_question'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('contact_page.faq2_answer')
+        }
+      },
+      {
+        "@type": "Question",
+        "name": t('contact_page.faq3_question'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('contact_page.faq3_answer')
+        }
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-grayBg relative overflow-hidden" style={{ minHeight: '300px' }}>
-      {/* Reserve space for dynamic content */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ minHeight: '500px', minWidth: '500px' }}>
         <div className="absolute w-[500px] h-[500px] bg-green-500/10 rounded-full blur-3xl -top-20 -right-20 animate-float-slow"></div>
         <div className="absolute w-[500px] h-[500px] bg-green-600/10 rounded-full blur-3xl -bottom-20 -left-20 animate-float-slower"></div>
       </div>
 
       <Helmet>
-        <title>Contatti Edilquadro | Ristrutturazione Roma</title>
-        <meta name="description" content="Contatta Edilquadro per ristrutturazione casa, negozi, bar, ristoranti, edifici e condomini a Roma. Richiedi informazioni o preventivo gratuito." />
+        <title>{t('contact_page.meta_title')}</title>
+        <meta name="description" content={t('contact_page.meta_description')} />
         <link rel="canonical" href="https://edilquadro.it/contatti" />
-        <meta name="keywords" content="contatti edilquadro, preventivo ristrutturazione Roma, impresa edile Roma, ristrutturazione casa Roma, ristrutturazione negozi Roma, edilizia Roma, lavori edili Roma, architetto Roma, progettazione interni Roma" />
+        <meta name="keywords" content={t('contact_page.meta_keywords')} />
         <meta name="author" content="Edilquadro" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Contatti Edilquadro | Ristrutturazione Roma" />
-        <meta property="og:description" content="Contatta Edilquadro per ristrutturazione casa, negozi, bar, ristoranti, edifici e condomini a Roma. Richiedi informazioni o preventivo gratuito." />
+        <meta property="og:title" content={t('contact_page.meta_title')} />
+        <meta property="og:description" content={t('contact_page.meta_description')} />
         <meta property="og:image" content="https://edilquadro.it/logo192.png" />
         <meta property="og:url" content="https://edilquadro.it/contatti" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contatti Edilquadro | Ristrutturazione Roma" />
-        <meta name="twitter:description" content="Contatta Edilquadro per ristrutturazione casa, negozi, bar, ristoranti, edifici e condomini a Roma. Richiedi informazioni o preventivo gratuito." />
+        <meta name="twitter:title" content={t('contact_page.meta_title')} />
+        <meta name="twitter:description" content={t('contact_page.meta_description')} />
         <meta name="twitter:image" content="https://edilquadro.it/logo192.png" />
         <meta name="twitter:site" content="@edilquadro" />
-        <html lang="it" />
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "ContactPage",
-            "name": "Contatti Edilquadro Roma",
-            "description": "Pagina contatti Edilquadro: richiedi informazioni o preventivo gratuito per ristrutturazione casa, negozi, edifici a Roma.",
-            "url": "https://edilquadro.it/contatti"
-          }
-        `}</script>
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://edilquadro.it/",
-                "@id": "https://edilquadro.it/#breadcrumb-home"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Contatti",
-                "item": "https://edilquadro.it/contatti",
-                "@id": "https://edilquadro.it/contatti#breadcrumb-contatti"
-              }
-            ]
-          }
-        `}</script>
+        <html lang={i18n.language} />
+        <script type="application/ld+json">{JSON.stringify(contactPageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(generateLocalBusinessSchema())}</script>
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Come posso richiedere un preventivo ristrutturazione a Roma?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Puoi compilare il modulo contatti, chiamarci o scriverci su WhatsApp per ricevere un preventivo gratuito e personalizzato per la tua ristrutturazione a Roma."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Edilquadro offre consulenza per ristrutturazione casa e negozi?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sì, offriamo consulenza gratuita per ristrutturazione casa, negozi, uffici e condomini a Roma e provincia."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Dove si trova la sede di Edilquadro?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "La nostra sede è in via Egerio Levio, Roma. Riceviamo su appuntamento per consulenze e preventivi."
-                }
-              }
-            ]
-          }
-        `}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <main className="flex-grow relative z-10" role="main" aria-label="Sezione principale contatti edilquadro">
-  <section className="container mx-auto px-4 pt-8">
+        <section className="container mx-auto px-4 pt-8">
           <header>
-            {/* HERO CON VIDEO DI SFONDO COERENTE */}
             <section className="relative min-h-[60vh] flex items-center justify-center bg-black/80">
               <div className="absolute inset-0 w-full h-full">
                 <div className="absolute inset-0 bg-black/60 z-10" />
@@ -140,7 +140,7 @@ const Contact = () => {
                   transition={{ duration: 0.8 }}
                   className="text-4xl md:text-6xl font-bold mb-6 text-white text-center"
                 >
-                  Contattaci – Impresa Edile Roma
+                  {t('contact_page.header_title')}
                 </motion.h1>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -148,30 +148,33 @@ const Contact = () => {
                   transition={{ duration: 0.8, delay: 0.4 }}
                   className="text-xl md:text-2xl text-gray-200 text-center max-w-2xl"
                 >
-                  Siamo la <strong>impresa edile a Roma</strong> specializzata in <a href="/servizi/casa" className="text-green-400 hover:text-green-300 no-underline" title="Ristrutturazione casa Roma">ristrutturazione casa Roma</a>, <a href="/servizi/commerciale" className="text-green-400 hover:text-green-300 no-underline" title="Ristrutturazione negozi Roma">ristrutturazione negozi Roma</a> e <a href="/servizi/edifici" className="text-green-400 hover:text-green-300 no-underline" title="Ristrutturazione edifici e condomini Roma">ristrutturazione edifici e condomini</a>. <br />
-                  <a href="/portfolio" className="text-green-400 hover:text-green-300 no-underline" title="Portfolio lavori Edilquadro">Guarda il portfolio dei nostri lavori</a> o <a href="/contatti" className="text-green-400 hover:text-green-300 no-underline" title="Preventivo ristrutturazione Roma">richiedi un preventivo gratuito</a>.<br />
-                  Siamo una delle principali aziende di <strong>ristrutturazioni a Roma</strong>. <a href="/contatti" className="text-green-400 hover:text-green-300 no-underline" title="Contatta azienda ristrutturazioni Roma">Contattaci per informazioni</a>.
+                  <Trans i18nKey="contact_page.header_subtitle" components={{
+                    1: <strong />,
+                    3: <a href="/servizi/casa" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.home_renovation')} />,
+                    5: <a href="/servizi/commerciale" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.shops_renovation')} />,
+                    7: <a href="/servizi/edifici" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.buildings_renovation')} />,
+                    9: <a href="/portfolio" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.portfolio')} />,
+                    11: <a href="/contatti" className="text-green-400 hover:text-green-300 no-underline" title={t('home.cta.free_quote')} />,
+                    13: <strong />,
+                    15: <a href="/contatti" className="text-green-400 hover:text-green-300 no-underline" title={t('nav.contact')} />
+                  }} />
                 </motion.p>
               </div>
             </section>
-            {/* FINE HERO */}
           </header>
 
-          {/* Opening Hours Section */}
           <div className="flex flex-col items-center justify-center mb-12">
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-white font-semibold text-lg">Orari di apertura:</span>
-              <span className="text-green-400 font-semibold">Lunedì - Venerdì: 09:00 - 19:00</span>
+              <span className="text-white font-semibold text-lg">{t('contact_page.opening_hours')}</span>
+              <span className="text-green-400 font-semibold">{t('contact_page.weekdays')}</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-green-400 font-semibold">Sabato: 09:00 - 13:00</span>
+              <span className="text-green-400 font-semibold">{t('contact_page.saturday')}</span>
             </div>
-            <div className="text-gray-400 text-sm mt-1">Domenica chiuso</div>
+            <div className="text-gray-400 text-sm mt-1">{t('contact_page.sunday')}</div>
           </div>
 
-          {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
-            {/* Phone */}
             <motion.a
               href="tel:+393333377320"
               initial={{ opacity: 0 }}
@@ -184,11 +187,10 @@ const Contact = () => {
                 <FaPhone className="w-7 h-7" />
               </div>
               <div className="text-left flex-1 min-w-0">
-                <h3 className="text-white font-bold text-lg">Telefono</h3>
+                <h3 className="text-white font-bold text-lg">{t('contact_page.phone')}</h3>
                 <p className="text-gray-200 text-base font-semibold">+39 333 337 7320</p>
               </div>
             </motion.a>
-            {/* Email */}
             <motion.a
               href="mailto:edilquadroroma@gmail.com"
               initial={{ opacity: 0 }}
@@ -201,11 +203,10 @@ const Contact = () => {
                 <FaEnvelope className="w-7 h-7" />
               </div>
               <div className="text-left flex-1 min-w-0">
-                <h3 className="text-white font-bold text-lg">Email</h3>
+                <h3 className="text-white font-bold text-lg">{t('contact_page.email')}</h3>
                 <p className="text-gray-200 break-all text-base font-semibold">edilquadroroma@gmail.com</p>
               </div>
             </motion.a>
-            {/* WhatsApp */}
             <motion.a
               href="https://wa.me/393333377320"
               target="_blank"
@@ -220,11 +221,10 @@ const Contact = () => {
                 <FaWhatsapp className="w-7 h-7" />
               </div>
               <div className="text-left flex-1 min-w-0">
-                <h3 className="text-white font-bold text-lg">WhatsApp</h3>
+                <h3 className="text-white font-bold text-lg">{t('contact_page.cta_whatsapp_label')}</h3>
                 <p className="text-gray-200 break-all text-base font-semibold">+39 333 337 7320</p>
               </div>
             </motion.a>
-            {/* Viber */}
             <motion.a
               href="viber://chat?number=%2B393333377320"
               target="_blank"
@@ -239,13 +239,12 @@ const Contact = () => {
                 <FaViber className="w-7 h-7" />
               </div>
               <div className="text-left flex-1 min-w-0">
-                <h3 className="text-white font-bold text-lg">Viber</h3>
+                <h3 className="text-white font-bold text-lg">{t('contact_page.cta_viber_label')}</h3>
                 <p className="text-gray-200 break-all text-base font-semibold">+39 333 337 7320</p>
               </div>
             </motion.a>
           </div>
 
-          {/* Location Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -256,9 +255,9 @@ const Contact = () => {
               <div className="p-3 rounded-full bg-green-500/10 text-green-400">
                 <FaMapMarkerAlt className="w-6 h-6" />
               </div>
-              <h2 className="text-2xl font-bold text-white">La Nostra Sede – Edilquadro Roma</h2>
+              <h2 className="text-2xl font-bold text-white">{t('contact_page.location_title')}</h2>
             </div>
-            <p className="text-gray-300 mb-6">Siamo situati nel cuore di Roma, pronti ad accoglierti per discutere del tuo progetto.</p>
+            <p className="text-gray-300 mb-6">{t('contact_page.location_subtitle')}</p>
             <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
               <iframe
                 src="https://www.google.com/maps?q=Via+Egerio+Levio+13,+Roma,+Italia&output=embed"
@@ -275,14 +274,12 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Sezione Lascia una Recensione con Google */}
           <section className="container mx-auto px-4 py-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">Lascia una recensione su Edilquadro</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">{t('contact_page.review_title')}</h2>
             <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">
-              {/* Box Google Review */}
               <div className="bg-black/70 rounded-xl p-4 md:p-6 border border-green-900 shadow-lg flex flex-col items-center justify-center max-w-md w-full min-h-[340px] mx-auto">
-                <h3 className="text-xl md:text-2xl font-semibold text-green-400 mb-2 text-center">Recensione su Google</h3>
-                <p className="text-gray-300 mb-4 text-center text-base md:text-lg">Aiutaci a crescere! Lascia una recensione pubblica su Google per condividere la tua esperienza.</p>
+                <h3 className="text-xl md:text-2xl font-semibold text-green-400 mb-2 text-center">{t('contact_page.review_google_title')}</h3>
+                <p className="text-gray-300 mb-4 text-center text-base md:text-lg">{t('contact_page.review_google_text')}</p>
                 <a
                   href="https://www.google.com/maps/search/?api=1&query=Edilquadro+Roma"
                   target="_blank"
@@ -290,7 +287,7 @@ const Contact = () => {
                   className="inline-block px-4 py-2 md:px-6 md:py-3 bg-green-600 text-white font-bold rounded-lg shadow hover:bg-green-500 transition-colors duration-300 text-base md:text-lg"
                   onClick={() => trackGAEvent({ action: 'click_review', category: 'Recensione', label: 'Contact - Google Review' })}
                 >
-                  Scrivi una recensione su Google
+                  {t('contact_page.review_google_button')}
                 </a>
               </div>
             </div>

@@ -2,44 +2,18 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   plugins: [
     react(),
-    ...(command === 'build' ? [visualizer({ open: false, filename: 'bundle-report.html' })] : [])
-    // PWA plugin would be added here after installing vite-plugin-pwa
-    // Compression plugin would be added here after installing vite-plugin-compression2
+    visualizer({ open: false, filename: 'bundle-report.html' })
   ],
   build: {
-    sourcemap: false, // Disable sourcemaps in production for better performance
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router-vendor': ['react-router-dom'],
-          'ui-vendor': ['framer-motion', '@headlessui/react'],
-          'icons': ['react-icons']
-        }
-      }
-    },
+    sourcemap: false, // Disable sourcemaps in production
     chunkSizeWarningLimit: 1000
   },
-  server: {
-    port: 3000,
-    open: true,
-    setupMiddlewares: (middlewares, server) => {
-      middlewares.use((req, res, next) => {
-        // Remove any existing CSP headers
-        res.removeHeader('Content-Security-Policy');
-        res.removeHeader('X-Content-Security-Policy');
-        res.removeHeader('X-WebKit-CSP');
-        
-        if (req.url.endsWith('.xml')) {
-          res.setHeader('Content-Type', 'application/xml');
-        }
-        next();
-      });
-      return middlewares;
-    }
+  appType: 'custom',
+  ssr: {
+    // Add problematic dependencies to noExternal to ensure they are processed by Vite
+    noExternal: ['react-helmet-async']
   }
-  // If you want to add CSP headers for production, use a plugin or your hosting config (e.g., Netlify, Vercel, nginx, etc.)
-}));
+});

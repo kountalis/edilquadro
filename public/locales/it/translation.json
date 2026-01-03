@@ -270,7 +270,7 @@
     "condo_renovation_link": "Scopri le ristrutturazioni per edifici",
     "cta_title": "Pronto a Iniziare?",
     "cta_subtitle": "Contattaci per un preventivo gratuito e scopri come possiamo trasformare la tua casa.",
-    "cta_call": "Chiama Ora",
+    "cta_call": "Chiama Ora"
 
   },
   "commercial_services_page": {
@@ -330,8 +330,7 @@
     "condo_renovation_link": "Vai ai servizi per edifici",
     "cta_title": "Pronti a Iniziare?",
     "cta_subtitle": "Contattaci per un preventivo gratuito e scopri come possiamo trasformare il tuo spazio commerciale.",
-    "cta_call": "Chiama Ora",
-
+    "cta_call": "Chiama Ora"
   },
   "building_services_page": {
     "meta_title": "Ristrutturazione Edifici e Condomini Roma | Servizi Edilquadro",
@@ -390,9 +389,8 @@
     "commercial_services_link": "Vai ai servizi commerciali",
     "cta_title": "Pronto a Iniziare?",
     "cta_subtitle": "Contattaci per un preventivo gratuito e scopri come possiamo migliorare il tuo edificio.",
-    "cta_call": "Chiama Ora",
-
-
+    "cta_call": "Chiama Ora"
+  },
 
   "privacy_page": {
     "meta_title": "Privacy Policy | Edilquadro",

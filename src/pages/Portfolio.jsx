@@ -7,8 +7,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
+import { useTranslation, Trans } from 'react-i18next';
 
 const Portfolio = () => {
+  const { t, i18n } = useTranslation();
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -16,13 +19,12 @@ const Portfolio = () => {
   const [selectedFilter, setSelectedFilter] = useState('all');
   const { openModal, closeModal, isModalOpen, selectedProject } = useProject();
 
-  // Projects data
   const projects = [
     {
       id: 1,
-      title: "Casa Moderna",
+      title: t('portfolio_page.projects.proj1_title'),
       category: "casa",
-      description: "Ristrutturazione completa di una casa residenziale con design moderno",
+      description: t('portfolio_page.projects.proj1_desc'),
       images: [
         "/projects/casaleucade1.webp",
         "/projects/casaleucade2.webp",
@@ -33,9 +35,9 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: "Piazza Cina",
-      location: "Piazza Cina Genzano, Italia",
-      description: "Riqualificazione completa della piazza con nuova pavimentazione e arredo urbano",
+      title: t('portfolio_page.projects.proj2_title'),
+      location: t('portfolio_page.projects.proj2_location'),
+      description: t('portfolio_page.projects.proj2_desc'),
       images: [
         "/projects/piazzacina1.webp",
         "/projects/piazzacina2.webp",
@@ -49,9 +51,9 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: "Centro Yoga",
-      location: "Milano, Italia",
-      description: "Ristrutturazione di uno spazio per lavorare su la consapevolezza, auto-conoscenza e ricerca",
+      title: t('portfolio_page.projects.proj3_title'),
+      location: t('portfolio_page.projects.proj3_location'),
+      description: t('portfolio_page.projects.proj3_desc'),
       images: [
         "/projects/Yoga Hatha 1.webp",
         "/projects/Yoga Hatha 2.webp",
@@ -68,9 +70,9 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: "Attico Roma",
-      location: "Firenze, Italia",
-      description: "Ristrutturazione di un piccolo attico storico con finiture di pregio",
+      title: t('portfolio_page.projects.proj4_title'),
+      location: t('portfolio_page.projects.proj4_location'),
+      description: t('portfolio_page.projects.proj4_desc'),
       images: [
         "/projects/alessandrino1.webp",
         "/projects/alessandrino2.webp",
@@ -93,9 +95,9 @@ const Portfolio = () => {
     },
     {
       id: 5,
-      title: "Negozio di Abbigliamento",
-      location: "Bologna, Italia",
-      description: "Ristrutturazione e ampliamento di un negozio esistente compreso i mobili espositivi",
+      title: t('portfolio_page.projects.proj5_title'),
+      location: t('portfolio_page.projects.proj5_location'),
+      description: t('portfolio_page.projects.proj5_desc'),
       images: [
         "/projects/ABBIGLIAMENTO 1.webp",
         "/projects/ABBIGLIAMENTO 2.webp",
@@ -111,9 +113,9 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      title: "Villa sul Mare",
-      location: "Napoli, Italia",
-      description: "Realizzazione di una villa con vista mare",
+      title: t('portfolio_page.projects.proj6_title'),
+      location: t('portfolio_page.projects.proj6_location'),
+      description: t('portfolio_page.projects.proj6_desc'),
       images: [
         "/projects/project1.webp",
         "/projects/project2.webp",
@@ -132,9 +134,9 @@ const Portfolio = () => {
     },
     {
       id: 7,
-      title: "Asilo Nido",
-      location: "Verona, Italia",
-      description: "Progettazione e restauro di un complesso scolastico sostenibile e inovativo",
+      title: t('portfolio_page.projects.proj7_title'),
+      location: t('portfolio_page.projects.proj7_location'),
+      description: t('portfolio_page.projects.proj7_desc'),
       images: [
         "/projects/warp1.webp",
         "/projects/warp2.webp",
@@ -150,9 +152,9 @@ const Portfolio = () => {
     },
     {
       id: 8,
-      title: "Ristorante",
-      location: "Venezia, Italia",
-      description: "Conversione di uno spazio al interno di un palazzo storico in un ristorante etnico",
+      title: t('portfolio_page.projects.proj8_title'),
+      location: t('portfolio_page.projects.proj8_location'),
+      description: t('portfolio_page.projects.proj8_desc'),
       images: [
         "/projects/Ristorante 1.webp",
         "/projects/Ristorante 2.webp",
@@ -164,9 +166,9 @@ const Portfolio = () => {
     },
     {
       id: 9,
-      title: "Casa Roma",
-      location: "Milano, Italia",
-      description: "Trasformazione di una casa residenziale con design moderno.",
+      title: t('portfolio_page.projects.proj9_title'),
+      location: t('portfolio_page.projects.proj9_location'),
+      description: t('portfolio_page.projects.proj9_desc'),
       images: [
         "/projects/Lunaduei Deluca 2.webp",
         "/projects/Lunaduei Deluca 3.webp",
@@ -195,9 +197,9 @@ const Portfolio = () => {
     },
     {
       id: 10,
-      title: "Complesso Residenziale",
-      location: "Roma, Italia",
-      description: "Costruzione completa di un Complesso residenziale e sistemazione delle aree esterne",
+      title: t('portfolio_page.projects.proj10_title'),
+      location: t('portfolio_page.projects.proj10_location'),
+      description: t('portfolio_page.projects.proj10_desc'),
       images: [
         "/projects/pomezia1.webp",
         "/projects/pomezia2.webp",
@@ -209,9 +211,9 @@ const Portfolio = () => {
     },
     {
       id: 11,
-      title: "Ortus Artis",
-      location: "Firenze, Italia",
-      description: "L'essenzialità dello spazio è invito alla riflessione",
+      title: t('portfolio_page.projects.proj11_title'),
+      location: t('portfolio_page.projects.proj11_location'),
+      description: t('portfolio_page.projects.proj11_desc'),
       images: [
         "/projects/padula1.webp",
         "/projects/padula2.webp",
@@ -227,76 +229,71 @@ const Portfolio = () => {
     },
     {
       id: 12,
-      title: "Casa Moderna in Progresso",
-      location: "Torino, Italia",
-      description: "Progettazione di una nuova casa moderna con design innovativo.",
+      title: t('portfolio_page.projects.proj12_title'),
+      location: t('portfolio_page.projects.proj12_location'),
+      description: t('portfolio_page.projects.proj12_desc'),
       images: [
         "/projects/In Progress 1.webp"
       ],
       category: "casa",
-      status: "In Progress"
+      status: t('portfolio_page.status_in_progress')
     },
     {
       id: 13,
-      title: "Bar in Progresso",
-      location: "Milano, Italia",
-      description: "Progettazione e ristrutturazione di un Bar di design moderno.",
+      title: t('portfolio_page.projects.proj13_title'),
+      location: t('portfolio_page.projects.proj13_location'),
+      description: t('portfolio_page.projects.proj13_desc'),
       images: [
         "/projects/Bar In Progress 1.webp"
       ],
       category: "commerciale",
-      status: "In Progress"
+      status: t('portfolio_page.status_in_progress')
     },
   ];
 
-  // Filter projects based on selected category
   const filteredProjects = projects.filter(
     project => selectedFilter === 'all' || project.category === selectedFilter
   );
 
+  const collectionPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": t('portfolio_page.meta_title'),
+    "description": t('portfolio_page.meta_description'),
+    "url": "https://edilquadro.it/portfolio",
+    "image": "https://edilquadro.it/portfolio-bg.jpg"
+  };
+
   return (
     <>
       <Helmet>
-        <title>Portfolio Lavori Edilquadro – Ristrutturazioni Roma</title>
-        <meta name="description" content="Guarda i lavori di ristrutturazione casa, negozi, edifici realizzati da Edilquadro a Roma. Scopri il nostro portfolio e richiedi un preventivo gratuito!" />
+        <title>{t('portfolio_page.meta_title')}</title>
+        <meta name="description" content={t('portfolio_page.meta_description')} />
         <link rel="canonical" href="https://edilquadro.it/portfolio" />
-        <meta property="og:title" content="Portfolio Lavori Edilquadro – Ristrutturazioni Roma" />
-        <meta property="og:description" content="Guarda i lavori di ristrutturazione casa, negozi, edifici realizzati da Edilquadro a Roma. Scopri il nostro portfolio e richiedi un preventivo gratuito!" />
+        <meta property="og:title" content={t('portfolio_page.meta_title')} />
+        <meta property="og:description" content={t('portfolio_page.meta_description')} />
         <meta property="og:image" content="https://edilquadro.it/portfolio-bg.jpg" />
         <meta property="og:url" content="https://edilquadro.it/portfolio" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Portfolio Lavori Edilquadro – Ristrutturazioni Roma" />
-        <meta name="twitter:description" content="Guarda i lavori di ristrutturazione casa, negozi, edifici realizzati da Edilquadro a Roma. Scopri il nostro portfolio e richiedi un preventivo gratuito!" />
+        <meta name="twitter:title" content={t('portfolio_page.meta_title')} />
+        <meta name="twitter:description" content={t('portfolio_page.meta_description')} />
         <meta name="twitter:image" content="https://edilquadro.it/portfolio-bg.jpg" />
         <meta name="twitter:site" content="@edilquadro" />
-        <html lang="it" />
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            "name": "Portfolio Lavori Edilquadro",
-            "description": "Guarda i lavori di ristrutturazione casa, negozi, edifici realizzati da Edilquadro a Roma. Scopri il nostro portfolio e richiedi un preventivo gratuito!",
-            "url": "https://edilquadro.it/portfolio",
-            "image": "https://edilquadro.it/portfolio-bg.jpg"
-          }
-        `}</script>
+        <html lang={i18n.language} />
+        <script type="application/ld+json">{JSON.stringify(collectionPageSchema)}</script>
       </Helmet>
       <div className="relative min-h-screen flex flex-col overflow-hidden">
-        {/* Immagine di background */}
         <img
           src="/portfolio-bg.jpg"
-          alt="Background"
+          alt={t('portfolio_page.header_title')}
           className="absolute inset-0 w-full h-full object-cover z-10"
           loading="lazy"
           fetchpriority="low"
         />
-        {/* Overlay nero semi-trasparente */}
         <div className="absolute inset-0 bg-black/60 z-20"></div>
-        {/* Contenuto principale SOPRA tutto */}
         <main className="relative z-30">
           <header className="container mx-auto px-4 pt-8">
-            {/* Reserve space for the animated header to prevent layout shifts */}
             <div style={{ minHeight: '200px' }}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -305,21 +302,26 @@ const Portfolio = () => {
                 className="text-center mb-16"
               >
                 <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-                  Portfolio Lavori Edilquadro – Ristrutturazioni Roma
+                  {t('portfolio_page.header_title')}
                 </h1>
                 <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                  Guarda i nostri <Link to="/servizi/casa" className="text-green-400 hover:text-green-300 no-underline" title="Ristrutturazione casa Roma">lavori di ristrutturazione casa</Link>, <Link to="/servizi/commerciale" className="text-green-400 hover:text-green-300 no-underline" title="Ristrutturazione negozi Roma">servizi commerciali</Link> e <Link to="/servizi/edifici" className="text-green-400 hover:text-green-300 no-underline" title="Ristrutturazione edifici e condomini Roma">servizi per edifici</Link> realizzati dalla nostra <strong>impresa edile a Roma</strong>. <Link to="/contatti" className="text-green-400 hover:text-green-300 no-underline" title="Contatta Edilquadro Roma">Contattaci</Link> per informazioni o preventivo gratuito.
+                  <Trans i18nKey="portfolio_page.header_subtitle" components={{
+                    1: <Link to="/servizi/casa" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.home_renovation')} />,
+                    3: <Link to="/servizi/commerciale" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.shops_renovation')} />,
+                    5: <Link to="/servizi/edifici" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.buildings_renovation')} />,
+                    7: <strong />,
+                    9: <Link to="/contatti" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.contact')} />
+                  }} />
                 </p>
               </motion.div>
             </div>
 
-            {/* Filter Buttons */}
             <nav aria-label="Filtra progetti" className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12 px-4">
               {[
-                { id: 'all', label: 'Tutti', shortLabel: 'Tutti' },
-                { id: 'casa', label: 'Casa', shortLabel: 'Casa' },
-                { id: 'commerciale', label: 'Commerciale', shortLabel: 'Comm.' },
-                { id: 'edifici', label: 'Edifici - Sist. Esterne', shortLabel: 'Edifici' }
+                { id: 'all', label: t('portfolio_page.filter_all'), shortLabel: t('portfolio_page.filter_all_short') },
+                { id: 'casa', label: t('portfolio_page.filter_home'), shortLabel: t('portfolio_page.filter_home_short') },
+                { id: 'commerciale', label: t('portfolio_page.filter_commercial'), shortLabel: t('portfolio_page.filter_commercial_short') },
+                { id: 'edifici', label: t('portfolio_page.filter_buildings'), shortLabel: t('portfolio_page.filter_buildings_short') }
               ].map((filter) => (
                 <button
                   key={filter.id}
@@ -336,11 +338,13 @@ const Portfolio = () => {
               ))}
             </nav>
             <div className="text-center mb-8 text-gray-400 text-sm">
-              Cerchi ispirazione? Guarda altri <Link to="/portfolio" className="text-green-400 underline hover:text-green-300 no-underline">progetti realizzati</Link> o <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline">richiedi un preventivo</Link>.
+              <Trans i18nKey="portfolio_page.inspiration_text" components={{
+                1: <Link to="/portfolio" className="text-green-400 underline hover:text-green-300 no-underline" />,
+                3: <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline" />
+              }} />
             </div>
           </header>
 
-          {/* Projects Grid */}
           <section className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProjects.map((project) => (
@@ -352,18 +356,16 @@ const Portfolio = () => {
                     className="relative aspect-[4/3] overflow-hidden cursor-pointer flex items-center justify-center"
                     onClick={() => project.images ? openModal(project) : null}
                   >
-                    {/* Category Badge */}
                     <div className="absolute top-3 right-3 z-10">
                       <div className="bg-green-600/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg border border-green-500/30">
                         <span className="text-white text-sm font-medium">
-                          {project.category === 'casa' && 'Casa'}
-                          {project.category === 'commerciale' && 'Commerciale'}
-                          {project.category === 'edifici' && 'Edifici'}
+                          {project.category === 'casa' && t('portfolio_page.category_home')}
+                          {project.category === 'commerciale' && t('portfolio_page.category_commercial')}
+                          {project.category === 'edifici' && t('portfolio_page.category_buildings')}
                         </span>
                       </div>
                     </div>
 
-                    {/* Responsive Image with WebP and Lazy Loading */}
                     <LazyImage
                       src={project.images ? project.images[0] : project.image}
                       webpSrc={
@@ -388,7 +390,6 @@ const Portfolio = () => {
                       fetchpriority="low"
                     />
 
-                    {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-6">
                         <h3 className="text-white font-bold text-xl mb-2">{project.title}</h3>
@@ -396,10 +397,9 @@ const Portfolio = () => {
                       </div>
                     </div>
 
-                    {/* In Progress Badge */}
-                    {project.status === "In Progress" && (
+                    {project.status && (
                       <div className="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold uppercase rounded-full px-3 py-1 rotate-45">
-                        In Progress
+                        {project.status}
                       </div>
                     )}
                   </div>
@@ -408,12 +408,9 @@ const Portfolio = () => {
             </div>
           </section>
 
-          {/* Spacing div */}
           <div className="py-24"></div>
 
-          {/* Contact/CTA Section */}
           <section className="py-24 bg-gradient-to-b from-black/60 to-dark/60 backdrop-blur-sm relative overflow-hidden w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-            {/* Animated Background Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ minHeight: '500px', minWidth: '500px' }}>
               <div className="absolute w-[500px] h-[500px] bg-green-500/10 rounded-full blur-3xl -top-20 -right-20 animate-float-slow" style={{ animationDelay: '0.5s' }}></div>
               <div className="absolute w-[500px] h-[500px] bg-green-600/10 rounded-full blur-3xl -bottom-20 -left-20 animate-float-slower" style={{ animationDelay: '0.5s' }}></div>
@@ -433,7 +430,7 @@ const Portfolio = () => {
                   transition={{ duration: 1, delay: 0.2 }}
                   className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
                 >
-                  Hai un progetto in mente?
+                  {t('portfolio_page.cta_title')}
                 </motion.h2>
                 <motion.p
                   initial={{ opacity: 0 }}
@@ -441,10 +438,17 @@ const Portfolio = () => {
                   transition={{ duration: 1, delay: 0.4 }}
                   className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
                 >
-                  Contattaci per trasformare le tue idee in realtà. Il nostro team di <strong>architetto Roma</strong> e <strong>progettazione interni Roma</strong> è pronto ad ascoltare le tue esigenze e creare soluzioni su misura per te. Scopri i nostri <Link to="/servizi/casa" className="text-green-400 underline hover:text-green-300 no-underline">servizi casa</Link>, <Link to="/servizi/commerciale" className="text-green-400 underline hover:text-green-300 no-underline">servizi commerciali</Link> o <Link to="/servizi/edifici" className="text-green-400 underline hover:text-green-300 no-underline">servizi edifici</Link>. <Link to="/portfolio" className="text-green-400 underline hover:text-green-300 no-underline">Portfolio</Link> | <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline">Preventivo gratuito</Link>.
+                  <Trans i18nKey="portfolio_page.cta_subtitle" components={{
+                    1: <strong />,
+                    3: <strong />,
+                    5: <Link to="/servizi/casa" className="text-green-400 underline hover:text-green-300 no-underline" />,
+                    7: <Link to="/servizi/commerciale" className="text-green-400 underline hover:text-green-300 no-underline" />,
+                    9: <Link to="/servizi/edifici" className="text-green-400 underline hover:text-green-300 no-underline" />,
+                    11: <Link to="/portfolio" className="text-green-400 underline hover:text-green-300 no-underline" />,
+                    13: <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline" />
+                  }} />
                 </motion.p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {/* Call Button */}
                   <motion.a
                     href="tel:+393333377320"
                     initial={{ opacity: 0 }}
@@ -456,25 +460,19 @@ const Portfolio = () => {
                     style={{ minHeight: '100px' }}
                     onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Portfolio - Telefono' })}
                   >
-                    {/* Hover Glow */}
                     <div className="absolute inset-0 rounded-2xl bg-greenDark opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
-                    
-                    {/* Content */}
                     <div className="relative flex items-center justify-center gap-3">
                       <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
                         <FaPhone className="w-6 h-6 text-white" />
                       </div>
                       <div className="text-left">
-                        <div className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">Chiamaci Ora</div>
+                        <div className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">{t('home.cta.call_us')}</div>
                         <div className="text-white font-semibold">+39 333 337 7320</div>
                       </div>
                     </div>
-
-                    {/* Border Glow */}
                     <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-green-500/30 group-hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] transition-all duration-300"></div>
                   </motion.a>
 
-                  {/* Email Button */}
                   <motion.a
                     href="mailto:edilquadroroma@gmail.com"
                     initial={{ opacity: 0 }}
@@ -485,25 +483,19 @@ const Portfolio = () => {
                     className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-green-600 to-green-500 transition-all duration-300"
                     onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Portfolio - Email' })}
                   >
-                    {/* Hover Glow */}
                     <div className="absolute inset-0 rounded-2xl bg-green-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
-                    
-                    {/* Content */}
                     <div className="relative flex items-center justify-center gap-3">
                       <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
                         <FaEnvelope className="w-6 h-6 text-white" />
                       </div>
                       <div className="text-left">
-                        <div className="text-sm text-gray-200 group-hover:text-white transition-colors duration-300">Email</div>
-                        <div className="text-white font-semibold">Preventivo Gratuito</div>
+                        <div className="text-sm text-gray-200 group-hover:text-white transition-colors duration-300">{t('portfolio_page.cta_email_label')}</div>
+                        <div className="text-white font-semibold">{t('home.cta.free_quote')}</div>
                       </div>
                     </div>
-
-                    {/* Border Glow */}
                     <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-green-400/30 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"></div>
                   </motion.a>
 
-                  {/* WhatsApp Button */}
                   <motion.a
                     href="https://wa.me/393333377320"
                     target="_blank"
@@ -516,21 +508,16 @@ const Portfolio = () => {
                     className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-[#128C7E] to-[#25D366] transition-all duration-300"
                     onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Portfolio - WhatsApp' })}
                   >
-                    {/* Hover Glow */}
                     <div className="absolute inset-0 rounded-2xl bg-whatsapp opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
-                    
-                    {/* Content */}
                     <div className="relative flex items-center justify-center gap-3">
                       <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
                         <FaWhatsapp className="w-6 h-6 text-white" />
                       </div>
                       <div className="text-left">
-                        <div className="text-sm text-gray-200 group-hover:text-white transition-colors duration-300">WhatsApp</div>
-                        <div className="text-white font-semibold">Scrivici Ora</div>
+                        <div className="text-sm text-gray-200 group-hover:text-white transition-colors duration-300">{t('portfolio_page.cta_whatsapp_label')}</div>
+                        <div className="text-white font-semibold">{t('home.cta.chat_with_us')}</div>
                       </div>
                     </div>
-
-                    {/* Border Glow */}
                     <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-green-400/30 group-hover:shadow-[0_0_15px_rgba(37,211,102,0.5)] transition-all duration-300"></div>
                   </motion.a>
                 </div>

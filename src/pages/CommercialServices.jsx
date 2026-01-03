@@ -2,13 +2,15 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaPaintBrush, FaPlug, FaTools, FaLightbulb, FaIndustry, FaRegBuilding, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
-// Per routing corretto: aggiungi in alto
-import { Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
 import { generateLocalBusinessSchema } from "../utils/seo";
+import { useTranslation, Trans } from 'react-i18next';
 
 const CommercialServices = () => {
+  const { t, i18n } = useTranslation();
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
@@ -16,171 +18,201 @@ const CommercialServices = () => {
   const services = [
     {
       icon: <FaPaintBrush className="w-12 h-12" />,
-      title: "Pittura e Finiture",
-      description: "Soluzioni di pittura professionale per spazi commerciali con materiali di alta qualità.",
-      details: ["Pitture commerciali", "Rivestimenti speciali", "Finiture decorative", "Protezioni murali"]
+      title: t('commercial_services_page.service1_title'),
+      description: t('commercial_services_page.service1_desc'),
+      details: [
+        t('commercial_services_page.service1_detail1'),
+        t('commercial_services_page.service1_detail2'),
+        t('commercial_services_page.service1_detail3'),
+        t('commercial_services_page.service1_detail4')
+      ]
     },
     {
       icon: <FaPlug className="w-12 h-12" />,
-      title: "Impianti Elettrici",
-      description: "Installazione e aggiornamento di sistemi elettrici per attività commerciali.",
-      details: ["Illuminazione LED", "Reti dati", "Sistemi di sicurezza", "Automazione"]
+      title: t('commercial_services_page.service2_title'),
+      description: t('commercial_services_page.service2_desc'),
+      details: [
+        t('commercial_services_page.service2_detail1'),
+        t('commercial_services_page.service2_detail2'),
+        t('commercial_services_page.service2_detail3'),
+        t('commercial_services_page.service2_detail4')
+      ]
     },
     {
       icon: <FaTools className="w-12 h-12" />,
-      title: "Pavimentazione",
-      description: "Pavimenti resistenti e funzionali per spazi commerciali.",
-      details: ["Pavimenti industriali", "Resine epossidiche", "Ceramiche tecniche", "Pavimenti sopraelevati"]
+      title: t('commercial_services_page.service3_title'),
+      description: t('commercial_services_page.service3_desc'),
+      details: [
+        t('commercial_services_page.service3_detail1'),
+        t('commercial_services_page.service3_detail2'),
+        t('commercial_services_page.service3_detail3'),
+        t('commercial_services_page.service3_detail4')
+      ]
     },
     {
       icon: <FaLightbulb className="w-12 h-12" />,
-      title: "Illuminazione",
-      description: "Sistemi di illuminazione ottimizzati per spazi commerciali.",
-      details: ["Illuminazione LED", "Luci d'accento", "Illuminazione di sicurezza", "Controllo luminoso"]
+      title: t('commercial_services_page.service4_title'),
+      description: t('commercial_services_page.service4_desc'),
+      details: [
+        t('commercial_services_page.service4_detail1'),
+        t('commercial_services_page.service4_detail2'),
+        t('commercial_services_page.service4_detail3'),
+        t('commercial_services_page.service4_detail4')
+      ]
     },
     {
       icon: <FaIndustry className="w-12 h-12" />,
-      title: "Spazi Industriali",
-      description: "Ristrutturazione di capannoni e spazi industriali.",
-      details: ["Divisori industriali", "Portoni", "Pavimenti industriali", "Coperture"]
+      title: t('commercial_services_page.service5_title'),
+      description: t('commercial_services_page.service5_desc'),
+      details: [
+        t('commercial_services_page.service5_detail1'),
+        t('commercial_services_page.service5_detail2'),
+        t('commercial_services_page.service5_detail3'),
+        t('commercial_services_page.service5_detail4')
+      ]
     },
     {
       icon: <FaRegBuilding className="w-12 h-12" />,
-      title: "Design Interni",
-      description: "Progettazione e realizzazione di interni commerciali.",
-      details: ["Layout negozi", "Uffici", "Showroom", "Spazi espositivi"]
+      title: t('commercial_services_page.service6_title'),
+      description: t('commercial_services_page.service6_desc'),
+      details: [
+        t('commercial_services_page.service6_detail1'),
+        t('commercial_services_page.service6_detail2'),
+        t('commercial_services_page.service6_detail3'),
+        t('commercial_services_page.service6_detail4')
+      ]
     }
   ];
 
   const images = [
     {
       url: "/projects/Negozio Design.webp",
-      caption: "Negozio Design"
+      caption: t('commercial_services_page.img1_caption')
     },
     {
       url: "/projects/Showroom1.webp",
-      caption: "Showroom"
+      caption: t('commercial_services_page.img2_caption')
     },
     {
       url: "/projects/ufficio-moderno.webp",
-      caption: "Ufficio Moderno"
+      caption: t('commercial_services_page.img3_caption')
     },
     {
       url: "/projects/spazio-commerciale.webp",
-      caption: "Spazio Commerciale"
+      caption: t('commercial_services_page.img4_caption')
     }
   ];
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": t('commercial_services_page.service_type'),
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Edilquadro",
+      "areaServed": "Roma e provincia",
+      "telephone": "+393333377320",
+      "url": "https://edilquadro.it/"
+    },
+    "areaServed": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Roma",
+        "addressRegion": "RM",
+        "addressCountry": "IT"
+      }
+    },
+    "description": t('commercial_services_page.service_description')
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": t('commercial_services_page.breadcrumb_home'),
+        "item": "https://edilquadro.it/",
+        "@id": "https://edilquadro.it/#breadcrumb-home"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": t('commercial_services_page.breadcrumb_services'),
+        "item": "https://edilquadro.it/servizi",
+        "@id": "https://edilquadro.it/servizi#breadcrumb-servizi"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": t('commercial_services_page.breadcrumb_commercial_services'),
+        "item": "https://edilquadro.it/servizi/commerciale",
+        "@id": "https://edilquadro.it/servizi/commerciale#breadcrumb-servizi-commerciali"
+      }
+    ]
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": t('commercial_services_page.faq1_question'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('commercial_services_page.faq1_answer')
+        }
+      },
+      {
+        "@type": "Question",
+        "name": t('commercial_services_page.faq2_question'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('commercial_services_page.faq2_answer')
+        }
+      },
+      {
+        "@type": "Question",
+        "name": t('commercial_services_page.faq3_question'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": t('commercial_services_page.faq3_answer')
+        }
+      }
+    ]
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-black relative overflow-hidden" style={{ minHeight: '300px' }}>
       <Helmet>
-        <title>Ristrutturazione Negozi Roma | Servizi Commerciali Edilquadro</title>
-        <meta name="description" content="Servizi di ristrutturazione negozi, bar, ristoranti e locali commerciali a Roma. Progettazione, realizzazione e restyling spazi commerciali chiavi in mano." />
+        <title>{t('commercial_services_page.meta_title')}</title>
+        <meta name="description" content={t('commercial_services_page.meta_description')} />
         <link rel="canonical" href="https://edilquadro.it/servizi/commerciale" />
-        <meta name="keywords" content="ristrutturazione negozi Roma, servizi commerciali edilquadro, ristrutturazione bar Roma, ristrutturazione ristoranti Roma, impresa edile Roma, edilizia Roma, lavori edili Roma, progettazione interni Roma, preventivo ristrutturazione Roma" />
+        <meta name="keywords" content={t('commercial_services_page.meta_keywords')} />
         <meta name="author" content="Edilquadro" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Ristrutturazione Negozi Roma | Servizi Commerciali Edilquadro" />
-        <meta property="og:description" content="Servizi di ristrutturazione negozi, bar, ristoranti e locali commerciali a Roma. Progettazione, realizzazione e restyling spazi commerciali chiavi in mano." />
+        <meta property="og:title" content={t('commercial_services_page.meta_title')} />
+        <meta property="og:description" content={t('commercial_services_page.meta_description')} />
         <meta property="og:image" content="https://edilquadro.it/logo192.png" />
         <meta property="og:url" content="https://edilquadro.it/servizi/commerciale" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ristrutturazione Negozi Roma | Servizi Commerciali Edilquadro" />
-        <meta name="twitter:description" content="Servizi di ristrutturazione negozi, bar, ristoranti e locali commerciali a Roma. Progettazione, realizzazione e restyling spazi commerciali chiavi in mano." />
+        <meta name="twitter:title" content={t('commercial_services_page.meta_title')} />
+        <meta name="twitter:description" content={t('commercial_services_page.meta_description')} />
         <meta name="twitter:image" content="https://edilquadro.it/logo192.png" />
         <meta name="twitter:site" content="@edilquadro" />
-        <html lang="it" />
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Ristrutturazione Negozi a Roma",
-            "provider": {
-              "@type": "LocalBusiness",
-              "name": "Edilquadro",
-              "areaServed": "Roma e provincia",
-              "telephone": "+393333377320",
-              "url": "https://edilquadro.it/"
-            },
-            "areaServed": {
-              "@type": "Place",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Roma",
-                "addressRegion": "RM",
-                "addressCountry": "IT"
-              }
-            },
-            "description": "Ristrutturazione negozi, bar, ristoranti e locali commerciali a Roma. Progettazione, realizzazione e restyling spazi commerciali chiavi in mano."
-          }
-        `}</script>
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://edilquadro.it/",
-                "@id": "https://edilquadro.it/#breadcrumb-home"
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Servizi",
-                "item": "https://edilquadro.it/servizi",
-                "@id": "https://edilquadro.it/servizi#breadcrumb-servizi"
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Servizi Commerciali",
-                "item": "https://edilquadro.it/servizi/commerciale",
-                "@id": "https://edilquadro.it/servizi/commerciale#breadcrumb-servizi-commerciali"
-              }
-            ]
-          }
-        `}</script>
-        <script type="application/ld+json">{`
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "Quali servizi commerciali offre Edilquadro?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Ristrutturazione negozi, uffici, spazi commerciali, allestimenti, ampliamenti e soluzioni su misura a Roma."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Posso richiedere un preventivo gratuito per la ristrutturazione negozio?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Sì, puoi richiedere un preventivo gratuito e senza impegno per la ristrutturazione del tuo negozio o ufficio a Roma."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Edilquadro si occupa anche di progettazione e pratiche edilizie per negozi?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Certo! Offriamo anche servizi di progettazione, pratiche edilizie e consulenza tecnica per attività commerciali."
-                }
-              }
-            ]
-          }
-        `}</script>
+        <html lang={i18n.language} />
+        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(generateLocalBusinessSchema())}</script>
       </Helmet>
       <header className="absolute inset-0 w-full h-full z-0" style={{ background: '#222831' }}></header>
       <main className="flex-grow relative z-10" role="main">
-  <section className="container mx-auto px-4 pt-8">
+        <section className="container mx-auto px-4 pt-8">
           <header>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -189,10 +221,14 @@ const CommercialServices = () => {
               className="text-center mb-16"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-                Servizi Commerciali – Ristrutturazione Negozi Roma
+                {t('commercial_services_page.header_title')}
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Scopri i nostri <a href="/servizi/casa" className="text-green-400 hover:text-green-300 no-underline" title="Ristrutturazione casa Roma">servizi casa</a>, <a href="/servizi/commerciale" className="text-green-400 hover:text-green-300 no-underline" title="Ristrutturazione negozi Roma">servizi commerciali</a> e <a href="/servizi/edifici" className="text-green-400 hover:text-green-300 no-underline" title="Ristrutturazione edifici e condomini Roma">servizi edifici</a> per aziende e attività commerciali a Roma.
+                <Trans i18nKey="commercial_services_page.header_subtitle" components={{
+                  1: <Link to="/servizi/casa" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.home_renovation')} />,
+                  3: <Link to="/servizi/commerciale" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.shops_renovation')} />,
+                  5: <Link to="/servizi/edifici" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.buildings_renovation')} />
+                }} />
               </p>
             </motion.div>
           </header>
@@ -211,7 +247,7 @@ const CommercialServices = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
                 <p className="text-gray-300 mb-6">
-                  {service.description} <a href="/contatti" className="text-green-400 underline hover:text-green-200 transition-colors" aria-label="Richiedi un preventivo ristrutturazione negozio Roma">Richiedi un preventivo</a>
+                  {service.description} <a href="/contatti" className="text-green-400 underline hover:text-green-200 transition-colors" aria-label="Richiedi un preventivo ristrutturazione negozio Roma">{t('commercial_services_page.request_quote')}</a>
                 </p>
                 <ul className="text-gray-300 space-y-2">
                   {service.details.map((detail, idx) => (
@@ -227,7 +263,7 @@ const CommercialServices = () => {
 
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white mb-12 text-center">
-              Lavori
+              {t('commercial_services_page.gallery_title')}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto px-8 md:px-16 lg:px-24">
               {images.map((image, index) => (
@@ -265,10 +301,10 @@ const CommercialServices = () => {
 
           <section className="text-center pb-20">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Pronti a Iniziare?
+              {t('commercial_services_page.cta_title')}
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contattaci per un preventivo gratuito e scopri come possiamo trasformare il tuo spazio commerciale.
+              {t('commercial_services_page.cta_subtitle')}
             </p>
             <div className="flex flex-wrap justify-center gap-4" role="group" aria-label="Azioni di contatto">
               <a
@@ -278,7 +314,7 @@ const CommercialServices = () => {
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'CommercialServices - Telefono' })}
               >
                 <FaPhone className="w-5 h-5" />
-                Chiama Ora
+                {t('commercial_services_page.cta_call')}
               </a>
               <a
                 href="mailto:edilquadroroma@gmail.com"
@@ -287,13 +323,13 @@ const CommercialServices = () => {
                 onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'CommercialServices - Email' })}
               >
                 <FaEnvelope className="w-5 h-5" />
-                Preventivo Gratuito
+                {t('free_quote')}
               </a>
             </div>
             <div className="text-center mt-8" role="navigation" aria-label="Link ad altri servizi edilquadro">
-              <a href="/servizi/casa" className="text-blue-400 underline hover:text-blue-200 transition-colors no-underline" aria-label="Vai ai servizi per la casa Edilquadro">Servizi per la casa</a>
+              <a href="/servizi/casa" className="text-blue-400 underline hover:text-blue-200 transition-colors no-underline" aria-label="Vai ai servizi per la casa Edilquadro">{t('commercial_services_page.home_services_link')}</a>
               <span className="mx-2 text-gray-400">|</span>
-              <a href="/servizi/edifici" className="text-blue-400 underline hover:text-blue-200 transition-colors no-underline" aria-label="Ristrutturazione condomini Roma">Ristrutturazione condomini</a>
+              <a href="/servizi/edifici" className="text-blue-400 underline hover:text-blue-200 transition-colors no-underline" aria-label="Ristrutturazione condomini Roma">{t('commercial_services_page.condo_renovation_link')}</a>
             </div>
           </section>
         </section>
@@ -303,6 +339,3 @@ const CommercialServices = () => {
 };
 
 export default CommercialServices;
-
-// Se usi React Router v6+ in App.jsx, assicurati di avere:
-// <Route path="/servizi-commerciali" element={<CommercialServices />} />

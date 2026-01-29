@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaWhatsapp, FaPhone, FaEnvelope } from 'react-icons/fa';
+// Rimosso import icone React, usiamo solo SVG public
 import { useProject } from '../context/ProjectContext';
 import ProjectModal from '../components/ProjectModal';
 import { Helmet } from 'react-helmet-async';
@@ -456,21 +456,21 @@ const Portfolio = () => {
                     transition={{ duration: 1, delay: 0.6 }}
                     whileHover={{ scale: 1.02, y: -4 }}
                     whileTap={{ scale: 0.98 }}
-                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-[#004d00] to-[#006400] transition-all duration-300"
+                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300"
                     style={{ minHeight: '100px' }}
                     onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Portfolio - Telefono' })}
                   >
-                    <div className="absolute inset-0 rounded-2xl bg-greenDark opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">
                       <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                        <FaPhone className="w-6 h-6 text-white" />
+                        <img src="/phone.svg" alt="Telefono" className="w-6 h-6" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
                       </div>
                       <div className="text-left">
                         <div className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">{t('home.cta.call_us')}</div>
                         <div className="text-white font-semibold">+39 333 337 7320</div>
                       </div>
                     </div>
-                    <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-green-500/30 group-hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] transition-all duration-300"></div>
+                    <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-cta-green/30 group-hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] transition-all duration-300"></div>
                   </motion.a>
 
                   <motion.a
@@ -480,20 +480,20 @@ const Portfolio = () => {
                     transition={{ duration: 1, delay: 0.8 }}
                     whileHover={{ scale: 1.02, y: -4 }}
                     whileTap={{ scale: 0.98 }}
-                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-green-600 to-green-500 transition-all duration-300"
+                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green-light transition-all duration-300"
                     onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Portfolio - Email' })}
                   >
-                    <div className="absolute inset-0 rounded-2xl bg-green-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">
                       <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                        <FaEnvelope className="w-6 h-6 text-white" />
+                        <img src="/envelope.svg" alt="Email" className="w-6 h-6" style={{filter: 'brightness(0) invert(1)'}} />
                       </div>
                       <div className="text-left">
                         <div className="text-sm text-gray-200 group-hover:text-white transition-colors duration-300">{t('portfolio_page.cta_email_label')}</div>
                         <div className="text-white font-semibold">{t('home.cta.free_quote')}</div>
                       </div>
                     </div>
-                    <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-green-400/30 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"></div>
+                      <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-cta-green/30 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"></div>
                   </motion.a>
 
                   <motion.a
@@ -505,20 +505,20 @@ const Portfolio = () => {
                     transition={{ duration: 1, delay: 1.0 }}
                     whileHover={{ scale: 1.02, y: -4 }}
                     whileTap={{ scale: 0.98 }}
-                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-[#128C7E] to-[#25D366] transition-all duration-300"
+                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-whatsappDark to-whatsapp transition-all duration-300"
                     onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Portfolio - WhatsApp' })}
                   >
                     <div className="absolute inset-0 rounded-2xl bg-whatsapp opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">
                       <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                        <FaWhatsapp className="w-6 h-6 text-white" />
+                        <img src="/Whatsapp.svg" alt="WhatsApp" className="w-6 h-6" style={{filter: 'brightness(0) invert(1)'}} />
                       </div>
                       <div className="text-left">
                         <div className="text-sm text-gray-200 group-hover:text-white transition-colors duration-300">{t('portfolio_page.cta_whatsapp_label')}</div>
                         <div className="text-white font-semibold">{t('home.cta.chat_with_us')}</div>
                       </div>
                     </div>
-                    <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-green-400/30 group-hover:shadow-[0_0_15px_rgba(37,211,102,0.5)] transition-all duration-300"></div>
+                    <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-whatsapp/30 group-hover:shadow-[0_0_15px_rgba(37,211,102,0.5)] transition-all duration-300"></div>
                   </motion.a>
                 </div>
               </motion.div>

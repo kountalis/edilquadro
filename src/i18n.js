@@ -16,13 +16,20 @@ i18n
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     fallbackLng: 'it',
-    debug: true,
+    supportedLngs: ['it', 'en'],
+    nonExplicitSupportedLngs: true,
+    load: 'languageOnly',
+    debug: process.env.NODE_ENV === 'development',
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
+    detection: {
+      order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
+      caches: ['localStorage'],
+    },
     backend: {
       loadPath: '/locales/{{lng}}/translation.json',
-    }
+    },
   });
 
 export default i18n;

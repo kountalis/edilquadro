@@ -2,12 +2,16 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
-import { HelmetProvider } from 'react-helmet-async';
 import i18next from 'i18next';
 import FsBackend from 'i18next-fs-backend';
 import path from 'path';
 
 import App from './App';
+
+const routerFuture = {
+  v7_startTransition: true,
+  v7_relativeSplatPath: true,
+};
 
 export async function render(req, isProd) {
   const helmetContext = {};
@@ -35,11 +39,9 @@ export async function render(req, isProd) {
   const appHtml = ReactDOMServer.renderToString(
     <React.StrictMode>
       <I18nextProvider i18n={i18n}>
-        <HelmetProvider context={helmetContext}>
-          <StaticRouter location={req.originalUrl}>
-            <App />
-          </StaticRouter>
-        </HelmetProvider>
+        <StaticRouter location={req.originalUrl} future={routerFuture}>
+          <App helmetContext={helmetContext} />
+        </StaticRouter>
       </I18nextProvider>
     </React.StrictMode>
   );

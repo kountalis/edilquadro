@@ -59,6 +59,12 @@
       "shops_renovation": "Shop renovation Rome",
       "buildings_renovation": "Building and condominium renovation Rome",
       "contact": "Contact Edilquadro"
+    },
+    "sections": {
+      "services_title": "Our Services",
+      "services_description": "We design and deliver renovations across Rome for homes, shops, and buildings with unwavering attention to detail.",
+      "projects_title": "Highlighted Projects",
+      "projects_description": "Explore some of our recent works to see how we bring spaces to life with tailor-made solutions."
     }
   },
   "footer": {

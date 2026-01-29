@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Edificio con finestre in griglia elegante -->
+  <!-- Corpo principale -->
+  <rect x="10" y="12" width="44" height="44" rx="2" fill="#22c55e" stroke="none"/>
+  <!-- Prima riga di finestre -->
+  <rect x="16" y="19" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
+  <rect x="29" y="19" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
+  <rect x="42" y="19" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
+  <!-- Seconda riga di finestre -->
+  <rect x="16" y="32" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
+  <rect x="29" y="32" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
+  <rect x="42" y="32" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
+  <!-- Terza riga di finestre -->
+  <rect x="16" y="45" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
+  <rect x="29" y="45" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
+  <rect x="42" y="45" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
+</svg>

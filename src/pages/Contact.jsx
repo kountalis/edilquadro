@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaWhatsapp, FaViber, FaMapMarkerAlt } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
-import emailjs from '@emailjs/browser';
 import { trackGAEvent } from '../utils/gaEvents';
 import { generateLocalBusinessSchema } from "../utils/seo";
 import { useTranslation, Trans } from 'react-i18next';
+// Rimosso import icone, usiamo solo SVG public
 
 const Contact = () => {
   const { t, i18n } = useTranslation();
@@ -180,12 +179,16 @@ const Contact = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1 }}
-              className="group p-6 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-4 min-h-[90px] shadow"
+              className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px] shadow"
               onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Contact - Telefono' })}
             >
-              <div className="p-3 rounded-full bg-green-500/10 text-green-600 group-hover:text-green-500 transition-colors duration-300">
-                <FaPhone className="w-7 h-7" />
-              </div>
+              <img
+                src="/phone.svg"
+                alt="Telefono Edilquadro"
+                className="w-8 h-8 object-contain"
+                loading="lazy"
+                style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
+              />
               <div className="text-left flex-1 min-w-0">
                 <h3 className="text-white font-bold text-lg">{t('contact_page.phone')}</h3>
                 <p className="text-gray-200 text-base font-semibold">+39 333 337 7320</p>
@@ -196,12 +199,16 @@ const Contact = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="group p-6 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-4 min-h-[90px]"
+              className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px]"
               onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Contact - Email' })}
             >
-              <div className="p-3 rounded-full bg-green-500/10 text-green-600 group-hover:text-green-500 transition-colors duration-300">
-                <FaEnvelope className="w-7 h-7" />
-              </div>
+              <img
+                src="/envelope.svg"
+                alt="Email Edilquadro"
+                className="w-[3.35rem] h-[3.35rem] md:w-[3.6rem] md:h-[3.6rem] object-contain"
+                loading="lazy"
+                style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
+              />
               <div className="text-left flex-1 min-w-0">
                 <h3 className="text-white font-bold text-lg">{t('contact_page.email')}</h3>
                 <p className="text-gray-200 break-all text-base font-semibold">edilquadroroma@gmail.com</p>
@@ -217,9 +224,13 @@ const Contact = () => {
               className="group p-6 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-4 min-h-[90px]"
               onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Contact - WhatsApp' })}
             >
-              <div className="p-3 rounded-full bg-green-500/10 text-green-600 group-hover:text-green-500 transition-colors duration-300">
-                <FaWhatsapp className="w-7 h-7" />
-              </div>
+              <img
+                src="/Whatsapp.svg"
+                alt="WhatsApp Edilquadro"
+                className="w-10 h-10 object-contain"
+                loading="lazy"
+                style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
+              />
               <div className="text-left flex-1 min-w-0">
                 <h3 className="text-white font-bold text-lg">{t('contact_page.cta_whatsapp_label')}</h3>
                 <p className="text-gray-200 break-all text-base font-semibold">+39 333 337 7320</p>
@@ -235,9 +246,13 @@ const Contact = () => {
               className="group p-6 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-4 min-h-[90px] shadow"
               onClick={() => trackGAEvent({ action: 'click_viber', category: 'Contatto', label: 'Contact - Viber' })}
             >
-              <div className="p-3 rounded-full bg-green-500/10 text-green-600 group-hover:text-green-500 transition-colors duration-300">
-                <FaViber className="w-7 h-7" />
-              </div>
+              <img
+                src="/viber.svg"
+                alt="Viber Edilquadro"
+                className="w-[2.2rem] h-[2.2rem] object-contain"
+                loading="lazy"
+                style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
+              />
               <div className="text-left flex-1 min-w-0">
                 <h3 className="text-white font-bold text-lg">{t('contact_page.cta_viber_label')}</h3>
                 <p className="text-gray-200 break-all text-base font-semibold">+39 333 337 7320</p>
@@ -253,7 +268,7 @@ const Contact = () => {
           >
             <div className="flex items-center gap-4 mb-4">
               <div className="p-3 rounded-full bg-green-500/10 text-green-400">
-                <FaMapMarkerAlt className="w-6 h-6" />
+                <img src="/home.svg" alt="Location" className="w-6 h-6" style={{filter: 'brightness(0.7) saturate(2) hue-rotate(90deg)'}} />
               </div>
               <h2 className="text-2xl font-bold text-white">{t('contact_page.location_title')}</h2>
             </div>
@@ -284,7 +299,7 @@ const Contact = () => {
                   href="https://www.google.com/maps/search/?api=1&query=Edilquadro+Roma"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-4 py-2 md:px-6 md:py-3 bg-green-600 text-white font-bold rounded-lg shadow hover:bg-green-500 transition-colors duration-300 text-base md:text-lg"
+                  className="inline-block px-4 py-2 md:px-6 md:py-3 bg-cta-green text-white font-bold rounded-lg shadow hover:bg-cta-green-light transition-colors duration-300 text-base md:text-lg"
                   onClick={() => trackGAEvent({ action: 'click_review', category: 'Recensione', label: 'Contact - Google Review' })}
                 >
                   {t('contact_page.review_google_button')}

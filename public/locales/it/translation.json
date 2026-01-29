@@ -59,6 +59,12 @@
       "shops_renovation": "Ristrutturazione negozi Roma",
       "buildings_renovation": "Ristrutturazione edifici e condomini Roma",
       "contact": "Contatta Edilquadro"
+    },
+    "sections": {
+      "services_title": "I nostri servizi",
+      "services_description": "Progettiamo e realizziamo ristrutturazioni a Roma per case, negozi e condomini mettendo al centro qualità e cura dei dettagli.",
+      "projects_title": "Progetti in primo piano",
+      "projects_description": "Scopri alcuni dei lavori più recenti per capire come trasformiamo gli spazi con soluzioni su misura."
     }
   },
   "footer": {

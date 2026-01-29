@@ -3,7 +3,7 @@ import ProjectModal from '../components/ProjectModal';
 import { useProject } from '../context/ProjectContext';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaWhatsapp, FaEnvelope, FaHome, FaStore, FaBuilding, FaArrowRight, FaPhone } from 'react-icons/fa';
+// Rimosso import icone React, usiamo solo SVG public
 import { Helmet } from 'react-helmet-async';
 import { useTranslation, Trans } from 'react-i18next';
 import LazyImage from '../components/LazyImage';
@@ -105,7 +105,7 @@ const ProjectGallery = ({ projects }) => {
                     whileHover={{ x: 5 }}
                   >
                     {project.images ? t('home.featured_projects.see_all_photos', { count: project.images.length }) : t('home.featured_projects.see_details')}
-                    <FaArrowRight className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
+                    <img src="/arrow-right.svg" alt="Avanti" className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
                   </motion.span>
                 </div>
               </div>
@@ -128,19 +128,19 @@ const Home = () => {
 
   const services = [
     {
-      icon: <FaHome className="w-8 h-8" />,
+      icon: <img src="/home.svg" alt="Casa" className="w-8 h-8" />,
       title: t('home.services.card1_title'),
       description: t('home.services.card1_desc'),
       link: "/servizi/casa"
     },
     {
-      icon: <FaStore className="w-8 h-8" />,
+      icon: <img src="/shop.svg" alt="Negozio" className="w-8 h-8" />,
       title: t('home.services.card2_title'),
       description: t('home.services.card2_desc'),
       link: "/servizi/commerciale"
     },
     {
-      icon: <FaBuilding className="w-8 h-8" />,
+      icon: <img src="/building.svg" alt="Edificio" className="w-8 h-8" />,
       title: t('home.services.card3_title'),
       description: t('home.services.card3_desc'),
       link: "/servizi/edifici"
@@ -339,7 +339,7 @@ const Home = () => {
                           whileHover={{ x: 5 }}
                           transition={{ duration: 0.2 }}
                         >
-                          <FaArrowRight className="transform group-hover/link:translate-x-1 transition-transform duration-300" />
+                          <img src="/arrow-right.svg" alt="Avanti" className="transform group-hover/link:translate-x-1 transition-transform duration-300" />
                         </motion.div>
                       </Link>
                     </div>
@@ -388,7 +388,7 @@ const Home = () => {
                   className="inline-flex items-center px-8 py-4 rounded-full bg-green-600 text-white text-lg font-semibold shadow-lg hover:bg-green-700 transition-colors duration-300 group"
                 >
                   {t('home.shops_renovation.discover_more')}
-                  <FaArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <img src="/arrow-right.svg" alt="Avanti" className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
             </div>
@@ -574,7 +574,7 @@ const Home = () => {
                     <div className="absolute inset-0 rounded-2xl bg-green-600 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">
                       <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                        <FaPhone className="w-6 h-6 text-white" />
+                        <img src="/phone.svg" alt="Telefono" className="w-6 h-6" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
                       </div>
                       <div className="text-left">
                         <div className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">{t('home.cta.call_us')}</div>
@@ -599,7 +599,7 @@ const Home = () => {
                     <div className="absolute inset-0 rounded-2xl bg-green-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">
                       <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                        <FaEnvelope className="w-6 h-6 text-white" />
+                        <img src="/envelope.svg" alt="Email" className="w-6 h-6" style={{filter: 'brightness(0) invert(1)'}} />
                       </div>
                       <div className="text-left">
                         <div className="text-sm text-gray-200 group-hover:text-white transition-colors duration-300">Email</div>
@@ -626,7 +626,7 @@ const Home = () => {
                     <div className="absolute inset-0 rounded-2xl bg-whatsapp opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">
                       <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                        <FaWhatsapp className="w-6 h-6 text-white" />
+                        <img src="/Whatsapp.svg" alt="WhatsApp" className="w-6 h-6" style={{filter: 'brightness(0) invert(1)'}} />
                       </div>
                       <div className="text-left">
                         <div className="text-sm text-gray-200 group-hover:text-white transition-colors duration-300">WhatsApp</div>

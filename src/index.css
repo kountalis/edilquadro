@@ -1,6 +1,4 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
+/* Google Fonts are loaded through App.jsx <Helmet> to allow preconnect and preload hints */
 /* Inject Tailwind's base, components, and utilities styles */
 @tailwind base;
 @tailwind components;
@@ -33,6 +31,15 @@
        a distracting light strip — use a color close to the navbar's dark tone. */
     background-color: #1c1c1c; /* matches theme color 'dark' */
     /* background-image: none; */
+  }
+
+  video::-webkit-media-text-track-display,
+  video::-webkit-media-text-track-container {
+    display: none;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
   }
 
   /* Add this class when you want to reserve space for the fixed navbar (applied via JS from Navbar) */
@@ -128,4 +135,21 @@
     clip: rect(0, 0, 0, 0);
     border: 0;
   }
+
+  .link-accent {
+    color: #e4ffe8;
+    font-weight: 600;
+    text-decoration-line: underline;
+    text-decoration-color: rgba(134, 239, 172, 0.85);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: color 0.2s ease;
+  }
+
+  .link-accent:hover,
+  .link-accent:focus-visible {
+    color: #ffffff;
+    text-decoration-color: #bbf7d0;
+  }
+
 }

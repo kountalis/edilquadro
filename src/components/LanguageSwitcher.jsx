@@ -10,6 +10,10 @@ const LanguageSwitcher = () => {
   const dropdownRef = useRef(null);
 
   const currentLanguage = i18n.language || 'it';
+  const menuId = 'language-switcher-menu';
+  const ariaLabel = currentLanguage.startsWith('en')
+    ? 'Switch language to Italian'
+    : 'Switch language to English';
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -35,19 +39,23 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className="relative pointer-events-auto" ref={dropdownRef}>
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center p-2 rounded-full bg-dark/50 hover:bg-dark/80 transition-colors"
+        className="flex items-center justify-center p-2 rounded-full transition-colors"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
+        aria-haspopup="menu"
+        aria-expanded={isOpen}
+        aria-controls={menuId}
+        aria-label={ariaLabel}
       >
         {flags[currentLanguage.split('-')[0]]}
       </motion.button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 w-36 rounded-md shadow-lg bg-dark/80 backdrop-blur-lg ring-1 ring-white/10 z-10">
-          <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+        <div id={menuId} className="absolute top-full right-0 mt-2 w-36 rounded-md shadow-lg bg-dark/95 backdrop-blur-lg ring-1 ring-white/10 z-[9999]">
+          <div className="py-1" role="menu" aria-orientation="vertical" aria-label="Language options">
             <button
               onClick={() => changeLanguage('it')}
               className="flex items-center w-full px-4 py-2 text-sm text-white hover:bg-green-600/50"

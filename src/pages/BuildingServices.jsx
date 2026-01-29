@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaPaintBrush, FaHardHat, FaTools, FaSolarPanel, FaShieldAlt, FaWater, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
 import { generateLocalBusinessSchema } from "../utils/seo";
 import { useTranslation, Trans } from 'react-i18next';
 import { Link } from 'react-router-dom';
+// Rimosso import icone React, usiamo solo SVG public
 
 const BuildingServices = () => {
   const { t, i18n } = useTranslation();
@@ -17,7 +17,7 @@ const BuildingServices = () => {
 
   const services = [
     {
-      icon: <FaPaintBrush className="w-12 h-12" />,
+      icon: <img src="/paintbrush.svg" alt="Imbiancatura" className="w-12 h-12" />,
       title: t('building_services_page.service1_title'),
       description: t('building_services_page.service1_desc'),
       details: [
@@ -28,7 +28,7 @@ const BuildingServices = () => {
       ]
     },
     {
-      icon: <FaHardHat className="w-12 h-12" />,
+      icon: <img src="/hardhat.svg" alt="Casco" className="w-12 h-12" />,
       title: t('building_services_page.service2_title'),
       description: t('building_services_page.service2_desc'),
       details: [
@@ -39,7 +39,7 @@ const BuildingServices = () => {
       ]
     },
     {
-      icon: <FaTools className="w-12 h-12" />,
+      icon: <img src="/tools.svg" alt="Attrezzi" className="w-12 h-12" />,
       title: t('building_services_page.service3_title'),
       description: t('building_services_page.service3_desc'),
       details: [
@@ -50,7 +50,7 @@ const BuildingServices = () => {
       ]
     },
     {
-      icon: <FaSolarPanel className="w-12 h-12" />,
+      icon: <img src="/solarpanel.svg" alt="Pannello solare" className="w-12 h-12" />,
       title: t('building_services_page.service4_title'),
       description: t('building_services_page.service4_desc'),
       details: [
@@ -61,7 +61,7 @@ const BuildingServices = () => {
       ]
     },
     {
-      icon: <FaShieldAlt className="w-12 h-12" />,
+      icon: <img src="/shield.svg" alt="Scudo" className="w-12 h-12" />,
       title: t('building_services_page.service5_title'),
       description: t('building_services_page.service5_desc'),
       details: [
@@ -72,7 +72,7 @@ const BuildingServices = () => {
       ]
     },
     {
-      icon: <FaWater className="w-12 h-12" />,
+      icon: <img src="/water.svg" alt="Acqua" className="w-12 h-12" />,
       title: t('building_services_page.service6_title'),
       description: t('building_services_page.service6_desc'),
       details: [
@@ -313,15 +313,15 @@ const BuildingServices = () => {
                 className="bg-greenDark text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-greenDarker transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] hover:scale-105"
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'BuildingServices - Telefono' })}
               >
-                <FaPhone className="w-5 h-5" />
+                <PhoneIcon className="w-5 h-5" />
                 {t('building_services_page.cta_call')}
               </a>
               <a
                 href="mailto:edilquadroroma@gmail.com"
-                className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105"
+                className="bg-cta-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-cta-green-dark transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105"
                 onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'BuildingServices - Email' })}
               >
-                <FaEnvelope className="w-5 h-5" />
+                <EnvelopeIcon className="w-5 h-5" />
                 {t('free_quote')}
               </a>
             </div>

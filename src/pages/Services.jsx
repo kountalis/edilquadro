@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaHome, FaStore, FaBuilding, FaPhone, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+// Rimosso import icone React, usiamo solo SVG public
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import LazyImage from '../components/LazyImage';
@@ -16,7 +16,7 @@ const Services = () => {
   }, []);
 
   const services = [{
-    icon: <FaHome className="w-12 h-12" />,
+    icon: <img src="/home.svg" alt="Casa" className="w-12 h-12" />,
     title: t('services_page.card1_title'),
     description: t('services_page.card1_desc'),
     features: [
@@ -27,7 +27,7 @@ const Services = () => {
     ]
   },
   {
-    icon: <FaStore className="w-12 h-12" />,
+    icon: <img src="/shop.svg" alt="Negozio" className="w-12 h-12" />,
     title: t('services_page.card2_title'),
     description: t('services_page.card2_desc'),
     features: [
@@ -38,7 +38,7 @@ const Services = () => {
     ]
   },
   {
-    icon: <FaBuilding className="w-12 h-12" />,
+    icon: <img src="/building.svg" alt="Edificio" className="w-12 h-12" />,
     title: t('services_page.card3_title'),
     description: t('services_page.card3_desc'),
     features: [
@@ -258,21 +258,21 @@ const Services = () => {
                   transition={{ duration: 1, delay: 0.6 }}
                   whileHover={{ scale: 1.02, y: -4 }}
                   whileTap={{ scale: 0.98 }}
-                  className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-[#004d00] to-[#006400] transition-all duration-300"
+                  className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300"
                   aria-label="Chiama Edilquadro per ristrutturazione Roma"
                   onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Services - Telefono' })}
                 >
-                  <div className="absolute inset-0 rounded-2xl bg-greenDark opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                   <div className="relative flex items-center justify-center gap-3">
                     <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                      <FaPhone className="w-6 h-6 text-white" />
+                      <img src="/phone.svg" alt="Telefono" className="w-6 h-6" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
                     </div>
                     <div className="text-left">
                       <div className="text-sm text-gray-300 group-hover:text-white transition-colors duration-300">{t('services_page.cta_call')}</div>
                       <div className="text-white font-semibold">+39 333 337 7320</div>
                     </div>
                   </div>
-                  <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-green-500/30 group-hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] transition-all duration-300"></div>
+                  <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-cta-green/30 group-hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] transition-all duration-300"></div>
                 </motion.a>
 
                 <motion.a
@@ -282,21 +282,21 @@ const Services = () => {
                   transition={{ duration: 1, delay: 0.8 }}
                   whileHover={{ scale: 1.02, y: -4 }}
                   whileTap={{ scale: 0.98 }}
-                  className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-green-600 to-green-500 transition-all duration-300"
+                  className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green-light transition-all duration-300"
                   aria-label="Scrivi a Edilquadro per preventivo gratuito ristrutturazione Roma"
                   onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Services - Email' })}
                 >
-                  <div className="absolute inset-0 rounded-2xl bg-green-500 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                   <div className="relative flex items-center justify-center gap-3">
                     <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                      <FaEnvelope className="w-6 h-6 text-white" />
+                      <img src="/envelope.svg" alt="Email" className="w-6 h-6" style={{filter: 'brightness(0) invert(1)'}} />
                     </div>
                     <div className="text-left">
                       <div className="text-sm text-gray-200 group-hover:text-white transition-colors duration-300">Email</div>
                       <div className="text-white font-semibold">{t('services_page.cta_quote')}</div>
                     </div>
                   </div>
-                  <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-green-400/30 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"></div>
+                    <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-cta-green/30 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"></div>
                 </motion.a>
 
                 <motion.a
@@ -308,20 +308,20 @@ const Services = () => {
                   transition={{ duration: 1, delay: 1.0 }}
                   whileHover={{ scale: 1.02, y: -4 }}
                   whileTap={{ scale: 0.98 }}
-                  className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-[#128C7E] to-[#25D366] transition-all duration-300"
+                  className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-whatsappDark to-whatsapp transition-all duration-300"
                   onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Services - WhatsApp' })}
                 >
                   <div className="absolute inset-0 rounded-2xl bg-whatsapp opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                   <div className="relative flex items-center justify-center gap-3">
                     <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
-                      <FaWhatsapp className="w-6 h-6 text-white" />
+                      <img src="/Whatsapp.svg" alt="WhatsApp" className="w-6 h-6" style={{filter: 'brightness(0) invert(1)'}} />
                     </div>
                     <div className="text-left">
                       <div className="text-sm text-gray-200 group-hover:text-white transition-colors duration-300">{t('services_page.cta_whatsapp_label')}</div>
                       <div className="text-white font-semibold">{t('services_page.cta_write')}</div>
                     </div>
                   </div>
-                  <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-green-400/30 group-hover:shadow-[0_0_15px_rgba(37,211,102,0.5)] transition-all duration-300"></div>
+                  <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-whatsapp/30 group-hover:shadow-[0_0_15px_rgba(37,211,102,0.5)] transition-all duration-300"></div>
                 </motion.a>
               </div>
             </motion.div>

@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaPaintBrush, FaPlug, FaTools, FaLightbulb, FaIndustry, FaRegBuilding, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
 import { generateLocalBusinessSchema } from "../utils/seo";
 import { useTranslation, Trans } from 'react-i18next';
+// Rimosso import icone React, usiamo solo SVG public
 
 const CommercialServices = () => {
   const { t, i18n } = useTranslation();
@@ -17,7 +17,7 @@ const CommercialServices = () => {
 
   const services = [
     {
-      icon: <FaPaintBrush className="w-12 h-12" />,
+      icon: <img src="/paintbrush.svg" alt="Imbiancatura" className="w-12 h-12" />,
       title: t('commercial_services_page.service1_title'),
       description: t('commercial_services_page.service1_desc'),
       details: [
@@ -28,7 +28,7 @@ const CommercialServices = () => {
       ]
     },
     {
-      icon: <FaPlug className="w-12 h-12" />,
+      icon: <img src="/plug.svg" alt="Elettricista" className="w-12 h-12" />,
       title: t('commercial_services_page.service2_title'),
       description: t('commercial_services_page.service2_desc'),
       details: [
@@ -39,7 +39,7 @@ const CommercialServices = () => {
       ]
     },
     {
-      icon: <FaTools className="w-12 h-12" />,
+      icon: <img src="/tools.svg" alt="Attrezzi" className="w-12 h-12" />,
       title: t('commercial_services_page.service3_title'),
       description: t('commercial_services_page.service3_desc'),
       details: [
@@ -50,7 +50,7 @@ const CommercialServices = () => {
       ]
     },
     {
-      icon: <FaLightbulb className="w-12 h-12" />,
+      icon: <img src="/lightbulb.svg" alt="Illuminazione" className="w-12 h-12" />,
       title: t('commercial_services_page.service4_title'),
       description: t('commercial_services_page.service4_desc'),
       details: [
@@ -61,7 +61,7 @@ const CommercialServices = () => {
       ]
     },
     {
-      icon: <FaIndustry className="w-12 h-12" />,
+      icon: <img src="/industry.svg" alt="Industria" className="w-12 h-12" />,
       title: t('commercial_services_page.service5_title'),
       description: t('commercial_services_page.service5_desc'),
       details: [
@@ -72,7 +72,7 @@ const CommercialServices = () => {
       ]
     },
     {
-      icon: <FaRegBuilding className="w-12 h-12" />,
+      icon: <img src="/building.svg" alt="Edificio" className="w-12 h-12" />,
       title: t('commercial_services_page.service6_title'),
       description: t('commercial_services_page.service6_desc'),
       details: [
@@ -313,16 +313,16 @@ const CommercialServices = () => {
                 aria-label="Chiama Edilquadro per ristrutturazione negozi Roma"
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'CommercialServices - Telefono' })}
               >
-                <FaPhone className="w-5 h-5" />
+                <PhoneIcon className="w-5 h-5" />
                 {t('commercial_services_page.cta_call')}
               </a>
               <a
                 href="mailto:edilquadroroma@gmail.com"
-                className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105"
+                className="bg-cta-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-cta-green-dark transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105"
                 aria-label="Scrivi a Edilquadro per preventivo gratuito ristrutturazione negozi Roma"
                 onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'CommercialServices - Email' })}
               >
-                <FaEnvelope className="w-5 h-5" />
+                <EnvelopeIcon className="w-5 h-5" />
                 {t('free_quote')}
               </a>
             </div>

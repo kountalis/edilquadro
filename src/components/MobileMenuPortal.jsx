@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhone } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
-import logo from '../assets/logo.png';
+import { trackGAEvent } from '../utils/gaEvents';
 
 export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
   const { t } = useTranslation();
@@ -28,10 +27,9 @@ export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
         <div className="w-full flex items-center mb-6">
           <div className="flex items-center gap-3">
             <img
-              src={logo}
-              alt="logo"
-              className="h-8 w-auto"
-              style={{ filter: 'invert(27%) sepia(90%) saturate(2160%) hue-rotate(106deg) brightness(97%) contrast(105%)' }}
+              src="/logo.svg"
+              alt="Logo Edilquadro"
+              className="h-6 w-auto"
             />
             <span className="text-lg font-bold text-white">Edilquadro</span>
           </div>
@@ -50,23 +48,43 @@ export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
           ))}
         </nav>
 
-        <div className="mt-auto w-full px-2">
+        <div className="mt-auto w-full space-y-3 px-2">
           <a
-            href="mailto:edilquadroroma@gmail.com"
-            className="block w-full text-center bg-green-600 py-3 rounded-lg text-white font-medium flex items-center justify-center gap-3"
-            onClick={onClose}
+            href="tel:+393333377320"
+            className="group bg-greenDark text-white px-3 py-1.5 rounded-full text-sm font-semibold hover:bg-greenDarker transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] hover:scale-105 min-h-[44px]"
+            onClick={() => {
+              onClose();
+              trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Mobile - Telefono' });
+            }}
           >
-            <FaEnvelope className="w-4 h-4" />
-            <span>{t('free_quote')}</span>
+            <img
+                src="/phone.svg"
+                alt="Telefono Edilquadro"
+                className="w-7 h-7 object-contain"
+                style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
+              />
+            <div className="flex-1 text-left">
+              <span className="block">Preventivo gratuito</span>
+            </div>
           </a>
 
           <a
-            href="tel:+393333377320"
-            className="block w-full text-center mt-3 bg-green-700 py-3 rounded-lg text-white font-medium flex items-center justify-center gap-3 hover:bg-green-800 shadow-lg transition-colors"
-            onClick={onClose}
+            href="mailto:edilquadroroma@gmail.com"
+            className="group bg-cta-green text-white px-3 py-1.5 rounded-full text-sm font-semibold hover:bg-cta-green-dark transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105 min-h-[44px]"
+            onClick={() => {
+              onClose();
+              trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Mobile - Email' });
+            }}
           >
-            <FaPhone className="w-4 h-4" />
-            <span>{t('home.cta.call_us') || t('call_us') || t('cta_call') || 'Call Us'}</span>
+            <img
+                src="/envelope.svg"
+                alt="Email Edilquadro"
+                className="w-7 h-7 object-contain"
+                style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
+              />
+            <div className="flex-1 text-left">
+              <span className="block">Preventivo gratuito</span>
+            </div>
           </a>
         </div>
       </motion.aside>

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { HiMenu, HiX } from 'react-icons/hi';
-import { FaWhatsapp, FaEnvelope } from 'react-icons/fa';
+// Rimosso MenuIcon e XIcon, usiamo SVG public
 import { motion } from 'framer-motion';
-import logo from '../assets/logo.png';
 import { trackGAEvent } from '../utils/gaEvents';
 import MobileMenuPortal from './MobileMenuPortal';
 import { useTranslation } from 'react-i18next';
@@ -62,9 +60,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
       e.preventDefault();
       const ctaSection = document.getElementById('cta');
       if (ctaSection) {
-        const yOffset = -100;
-        const y = ctaSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+        ctaSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }
   };
@@ -80,12 +76,36 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     <motion.nav
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-dark/50 backdrop-blur-[10px]'
           : 'bg-dark/30 backdrop-blur-[5px]'
       }`}
     >
+      {/* Mobile Menu Button (hamburger left) */}
+      <div className="md:hidden fixed top-4 left-4" style={{ zIndex: 999 }}>
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="inline-flex items-center justify-center p-1 rounded-full text-white transition-colors"
+          aria-expanded={isOpen}
+          aria-label={isOpen ? 'Chiudi menu di navigazione' : 'Apri menu di navigazione'}
+        >
+          {isOpen ? (
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
+        </button>
+      </div>
+
+      {/* Language Switcher - top right */}
+      <div className="fixed top-4 right-4" style={{ zIndex: 9999 }}>
+        <LanguageSwitcher />
+      </div>
           {/* Desktop Logo positioned absolute to left */}
             <div className="hidden md:flex items-center absolute left-12 top-1/2 transform -translate-y-1/2" style={{ left: '3rem' }}>
         <Link
@@ -94,12 +114,11 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           style={{ textDecoration: 'none' }}
           aria-label="Vai alla home"
         >
-          <img
-            src={logo}
-            alt="Edilquadro - Impresa Edile Roma"
-            className="h-8 w-7 md:h-10 md:w-8 navbar-logo"
-            style={{ filter: 'invert(27%) sepia(90%) saturate(2160%) hue-rotate(106deg) brightness(97%) contrast(105%)' }}
-          />
+            <img
+              src="/logo.svg"
+              alt="Edilquadro - Impresa Edile Roma"
+              className="h-11 w-auto max-h-[64px]"
+            />
           <span
             className="text-2xl md:text-4xl font-bold navbar-title transition-all duration-200 bg-clip-text"
             style={{
@@ -113,31 +132,24 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         </Link>
       </div>
 
-      {/* Desktop Language (absolute right edge) - aligned with logo */}
-      {!isMobileView && (
-        <div className="hidden md:flex items-center absolute right-12 top-1/2 transform -translate-y-1/2" style={{ right: '3rem' }}>
-          <LanguageSwitcher />
-        </div>
-      )}
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="flex justify-center items-center h-20">
-          {/* Mobile Logo (centered) */}
-          <div className="flex items-center md:hidden">
+        <div className="flex justify-center md:justify-center items-center h-20 md:h-20">
+          {/* Mobile Layout: Hamburger (fixed left) + Logo (flex) + Language (fixed right) */}
+          <div className="md:hidden absolute inset-0 flex justify-center items-center pointer-events-none">
+            {/* Mobile Logo (centered, non-interactive area) */}
             <Link
               to="/"
-              className="flex-shrink-0 flex items-center gap-2 group"
+              className="flex-shrink-0 flex items-center gap-1 group pointer-events-auto"
               style={{ textDecoration: 'none' }}
               aria-label="Vai alla home"
             >
               <img
-                src={logo}
-                alt="Edilquadro - Impresa Edile Roma"
-                className="h-8 w-7 navbar-logo"
-                style={{ filter: 'invert(27%) sepia(90%) saturate(2160%) hue-rotate(106deg) brightness(97%) contrast(105%)' }}
-              />
+                  src="/logo.svg"
+                  alt="Edilquadro - Impresa Edile Roma"
+                  className="h-6 w-auto text-white"
+                />
               <span
-                className="text-xl font-bold navbar-title transition-all duration-200 bg-clip-text ml-2"
+                className="text-lg font-bold navbar-title transition-all duration-200 bg-clip-text ml-1"
                 style={{
                   color: 'white'
                 }}
@@ -178,13 +190,13 @@ const Navbar = ({ isOpen, setIsOpen }) => {
             <div className="flex items-center justify-center h-full space-x-4">
                 <motion.a
                   href="mailto:edilquadroroma@gmail.com"
-                  className="bg-green-600 text-white px-6 h-12 rounded-full text-lg font-medium hover:bg-green-700 transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)]"
+                  className="bg-cta-green text-white px-6 h-12 rounded-full text-lg font-medium hover:bg-cta-green-dark transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)]"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   style={{ textDecoration: 'none' }}
                   onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Navbar - Email' })}
                 >
-                  <FaEnvelope className="w-5 h-5" />
+                  <img src="/envelope.svg" alt="Email" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
                   <span className="hidden sm:inline">{t('free_quote')}</span>
                 </motion.a>
                 <motion.a
@@ -196,7 +208,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                   whileTap={{ scale: 0.95 }}
                   onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Navbar - WhatsApp' })}
                 >
-                  <FaWhatsapp className="w-5 h-5" />
+                  <img src="/Whatsapp.svg" alt="WhatsApp" className="w-6 h-6" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
                 </motion.a>
                 {/* desktop LanguageSwitcher moved outside centered container to align with logo */}
             </div>
@@ -205,23 +217,8 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           {/* Desktop Language (absolute right edge) */}
           {/* (moved to be a sibling of the logo to ensure same reference point) */}
 
-          {/* Mobile Language (fixed right) */}
-          {isMobileView && (
-            <div className="md:hidden fixed right-4 top-5 z-60">
-              <LanguageSwitcher />
-            </div>
-          )}
-
           {/* Mobile Menu Button (hamburger left) */}
-          <div className="md:hidden fixed top-5 left-4 z-60">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-full text-white bg-dark/80 hover:text-gray-300 hover:bg-dark/60 mobile-menu-button shadow-lg"
-              style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.15)' }}
-            >
-              {isOpen ? <HiX className="h-7 w-7" /> : <HiMenu className="h-7 w-7" />}
-            </button>
-          </div>
+          {/* REMOVED - moved to absolute positioning within nav above */}
         </div>
       </div>
 
@@ -232,5 +229,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     </motion.nav>
   );
 };
+
+// ...existing code...
 
 export default Navbar;

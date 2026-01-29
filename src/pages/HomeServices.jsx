@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaPaintBrush, FaPlug, FaTools, FaBath, FaHammer, FaRegLightbulb, FaPhone, FaEnvelope } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
 import { generateLocalBusinessSchema } from "../utils/seo";
 import { useTranslation } from 'react-i18next';
+// Rimosso import icone React, usiamo solo SVG public
 
 const HomeServices = () => {
   const { t, i18n } = useTranslation();
@@ -16,7 +16,7 @@ const HomeServices = () => {
 
   const services = [
     {
-      icon: <FaPaintBrush className="w-12 h-12" />,
+      icon: <img src="/paintbrush.svg" alt="Imbiancatura" className="w-12 h-12" />,
       title: t('home_services_page.service1_title'),
       description: t('home_services_page.service1_desc'),
       details: [
@@ -27,7 +27,7 @@ const HomeServices = () => {
       ]
     },
     {
-      icon: <FaPlug className="w-12 h-12" />,
+      icon: <img src="/plug.svg" alt="Elettricista" className="w-12 h-12" />,
       title: t('home_services_page.service2_title'),
       description: t('home_services_page.service2_desc'),
       details: [
@@ -38,7 +38,7 @@ const HomeServices = () => {
       ]
     },
     {
-      icon: <FaTools className="w-12 h-12" />,
+      icon: <img src="/tools.svg" alt="Attrezzi" className="w-12 h-12" />,
       title: t('home_services_page.service3_title'),
       description: t('home_services_page.service3_desc'),
       details: [
@@ -49,7 +49,7 @@ const HomeServices = () => {
       ]
     },
     {
-      icon: <FaBath className="w-12 h-12" />,
+      icon: <img src="/bath.svg" alt="Bagno" className="w-12 h-12" />,
       title: t('home_services_page.service4_title'),
       description: t('home_services_page.service4_desc'),
       details: [
@@ -60,7 +60,7 @@ const HomeServices = () => {
       ]
     },
     {
-      icon: <FaHammer className="w-12 h-12" />,
+      icon: <img src="/hammer.svg" alt="Martello" className="w-12 h-12" />,
       title: t('home_services_page.service5_title'),
       description: t('home_services_page.service5_desc'),
       details: [
@@ -71,7 +71,7 @@ const HomeServices = () => {
       ]
     },
     {
-      icon: <FaRegLightbulb className="w-12 h-12" />,
+      icon: <img src="/lightbulb.svg" alt="Illuminazione" className="w-12 h-12" />,
       title: t('home_services_page.service6_title'),
       description: t('home_services_page.service6_desc'),
       details: [
@@ -318,16 +318,16 @@ const HomeServices = () => {
                 aria-label="Chiama Edilquadro per ristrutturazione casa Roma"
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'HomeServices - Telefono' })}
               >
-                <FaPhone className="w-5 h-5" />
+                <PhoneIcon className="w-5 h-5" />
                 {t('home_services_page.cta_call')}
               </a>
               <a
                 href="mailto:edilquadroroma@gmail.com"
-                className="bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-700 transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105"
+                className="bg-cta-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-cta-green-dark transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105"
                 aria-label="Scrivi a Edilquadro per preventivo gratuito ristrutturazione casa Roma"
                 onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'HomeServices - Email' })}
               >
-                <FaEnvelope className="w-5 h-5" />
+                <EnvelopeIcon className="w-5 h-5" />
                 {t('free_quote')}
               </a>
             </div>

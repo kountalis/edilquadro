@@ -33,13 +33,18 @@ export default {
         }
       },
       colors: {
-        whatsapp: '#25D366',
-        whatsappDark: '#128C7E',
+        whatsapp: '#0C462D',
+        whatsappDark: '#041B13',
         dark: '#1C1C1C',
         greenDark: '#006400',
         greenDarker: '#004d00',
-        viber: '#7360F2',
-        viberDark: '#5942a3',
+        viber: '#5C42D1',
+        viberDark: '#31217B',
+        'cta-green': {
+          DEFAULT: '#0F4C2F',
+          dark: '#061D14',
+          light: '#1A6948',
+        },
         grayBg: '#636B70',
         // altri colori custom se servono
       }

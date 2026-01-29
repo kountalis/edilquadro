@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaTimes, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+// Rimosso import icone React, usiamo SVG public
 import LazyImage from './LazyImage';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
@@ -200,7 +200,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
               aria-label="Chiudi"
             >
-              <FaTimes className="w-5 h-5" />
+              <img src="/x.svg" alt="Chiudi" className="w-5 h-5" />
             </button>
             
             {/* Image Gallery */}
@@ -244,7 +244,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
                     aria-label="Immagine precedente"
                   >
-                    <FaArrowLeft className="w-5 h-5" />
+                    <ArrowLeftIcon className="w-5 h-5" />
                   </button>
                   <button
                     onClick={(e) => {
@@ -254,7 +254,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     className="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
                     aria-label="Immagine successiva"
                   >
-                    <FaArrowRight className="w-5 h-5" />
+                    <ArrowRightIcon className="w-5 h-5" />
                   </button>
                 </>
               )}

@@ -17,7 +17,7 @@ const CommercialServices = () => {
 
   const services = [
     {
-      icon: <img src="/paintbrush.svg" alt="Imbiancatura" className="w-12 h-12" />,
+      icon: <img src="/servizi-paintbrush.svg" alt="Imbiancatura" className="w-12 h-12" />,
       title: t('commercial_services_page.service1_title'),
       description: t('commercial_services_page.service1_desc'),
       details: [
@@ -28,7 +28,7 @@ const CommercialServices = () => {
       ]
     },
     {
-      icon: <img src="/plug.svg" alt="Elettricista" className="w-12 h-12" />,
+      icon: <img src="/servizi-plug.svg" alt="Elettricista" className="w-12 h-12" />,
       title: t('commercial_services_page.service2_title'),
       description: t('commercial_services_page.service2_desc'),
       details: [
@@ -39,7 +39,7 @@ const CommercialServices = () => {
       ]
     },
     {
-      icon: <img src="/tools.svg" alt="Attrezzi" className="w-12 h-12" />,
+      icon: <img src="/servizi-floor.svg" alt="Attrezzi" className="w-12 h-12" />,
       title: t('commercial_services_page.service3_title'),
       description: t('commercial_services_page.service3_desc'),
       details: [
@@ -50,7 +50,7 @@ const CommercialServices = () => {
       ]
     },
     {
-      icon: <img src="/lightbulb.svg" alt="Illuminazione" className="w-12 h-12" />,
+      icon: <img src="/servizi-lightbulb.svg" alt="Illuminazione" className="w-12 h-12" />,
       title: t('commercial_services_page.service4_title'),
       description: t('commercial_services_page.service4_desc'),
       details: [
@@ -61,7 +61,7 @@ const CommercialServices = () => {
       ]
     },
     {
-      icon: <img src="/industry.svg" alt="Industria" className="w-12 h-12" />,
+      icon: <img src="/servizi-industrial-building.svg" alt="Industria" className="w-12 h-12" />,
       title: t('commercial_services_page.service5_title'),
       description: t('commercial_services_page.service5_desc'),
       details: [
@@ -72,7 +72,7 @@ const CommercialServices = () => {
       ]
     },
     {
-      icon: <img src="/building.svg" alt="Edificio" className="w-12 h-12" />,
+      icon: <img src="/servizi-constructor.svg" alt="Edificio" className="w-12 h-12" />,
       title: t('commercial_services_page.service6_title'),
       description: t('commercial_services_page.service6_desc'),
       details: [
@@ -313,7 +313,7 @@ const CommercialServices = () => {
                 aria-label="Chiama Edilquadro per ristrutturazione negozi Roma"
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'CommercialServices - Telefono' })}
               >
-                <PhoneIcon className="w-5 h-5" />
+                <img src="/phone.svg" alt="Telefono" className="w-5 h-5" />
                 {t('commercial_services_page.cta_call')}
               </a>
               <a
@@ -322,7 +322,7 @@ const CommercialServices = () => {
                 aria-label="Scrivi a Edilquadro per preventivo gratuito ristrutturazione negozi Roma"
                 onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'CommercialServices - Email' })}
               >
-                <EnvelopeIcon className="w-5 h-5" />
+                <img src="/envelope.svg" alt="Email" className="w-5 h-5" />
                 {t('free_quote')}
               </a>
             </div>

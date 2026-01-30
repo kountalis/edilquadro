@@ -137,9 +137,15 @@ const Contact = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="text-4xl md:text-6xl font-bold mb-6 text-white text-center"
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight text-center"
                 >
-                  {t('contact_page.header_title')}
+                  <Trans i18nKey="contact_page.header_title"
+                    components={{
+                      0: <strong className="text-green-400" />,
+                      1: <span className="block h-6" />,
+                      2: <span className="text-2xl md:text-3xl lg:text-4xl block font-semibold" />,
+                    }}
+                  />
                 </motion.h1>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -179,7 +185,7 @@ const Contact = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1 }}
-              className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px] shadow"
+              className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px]"
               onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Contact - Telefono' })}
             >
               <img
@@ -205,7 +211,7 @@ const Contact = () => {
               <img
                 src="/envelope.svg"
                 alt="Email Edilquadro"
-                className="w-[3.35rem] h-[3.35rem] md:w-[3.6rem] md:h-[3.6rem] object-contain"
+                className="w-8 h-8 object-contain"
                 loading="lazy"
                 style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
               />
@@ -221,13 +227,13 @@ const Contact = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="group p-6 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-4 min-h-[90px]"
+              className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px]"
               onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Contact - WhatsApp' })}
             >
               <img
                 src="/Whatsapp.svg"
                 alt="WhatsApp Edilquadro"
-                className="w-10 h-10 object-contain"
+                className="w-8 h-8 object-contain"
                 loading="lazy"
                 style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
               />
@@ -243,13 +249,13 @@ const Contact = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="group p-6 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-4 min-h-[90px] shadow"
+              className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px] shadow"
               onClick={() => trackGAEvent({ action: 'click_viber', category: 'Contatto', label: 'Contact - Viber' })}
             >
               <img
                 src="/viber.svg"
                 alt="Viber Edilquadro"
-                className="w-[2.2rem] h-[2.2rem] object-contain"
+                className="w-8 h-8 object-contain"
                 loading="lazy"
                 style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
               />

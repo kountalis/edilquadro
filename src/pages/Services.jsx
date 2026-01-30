@@ -147,8 +147,15 @@ const Services = () => {
               transition={{ duration: 0.5 }}
               className="text-center mb-16"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-                {t('services_page.header_title')}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+                <Trans i18nKey="services_page.header_title"
+                  components={{
+                    0: <strong className="text-green-400" />,
+                    1: <span className="block h-6" />,
+                    2: <span className="text-2xl md:text-3xl lg:text-4xl block font-semibold" />,
+                    3: <span className="text-2xl md:text-3xl lg:text-4xl block -mt-1 font-semibold" />,
+                  }}
+                />
               </h1>
               <p className="text-xl text-white mb-6">
                 <Trans i18nKey="services_page.header_subtitle" components={{

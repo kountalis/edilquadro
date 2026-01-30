@@ -105,7 +105,7 @@ const ProjectGallery = ({ projects }) => {
                     whileHover={{ x: 5 }}
                   >
                     {project.images ? t('home.featured_projects.see_all_photos', { count: project.images.length }) : t('home.featured_projects.see_details')}
-                    <img src="/arrow-right.svg" alt="Avanti" className="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
+                    <img src="/arrow.svg" alt="Freccia" className="ml-2 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'invert(1) sepia(1) hue-rotate(90deg) saturate(3)' }} />
                   </motion.span>
                 </div>
               </div>
@@ -128,19 +128,19 @@ const Home = () => {
 
   const services = [
     {
-      icon: <img src="/home.svg" alt="Casa" className="w-8 h-8" />,
+      icon: <img src="/home.svg" alt="Casa" className="w-14 h-14" />,
       title: t('home.services.card1_title'),
       description: t('home.services.card1_desc'),
       link: "/servizi/casa"
     },
     {
-      icon: <img src="/shop.svg" alt="Negozio" className="w-8 h-8" />,
+      icon: <img src="/shop.svg" alt="Negozio" className="w-14 h-14" />,
       title: t('home.services.card2_title'),
       description: t('home.services.card2_desc'),
       link: "/servizi/commerciale"
     },
     {
-      icon: <img src="/building.svg" alt="Edificio" className="w-8 h-8" />,
+      icon: <img src="/building.svg" alt="Edificio" className="w-14 h-14" />,
       title: t('home.services.card3_title'),
       description: t('home.services.card3_desc'),
       link: "/servizi/edifici"
@@ -264,7 +264,14 @@ const Home = () => {
                     </div>
                   </div>
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-                    {t('home.hero_title')}
+                    <Trans i18nKey="home.hero_title"
+                      components={{
+                        0: <strong className="text-green-400" />,
+                        1: <span className="block h-6" />,
+                        2: <span className="text-2xl md:text-3xl lg:text-4xl block font-semibold" />,
+                        3: <span className="text-2xl md:text-3xl lg:text-4xl block -mt-1 font-semibold" />,
+                      }}
+                    />
                   </h1>
                   <motion.p
                     className="text-xl md:text-2xl mb-12 font-visby text-gray-200"
@@ -293,6 +300,7 @@ const Home = () => {
   
           <section className="py-20 bg-grayBg">
             <div className="container mx-auto px-4">
+              <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">{t('home.services.title')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 {services.map((service, index) => (
                   <motion.div
@@ -308,9 +316,9 @@ const Home = () => {
                     className="group bg-gradient-to-br from-gray-900/90 to-black/90 p-8 rounded-2xl shadow-xl border border-white/10 transform will-change-transform hover:shadow-2xl flex flex-col justify-between lazy-load-box"
                     style={{ minHeight: '300px' }}
                   >
-                    <div className="relative mb-6 w-16 h-16">
+                    <div className="relative mb-12 w-16 h-16 flex items-center justify-center">
                       <div className="absolute inset-0 bg-green-500/20 rounded-lg blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                      <div className="relative bg-black/50 rounded-lg p-4 border border-white/10 group-hover:border-green-500/30 transition-colors">
+                      <div className="relative bg-black/50 rounded-lg p-3 border border-white/10 group-hover:border-green-500/30 transition-colors w-full h-full flex items-center justify-center">
                         <div className="text-green-500 transform group-hover:scale-110 transition-transform duration-300">
                           {service.icon}
                         </div>
@@ -335,11 +343,11 @@ const Home = () => {
                           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
                         </span>
                         <motion.div
-                          className="ml-2"
+                          className="ml-2 w-12 h-12"
                           whileHover={{ x: 5 }}
                           transition={{ duration: 0.2 }}
                         >
-                          <img src="/arrow-right.svg" alt="Avanti" className="transform group-hover/link:translate-x-1 transition-transform duration-300" />
+                          <img src="/arrow.svg" alt="Avanti" className="w-full h-full transform group-hover/link:translate-x-1 transition-transform duration-300" />
                         </motion.div>
                       </Link>
                     </div>
@@ -388,7 +396,7 @@ const Home = () => {
                   className="inline-flex items-center px-8 py-4 rounded-full bg-green-600 text-white text-lg font-semibold shadow-lg hover:bg-green-700 transition-colors duration-300 group"
                 >
                   {t('home.shops_renovation.discover_more')}
-                  <img src="/arrow-right.svg" alt="Avanti" className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  <img src="/arrow.svg" alt="Avanti" className="ml-3 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'brightness(0) saturate(100%) invert(1)', strokeWidth: '2px' }} />
                 </Link>
               </div>
             </div>

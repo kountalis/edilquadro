@@ -1,17 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- Edificio con finestre in griglia elegante -->
-  <!-- Corpo principale -->
-  <rect x="10" y="12" width="44" height="44" rx="2" fill="#22c55e" stroke="none"/>
-  <!-- Prima riga di finestre -->
-  <rect x="16" y="19" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
-  <rect x="29" y="19" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
-  <rect x="42" y="19" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
-  <!-- Seconda riga di finestre -->
-  <rect x="16" y="32" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
-  <rect x="29" y="32" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
-  <rect x="42" y="32" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
-  <!-- Terza riga di finestre -->
-  <rect x="16" y="45" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
-  <rect x="29" y="45" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
-  <rect x="42" y="45" width="7" height="7" rx="1" fill="#000000" stroke="none"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg id="_x32_" width="800px" height="800px" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+	.st0{fill:#22c55e;}
+</style>
+
+	<path class="st0" d="m52.963 0v512h176.55v-123.59h52.965v123.59h176.56v-512h-406.07zm123.59 441.38h-52.966v-52.966h52.966v52.966zm0-105.93h-52.966v-52.966h52.966v52.966zm0-105.93h-52.966v-52.966h52.966v52.966zm0-105.93h-52.966v-52.965h52.966v52.965zm105.93 211.86h-52.965v-52.966h52.965v52.966zm0-105.93h-52.965v-52.966h52.965v52.966zm0-105.93h-52.965v-52.965h52.965v52.965zm105.94 317.79h-52.97v-52.966h52.97v52.966zm0-105.93h-52.97v-52.966h52.97v52.966zm0-105.93h-52.97v-52.966h52.97v52.966zm0-105.93h-52.97v-52.965h52.97v52.965z"/>
+
 </svg>

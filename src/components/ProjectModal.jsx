@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-// Rimosso import icone React, usiamo SVG public
 import LazyImage from './LazyImage';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
@@ -9,22 +8,18 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
-  
-  // Blocca swipe multipli rapidi
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // Reset current image index when project changes
   useEffect(() => {
     setCurrentImageIndex(0);
     setIsLoading(true);
     
-    // Preload all images when modal opens
     if (project && project.images) {
       project.images.forEach((imageSrc, index) => {
         const img = new Image();
         img.src = imageSrc;
         img.onload = () => {
-          // Image loaded successfully
+          //
         };
         img.onerror = () => {
           console.error(`Failed to preload image ${index + 1}: ${imageSrc}`);
@@ -33,7 +28,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     }
   }, [project]);
   
-  // Safety check: ensure current image index is within bounds
   useEffect(() => {
     if (project && project.images) {
       const maxIndex = project.images.length - 1;
@@ -43,7 +37,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     }
   }, [project, currentImageIndex]);
   
-  // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!isOpen) return;
@@ -67,11 +60,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, currentImageIndex, project]);
   
-  // Lock body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-      document.body.style.paddingRight = '15px'; // Prevent layout shift due to scrollbar removal
+      document.body.style.paddingRight = '15px';
     } else {
       document.body.style.overflow = 'auto';
       document.body.style.paddingRight = '0';
@@ -87,10 +79,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
   
   const images = project.images || [project.image];
   
-  // Safety check: if no images, don't render modal
   if (!images || images.length === 0) return null;
   
-  // Safety check: ensure current image is valid
   const currentImage = images[currentImageIndex];
   if (!currentImage) {
     setCurrentImageIndex(0);
@@ -101,22 +91,27 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setIsLoading(true);
+    
     setCurrentImageIndex((prevIndex) => {
       const nextIndex = prevIndex === images.length - 1 ? 0 : prevIndex + 1;
-      
-      // Force image preload for next image
       const nextImageSrc = images[nextIndex];
       if (nextImageSrc) {
         const img = new Image();
         img.src = nextImageSrc;
         img.onload = () => {
-          // Image loaded successfully
+          setIsLoading(false);
+          setIsTransitioning(false);
         };
         img.onerror = () => {
           console.error(`Failed to preload image: ${nextImageSrc}`);
+          setIsLoading(false);
+          setIsTransitioning(false);
         };
+        setTimeout(() => {
+          setIsLoading(false);
+          setIsTransitioning(false);
+        }, 3000);
       }
-      
       return nextIndex;
     });
   };
@@ -125,27 +120,31 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     if (isTransitioning) return;
     setIsTransitioning(true);
     setIsLoading(true);
+    
     setCurrentImageIndex((prevIndex) => {
       const prevIndexNew = prevIndex === 0 ? images.length - 1 : prevIndex - 1;
-      
-      // Force image preload for previous image
       const prevImageSrc = images[prevIndexNew];
       if (prevImageSrc) {
         const img = new Image();
         img.src = prevImageSrc;
         img.onload = () => {
-          // Image loaded successfully
+          setIsLoading(false);
+          setIsTransitioning(false);
         };
         img.onerror = () => {
           console.error(`Failed to preload image: ${prevImageSrc}`);
+          setIsLoading(false);
+          setIsTransitioning(false);
         };
+        setTimeout(() => {
+          setIsLoading(false);
+          setIsTransitioning(false);
+        }, 3000);
       }
-      
       return prevIndexNew;
     });
   };
   
-  // Touch handlers for swipe navigation
   const handleTouchStart = (e) => {
     setTouchStart(e.targetTouches[0].clientX);
   };
@@ -157,16 +156,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
   const handleTouchEnd = () => {
     const swipeDistance = touchStart - touchEnd;
     if (swipeDistance > 100) {
-      // Swipe left
       nextImage();
     }
     if (swipeDistance < -100) {
-      // Swipe right
       prevImage();
     }
   };
   
-  // Generate WebP source if image is jpg/jpeg/png
   const getWebpSource = (imageSrc) => {
     if (imageSrc && imageSrc.match(/\.(jpg|jpeg|png)$/i)) {
       return imageSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
@@ -174,7 +170,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     return null;
   };
   
-  // Use React Portal to render modal at document.body
   return createPortal(
     <AnimatePresence>
       {isOpen && (
@@ -182,42 +177,50 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+          className="fixed inset-0 z-[99999] flex items-center justify-center p-2 md:p-4 bg-black/90 backdrop-blur-sm"
           onClick={onClose}
         >
-          {/* Modal Content */}
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ type: 'spring', damping: 25 }}
-            className="relative w-full max-w-5xl bg-gray-900 rounded-xl overflow-hidden shadow-2xl"
+            className="relative w-full max-w-2xl h-[90vh] md:h-[95vh] bg-gray-900 rounded-xl overflow-hidden shadow-2xl flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
-              aria-label="Chiudi"
-            >
-              <img src="/x.svg" alt="Chiudi" className="w-5 h-5" />
-            </button>
-            
-            {/* Image Gallery */}
+            {/* Header - Fixed */}
+            <div className="flex-shrink-0 flex items-center justify-between p-3 md:p-4 bg-gradient-to-r from-gray-900 to-gray-800 border-b border-gray-700">
+              <h3 className="text-lg md:text-xl font-bold text-white truncate flex-1">{project.title}</h3>
+              <button
+                onClick={onClose}
+                className="flex-shrink-0 ml-2 text-white hover:opacity-70 transition-opacity"
+                aria-label="Chiudi"
+              >
+                <span className="text-2xl font-black leading-none" style={{ fontWeight: '900' }}>×</span>
+              </button>
+            </div>
+
+            {/* Description Section - Fixed */}
+            <div className="flex-shrink-0 p-3 md:p-4 bg-gray-800 border-b border-gray-700">
+              <p className="text-green-400 text-xs md:text-sm font-semibold mb-1">{project.category.charAt(0).toUpperCase() + project.category.slice(1)}</p>
+              {project.description && (
+                <p className="text-gray-300 text-sm md:text-base">{project.description}</p>
+              )}
+            </div>
+
+            {/* Image Container - Fixed Height */}
             <div 
-              className="relative h-[70vh] w-full bg-black"
+              className="flex-shrink-0 relative h-[45vh] md:h-[50vh] w-full bg-black"
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
             >
-              {/* Loading Indicator */}
               {isLoading && (
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0 flex items-center justify-center z-20">
                   <div className="w-12 h-12 border-4 border-green-500/30 border-t-green-500 rounded-full animate-spin"></div>
                 </div>
               )}
               
-              {/* Current Image */}
               <img
                 src={currentImage}
                 alt={`${project.title} - Immagine ${currentImageIndex + 1}`}
@@ -233,7 +236,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 loading="eager"
                 fetchpriority="high"
               />
-              {/* Navigation Arrows */}
+
               {images.length > 1 && (
                 <>
                   <button
@@ -241,68 +244,69 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       e.stopPropagation();
                       prevImage();
                     }}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                    className="absolute left-2 md:left-3 top-1/2 transform -translate-y-1/2 z-40 text-white hover:opacity-70 transition-opacity"
                     aria-label="Immagine precedente"
+                    disabled={isTransitioning}
                   >
-                    <ArrowLeftIcon className="w-5 h-5" />
+                    <span className="text-2xl md:text-3xl font-black" style={{ fontWeight: '900' }}>&lt;</span>
                   </button>
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
                       nextImage();
                     }}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+                    className="absolute right-2 md:right-3 top-1/2 transform -translate-y-1/2 z-40 text-white hover:opacity-70 transition-opacity"
                     aria-label="Immagine successiva"
+                    disabled={isTransitioning}
                   >
-                    <ArrowRightIcon className="w-5 h-5" />
+                    <span className="text-2xl md:text-3xl font-black" style={{ fontWeight: '900' }}>&gt;</span>
                   </button>
                 </>
               )}
-              {/* Image Counter */}
+
               {images.length > 1 && (
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 px-3 py-1 rounded-full bg-black/70 text-white text-sm">
+                <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 text-white text-xs md:text-sm z-40">
                   {currentImageIndex + 1} / {images.length}
                 </div>
               )}
             </div>
-            {/* Project Info */}
-            <div className="p-6 bg-gradient-to-t from-gray-900 to-gray-800">
-              <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-              <p className="text-green-400 mb-4">{project.category.charAt(0).toUpperCase() + project.category.slice(1)}</p>
-              {project.description && (
-                <p className="text-gray-300">{project.description}</p>
-              )}
-              {/* Thumbnail Navigation */}
-              {images.length > 1 && (
-                <div className="mt-4 overflow-x-auto pb-2">
-                  <div className="flex space-x-2">
-                    {images.map((image, index) => (
-                      <button
-                        key={index}
-                        onClick={() => {
-                          setCurrentImageIndex(index);
-                          setIsLoading(true);
-                        }}
-                        className={`flex-shrink-0 w-16 h-16 rounded-md overflow-hidden border-2 transition-all ${
-                          currentImageIndex === index ? 'border-green-500 scale-110' : 'border-transparent opacity-70'
-                        }`}
-                        aria-label={`Vai all'immagine ${index + 1}`}
-                      >
-                        <LazyImage
-                          src={image || images[0]}
-                          webpSrc={getWebpSource(image || images[0])}
-                          alt={`Miniatura ${index + 1}`}
-                          className="w-full h-full"
-                          imageClassName="object-cover object-center"
-                          width="64"
-                          height="64"
-                        />
-                      </button>
-                    ))}
-                  </div>
+
+            {/* Thumbnail Navigation - Scrollable */}
+            {images.length > 1 && (
+              <div className="flex-shrink-0 p-2 md:p-3 bg-gray-800 border-t border-gray-700 overflow-x-auto">
+                <div className="flex space-x-2">
+                  {images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => {
+                        if (isTransitioning) return;
+                        setCurrentImageIndex(index);
+                        setIsLoading(true);
+                        setIsTransitioning(true);
+                        setTimeout(() => {
+                          setIsTransitioning(false);
+                        }, 2000);
+                      }}
+                      disabled={isTransitioning}
+                      className={`flex-shrink-0 w-14 h-14 md:w-16 md:h-16 rounded-md overflow-hidden border-2 transition-all ${
+                        currentImageIndex === index ? 'border-green-500 scale-110' : 'border-transparent opacity-70'
+                      }`}
+                      aria-label={`Vai all'immagine ${index + 1}`}
+                    >
+                      <LazyImage
+                        src={image || images[0]}
+                        webpSrc={getWebpSource(image || images[0])}
+                        alt={`Miniatura ${index + 1}`}
+                        className="w-full h-full"
+                        imageClassName="object-cover object-center"
+                        width="64"
+                        height="64"
+                      />
+                    </button>
+                  ))}
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </motion.div>
         </motion.div>
       )}

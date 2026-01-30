@@ -17,7 +17,7 @@ const BuildingServices = () => {
 
   const services = [
     {
-      icon: <img src="/paintbrush.svg" alt="Imbiancatura" className="w-12 h-12" />,
+      icon: <img src="/servizi-floor.svg" alt="Imbiancatura" className="w-12 h-12" />,
       title: t('building_services_page.service1_title'),
       description: t('building_services_page.service1_desc'),
       details: [
@@ -28,7 +28,7 @@ const BuildingServices = () => {
       ]
     },
     {
-      icon: <img src="/hardhat.svg" alt="Casco" className="w-12 h-12" />,
+      icon: <img src="/servizi-hammer.svg" alt="Casco" className="w-12 h-12" />,
       title: t('building_services_page.service2_title'),
       description: t('building_services_page.service2_desc'),
       details: [
@@ -39,7 +39,7 @@ const BuildingServices = () => {
       ]
     },
     {
-      icon: <img src="/tools.svg" alt="Attrezzi" className="w-12 h-12" />,
+      icon: <img src="/servizi-roof.svg" alt="Attrezzi" className="w-12 h-12" />,
       title: t('building_services_page.service3_title'),
       description: t('building_services_page.service3_desc'),
       details: [
@@ -50,7 +50,7 @@ const BuildingServices = () => {
       ]
     },
     {
-      icon: <img src="/solarpanel.svg" alt="Pannello solare" className="w-12 h-12" />,
+      icon: <img src="/servizi-lightbulb.svg" alt="Pannello solare" className="w-12 h-12" />,
       title: t('building_services_page.service4_title'),
       description: t('building_services_page.service4_desc'),
       details: [
@@ -61,7 +61,7 @@ const BuildingServices = () => {
       ]
     },
     {
-      icon: <img src="/shield.svg" alt="Scudo" className="w-12 h-12" />,
+      icon: <img src="/servizi-constructor.svg" alt="Scudo" className="w-12 h-12" />,
       title: t('building_services_page.service5_title'),
       description: t('building_services_page.service5_desc'),
       details: [
@@ -72,7 +72,7 @@ const BuildingServices = () => {
       ]
     },
     {
-      icon: <img src="/water.svg" alt="Acqua" className="w-12 h-12" />,
+      icon: <img src="/servizi-elevator.svg" alt="Acqua" className="w-12 h-12" />,
       title: t('building_services_page.service6_title'),
       description: t('building_services_page.service6_desc'),
       details: [
@@ -313,7 +313,7 @@ const BuildingServices = () => {
                 className="bg-greenDark text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-greenDarker transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] hover:scale-105"
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'BuildingServices - Telefono' })}
               >
-                <PhoneIcon className="w-5 h-5" />
+                <img src="/phone.svg" alt="Telefono" className="w-5 h-5" />
                 {t('building_services_page.cta_call')}
               </a>
               <a
@@ -321,7 +321,7 @@ const BuildingServices = () => {
                 className="bg-cta-green text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-cta-green-dark transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105"
                 onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'BuildingServices - Email' })}
               >
-                <EnvelopeIcon className="w-5 h-5" />
+                <img src="/envelope.svg" alt="Email" className="w-5 h-5" />
                 {t('free_quote')}
               </a>
             </div>

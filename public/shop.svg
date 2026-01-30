@@ -1,13 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <!-- Negozio con finestre e porta realistiche -->
-  <!-- Corpo principale -->
-  <rect x="8" y="18" width="48" height="38" rx="2" fill="#22c55e" stroke="none"/>
-  <!-- Finestra vetrina sinistra -->
-  <rect x="12" y="24" width="11" height="12" rx="1" fill="#000000" stroke="none"/>
-  <!-- Finestra vetrina centrale -->
-  <rect x="27" y="24" width="10" height="12" rx="1" fill="#000000" stroke="none"/>
-  <!-- Finestra vetrina destra -->
-  <rect x="41" y="24" width="11" height="12" rx="1" fill="#000000" stroke="none"/>
-  <!-- Porta centrale -->
-  <rect x="26" y="40" width="12" height="16" rx="1" fill="#000000" stroke="none"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <title>shop</title>
+ <desc>Created with Sketch Beta.</desc>
+ <g fill="none" fill-rule="evenodd">
+  <g id="Icon-Set-Filled" transform="translate(-362 -725)" fill="#22c55e">
+   <path id="shop" d="m388.15 725h-20.341l-5.813 10h31.967l-5.813-10zm2.846 24h-25.997l-3e-3 -6h1.964c1.074 0 2.777-0.958 3.498-2.424 0.809 1.425 2.319 2.424 3.761 2.424 1.523 0 3.2-0.906 3.76-2.216 0.561 1.279 2.203 2.216 3.695 2.216 1.48 0 3.013-1.088 3.789-2.574 0.907 1.5 2.198 2.574 3.533 2.574 0.293 0 1.744 0.048 2 0v6zm-28.975-12h-0.025c-0.018 0.435 0 1.431 0 2 0 1.065 0.383 2.229 1.001 3l0.03 11c0 2.209 1.847 4 4.125 4h21.655c2.278 0 4.189-1.791 4.189-4v-11c0.7-0.824 1-1.67 1-3v-2h-31.975z"/>
+  </g>
+ </g>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:title>shop</dc:title>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
 </svg>

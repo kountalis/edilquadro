@@ -16,7 +16,7 @@ const HomeServices = () => {
 
   const services = [
     {
-      icon: <img src="/paintbrush.svg" alt="Imbiancatura" className="w-12 h-12" />,
+      icon: <img src="/servizi-paintbrush.svg" alt="Imbiancatura" className="w-12 h-12" />,
       title: t('home_services_page.service1_title'),
       description: t('home_services_page.service1_desc'),
       details: [
@@ -27,7 +27,7 @@ const HomeServices = () => {
       ]
     },
     {
-      icon: <img src="/plug.svg" alt="Elettricista" className="w-12 h-12" />,
+      icon: <img src="/servizi-plug.svg" alt="Elettricista" className="w-12 h-12" />,
       title: t('home_services_page.service2_title'),
       description: t('home_services_page.service2_desc'),
       details: [
@@ -38,7 +38,7 @@ const HomeServices = () => {
       ]
     },
     {
-      icon: <img src="/tools.svg" alt="Attrezzi" className="w-12 h-12" />,
+      icon: <img src="/servizi-floor.svg" alt="Attrezzi" className="w-12 h-12" />,
       title: t('home_services_page.service3_title'),
       description: t('home_services_page.service3_desc'),
       details: [
@@ -49,7 +49,7 @@ const HomeServices = () => {
       ]
     },
     {
-      icon: <img src="/bath.svg" alt="Bagno" className="w-12 h-12" />,
+      icon: <img src="/servizi-bath.svg" alt="Bagno" className="w-12 h-12" />,
       title: t('home_services_page.service4_title'),
       description: t('home_services_page.service4_desc'),
       details: [
@@ -60,7 +60,7 @@ const HomeServices = () => {
       ]
     },
     {
-      icon: <img src="/hammer.svg" alt="Martello" className="w-12 h-12" />,
+      icon: <img src="/servizi-hammer.svg" alt="Martello" className="w-12 h-12" />,
       title: t('home_services_page.service5_title'),
       description: t('home_services_page.service5_desc'),
       details: [
@@ -71,7 +71,7 @@ const HomeServices = () => {
       ]
     },
     {
-      icon: <img src="/lightbulb.svg" alt="Illuminazione" className="w-12 h-12" />,
+      icon: <img src="/servizi-lightbulb.svg" alt="Illuminazione" className="w-12 h-12" />,
       title: t('home_services_page.service6_title'),
       description: t('home_services_page.service6_desc'),
       details: [
@@ -318,7 +318,7 @@ const HomeServices = () => {
                 aria-label="Chiama Edilquadro per ristrutturazione casa Roma"
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'HomeServices - Telefono' })}
               >
-                <PhoneIcon className="w-5 h-5" />
+                <img src="/phone.svg" alt="Telefono" className="w-5 h-5" />
                 {t('home_services_page.cta_call')}
               </a>
               <a
@@ -327,7 +327,7 @@ const HomeServices = () => {
                 aria-label="Scrivi a Edilquadro per preventivo gratuito ristrutturazione casa Roma"
                 onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'HomeServices - Email' })}
               >
-                <EnvelopeIcon className="w-5 h-5" />
+                <img src="/envelope.svg" alt="Email" className="w-5 h-5" />
                 {t('free_quote')}
               </a>
             </div>

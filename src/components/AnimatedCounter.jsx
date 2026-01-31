@@ -39,3 +39,13 @@ const AnimatedCounter = ({ value, suffix = '', duration = 2.5, start = false }) 
 };
 
 export default AnimatedCounter;
+
+
+
+
+
+
+
+
+
+

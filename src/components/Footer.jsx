@@ -94,7 +94,7 @@ const Footer = () => {
               {/* Email Button - Teal */}
               <a
                 href="mailto:edilquadroroma@gmail.com"
-                className="inline-flex items-center gap-2 bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-teal-600 transition-all hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 active:scale-95"
+                className="inline-flex items-center gap-2 bg-teal-700 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-teal-800 transition-all hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 active:scale-95"
                 onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Footer - Email' })}
                 aria-label="Invia email a Edilquadro"
               >
@@ -112,7 +112,7 @@ const Footer = () => {
                 href="https://wa.me/393333377320"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-all hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105 active:scale-95"
+                className="inline-flex items-center gap-2 bg-emerald-700 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-emerald-800 transition-all hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105 active:scale-95"
                 onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Footer - WhatsApp' })}
                 aria-label="Contatta Edilquadro su WhatsApp"
               >
@@ -161,3 +161,13 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
+
+
+
+
+
+

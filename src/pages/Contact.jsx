@@ -141,7 +141,7 @@ const Contact = () => {
                 >
                   <Trans i18nKey="contact_page.header_title"
                     components={{
-                      0: <strong className="text-green-400" />,
+                      0: <strong className="text-emerald-400" />,
                       1: <span className="block h-6" />,
                       2: <span className="text-2xl md:text-3xl lg:text-4xl block font-semibold" />,
                     }}
@@ -155,13 +155,13 @@ const Contact = () => {
                 >
                   <Trans i18nKey="contact_page.header_subtitle" components={{
                     1: <strong />,
-                    3: <a href="/servizi/casa" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.home_renovation')} />,
-                    5: <a href="/servizi/commerciale" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.shops_renovation')} />,
-                    7: <a href="/servizi/edifici" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.buildings_renovation')} />,
-                    9: <a href="/portfolio" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.portfolio')} />,
-                    11: <a href="/contatti" className="text-green-400 hover:text-green-300 no-underline" title={t('home.cta.free_quote')} />,
+                    3: <a href="/servizi/casa" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.home_renovation')} />,
+                    5: <a href="/servizi/commerciale" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.shops_renovation')} />,
+                    7: <a href="/servizi/edifici" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.buildings_renovation')} />,
+                    9: <a href="/portfolio" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.portfolio')} />,
+                    11: <a href="/contatti" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.cta.free_quote')} />,
                     13: <strong />,
-                    15: <a href="/contatti" className="text-green-400 hover:text-green-300 no-underline" title={t('nav.contact')} />
+                    15: <a href="/contatti" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('nav.contact')} />
                   }} />
                 </motion.p>
               </div>
@@ -171,10 +171,10 @@ const Contact = () => {
           <div className="flex flex-col items-center justify-center mb-12">
             <div className="flex items-center gap-3 mb-2">
               <span className="text-white font-semibold text-lg">{t('contact_page.opening_hours')}</span>
-              <span className="text-green-400 font-semibold">{t('contact_page.weekdays')}</span>
+              <span className="text-emerald-400 font-semibold">{t('contact_page.weekdays')}</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="text-green-400 font-semibold">{t('contact_page.saturday')}</span>
+              <span className="text-emerald-400 font-semibold">{t('contact_page.saturday')}</span>
             </div>
             <div className="text-gray-400 text-sm mt-1">{t('contact_page.sunday')}</div>
           </div>
@@ -273,7 +273,7 @@ const Contact = () => {
             className="max-w-6xl mx-auto mb-16 p-8 bg-black/70 backdrop-blur-sm rounded-2xl border border-white/5"
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 rounded-full bg-green-500/10 text-green-400">
+              <div className="p-3 rounded-full bg-green-500/10 text-emerald-400">
                 <img src="/home.svg" alt="Location" className="w-6 h-6" style={{filter: 'brightness(0.7) saturate(2) hue-rotate(90deg)'}} />
               </div>
               <h2 className="text-2xl font-bold text-white">{t('contact_page.location_title')}</h2>
@@ -299,7 +299,7 @@ const Contact = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">{t('contact_page.review_title')}</h2>
             <div className="flex flex-col md:flex-row gap-8 justify-center items-stretch">
               <div className="bg-black/70 rounded-xl p-4 md:p-6 border border-green-900 shadow-lg flex flex-col items-center justify-center max-w-md w-full min-h-[340px] mx-auto">
-                <h3 className="text-xl md:text-2xl font-semibold text-green-400 mb-2 text-center">{t('contact_page.review_google_title')}</h3>
+                <h3 className="text-xl md:text-2xl font-semibold text-emerald-400 mb-2 text-center">{t('contact_page.review_google_title')}</h3>
                 <p className="text-gray-300 mb-4 text-center text-base md:text-lg">{t('contact_page.review_google_text')}</p>
                 <a
                   href="https://www.google.com/maps/search/?api=1&query=Edilquadro+Roma"
@@ -320,3 +320,13 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
+
+
+
+
+
+
+

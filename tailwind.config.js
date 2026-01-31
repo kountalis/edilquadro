@@ -45,7 +45,7 @@ export default {
           dark: '#061D14',
           light: '#1A6948',
         },
-        grayBg: '#636B70',
+        grayBg: '#2d3436',
         // altri colori custom se servono
       }
     },

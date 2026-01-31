@@ -101,7 +101,7 @@ const ProjectGallery = ({ projects }) => {
                     {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
                   </p>
                   <motion.span 
-                    className="inline-flex items-center text-green-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300"
+                    className="inline-flex items-center text-emerald-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300"
                     whileHover={{ x: 5 }}
                   >
                     {project.images ? t('home.featured_projects.see_all_photos', { count: project.images.length }) : t('home.featured_projects.see_details')}
@@ -244,8 +244,11 @@ const Home = () => {
                 loop
                 muted
                 playsInline
+                fetchpriority="high"
+                preload="auto"
               >
                 <source src="/hero-video.mp4" type="video/mp4" />
+                <track kind="captions" src="/hero-video-captions.vtt" srcLang="it" label="Italiano" />
               </video>
             </div>
             <div className="relative z-10 min-h-screen flex items-center justify-center">
@@ -266,7 +269,7 @@ const Home = () => {
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
                     <Trans i18nKey="home.hero_title"
                       components={{
-                        0: <strong className="text-green-400" />,
+                        0: <strong className="text-emerald-400" />,
                         1: <span className="block h-6" />,
                         2: <span className="text-2xl md:text-3xl lg:text-4xl block font-semibold" />,
                         3: <span className="text-2xl md:text-3xl lg:text-4xl block -mt-1 font-semibold" />,
@@ -283,13 +286,13 @@ const Home = () => {
                       components={{
                         0: <strong />,
                         1: <br />,
-                        2: <Link to="/servizi/casa" className="text-green-400 underline hover:text-green-300 no-underline" title="Ristrutturazione casa Roma" />,
-                        4: <Link to="/servizi/commerciale" className="text-green-400 underline hover:text-green-300 no-underline" title="Ristrutturazione negozi Roma" />,
-                        6: <Link to="/servizi/edifici" className="text-green-400 underline hover:text-green-300 no-underline" title="Ristrutturazione edifici e condomini Roma" />,
-                        8: <Link to="/portfolio" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                        10: <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline" />,
+                        2: <Link to="/servizi/casa" className="text-emerald-600 underline hover:text-emerald-600 no-underline" title="Ristrutturazione casa Roma" />,
+                        4: <Link to="/servizi/commerciale" className="text-emerald-600 underline hover:text-emerald-600 no-underline" title="Ristrutturazione negozi Roma" />,
+                        6: <Link to="/servizi/edifici" className="text-emerald-600 underline hover:text-emerald-600 no-underline" title="Ristrutturazione edifici e condomini Roma" />,
+                        8: <Link to="/portfolio" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                        10: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
                         12: <strong />,
-                        14: <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline" />,
+                        14: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
                       }}
                     />
                   </motion.p>
@@ -358,15 +361,15 @@ const Home = () => {
                 <p className="text-xl text-white">
                   <Trans i18nKey="home.services.description" components={{ 
                       0: <strong />,
-                      1: <Link to="/servizi" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                      2: <Link to="/servizi" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                      3: <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                      4: <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                      5: <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                      6: <Link to="/servizi" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                      7: <Link to="/servizi" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                      8: <Link to="/servizi" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                      9: <Link to="/servizi" className="text-green-400 underline hover:text-green-300 no-underline" />,
+                      1: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                      2: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                      3: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                      4: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                      5: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                      6: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                      7: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                      8: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                      9: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
                   }} />
                 </p>
               </div>
@@ -377,7 +380,7 @@ const Home = () => {
             <div className="container mx-auto px-4">
               <ProjectGallery projects={featuredProjects} />
               <div className="text-center mt-8 text-gray-200 text-lg">
-                <Trans i18nKey="home.featured_projects.explore_portfolio" components={{ 0: <strong />, 2: <Link to="/portfolio" className="text-green-400 underline hover:text-green-300 no-underline" /> }} />
+                <Trans i18nKey="home.featured_projects.explore_portfolio" components={{ 0: <strong />, 2: <Link to="/portfolio" className="text-emerald-600 underline hover:text-emerald-600 no-underline" /> }} />
               </div>
             </div>
           </section>
@@ -389,11 +392,11 @@ const Home = () => {
                   {t('home.shops_renovation.title')}
                 </h2>
                 <p className="text-xl text-gray-200 mb-6">
-                  <Trans i18nKey="home.shops_renovation.description" components={{ 0: <strong />, 1: <Link to="/servizi/commerciale" className="text-green-400 underline hover:text-green-300 no-underline" /> }} />
+                  <Trans i18nKey="home.shops_renovation.description" components={{ 0: <strong />, 1: <Link to="/servizi/commerciale" className="text-emerald-600 underline hover:text-emerald-600 no-underline" /> }} />
                 </p>
                 <Link
                   to="/servizi/commerciale"
-                  className="inline-flex items-center px-8 py-4 rounded-full bg-green-600 text-white text-lg font-semibold shadow-lg hover:bg-green-700 transition-colors duration-300 group"
+                  className="inline-flex items-center px-8 py-4 rounded-full bg-emerald-800 text-white text-lg font-semibold shadow-lg hover:bg-green-700 transition-colors duration-300 group"
                 >
                   {t('home.shops_renovation.discover_more')}
                   <img src="/arrow.svg" alt="Avanti" className="ml-3 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'brightness(0) saturate(100%) invert(1)', strokeWidth: '2px' }} />
@@ -479,8 +482,8 @@ const Home = () => {
                 </h2>
                 <p className="text-xl text-gray-300 mt-6">
                   <Trans i18nKey="home.testimonials.subtitle" components={{
-                    0: <span className="text-green-400 font-semibold" />,
-                    1: <span className="text-green-400 font-semibold" />
+                    0: <span className="text-emerald-400 font-semibold" />,
+                    1: <span className="text-emerald-400 font-semibold" />
                   }} />
                 </p>
               </motion.div>
@@ -517,7 +520,7 @@ const Home = () => {
                             <p className="font-semibold text-white text-lg">
                               {testimonial.author}
                             </p>
-                            <p className="text-green-400 text-sm">
+                            <p className="text-emerald-400 text-sm">
                               {testimonial.role}
                             </p>
                           </div>
@@ -560,9 +563,9 @@ const Home = () => {
                   transition={{ duration: 1, delay: 0.4 }}
                   className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
                 >
-                  <Trans i18nKey="home.cta.description" components={{ 0: <strong />, 1: <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                      2: <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                      3: <Link to="/servizi" className="text-green-400 underline hover:text-green-300 no-underline" />,
+                  <Trans i18nKey="home.cta.description" components={{ 0: <strong />, 1: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                      2: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                      3: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
                       4: <strong /> 
                   }} />
                 </motion.p>
@@ -674,3 +677,13 @@ const Home = () => {
     );
   };
 export default Home;
+
+
+
+
+
+
+
+
+
+

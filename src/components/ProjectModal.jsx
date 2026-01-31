@@ -202,7 +202,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
             {/* Description Section - Fixed */}
             <div className="flex-shrink-0 p-3 md:p-4 bg-gray-800 border-b border-gray-700">
-              <p className="text-green-400 text-xs md:text-sm font-semibold mb-1">{project.category.charAt(0).toUpperCase() + project.category.slice(1)}</p>
+              <p className="text-emerald-400 text-xs md:text-sm font-semibold mb-1">{project.category.charAt(0).toUpperCase() + project.category.slice(1)}</p>
               {project.description && (
                 <p className="text-gray-300 text-sm md:text-base">{project.description}</p>
               )}
@@ -316,3 +316,13 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 };
 
 export default ProjectModal;
+
+
+
+
+
+
+
+
+
+

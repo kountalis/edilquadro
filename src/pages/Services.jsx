@@ -150,7 +150,7 @@ const Services = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
                 <Trans i18nKey="services_page.header_title"
                   components={{
-                    0: <strong className="text-green-400" />,
+                    0: <strong className="text-emerald-400" />,
                     1: <span className="block h-6" />,
                     2: <span className="text-2xl md:text-3xl lg:text-4xl block font-semibold" />,
                     3: <span className="text-2xl md:text-3xl lg:text-4xl block -mt-1 font-semibold" />,
@@ -159,12 +159,12 @@ const Services = () => {
               </h1>
               <p className="text-xl text-white mb-6">
                 <Trans i18nKey="services_page.header_subtitle" components={{
-                  1: <Link to="/servizi/casa" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.home_renovation')} />,
-                  3: <Link to="/servizi/commerciale" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.shops_renovation')} />,
-                  5: <Link to="/servizi/edifici" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.buildings_renovation')} />,
+                  1: <Link to="/servizi/casa" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.home_renovation')} />,
+                  3: <Link to="/servizi/commerciale" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.shops_renovation')} />,
+                  5: <Link to="/servizi/edifici" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.buildings_renovation')} />,
                   7: <strong />,
-                  9: <Link to="/portfolio" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.portfolio')} />,
-                  11: <Link to="/contatti" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.contact')} />
+                  9: <Link to="/portfolio" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.portfolio')} />,
+                  11: <Link to="/contatti" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.contact')} />
                 }} />
               </p>
             </motion.div>
@@ -181,7 +181,7 @@ const Services = () => {
               >
                 <div className="relative mb-6">
                   <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-green-600/10 blur-2xl transform group-hover:scale-110 transition-transform duration-500" />
-                  <div className="relative text-green-400 group-hover:text-green-300 transition-colors duration-300">
+                  <div className="relative text-emerald-400 group-hover:text-emerald-300 transition-colors duration-300">
                     {service.icon}
                   </div>
                 </div>
@@ -339,19 +339,19 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">{t('services_page.faq_main_title')}</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-black/70 rounded-xl p-6 border border-green-900 shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-400 mb-2">{t('services_page.faq1_question')}</h3>
+              <h3 className="text-2xl font-semibold text-emerald-400 mb-2">{t('services_page.faq1_question')}</h3>
               <p className="text-gray-300">{t('services_page.faq1_answer')}</p>
             </div>
             <div className="bg-black/70 rounded-xl p-6 border border-green-900 shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-400 mb-2">{t('services_page.faq2_question')}</h3>
+              <h3 className="text-2xl font-semibold text-emerald-400 mb-2">{t('services_page.faq2_question')}</h3>
               <p className="text-gray-300">{t('services_page.faq2_answer')}</p>
             </div>
             <div className="bg-black/70 rounded-xl p-6 border border-green-900 shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-400 mb-2">{t('services_page.faq3_question')}</h3>
+              <h3 className="text-2xl font-semibold text-emerald-400 mb-2">{t('services_page.faq3_question')}</h3>
               <p className="text-gray-300">{t('services_page.faq3_answer')}</p>
             </div>
             <div className="bg-black/70 rounded-xl p-6 border border-green-900 shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-400 mb-2">{t('services_page.faq4_question')}</h3>
+              <h3 className="text-2xl font-semibold text-emerald-400 mb-2">{t('services_page.faq4_question')}</h3>
               <p className="text-gray-300">{t('services_page.faq4_answer')}</p>
             </div>
           </div>
@@ -361,7 +361,7 @@ const Services = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-black/70 rounded-xl p-6 border border-green-900">
               <div className="flex items-center mb-2">
-                <span className="text-green-400 font-bold mr-2">{t('services_page.review1_author')}</span>
+                <span className="text-emerald-400 font-bold mr-2">{t('services_page.review1_author')}</span>
                 <span className="text-yellow-400">★★★★★</span>
               </div>
               <p className="text-gray-300 italic">{t('services_page.review1_text')}</p>
@@ -369,7 +369,7 @@ const Services = () => {
             </div>
             <div className="bg-black/70 rounded-xl p-6 border border-green-900">
               <div className="flex items-center mb-2">
-                <span className="text-green-400 font-bold mr-2">{t('services_page.review2_author')}</span>
+                <span className="text-emerald-400 font-bold mr-2">{t('services_page.review2_author')}</span>
                 <span className="text-yellow-400">★★★★★</span>
               </div>
               <p className="text-gray-300 italic">{t('services_page.review2_text')}</p>
@@ -383,3 +383,13 @@ const Services = () => {
 };
 
 export default Services;
+
+
+
+
+
+
+
+
+
+

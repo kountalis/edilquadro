@@ -229,9 +229,9 @@ const BuildingServices = () => {
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 <Trans i18nKey="building_services_page.header_subtitle" components={{
-                  1: <Link to="/servizi/casa" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.home_renovation')} />,
-                  3: <Link to="/servizi/commerciale" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.shops_renovation')} />,
-                  5: <Link to="/servizi/edifici" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.buildings_renovation')} />
+                  1: <Link to="/servizi/casa" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.home_renovation')} />,
+                  3: <Link to="/servizi/commerciale" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.shops_renovation')} />,
+                  5: <Link to="/servizi/edifici" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.buildings_renovation')} />
                 }} />
               </p>
             </motion.div>
@@ -251,7 +251,7 @@ const BuildingServices = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
                 <p className="text-gray-300 mb-6">
-                  {service.description} <a href="/contatti" className="text-green-400 underline hover:text-green-200 transition-colors" aria-label="Preventivo ristrutturazione condominio Roma">{t('building_services_page.request_quote')}</a>
+                  {service.description} <a href="/contatti" className="text-emerald-600 underline hover:text-green-200 transition-colors" aria-label="Preventivo ristrutturazione condominio Roma">{t('building_services_page.request_quote')}</a>
                 </p>
                 <ul className="text-gray-300 space-y-2">
                   {service.details.map((detail, idx) => (
@@ -338,3 +338,13 @@ const BuildingServices = () => {
 };
 
 export default BuildingServices;
+
+
+
+
+
+
+
+
+
+

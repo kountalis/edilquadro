@@ -9,7 +9,8 @@
     "optimize-assets": "node scripts/optimize-assets.js",
     "prebuild": "npm run optimize-assets",
     "build": "vite build",
-    "postbuild": "copy deploy-files\\.htaccess dist\\.htaccess && copy deploy-files\\sitemap.xml dist\\sitemap.xml",
+    "postbuild": "npm run prerender && copy deploy-files\\.htaccess dist\\.htaccess && copy deploy-files\\sitemap.xml dist\\sitemap.xml",
+    "prerender": "node scripts/prerender.js",
     "preview": "vite preview --host 0.0.0.0 --port 4173 --strictPort",
     "preview:ci": "vite preview --host 127.0.0.1 --port 4173 --strictPort",
     "lhci": "powershell -ExecutionPolicy Bypass -File scripts/run-lhci.ps1"

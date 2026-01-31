@@ -304,7 +304,7 @@ const Portfolio = () => {
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
                   <Trans i18nKey="portfolio_page.header_title"
                     components={{
-                      0: <strong className="text-green-400" />,
+                      0: <strong className="text-emerald-400" />,
                       1: <span className="block h-6" />,
                       2: <span className="text-2xl md:text-3xl lg:text-4xl block font-semibold" />,
                       3: <span className="text-2xl md:text-3xl lg:text-4xl block -mt-1 font-semibold" />,
@@ -313,11 +313,11 @@ const Portfolio = () => {
                 </h1>
                 <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                   <Trans i18nKey="portfolio_page.header_subtitle" components={{
-                    1: <Link to="/servizi/casa" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.home_renovation')} />,
-                    3: <Link to="/servizi/commerciale" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.shops_renovation')} />,
-                    5: <Link to="/servizi/edifici" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.buildings_renovation')} />,
+                    1: <Link to="/servizi/casa" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.home_renovation')} />,
+                    3: <Link to="/servizi/commerciale" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.shops_renovation')} />,
+                    5: <Link to="/servizi/edifici" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.buildings_renovation')} />,
                     7: <strong />,
-                    9: <Link to="/contatti" className="text-green-400 hover:text-green-300 no-underline" title={t('home.footer_nav.contact')} />
+                    9: <Link to="/contatti" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.contact')} />
                   }} />
                 </p>
               </motion.div>
@@ -346,8 +346,8 @@ const Portfolio = () => {
             </nav>
             <div className="text-center mb-8 text-gray-400 text-sm">
               <Trans i18nKey="portfolio_page.inspiration_text" components={{
-                1: <Link to="/portfolio" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                3: <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline" />
+                1: <Link to="/portfolio" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                3: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />
               }} />
             </div>
           </header>
@@ -448,11 +448,11 @@ const Portfolio = () => {
                   <Trans i18nKey="portfolio_page.cta_subtitle" components={{
                     1: <strong />,
                     3: <strong />,
-                    5: <Link to="/servizi/casa" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                    7: <Link to="/servizi/commerciale" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                    9: <Link to="/servizi/edifici" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                    11: <Link to="/portfolio" className="text-green-400 underline hover:text-green-300 no-underline" />,
-                    13: <Link to="/contatti" className="text-green-400 underline hover:text-green-300 no-underline" />
+                    5: <Link to="/servizi/casa" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                    7: <Link to="/servizi/commerciale" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                    9: <Link to="/servizi/edifici" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                    11: <Link to="/portfolio" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                    13: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />
                   }} />
                 </motion.p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -543,3 +543,13 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+
+
+
+
+
+
+
+
+

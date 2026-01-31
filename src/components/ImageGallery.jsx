@@ -68,7 +68,7 @@ const ImageGallery = ({ images, category, title, id }) => {
                   {category.charAt(0).toUpperCase() + category.slice(1)}
                 </p>
                 <motion.span 
-                  className="inline-flex items-center text-green-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300"
+                  className="inline-flex items-center text-emerald-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300"
                   whileHover={{ x: 5 }}
                 >
                   {`Vedi Tutte le Foto (${images.length})`}
@@ -99,3 +99,13 @@ const ImageGallery = ({ images, category, title, id }) => {
 };
 
 export default ImageGallery;
+
+
+
+
+
+
+
+
+
+

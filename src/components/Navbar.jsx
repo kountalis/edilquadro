@@ -118,6 +118,8 @@ const Navbar = ({ isOpen, setIsOpen }) => {
               src="/logo.svg"
               alt="Edilquadro - Impresa Edile Roma"
               className="h-11 w-auto max-h-[64px]"
+              width="64"
+              height="44"
             />
           <span
             className="text-2xl md:text-4xl font-bold navbar-title transition-all duration-200 bg-clip-text"
@@ -147,6 +149,8 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                   src="/logo.svg"
                   alt="Edilquadro - Impresa Edile Roma"
                   className="h-6 w-auto text-white"
+                  width="24"
+                  height="24"
                 />
               <span
                 className="text-lg font-bold navbar-title transition-all duration-200 bg-clip-text ml-1"
@@ -233,3 +237,13 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 // ...existing code...
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+

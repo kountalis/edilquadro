@@ -250,7 +250,7 @@ const HomeServices = () => {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
                 <p className="text-gray-300 mb-6">
-                  {service.description} <a href="/contatti" className="text-green-400 underline hover:text-green-200 transition-colors" aria-label="Richiedi un preventivo ristrutturazione casa Roma">{t('home_services_page.request_quote')}</a>
+                  {service.description} <a href="/contatti" className="text-emerald-600 underline hover:text-green-200 transition-colors" aria-label="Richiedi un preventivo ristrutturazione casa Roma">{t('home_services_page.request_quote')}</a>
                 </p>
                 <ul className="text-gray-300 space-y-2">
                   {service.details.map((detail, idx) => (
@@ -339,3 +339,13 @@ const HomeServices = () => {
 };
 
 export default HomeServices;
+
+
+
+
+
+
+
+
+
+

@@ -72,7 +72,7 @@ const ProjectGallery = ({ projects = [] }) => {
                       </p>
                     )}
                   </div>
-                  <div className="flex items-center gap-2 text-sm font-semibold text-green-400">
+                  <div className="flex items-center gap-2 text-sm font-semibold text-emerald-400">
                     <span>Apri galleria</span>
                     <ArrowRightIcon className="w-4 h-4" />
                   </div>
@@ -87,3 +87,13 @@ const ProjectGallery = ({ projects = [] }) => {
 };
 
 export default ProjectGallery;
+
+
+
+
+
+
+
+
+
+

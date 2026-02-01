@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-02-01T10:30:25.849Z",
+  "environment": "development",
+  "tests": {
+    "connectivity": false,
+    "token": {}
+  },
+  "configuration": {
+    "prerender_domain": "https://service.prerender.io",
+    "prerender_token": "configured",
+    "cache_ttl": "86400s"
+  }
+}

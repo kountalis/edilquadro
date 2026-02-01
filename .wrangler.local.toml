@@ -1,0 +1,10 @@
+# Local development configuration
+# This file is for local testing only
+
+[env.local]
+name = "edilquadro-prerender-local"
+main = "src/worker.js"
+
+[env.local.vars]
+PRERENDER_TOKEN = "w2gqqMwErwI5gtkoxCnD"
+PRERENDER_DOMAIN = "https://service.prerender.io"

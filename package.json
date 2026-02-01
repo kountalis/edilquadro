@@ -13,7 +13,12 @@
     "prerender": "node scripts/prerender.js",
     "preview": "vite preview --host 0.0.0.0 --port 4173 --strictPort",
     "preview:ci": "vite preview --host 127.0.0.1 --port 4173 --strictPort",
-    "lhci": "powershell -ExecutionPolicy Bypass -File scripts/run-lhci.ps1"
+    "lhci": "powershell -ExecutionPolicy Bypass -File scripts/run-lhci.ps1",
+    "worker:dev": "wrangler dev --env local",
+    "worker:test": "node scripts/test-worker.js",
+    "worker:deploy": "wrangler deploy --env production",
+    "worker:logs": "wrangler tail --env production",
+    "worker:secret": "wrangler secret put PRERENDER_TOKEN --env production"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

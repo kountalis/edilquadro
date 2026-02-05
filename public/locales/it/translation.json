@@ -11,6 +11,12 @@
     "meta_description": "Impresa edile a Roma: ristrutturazioni casa, negozi, edifici. Scopri i nostri lavori e richiedi un preventivo gratuito!",
     "hero_title": "<0>Edilquadro</0><1/><2>Ristrutturazioni Roma</2><1/><3>Impresa Edile Ristrutturazioni Roma</3>",
     "hero_subtitle": "<0>Edilquadro</0> è l'impresa edile a Roma che trasforma i tuoi spazi. Scopri i nostri <2>servizi di ristrutturazione casa</2>, <4>ristrutturazione negozi</4> e <6>ristrutturazione edifici e condomini</6>.<1/>Case, edifici e spazi commerciali. Guarda il <8>portfolio dei lavori di Edilquadro</8> o <10>richiedi un preventivo gratuito</10>.<1/><12>Edilquadro</12> è una delle principali aziende edili di Roma e provincia. <14>Contatta Edilquadro</14> per informazioni.",
+    "expertise": {
+      "title": "Progettazione e Innovazione al Servizio dei Tuoi Spazi",
+      "paragraph1": "La <0>sinergia con i nostri designer e architetti</0> ci permette di essere sempre informati e aggiornati sulle ultime <1>tendenze del mercato</1>. Un <2>pool di professionisti</2> selezionati per trasformare ogni progetto in un'opera di <3>innovazione e qualità</3>.",
+      "paragraph2": "Le nostre soluzioni di <0>ristrutturazione casa</0>, <1>negozi e edifici</1> sono il frutto di un <2>attento lavoro di ideazione</2> dal nostro <3>ufficio tecnico</3>, in collaborazione con <4>studi partner</4> e professionisti scelti direttamente dai nostri clienti.",
+      "cta_text": "<0>Edilquadro</0>: una delle principali aziende edili a Roma e provincia. Contattaci per una consulenza personalizzata sui tuoi progetti."
+    },
     "services": {
       "title": "Servizi",
       "card1_title": "Ristrutturazione Casa",

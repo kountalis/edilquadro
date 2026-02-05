@@ -11,6 +11,12 @@
     "meta_description": "Construction company in Rome: home, shop, and building renovations. Discover our work and request a free quote!",
     "hero_title": "<0>Edilquadro</0><1/><2>Renovations Rome</2><1/><3>Construction Company</3>",
     "hero_subtitle": "<0>Edilquadro</0> is the construction company in Rome that transforms your spaces. Discover our <2>home renovation services</2>, <4>shop renovations</4>, and <6>building and condominium renovations</6>.<1/>Homes, buildings, and commercial spaces. See the <8>Edilquadro work portfolio</8> or <10>request a free quote</10>.<1/><12>Edilquadro</12> is one of the leading construction companies in Rome and its province. <14>Contact Edilquadro</14> for information.",
+    "expertise": {
+      "title": "Design and Innovation at Your Service",
+      "paragraph1": "The <0>synergy with our designers and architects</0> allows us to stay informed and updated on the latest <1>market trends</1>. A <2>pool of professionals</2> selected to transform every project into a work of <3>innovation and quality</3>.",
+      "paragraph2": "Our <0>home renovation</0>, <1>shop and building renovation</1> solutions are the result of <2>careful ideation work</2> from our <3>technical office</3>, in collaboration with <4>partner firms</4> and professionals chosen directly by our clients.",
+      "cta_text": "<0>Edilquadro</0>: one of the leading construction companies in Rome and its province. Contact us for personalized advice on your projects."
+    },
     "services": {
       "title": "Services",
       "card1_title": "Home Renovation",

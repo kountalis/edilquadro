@@ -43,9 +43,8 @@
     </script>
   </head>
   <body>
-    <!-- H1 statico per SEO - SEMPRE VISIBILE nell'HTML statico come richiesto da Bing -->
-    <!-- Questo H1 è visibile ai crawler anche senza JavaScript -->
-    <h1 style="font-size: 1.5rem; line-height: 1.75rem; margin: 0; padding: 1rem; color: #ffffff; background-color: #1c1c1c; text-align: center; font-weight: bold;">Edilquadro – Ristrutturazioni Roma | Impresa Edile</h1>
+    <!-- H1 hidden per SEO crawler - nascosto visivamente ma accessibile ai bot -->
+    <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">Edilquadro - Ristrutturazioni Roma</h1>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

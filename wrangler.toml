@@ -10,7 +10,8 @@ watch_paths = ["src/worker.js"]
 
 [env.production]
 routes = [
-  { pattern = "edilquadro.it/*", zone_name = "edilquadro.it" }
+  { pattern = "edilquadro.it/*", zone_name = "edilquadro.it" },
+  { pattern = "www.edilquadro.it/*", zone_name = "edilquadro.it" }
 ]
 
 [env.staging]

@@ -17,6 +17,8 @@
     "lhci": "powershell -ExecutionPolicy Bypass -File scripts/run-lhci.ps1",
     "worker:dev": "wrangler dev --env local",
     "worker:test": "node scripts/test-worker.js",
+    "worker:build": "esbuild src/worker.js --bundle --format=esm --outfile=dist/worker.js",
+    "build:worker": "npm run worker:build",
     "worker:deploy": "wrangler deploy --env production",
     "worker:logs": "wrangler tail --env production",
     "worker:secret": "wrangler secret put PRERENDER_TOKEN --env production"
@@ -46,6 +48,7 @@
     "@types/react-dom": "^18.2.17",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.17",
+    "esbuild": "^0.27.3",
     "postcss": "^8.4.32",
     "rollup-plugin-visualizer": "^6.0.5",
     "source-map-explorer": "^2.5.3",

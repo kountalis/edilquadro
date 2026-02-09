@@ -7,7 +7,18 @@
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
+    
+    // Redirect www to non-www
+    if (url.hostname === 'www.edilquadro.it') {
+      const newUrl = new URL(request.url);
+      newUrl.hostname = 'edilquadro.it';
+      return Response.redirect(newUrl.toString(), 301); // 301 = permanent redirect
+    }
+    
     const userAgent = request.headers.get('user-agent') || '';
+    
+    // Check if this request is coming from Prerender
+    const fromPrerender = request.headers.get('x-prerender-request') === 'true';
     
     // List of bot user agents that should be prerendered
     const botUserAgents = [
@@ -50,6 +61,12 @@ export default {
       url.pathname.startsWith(route)
     );
 
+    // If request comes from Prerender, skip prerendering to avoid loops
+    if (fromPrerender) {
+      console.log(`[PRERENDER] Request from Prerender detected, skipping prerender`);
+      return fetch(request);
+    }
+
     // If it's a bot and not in exclude list, use Prerender
     if (isBot && !shouldExclude) {
       return handlePrerender(request, env, ctx);
@@ -91,7 +108,8 @@ async function handlePrerender(request, env, ctx) {
       headers: {
         'User-Agent': request.headers.get('user-agent') || '',
         'Accept': 'text/html,application/xhtml+xml',
-        'X-Prerender-Token': env.PRERENDER_TOKEN
+        'X-Prerender-Token': env.PRERENDER_TOKEN,
+        'X-Prerender-Request': 'true'
       }
     });
 

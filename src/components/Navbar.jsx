@@ -45,7 +45,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   }, [isOpen]);
 
   useEffect(() => {
-    if (location && location.pathname === '/') {
+    if (location.pathname === '/') {
       document.body.classList.remove('has-navbar-offset');
     } else {
       document.body.classList.add('has-navbar-offset');
@@ -53,10 +53,10 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     return () => {
       document.body.classList.remove('has-navbar-offset');
     };
-  }, [location && location.pathname]);
+  }, [location.pathname]);
 
   const handleServiziClick = (e) => {
-    if (window.location.pathname === '/servizi') {
+    if (location.pathname === '/servizi') {
       e.preventDefault();
       const ctaSection = document.getElementById('cta');
       if (ctaSection) {
@@ -237,13 +237,3 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 // ...existing code...
 
 export default Navbar;
-
-
-
-
-
-
-
-
-
-

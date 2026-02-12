@@ -8,12 +8,13 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     
-    // Redirect www to non-www
+    /* DISABLED: Redirect www to non-www - causing redirect loop with .htaccess
     if (url.hostname === 'www.edilquadro.it') {
       const newUrl = new URL(request.url);
       newUrl.hostname = 'edilquadro.it';
       return Response.redirect(newUrl.toString(), 301); // 301 = permanent redirect
     }
+    */
     
     const userAgent = request.headers.get('user-agent') || '';
     
@@ -67,10 +68,11 @@ export default {
       return fetch(request);
     }
 
+    // TEMPORARY: Disable Prerender for all bots to diagnose redirect issue
     // If it's a bot and not in exclude list, use Prerender
-    if (isBot && !shouldExclude) {
-      return handlePrerender(request, env, ctx);
-    }
+    // if (isBot && !shouldExclude) {
+    //   return handlePrerender(request, env, ctx);
+    // }
 
     // Otherwise, proxy to origin or fetch normally
     return fetch(request);

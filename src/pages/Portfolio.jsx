@@ -228,6 +228,45 @@ const Portfolio = () => {
       category: "edifici"
     },
     {
+      id: 14,
+      title: t('portfolio_page.projects.proj14_title'),
+      description: t('portfolio_page.projects.proj14_desc'),
+      images: [
+        "/projects/brescini-01.webp",
+        "/projects/brescini-02.webp",
+        "/projects/brescini-03.webp",
+        "/projects/brescini-04.webp",
+        "/projects/brescini-05.webp",
+        "/projects/brescini-06.webp",
+        "/projects/brescini-07.webp",
+        "/projects/brescini-08.webp",
+        "/projects/brescini-09.webp",
+        "/projects/brescini-10.webp",
+        "/projects/brescini-11.webp"
+      ],
+      category: "casa"
+    },
+    {
+      id: 15,
+      title: t('portfolio_page.projects.proj15_title'),
+      description: t('portfolio_page.projects.proj15_desc'),
+      images: [
+        "/projects/sikinos-01.webp",
+        "/projects/sikinos-02.webp",
+        "/projects/sikinos-03.webp",
+        "/projects/sikinos-04.webp",
+        "/projects/sikinos-05.webp",
+        "/projects/sikinos-06.webp",
+        "/projects/sikinos-07.webp",
+        "/projects/sikinos-08.webp",
+        "/projects/sikinos-09.webp",
+        "/projects/sikinos-10.webp",
+        "/projects/sikinos-11.webp",
+        "/projects/sikinos-12.webp"
+      ],
+      category: "casa"
+    },
+    {
       id: 12,
       title: t('portfolio_page.projects.proj12_title'),
       location: t('portfolio_page.projects.proj12_location'),
@@ -423,7 +462,7 @@ const Portfolio = () => {
               <div className="absolute w-[500px] h-[500px] bg-green-600/10 rounded-full blur-3xl -bottom-20 -left-20 animate-float-slower" style={{ animationDelay: '0.5s' }}></div>
             </div>
 
-            <div className="container mx-auto px-4 relative z-10" style={{ minHeight: '300px', overflowY: 'scroll' }}>
+            <div className="container mx-auto px-4 relative z-10" style={{ minHeight: '300px' }}>
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}

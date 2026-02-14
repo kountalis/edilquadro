@@ -1,6 +1,18 @@
 RewriteEngine On
 RewriteBase /
 
+# Forza HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Forza www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Aggiunge lo slash finale alle directory esistenti (es. /cookie-policy -> /cookie-policy/)
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule [^/]$ %{REQUEST_URI}/ [L,R=301]
+
 # SPA Fallback - tutti i file non-esistenti vanno a index.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

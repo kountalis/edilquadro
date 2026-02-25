@@ -8,7 +8,7 @@
     "dev": "vite",
     "optimize-assets": "node scripts/optimize-assets.js",
     "prebuild": "npm run optimize-assets",
-    "build": "vite build",
+    "build": "vite build && copy public\\robots.txt dist\\robots.txt",
     "postbuild": "npm run prerender && copy deploy-files\\.htaccess dist\\.htaccess && copy deploy-files\\sitemap.xml dist\\sitemap.xml",
     "prerender": "node scripts/prerender.js",
     "preview": "vite preview --host 0.0.0.0 --port 4173 --strictPort",

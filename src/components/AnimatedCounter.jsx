@@ -18,8 +18,8 @@ const AnimatedCounter = ({ value, suffix = '', duration = 2.5, start = false }) 
       },
       { 
         root: null,
-        rootMargin: '50px', // Trigger slightly before it comes into view
-        threshold: 0 
+        rootMargin: '0px', // Trigger exactly when it comes into view
+        threshold: 0.1 // Trigger when 10% of the element is visible
       }
     );
     
@@ -46,13 +46,12 @@ const AnimatedCounter = ({ value, suffix = '', duration = 2.5, start = false }) 
 
     const animate = (time) => {
       if (!startTime) startTime = time;
-      const progress = (time - startTime) / (duration * 1000);
+      const progress = Math.min((time - startTime) / (duration * 1000), 1);
+      
+      setCount(Math.floor(progress * endValue));
       
       if (progress < 1) {
-        setCount(Math.floor(progress * endValue));
         rafId = requestAnimationFrame(animate);
-      } else {
-        setCount(endValue);
       }
     };
 

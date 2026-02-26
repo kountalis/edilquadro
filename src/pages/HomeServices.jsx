@@ -236,7 +236,6 @@ const HomeServices = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                whileInView={{ opacity: 1, y: 0 }}
                 className="bg-gray-700 p-8 rounded-lg shadow-lg"
               >
                 <div className="text-[#0018A8] mb-6">
@@ -266,7 +265,6 @@ const HomeServices = () => {
               {images.map((image, index) => (
                 <div
                   key={index}
-                  whileInView={{ opacity: 1, scale: 1 }}
                   className="relative overflow-hidden rounded-lg group aspect-[4/3] scale-150"
                 >
                   <LazyImage
@@ -331,6 +329,7 @@ const HomeServices = () => {
 };
 
 export default HomeServices;
+
 
 
 

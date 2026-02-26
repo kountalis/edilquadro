@@ -1,10 +1,32 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const AnimatedCounter = ({ value, suffix = '', duration = 2.5, start = false }) => {
   const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
+
+  // Auto-start when component comes into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
-    if (!start) {
+    // Start counting if start prop is true OR if component is visible
+    if (!start && !isVisible) {
       setCount(0);
       return;
     }
@@ -29,10 +51,10 @@ const AnimatedCounter = ({ value, suffix = '', duration = 2.5, start = false }) 
 
     const raf = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(raf);
-  }, [value, duration, start]);
+  }, [value, duration, start, isVisible]);
 
   return (
-    <span className="text-4xl font-bold text-green-500">
+    <span ref={ref} className="text-4xl font-bold text-green-500">
       {count}{suffix}
     </span>
   );

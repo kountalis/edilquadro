@@ -32,9 +32,6 @@ const ProjectGallery = ({ projects = [] }) => {
         return (
           <article
             key={project.id ?? index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: index * 0.08 }}
             className="group relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-gray-900/80 to-black shadow-[0_25px_55px_rgba(0,0,0,0.4)]"
           >
             <button

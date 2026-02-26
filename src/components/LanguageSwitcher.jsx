@@ -43,9 +43,7 @@ const LanguageSwitcher = () => {
     <div className="relative pointer-events-auto" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center p-2 rounded-full transition-colors"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
+        className="flex items-center justify-center p-2 rounded-full transition-colors hover:scale-110 active:scale-95"
         aria-haspopup="menu"
         aria-expanded={isOpen}
         aria-controls={menuId}

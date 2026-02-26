@@ -18,9 +18,6 @@ export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
 
       {/* Left-side drawer: slides in from left, covers 2/3 of viewport width on mobile */}
       <aside
-        initial={{ x: '-100%' }}
-        animate={{ x: 0 }}
-        transition={{ type: 'tween', duration: 0.28 }}
         className="fixed left-0 top-0 h-full z-[1010] bg-dark/95 w-2/3 md:hidden flex flex-col items-start pt-6 pb-6 px-4 shadow-xl"
         onClick={(e) => e.stopPropagation()}
       >

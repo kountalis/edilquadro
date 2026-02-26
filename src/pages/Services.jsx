@@ -188,13 +188,13 @@ const Services = () => {
                 </p>
                 <ul className="space-y-3">
                   {service.features.map((feature, idx) => (
-                    <motion.li
+                    <li
                       key={idx}
                       className="flex items-center text-gray-300"
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-green-400 mr-3" />
                       {feature}
-                    </motion.li>
+                    </li>
                   ))}
                 </ul>
                 {service.image && (
@@ -227,7 +227,6 @@ const Services = () => {
 
           <div className="container mx-auto px-4 relative z-10">
             <div
-              whileInView={{ opacity: 1 }}
               className="max-w-4xl mx-auto text-center"
             >
               <h2

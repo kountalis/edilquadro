@@ -132,12 +132,7 @@ const Contact = () => {
                 </video>
               </div>
               <div className="relative z-10 flex flex-col items-center justify-center w-full py-24">
-                <h1
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight text-center"
-                >
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight text-center">
                   <Trans i18nKey="contact_page.header_title"
                     components={{
                       0: <strong className="text-emerald-400" />,
@@ -146,12 +141,7 @@ const Contact = () => {
                     }}
                   />
                 </h1>
-                <p
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-xl md:text-2xl text-gray-200 text-center max-w-2xl"
-                >
+                <p className="text-xl md:text-2xl text-gray-200 text-center max-w-2xl">
                   <Trans i18nKey="contact_page.header_subtitle" components={{
                     1: <strong />,
                     3: <a href="/servizi/casa" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.home_renovation')} />,
@@ -181,9 +171,6 @@ const Contact = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
             <a
               href="tel:+393333377320"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.1 }}
               className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px]"
               onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Contact - Telefono' })}
             >
@@ -201,9 +188,6 @@ const Contact = () => {
             </a>
             <a
               href="mailto:edilquadroroma@gmail.com"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
               className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px]"
               onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Contact - Email' })}
             >
@@ -223,9 +207,6 @@ const Contact = () => {
               href="https://wa.me/393333377320"
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3 }}
               className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px]"
               onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Contact - WhatsApp' })}
             >
@@ -245,9 +226,6 @@ const Contact = () => {
               href="viber://chat?number=%2B393333377320"
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
               className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px] shadow"
               onClick={() => trackGAEvent({ action: 'click_viber', category: 'Contatto', label: 'Contact - Viber' })}
             >
@@ -265,12 +243,7 @@ const Contact = () => {
             </a>
           </div>
 
-          <div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="max-w-6xl mx-auto mb-16 p-8 bg-black/70 backdrop-blur-sm rounded-2xl border border-white/5"
-          >
+          <div className="max-w-6xl mx-auto mb-16 p-8 bg-black/70 backdrop-blur-sm rounded-2xl border border-white/5">
             <div className="flex items-center gap-4 mb-4">
               <div className="p-3 rounded-full bg-green-500/10 text-emerald-400">
                 <img src="/home.svg" alt="Location" className="w-6 h-6" style={{filter: 'brightness(0.7) saturate(2) hue-rotate(90deg)'}} />

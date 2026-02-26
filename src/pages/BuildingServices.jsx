@@ -219,9 +219,6 @@ const BuildingServices = () => {
         <section className="container mx-auto px-4 pt-8">
           <header>
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
               className="text-center mb-16"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
@@ -241,9 +238,6 @@ const BuildingServices = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-gray-700 p-8 rounded-lg shadow-lg"
               >
                 <div className="text-[#0018A8] mb-6">
@@ -273,9 +267,6 @@ const BuildingServices = () => {
               {images.map((image, index) => (
                 <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
                   className="relative overflow-hidden rounded-lg group aspect-[4/3] scale-150"
                 >
                   <LazyImage
@@ -338,6 +329,7 @@ const BuildingServices = () => {
 };
 
 export default BuildingServices;
+
 
 
 

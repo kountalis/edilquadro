@@ -9,47 +9,7 @@ import { useTranslation, Trans } from 'react-i18next';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
 import { generateLocalBusinessSchema } from "../utils/seo";
-
-const AnimatedCounter = ({ value, suffix = "", duration = 2.5, start = false }) => {
-  const [count, setCount] = useState(0); // Internal state for the animated count
-
-  useEffect(() => {
-    if (!start) {
-      setCount(0); // Reset if animation hasn't started or is reset
-      return;
-    }
-
-    const startValue = 0;
-    const endValue = parseInt(value, 10); // Ensure value is a number
-
-    if (isNaN(endValue)) {
-      setCount(value); // Fallback if value is not a number
-      return;
-    }
-
-    let startTime = null;
-    const animateCount = (currentTime) => {
-      if (!startTime) startTime = currentTime;
-      const progress = (currentTime - startTime) / (duration * 1000); // Calculate progress based on duration in seconds
-
-      if (progress < 1) {
-        setCount(Math.floor(startValue + progress * (endValue - startValue)));
-        requestAnimationFrame(animateCount);
-      } else {
-        setCount(endValue); // Ensure the final value is exactly the target
-      }
-    };
-
-    requestAnimationFrame(animateCount);
-
-  }, [value, duration, start]); // Re-run effect if value, duration, or start changes
-
-  return (
-    <span className="text-4xl font-bold text-green-500">
-      {count}{suffix}
-    </span>
-  );
-};
+import AnimatedCounter from '../components/AnimatedCounter';
 
 const ProjectGallery = ({ projects }) => {
   const { openModal } = useProject();

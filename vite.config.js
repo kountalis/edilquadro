@@ -15,7 +15,7 @@ export default defineConfig(({ command }) => ({
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['@headlessui/react', 'framer-motion'],
+          'ui-vendor': ['@headlessui/react'],
           'i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
         }
       }

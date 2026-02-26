@@ -17,7 +17,7 @@ export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
       />
 
       {/* Left-side drawer: slides in from left, covers 2/3 of viewport width on mobile */}
-      <motion.aside
+      <aside
         initial={{ x: '-100%' }}
         animate={{ x: 0 }}
         transition={{ type: 'tween', duration: 0.28 }}
@@ -87,11 +87,12 @@ export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
             </div>
           </a>
         </div>
-      </motion.aside>
+      </aside>
     </>,
     document.body
   );
 }
+
 
 
 

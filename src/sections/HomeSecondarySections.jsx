@@ -1,5 +1,4 @@
 import { useState, Suspense } from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Trans, useTranslation } from 'react-i18next';
 import ProjectGallery from '../components/ProjectGallery';
@@ -110,12 +109,8 @@ const HomeSecondarySections = ({ galleryReady }) => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.02, y: -2, transition: { duration: 0.2 } }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group bg-gradient-to-br from-gray-900/90 to-black/90 p-8 rounded-2xl shadow-xl border border-white/10 transform will-change-transform hover:shadow-2xl flex flex-col justify-between"
                 style={{ minHeight: '300px' }}
               >
@@ -142,12 +137,12 @@ const HomeSecondarySections = ({ galleryReady }) => {
                     className="inline-flex items-center text-green-500 font-semibold group/link"
                   >
                     {getDiscoverSpan(service.title)}
-                    <motion.div className="ml-2" whileHover={{ x: 5 }} transition={{ duration: 0.2 }}>
+                    <div className="ml-2">
                       <img src="/arrow-right.svg" alt="Avanti" className="w-5 h-5 transform origin-left transition-transform duration-300" />
-                    </motion.div>
+                    </div>
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
           <div className="max-w-4xl mx-auto mb-12 px-4 text-center" style={{ minHeight: '150px' }}>
@@ -244,13 +239,9 @@ const HomeSecondarySections = ({ galleryReady }) => {
               start: startClients,
               onAnimate: () => setStartClients(true)
             }].map((stat, index) => (
-              <motion.div
+              <div
                 key={stat.label}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1, delay: index * 0.1 }}
                 className="relative group"
-                onAnimationComplete={stat.onAnimate}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 to-transparent opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"></div>
                 <div className="relative p-8 rounded-2xl bg-gradient-to-br from-black/90 to-black/70 border border-white/5 group-hover:border-green-500/20 shadow-lg group-hover:shadow-green-500/10 transition-all duration-300">
@@ -262,7 +253,7 @@ const HomeSecondarySections = ({ galleryReady }) => {
                     <div className="mt-2 w-12 h-1 bg-gradient-to-r from-green-500 to-green-600 mx-auto rounded-full transform origin-left transition-transform duration-300 scale-x-100 group-hover:scale-x-125"></div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -280,27 +271,18 @@ const HomeSecondarySections = ({ galleryReady }) => {
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+          <div
             className="max-w-4xl mx-auto text-center"
           >
-            <motion.h2
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.2 }}
+            <h2
               className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
             >
               <Trans
                 i18nKey="home.cta.title"
                 components={{ 1: <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent" /> }}
               />
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.4 }}
+            </h2>
+            <p
               className="text-xl text-gray-100 mb-12 max-w-2xl mx-auto leading-relaxed"
             >
               <Trans
@@ -313,17 +295,12 @@ const HomeSecondarySections = ({ galleryReady }) => {
                   4: <strong />
                 }}
               />
-            </motion.p>
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 cta-actions-responsive">
-              <motion.a
+              <a
                 href="tel:+393333377320"
                 role="button"
                 aria-label="Chiama Edilquadro al numero +39 333 337 7320"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.6 }}
-                whileHover={{ scale: 1.02, y: -4 }}
-                whileTap={{ scale: 0.98 }}
                 className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300 cta-action-btn"
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Home - Telefono' })}
               >
@@ -338,17 +315,12 @@ const HomeSecondarySections = ({ galleryReady }) => {
                   </div>
                 </div>
                 <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-cta-green/30 group-hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] transition-all duration-300"></div>
-              </motion.a>
+              </a>
 
-              <motion.a
+              <a
                 href="mailto:edilquadroroma@gmail.com"
                 role="button"
                 aria-label="Invia una email a Edilquadro per un preventivo gratuito"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.8 }}
-                whileHover={{ scale: 1.02, y: -4 }}
-                whileTap={{ scale: 0.98 }}
                 className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green-light transition-all duration-300 cta-action-btn"
                 onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Home - Email' })}
               >
@@ -363,19 +335,14 @@ const HomeSecondarySections = ({ galleryReady }) => {
                   </div>
                 </div>
                 <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-cta-green/30 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"></div>
-              </motion.a>
+              </a>
 
-              <motion.a
+              <a
                 href="https://wa.me/393333377320"
                 target="_blank"
                 rel="noopener noreferrer"
                 role="button"
                 aria-label="Chatta con Edilquadro su WhatsApp"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 1.0 }}
-                whileHover={{ scale: 1.02, y: -4 }}
-                whileTap={{ scale: 0.98 }}
                 className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-whatsappDark to-whatsapp transition-all duration-300 cta-action-btn"
                 onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Home - WhatsApp' })}
               >
@@ -390,9 +357,9 @@ const HomeSecondarySections = ({ galleryReady }) => {
                   </div>
                 </div>
                 <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-whatsapp/30 group-hover:shadow-[0_0_15px_rgba(37,211,102,0.5)] transition-all duration-300"></div>
-              </motion.a>
+              </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </>

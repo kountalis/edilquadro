@@ -141,7 +141,7 @@ const Services = () => {
       <main className="flex-grow relative z-10" role="main" aria-label="Sezione principale servizi edilquadro">
         <section className="container mx-auto px-4 pt-8">
           <header>
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -167,12 +167,12 @@ const Services = () => {
                   11: <Link to="/contatti" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.contact')} />
                 }} />
               </p>
-            </motion.div>
+            </div>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -223,7 +223,7 @@ const Services = () => {
                   />
                 )}
                 <div className="absolute inset-0 shadow-[inset_0_2px_15px_rgba(0,0,0,0.5)] rounded-2xl pointer-events-none" />
-              </motion.div>
+              </div>
             ))}
           </div>
         </section>
@@ -235,30 +235,30 @@ const Services = () => {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div
+            <div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1 }}
               className="max-w-4xl mx-auto text-center"
             >
-              <motion.h2
+              <h2
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
                 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
               >
                 {t('services_page.cta_title')}
-              </motion.h2>
-              <motion.p
+              </h2>
+              <p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.4 }}
                 className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
               >
                 {t('services_page.cta_subtitle')}
-              </motion.p>
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <motion.a
+                <a
                   href="tel:+393333377320"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -280,9 +280,9 @@ const Services = () => {
                     </div>
                   </div>
                   <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-cta-green/30 group-hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] transition-all duration-300"></div>
-                </motion.a>
+                </a>
 
-                <motion.a
+                <a
                   href="mailto:edilquadroroma@gmail.com"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -304,9 +304,9 @@ const Services = () => {
                     </div>
                   </div>
                     <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-cta-green/30 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"></div>
-                </motion.a>
+                </a>
 
-                <motion.a
+                <a
                   href="https://wa.me/393333377320"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -329,9 +329,9 @@ const Services = () => {
                     </div>
                   </div>
                   <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-whatsapp/30 group-hover:shadow-[0_0_15px_rgba(37,211,102,0.5)] transition-all duration-300"></div>
-                </motion.a>
+                </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -383,6 +383,7 @@ const Services = () => {
 };
 
 export default Services;
+
 
 
 

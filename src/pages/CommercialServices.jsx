@@ -214,7 +214,7 @@ const CommercialServices = () => {
       <main className="flex-grow relative z-10" role="main">
         <section className="container mx-auto px-4 pt-8">
           <header>
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -230,12 +230,12 @@ const CommercialServices = () => {
                   5: <Link to="/servizi/edifici" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.buildings_renovation')} />
                 }} />
               </p>
-            </motion.div>
+            </div>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -257,7 +257,7 @@ const CommercialServices = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -267,7 +267,7 @@ const CommercialServices = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto px-8 md:px-16 lg:px-24">
               {images.map((image, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -294,7 +294,7 @@ const CommercialServices = () => {
                       {image.caption}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </section>
@@ -339,6 +339,7 @@ const CommercialServices = () => {
 };
 
 export default CommercialServices;
+
 
 
 

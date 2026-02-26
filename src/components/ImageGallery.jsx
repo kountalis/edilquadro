@@ -67,7 +67,7 @@ const ImageGallery = ({ images, category, title, id }) => {
                 <p className="text-gray-200 text-sm mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
                   {category.charAt(0).toUpperCase() + category.slice(1)}
                 </p>
-                <motion.span 
+                <span 
                   className="inline-flex items-center text-emerald-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300"
                   whileHover={{ x: 5 }}
                 >
@@ -85,7 +85,7 @@ const ImageGallery = ({ images, category, title, id }) => {
                       d="M14 5l7 7m0 0l-7 7m7-7H3" 
                     />
                   </svg>
-                </motion.span>
+                </span>
               </div>
             </div>
 
@@ -99,6 +99,7 @@ const ImageGallery = ({ images, category, title, id }) => {
 };
 
 export default ImageGallery;
+
 
 
 

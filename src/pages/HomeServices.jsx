@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
@@ -221,7 +220,7 @@ const HomeServices = () => {
       <main className="flex-grow relative z-10" role="main" aria-label="Sezione principale servizi casa edilquadro">
         <section className="container mx-auto px-4 pt-8">
           <header>
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -233,12 +232,12 @@ const HomeServices = () => {
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 {t('home_services_page.header_subtitle')}
               </p>
-            </motion.div>
+            </div>
           </header>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -260,7 +259,7 @@ const HomeServices = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -270,7 +269,7 @@ const HomeServices = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-6xl mx-auto px-8 md:px-16 lg:px-24">
               {images.map((image, index) => (
-                <motion.div
+                <div
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
@@ -294,7 +293,7 @@ const HomeServices = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
                     <p className="text-white text-xl font-semibold">{image.caption}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
             <div className="text-center mt-8" role="navigation" aria-label="Link ad altri servizi edilquadro">
@@ -339,6 +338,7 @@ const HomeServices = () => {
 };
 
 export default HomeServices;
+
 
 
 

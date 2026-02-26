@@ -41,7 +41,7 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="relative pointer-events-auto" ref={dropdownRef}>
-      <motion.button
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center justify-center p-2 rounded-full transition-colors"
         whileHover={{ scale: 1.1 }}
@@ -52,7 +52,7 @@ const LanguageSwitcher = () => {
         aria-label={ariaLabel}
       >
         {flags[currentLanguage.split('-')[0]]}
-      </motion.button>
+      </button>
 
       {isOpen && (
         <div id={menuId} className="absolute top-full right-0 mt-2 w-36 rounded-md shadow-lg bg-dark/95 backdrop-blur-lg ring-1 ring-white/10 z-[9999]">
@@ -81,6 +81,7 @@ const LanguageSwitcher = () => {
 };
 
 export default LanguageSwitcher;
+
 
 
 

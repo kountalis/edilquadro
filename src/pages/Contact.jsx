@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { trackGAEvent } from '../utils/gaEvents';
 import { generateLocalBusinessSchema } from "../utils/seo";
@@ -133,7 +132,7 @@ const Contact = () => {
                 </video>
               </div>
               <div className="relative z-10 flex flex-col items-center justify-center w-full py-24">
-                <motion.h1
+                <h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
@@ -146,8 +145,8 @@ const Contact = () => {
                       2: <span className="text-2xl md:text-3xl lg:text-4xl block font-semibold" />,
                     }}
                   />
-                </motion.h1>
-                <motion.p
+                </h1>
+                <p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
@@ -163,7 +162,7 @@ const Contact = () => {
                     13: <strong />,
                     15: <a href="/contatti" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('nav.contact')} />
                   }} />
-                </motion.p>
+                </p>
               </div>
             </section>
           </header>
@@ -180,7 +179,7 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
-            <motion.a
+            <a
               href="tel:+393333377320"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -199,8 +198,8 @@ const Contact = () => {
                 <h3 className="text-white font-bold text-lg">{t('contact_page.phone')}</h3>
                 <p className="text-gray-200 text-base font-semibold">+39 333 337 7320</p>
               </div>
-            </motion.a>
-            <motion.a
+            </a>
+            <a
               href="mailto:edilquadroroma@gmail.com"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -219,8 +218,8 @@ const Contact = () => {
                 <h3 className="text-white font-bold text-lg">{t('contact_page.email')}</h3>
                 <p className="text-gray-200 break-all text-base font-semibold">edilquadroroma@gmail.com</p>
               </div>
-            </motion.a>
-            <motion.a
+            </a>
+            <a
               href="https://wa.me/393333377320"
               target="_blank"
               rel="noopener noreferrer"
@@ -241,8 +240,8 @@ const Contact = () => {
                 <h3 className="text-white font-bold text-lg">{t('contact_page.cta_whatsapp_label')}</h3>
                 <p className="text-gray-200 break-all text-base font-semibold">+39 333 337 7320</p>
               </div>
-            </motion.a>
-            <motion.a
+            </a>
+            <a
               href="viber://chat?number=%2B393333377320"
               target="_blank"
               rel="noopener noreferrer"
@@ -263,10 +262,10 @@ const Contact = () => {
                 <h3 className="text-white font-bold text-lg">{t('contact_page.cta_viber_label')}</h3>
                 <p className="text-gray-200 break-all text-base font-semibold">+39 333 337 7320</p>
               </div>
-            </motion.a>
+            </a>
           </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -293,7 +292,7 @@ const Contact = () => {
                 aria-label="Mappa sede Edilquadro Roma"
               ></iframe>
             </div>
-          </motion.div>
+          </div>
 
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">{t('contact_page.review_title')}</h2>
@@ -320,6 +319,7 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
 
 

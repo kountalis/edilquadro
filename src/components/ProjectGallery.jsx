@@ -30,7 +30,7 @@ const ProjectGallery = ({ projects = [] }) => {
         const categoryLabel = categoryLabels[project.category] ?? project.category ?? '';
 
         return (
-          <motion.article
+          <article
             key={project.id ?? index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ const ProjectGallery = ({ projects = [] }) => {
                 </div>
               </div>
             </button>
-          </motion.article>
+          </article>
         );
       })}
     </div>
@@ -87,6 +87,7 @@ const ProjectGallery = ({ projects = [] }) => {
 };
 
 export default ProjectGallery;
+
 
 
 

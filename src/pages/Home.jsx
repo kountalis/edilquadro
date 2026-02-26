@@ -65,7 +65,7 @@ const ProjectGallery = ({ projects }) => {
           webpSrcSet = `${encodeURI(webpPath)} 1x`;
         }
         return (
-          <motion.div
+          <div
             key={project.id}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -100,19 +100,19 @@ const ProjectGallery = ({ projects }) => {
                   <p className="text-gray-200 text-sm mb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
                     {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
                   </p>
-                  <motion.span 
+                  <span 
                     className="inline-flex items-center text-emerald-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300"
                     whileHover={{ x: 5 }}
                   >
                     {project.images ? t('home.featured_projects.see_all_photos', { count: project.images.length }) : t('home.featured_projects.see_details')}
                     <img src="/arrow.svg" alt="Freccia" className="ml-2 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'invert(1) sepia(1) hue-rotate(90deg) saturate(3)' }} />
-                  </motion.span>
+                  </span>
                 </div>
               </div>
               {/* Border Glow */}
               <div className="absolute inset-0 border border-white/10 rounded-xl group-hover:border-green-500/30 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.2)] transition-all duration-500"></div>
             </div>
-          </motion.div>
+          </div>
         );
       })}
     </div>
@@ -253,7 +253,7 @@ const Home = () => {
             </div>
             <div className="relative z-10 min-h-screen flex items-center justify-center">
               <div className="container mx-auto px-4">
-                <motion.div
+                <div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1 }}
@@ -276,7 +276,7 @@ const Home = () => {
                       }}
                     />
                   </h1>
-                  <motion.p
+                  <p
                     className="text-xl md:text-2xl mb-12 font-visby text-gray-200"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -295,15 +295,15 @@ const Home = () => {
                         14: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
                       }}
                     />
-                  </motion.p>
-                </motion.div>
+                  </p>
+                </div>
               </div>
             </div>
           </header>
   
           <section className="py-16 md:py-24 bg-grayBg">
             <div className="container mx-auto px-4">
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -335,7 +335,7 @@ const Home = () => {
                     }}
                   />
                 </p>
-              </motion.div>
+              </div>
             </div>
           </section>
   
@@ -344,7 +344,7 @@ const Home = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">{t('home.services.title')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 {services.map((service, index) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -383,16 +383,16 @@ const Home = () => {
                           {t('home.services.discover_more', { service: service.title.toLowerCase() })}
                           <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-500 group-hover:w-full transition-all duration-300"></span>
                         </span>
-                        <motion.div
+                        <div
                           className="ml-2 w-12 h-12"
                           whileHover={{ x: 5 }}
                           transition={{ duration: 0.2 }}
                         >
                           <img src="/arrow.svg" alt="Avanti" className="w-full h-full transform group-hover/link:translate-x-1 transition-transform duration-300" />
-                        </motion.div>
+                        </div>
                       </Link>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
               <div className="max-w-4xl mx-auto mb-12 px-4 text-center" style={{ minHeight: '150px' }}>
@@ -446,7 +446,7 @@ const Home = () => {
           <section className="py-16 bg-dark">
             <div className="container mx-auto px-4">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <motion.div
+                <div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 1 }}
@@ -463,9 +463,9 @@ const Home = () => {
                       <div className="mt-2 w-12 h-1 bg-gradient-to-r from-green-500 to-green-600 mx-auto rounded-full transform origin-left group-hover:scale-x-150 transition-transform duration-300"></div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
   
-                <motion.div
+                <div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.1 }}
@@ -482,9 +482,9 @@ const Home = () => {
                       <div className="mt-2 w-12 h-1 bg-gradient-to-r from-green-500 to-green-600 mx-auto rounded-full transform origin-left group-hover:scale-x-150 transition-transform duration-300"></div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
   
-                <motion.div
+                <div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.2 }}
@@ -501,14 +501,14 @@ const Home = () => {
                       <div className="mt-2 w-12 h-1 bg-gradient-to-r from-green-500 to-green-600 mx-auto rounded-full transform origin-left group-hover:scale-x-150 transition-transform duration-300"></div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
           </section>
   
           <section className="py-20 bg-dark">
             <div className="container mx-auto px-4">
-              <motion.div
+              <div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -524,11 +524,11 @@ const Home = () => {
                     1: <span className="text-emerald-400 font-semibold" />
                   }} />
                 </p>
-              </motion.div>
+              </div>
   
               <div className="max-w-4xl mx-auto">
                 {testimonials.map((testimonial, index) => (
-                  <motion.div
+                  <div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -568,7 +568,7 @@ const Home = () => {
                     <div className="absolute top-0 right-0 w-32 h-32 overflow-hidden pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                       <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-green-500/10 to-transparent transform rotate-45 translate-x-1/2 -translate-y-1/2"></div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -581,21 +581,21 @@ const Home = () => {
             </div>
   
             <div className="container mx-auto px-4 relative z-10">
-              <motion.div
+              <div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
                 className="max-w-4xl mx-auto text-center"
               >
-                <motion.h2
+                <h2
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.2 }}
                   className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
                 >
                   <Trans i18nKey="home.cta.title" components={{ 1: <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent" /> }} />
-                </motion.h2>
-                <motion.p
+                </h2>
+                <p
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 1, delay: 0.4 }}
@@ -606,9 +606,9 @@ const Home = () => {
                       3: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
                       4: <strong /> 
                   }} />
-                </motion.p>
+                </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 cta-actions-responsive">
-                  <motion.a
+                  <a
                     href="tel:+393333377320"
                     role="button"
                     aria-label="Chiama Edilquadro al numero +39 333 337 7320"
@@ -631,9 +631,9 @@ const Home = () => {
                       </div>
                     </div>
                     <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-green-500/30 group-hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] transition-all duration-300"></div>
-                  </motion.a>
+                  </a>
   
-                  <motion.a
+                  <a
                     href="mailto:edilquadroroma@gmail.com"
                     role="button"
                     aria-label="Invia una email a Edilquadro per un preventivo gratuito"
@@ -656,9 +656,9 @@ const Home = () => {
                       </div>
                     </div>
                     <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-green-400/30 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"></div>
-                  </motion.a>
+                  </a>
   
-                  <motion.a
+                  <a
                     href="https://wa.me/393333377320"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -683,9 +683,9 @@ const Home = () => {
                       </div>
                     </div>
                     <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-whatsapp/30 group-hover:shadow-[0_0_15px_rgba(37,211,102,0.5)] transition-all duration-300"></div>
-                  </motion.a>
+                  </a>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </section>
   
@@ -715,6 +715,7 @@ const Home = () => {
     );
   };
 export default Home;
+
 
 
 

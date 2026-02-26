@@ -7,19 +7,23 @@ const AnimatedCounter = ({ value, suffix = '', duration = 2.5, start = false }) 
 
   // Auto-start when component comes into view
   useEffect(() => {
+    if (!ref.current) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target);
+          observer.disconnect(); // Stop observing once visible
         }
       },
-      { threshold: 0.1 }
+      { 
+        root: null,
+        rootMargin: '50px', // Trigger slightly before it comes into view
+        threshold: 0 
+      }
     );
     
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
+    observer.observe(ref.current);
     
     return () => observer.disconnect();
   }, []);
@@ -38,19 +42,25 @@ const AnimatedCounter = ({ value, suffix = '', duration = 2.5, start = false }) 
     }
 
     let startTime = null;
+    let rafId = null;
+
     const animate = (time) => {
       if (!startTime) startTime = time;
       const progress = (time - startTime) / (duration * 1000);
+      
       if (progress < 1) {
         setCount(Math.floor(progress * endValue));
-        requestAnimationFrame(animate);
+        rafId = requestAnimationFrame(animate);
       } else {
         setCount(endValue);
       }
     };
 
-    const raf = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(raf);
+    rafId = requestAnimationFrame(animate);
+    
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, [value, duration, start, isVisible]);
 
   return (

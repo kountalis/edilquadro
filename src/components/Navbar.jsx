@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 // Rimosso MenuIcon e XIcon, usiamo SVG public
-import { motion } from 'framer-motion';
+
 import { trackGAEvent } from '../utils/gaEvents';
 import MobileMenuPortal from './MobileMenuPortal';
 import { useTranslation } from 'react-i18next';
@@ -73,14 +73,13 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   ];
 
   return (
-    <motion.nav
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+    <nav
       className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${
         scrolled 
           ? 'bg-dark/50 backdrop-blur-[10px]'
           : 'bg-dark/30 backdrop-blur-[5px]'
       }`}
+      style={{ opacity: 1 }}
     >
       {/* Mobile Menu Button (hamburger left) */}
       <div className="md:hidden fixed top-4 left-4" style={{ zIndex: 999 }}>
@@ -166,20 +165,14 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           </div>
           
           {/* Desktop Menu */}
-          <motion.div 
-            className="hidden md:flex items-center justify-center h-full space-x-8"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+          <div 
+            className="hidden md:flex items-center justify-center h-full space-x-8 transition-all duration-300 opacity-100 translate-y-0"
           >
             <div className="bg-dark/40 backdrop-blur-[10px] rounded-full px-4 py-2 h-12 flex items-center justify-center space-x-6">
-              {navItems.map((item, index) => (
-                <motion.div
+              {navItems.map((item) => (
+                <div
                   key={item.name}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 + 0.3 }}
-                  className="h-full flex items-center"
+                  className="h-full flex items-center transition-all duration-300 opacity-100 translate-y-0"
                 >
                   <Link
                     to={item.path}
@@ -187,36 +180,32 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                   >
                     {item.name}
                   </Link>
-                </motion.div>
+                </div>
               ))}
             </div>
             
             <div className="flex items-center justify-center h-full space-x-4">
-                <motion.a
+                <a
                   href="mailto:edilquadroroma@gmail.com"
                   className="bg-cta-green text-white px-6 h-12 rounded-full text-lg font-medium hover:bg-cta-green-dark transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)]"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                   style={{ textDecoration: 'none' }}
                   onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Navbar - Email' })}
                 >
                   <img src="/envelope.svg" alt="Email" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
                   <span className="hidden sm:inline">{t('free_quote')}</span>
-                </motion.a>
-                <motion.a
+                </a>
+                <a
                   href="https://wa.me/393333377320"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-whatsapp text-white h-12 w-12 rounded-full hover:bg-whatsappDark transition-colors hover:shadow-[0_0_15px_rgba(37,211,102,0.5)] flex items-center justify-center"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                   onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Navbar - WhatsApp' })}
                 >
                   <img src="/Whatsapp.svg" alt="WhatsApp" className="w-6 h-6" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
-                </motion.a>
+                </a>
                 {/* desktop LanguageSwitcher moved outside centered container to align with logo */}
             </div>
-          </motion.div>
+          </div>
 
           {/* Desktop Language (absolute right edge) */}
           {/* (moved to be a sibling of the logo to ensure same reference point) */}
@@ -230,7 +219,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
       {/* Mobile Menu Portal */}
       <MobileMenuPortal isOpen={isOpen} onClose={() => setIsOpen(false)} navItems={navItems} />
-    </motion.nav>
+    </nav>
   );
 };
 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 // Rimosso import icone React, usiamo solo SVG public
 import { useProject } from '../context/ProjectContext';
 import ProjectModal from '../components/ProjectModal';
@@ -294,6 +293,22 @@ const Portfolio = () => {
     project => selectedFilter === 'all' || project.category === selectedFilter
   );
 
+  // Helper for responsive images - mobile optimization
+  const generateResponsiveAvifSrcSet = (imagePath) => {
+    if (!imagePath || !imagePath.endsWith('.webp')) return null;
+    const nameWithoutExt = imagePath.substring(0, imagePath.lastIndexOf('.'));
+    // Varianti AVIF + fallback WebP full-size per browser senza AVIF
+    return `${nameWithoutExt}-380.avif 380w, ${nameWithoutExt}-600.avif 600w, ${imagePath} 1200w`;
+  };
+
+  const generateResponsiveSrcSet = (imagePath) => {
+    if (!imagePath || !imagePath.endsWith('.webp')) return null;
+    const nameWithoutExt = imagePath.substring(0, imagePath.lastIndexOf('.'));
+    return `${nameWithoutExt}-380.webp 380w, ${nameWithoutExt}-600.webp 600w, ${imagePath} 1200w`;
+  };
+
+  const imageSizes = "(max-width: 480px) 380px, (max-width: 768px) 600px, 1200px";
+
   const collectionPageSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
@@ -323,23 +338,22 @@ const Portfolio = () => {
         <script type="application/ld+json">{JSON.stringify(collectionPageSchema)}</script>
       </Helmet>
       <div className="relative min-h-screen flex flex-col overflow-hidden">
-        <img
-          src="/portfolio-bg.jpg"
-          alt={t('portfolio_page.header_title')}
-          className="absolute inset-0 w-full h-full object-cover z-10"
-          loading="lazy"
-          fetchpriority="low"
-        />
+        <picture>
+          <source srcSet="/portfolio-bg.avif" type="image/avif" />
+          <source srcSet="/portfolio-bg.webp" type="image/webp" />
+          <img
+            src="/portfolio-bg.jpg"
+            alt={t('portfolio_page.header_title')}
+            className="absolute inset-0 w-full h-full object-cover z-10"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </picture>
         <div className="absolute inset-0 bg-black/60 z-20"></div>
         <main className="relative z-30">
           <header className="container mx-auto px-4 pt-8">
             <div style={{ minHeight: '200px' }}>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-center mb-16"
-              >
+              <div className="text-center mb-16" style={{ animation: 'fadeInUp 0.5s ease-out' }}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
                   <Trans i18nKey="portfolio_page.header_title"
                     components={{
@@ -359,7 +373,7 @@ const Portfolio = () => {
                     9: <Link to="/contatti" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.contact')} />
                   }} />
                 </p>
-              </motion.div>
+              </div>
             </div>
 
             <nav aria-label="Filtra progetti" className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12 px-4">
@@ -419,6 +433,8 @@ const Portfolio = () => {
                           ? project.images[0].replace(/\.(jpg|jpeg|png)$/i, '.webp')
                           : undefined
                       }
+                      srcSet={generateResponsiveAvifSrcSet(project.images ? project.images[0] : project.image) || generateResponsiveSrcSet(project.images ? project.images[0] : project.image)}
+                      sizes={imageSizes}
                       alt={project.title + (project.location ? `, ${project.location}` : '') + ' - Edilquadro Portfolio'}
                       className="w-full h-full"
                       imageClassName={`transition-transform duration-500 hover:scale-110 ${
@@ -463,26 +479,18 @@ const Portfolio = () => {
             </div>
 
             <div className="container mx-auto px-4 relative z-10" style={{ minHeight: '300px' }}>
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="max-w-4xl mx-auto text-center"
-                style={{ minHeight: '200px' }}
+              <div
+                className="max-w-4xl mx-auto text-center" style={{ minHeight: '200px' }}
               >
-                <motion.h2
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.2 }}
+                <h2
                   className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
+                  style={{ animation: 'fadeIn 1s ease-out 0.2s both' }}
                 >
                   {t('portfolio_page.cta_title')}
-                </motion.h2>
-                <motion.p
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.4 }}
+                </h2>
+                <p
                   className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
+                  style={{ animation: 'fadeIn 1s ease-out 0.4s both' }}
                 >
                   <Trans i18nKey="portfolio_page.cta_subtitle" components={{
                     1: <strong />,
@@ -493,17 +501,12 @@ const Portfolio = () => {
                     11: <Link to="/portfolio" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
                     13: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />
                   }} />
-                </motion.p>
+                </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <motion.a
+                  <a
                     href="tel:+393333377320"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.6 }}
-                    whileHover={{ scale: 1.02, y: -4 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300"
-                    style={{ minHeight: '100px' }}
+                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300 hover:scale-102 hover:-translate-y-1 active:scale-98"
+                    style={{ animation: 'fadeIn 1s ease-out 0.6s both', minHeight: '100px' }}
                     onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Portfolio - Telefono' })}
                   >
                     <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
@@ -517,19 +520,15 @@ const Portfolio = () => {
                       </div>
                     </div>
                     <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-cta-green/30 group-hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] transition-all duration-300"></div>
-                  </motion.a>
+                  </a>
 
-                  <motion.a
+                  <a
                     href="mailto:edilquadroroma@gmail.com"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                    whileHover={{ scale: 1.02, y: -4 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green-light transition-all duration-300"
+                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300 hover:scale-102 hover:-translate-y-1 active:scale-98"
+                    style={{ animation: 'fadeIn 1s ease-out 0.8s both', minHeight: '100px' }}
                     onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Portfolio - Email' })}
                   >
-                      <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">
                       <div className="p-2 rounded-full bg-white/10 group-hover:bg-white/20 transition-colors duration-300">
                         <img src="/envelope.svg" alt="Email" className="w-6 h-6" style={{filter: 'brightness(0) invert(1)'}} />
@@ -539,19 +538,15 @@ const Portfolio = () => {
                         <div className="text-white font-semibold">{t('home.cta.free_quote')}</div>
                       </div>
                     </div>
-                      <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-cta-green/30 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"></div>
-                  </motion.a>
+                    <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-cta-green/30 group-hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] transition-all duration-300"></div>
+                  </a>
 
-                  <motion.a
+                  <a
                     href="https://wa.me/393333377320"
                     target="_blank"
                     rel="noopener noreferrer"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1, delay: 1.0 }}
-                    whileHover={{ scale: 1.02, y: -4 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-whatsappDark to-whatsapp transition-all duration-300"
+                    className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-whatsappDark to-whatsapp transition-all duration-300 hover:scale-102 hover:-translate-y-1 active:scale-98"
+                    style={{ animation: 'fadeIn 1s ease-out 1s both', minHeight: '100px' }}
                     onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Portfolio - WhatsApp' })}
                   >
                     <div className="absolute inset-0 rounded-2xl bg-whatsapp opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
@@ -565,9 +560,9 @@ const Portfolio = () => {
                       </div>
                     </div>
                     <div className="absolute inset-0 rounded-2xl border border-white/10 group-hover:border-whatsapp/30 group-hover:shadow-[0_0_15px_rgba(37,211,102,0.5)] transition-all duration-300"></div>
-                  </motion.a>
+                  </a>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </section>
           <ProjectModal 

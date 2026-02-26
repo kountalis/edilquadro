@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 const LazyImage = ({ 
   src, 
-  webpSrc, 
+  webpSrc,
+  srcSet,
+  sizes,
   alt, 
   className, 
   imageClassName,
@@ -47,8 +49,19 @@ const LazyImage = ({
     >
       {isInView && (
         <picture>
+          {srcSet && srcSet.includes('.avif') && (
+            <source 
+              srcSet={srcSet}
+              sizes={sizes}
+              type="image/avif" 
+            />
+          )}
           {webpSrc && webpSrc.endsWith('.webp') && (
-            <source srcSet={`${encodeURI(webpSrc)} 1x`} type="image/webp" />
+            <source 
+              srcSet={srcSet && srcSet.includes('.avif') ? srcSet.replace(/\.avif/g, '.webp') : encodeURI(webpSrc)}
+              sizes={sizes}
+              type="image/webp" 
+            />
           )}
           <img
             src={src}
@@ -57,6 +70,8 @@ const LazyImage = ({
             height={height}
             loading={loading}
             fetchpriority={fetchpriority}
+            srcSet={srcSet ? (srcSet.includes('.avif') ? srcSet.replace(/\.avif/g, '.webp') : srcSet) : undefined}
+            sizes={srcSet ? sizes : undefined}
             onLoad={() => setIsLoaded(true)}
             className={`w-full h-full ${imageClassName || ''} ${!isLoaded ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}`}
             // Ensure images always fill their container unless explicitly overridden

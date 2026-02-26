@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProjectModal from '../components/ProjectModal';
 import { useProject } from '../context/ProjectContext';
-import { motion } from 'framer-motion';
+
 import { Link } from 'react-router-dom';
 // Rimosso import icone React, usiamo solo SVG public
 import { Helmet } from 'react-helmet-async';

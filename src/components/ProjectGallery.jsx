@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import { useProject } from '../context/ProjectContext';
 import LazyImage from './LazyImage';
 import { ArrowRightIcon } from './icons';

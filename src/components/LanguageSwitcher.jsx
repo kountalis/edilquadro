@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+
 import ItalyFlag from './icons/ItalyFlag';
 import UKFlag from './icons/UKFlag';
 

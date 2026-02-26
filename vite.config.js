@@ -10,7 +10,16 @@ export default defineConfig(({ command }) => ({
   ],
   build: {
     sourcemap: false, // Disable sourcemaps in production for better performance
-    chunkSizeWarningLimit: 1000
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['@headlessui/react', 'framer-motion'],
+          'i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
+        }
+      }
+    }
   },
   server: {
     port: 3000,

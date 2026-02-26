@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 // Rimosso import icone React, usiamo solo SVG public
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';

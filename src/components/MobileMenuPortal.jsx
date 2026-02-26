@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { motion } from 'framer-motion';
+
 import { useTranslation } from 'react-i18next';
 import { trackGAEvent } from '../utils/gaEvents';
 

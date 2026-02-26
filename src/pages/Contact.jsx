@@ -125,7 +125,7 @@ const Contact = () => {
                   loop
                   muted
                   playsInline
-                  poster="/portfolio-bg.webp"
+                  poster="/portfolio-bg.avif"
                   preload="none"
                   className="w-full h-full object-cover"
                 >

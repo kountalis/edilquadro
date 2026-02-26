@@ -8,6 +8,9 @@ const projectRoot = fileURLToPath(new URL('../', import.meta.url));
 const heroSource = join(projectRoot, 'public', 'hero-video-thumb.jpg');
 const heroAvif = join(projectRoot, 'public', 'hero-video-thumb.avif');
 const heroWebp = join(projectRoot, 'public', 'hero-video-thumb.webp');
+const portfolioSource = join(projectRoot, 'public', 'portfolio-bg.jpg');
+const portfolioAvif = join(projectRoot, 'public', 'portfolio-bg.avif');
+const portfolioWebp = join(projectRoot, 'public', 'portfolio-bg.webp');
 const logoSource = join(projectRoot, 'src', 'assets', 'logo.png');
 const logoTemp = join(projectRoot, 'src', 'assets', 'logo-optimized.png');
 
@@ -17,10 +20,30 @@ async function optimizeHero() {
   }
 
   const metadata = await sharp(heroSource).metadata();
-  await sharp(heroSource).avif({ quality: 50 }).toFile(heroAvif);
+  await sharp(heroSource).avif({ quality: 40 }).toFile(heroAvif);
   await sharp(heroSource).webp({ quality: 72 }).toFile(heroWebp);
   console.log(
     `Hero placeholder optimized (${metadata.width}x${metadata.height}) → ${heroAvif}, ${heroWebp}`
+  );
+}
+
+async function optimizePortfolioBackground() {
+  if (!fs.existsSync(portfolioSource)) {
+    console.log('Portfolio background not found - skipping optimization');
+    return;
+  }
+
+  const metadata = await sharp(portfolioSource).metadata();
+  const originalSize = fs.statSync(portfolioSource).size;
+  
+  await sharp(portfolioSource).avif({ quality: 40 }).toFile(portfolioAvif);
+  await sharp(portfolioSource).webp({ quality: 80 }).toFile(portfolioWebp);
+  
+  const avifSize = fs.statSync(portfolioAvif).size;
+  const webpSize = fs.statSync(portfolioWebp).size;
+  
+  console.log(
+    `Portfolio background optimized (${metadata.width}x${metadata.height}): JPG ${Math.round(originalSize / 1024)}KB → AVIF ${Math.round(avifSize / 1024)}KB (-${Math.round((1 - avifSize/originalSize) * 100)}%), WebP ${Math.round(webpSize / 1024)}KB`
   );
 }
 
@@ -47,6 +70,7 @@ async function optimizeLogo() {
 
 async function run() {
   await optimizeHero();
+  await optimizePortfolioBackground();
   await optimizeLogo();
 }
 

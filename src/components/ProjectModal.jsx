@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+
 import LazyImage from './LazyImage';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {

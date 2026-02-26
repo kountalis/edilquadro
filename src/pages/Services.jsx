@@ -142,9 +142,6 @@ const Services = () => {
         <section className="container mx-auto px-4 pt-8">
           <header>
             <div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
               className="text-center mb-16"
             >
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
@@ -174,9 +171,6 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative overflow-hidden rounded-2xl bg-black/70 backdrop-blur-sm p-8 hover:bg-black/80 transition-all duration-500 border border-white/5"
               >
                 <div className="relative mb-6">
@@ -196,9 +190,6 @@ const Services = () => {
                   {service.features.map((feature, idx) => (
                     <motion.li
                       key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.3, delay: index * 0.1 + idx * 0.1 }}
                       className="flex items-center text-gray-300"
                     >
                       <div className="w-1.5 h-1.5 rounded-full bg-green-400 mr-3" />
@@ -236,23 +227,15 @@ const Services = () => {
 
           <div className="container mx-auto px-4 relative z-10">
             <div
-              initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 1 }}
               className="max-w-4xl mx-auto text-center"
             >
               <h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.2 }}
                 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight"
               >
                 {t('services_page.cta_title')}
               </h2>
               <p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.4 }}
                 className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
               >
                 {t('services_page.cta_subtitle')}
@@ -260,11 +243,6 @@ const Services = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <a
                   href="tel:+393333377320"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.6 }}
-                  whileHover={{ scale: 1.02, y: -4 }}
-                  whileTap={{ scale: 0.98 }}
                   className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300"
                   aria-label="Chiama Edilquadro per ristrutturazione Roma"
                   onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Services - Telefono' })}
@@ -284,11 +262,6 @@ const Services = () => {
 
                 <a
                   href="mailto:edilquadroroma@gmail.com"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 0.8 }}
-                  whileHover={{ scale: 1.02, y: -4 }}
-                  whileTap={{ scale: 0.98 }}
                   className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green-light transition-all duration-300"
                   aria-label="Scrivi a Edilquadro per preventivo gratuito ristrutturazione Roma"
                   onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Services - Email' })}
@@ -310,11 +283,6 @@ const Services = () => {
                   href="https://wa.me/393333377320"
                   target="_blank"
                   rel="noopener noreferrer"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 1, delay: 1.0 }}
-                  whileHover={{ scale: 1.02, y: -4 }}
-                  whileTap={{ scale: 0.98 }}
                   className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-whatsappDark to-whatsapp transition-all duration-300"
                   onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Services - WhatsApp' })}
                 >
@@ -383,6 +351,7 @@ const Services = () => {
 };
 
 export default Services;
+
 
 
 

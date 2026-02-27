@@ -241,9 +241,9 @@ const HomeServices = () => {
                 <div className="text-[#0018A8] mb-6">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+                <h2 className="text-2xl font-bold mb-4 text-white">{service.title}</h2>
                 <p className="text-gray-300 mb-6">
-                  {service.description} <a href="/contatti" className="text-emerald-600 underline hover:text-green-200 transition-colors" aria-label="Richiedi un preventivo ristrutturazione casa Roma">{t('home_services_page.request_quote')}</a>
+                  {service.description} <a href="/contatti" className="text-emerald-400 underline hover:text-emerald-300 transition-colors" aria-label="Richiedi un preventivo ristrutturazione casa Roma">{t('home_services_page.request_quote')}</a>
                 </p>
                 <ul className="text-gray-300 space-y-2">
                   {service.details.map((detail, idx) => (
@@ -265,7 +265,7 @@ const HomeServices = () => {
               {images.map((image, index) => (
                 <div
                   key={index}
-                  className="relative overflow-hidden rounded-lg group aspect-[4/3] scale-150"
+                  className="relative overflow-hidden rounded-lg group aspect-[4/3]"
                 >
                   <LazyImage
                     src={image.fallback}
@@ -288,9 +288,9 @@ const HomeServices = () => {
               ))}
             </div>
             <div className="text-center mt-8" role="navigation" aria-label="Link ad altri servizi edilquadro">
-              <a href="/servizi/commerciale" className="text-blue-400 underline hover:text-blue-200 transition-colors no-underline" aria-label="Vai ai servizi commerciali Edilquadro">{t('home_services_page.commercial_services_link')}</a>
+              <a href="/servizi/commerciale" className="text-blue-400 underline hover:text-blue-200 transition-colors" >{t('home_services_page.commercial_services_link')}</a>
               <span className="mx-2 text-gray-400">|</span>
-              <a href="/servizi/edifici" className="text-blue-400 underline hover:text-blue-200 transition-colors no-underline" aria-label="Ristrutturazione condomini Roma">{t('home_services_page.condo_renovation_link')}</a>
+              <a href="/servizi/edifici" className="text-blue-400 underline hover:text-blue-200 transition-colors" >{t('home_services_page.condo_renovation_link')}</a>
             </div>
           </section>
 
@@ -305,7 +305,7 @@ const HomeServices = () => {
               <a
                 href="tel:+393333377320"
                 className="bg-greenDark text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-greenDarker transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] hover:scale-105"
-                aria-label="Chiama Edilquadro per ristrutturazione casa Roma"
+                
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'HomeServices - Telefono' })}
               >
                 <img src="/phone.svg" alt="Telefono" className="w-5 h-5" />

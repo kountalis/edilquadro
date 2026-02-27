@@ -80,11 +80,10 @@ const Footer = () => {
                 href="tel:+393333377320"
                 className="inline-flex items-center gap-2 bg-cta-green text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-cta-green-dark transition-all hover:shadow-[0_0_15px_rgba(15,76,47,0.5)] hover:scale-105 active:scale-95"
                 onClick={() => trackGAEvent({ action: 'click_phone', category: 'Contatto', label: 'Footer - Chiama' })}
-                aria-label="Chiama Edilquadro"
               >
                 <img
                   src="/phone.svg"
-                  alt="Telefono"
+                  alt=""
                   className="w-5 h-5"
                   style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                 />
@@ -96,11 +95,10 @@ const Footer = () => {
                 href="mailto:edilquadroroma@gmail.com"
                 className="inline-flex items-center gap-2 bg-teal-700 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-teal-800 transition-all hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 active:scale-95"
                 onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Footer - Email' })}
-                aria-label="Invia email a Edilquadro"
               >
                 <img
                   src="/envelope.svg"
-                  alt="Email"
+                  alt=""
                   className="w-5 h-5"
                   style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                 />
@@ -114,11 +112,10 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-emerald-700 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-emerald-800 transition-all hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105 active:scale-95"
                 onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Footer - WhatsApp' })}
-                aria-label="Contatta Edilquadro su WhatsApp"
               >
                 <img
                   src="/Whatsapp.svg"
-                  alt="WhatsApp"
+                  alt=""
                   className="w-5 h-5"
                   style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                 />
@@ -132,11 +129,10 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition-all hover:shadow-[0_0_15px_rgba(147,51,234,0.5)] hover:scale-105 active:scale-95"
                 onClick={() => trackGAEvent({ action: 'click_viber', category: 'Contatto', label: 'Footer - Viber' })}
-                aria-label="Contatta Edilquadro su Viber"
               >
                 <img
                   src="/viber.svg"
-                  alt="Viber"
+                  alt=""
                   className="w-5 h-5"
                   style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                 />

@@ -222,9 +222,9 @@ const CommercialServices = () => {
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 <Trans i18nKey="commercial_services_page.header_subtitle" components={{
-                  1: <Link to="/servizi/casa" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.home_renovation')} />,
-                  3: <Link to="/servizi/commerciale" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.shops_renovation')} />,
-                  5: <Link to="/servizi/edifici" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.buildings_renovation')} />
+                  1: <Link to="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
+                  3: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
+                  5: <Link to="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />
                 }} />
               </p>
             </div>
@@ -239,9 +239,9 @@ const CommercialServices = () => {
                 <div className="text-[#0018A8] mb-6">
                   {service.icon}
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-white">{service.title}</h3>
+                <h2 className="text-2xl font-bold mb-4 text-white">{service.title}</h2>
                 <p className="text-gray-300 mb-6">
-                  {service.description} <a href="/contatti" className="text-emerald-600 underline hover:text-green-200 transition-colors" aria-label="Richiedi un preventivo ristrutturazione negozio Roma">{t('commercial_services_page.request_quote')}</a>
+                  {service.description} <a href="/contatti" className="text-emerald-400 underline hover:text-emerald-300 transition-colors" aria-label="Richiedi un preventivo ristrutturazione negozio Roma">{t('commercial_services_page.request_quote')}</a>
                 </p>
                 <ul className="text-gray-300 space-y-2">
                   {service.details.map((detail, idx) => (
@@ -264,7 +264,7 @@ const CommercialServices = () => {
                 <div
                   key={index}
                   viewport={{ once: true }}
-                  className="relative overflow-hidden rounded-lg group aspect-[4/3] scale-150"
+                  className="relative overflow-hidden rounded-lg group aspect-[4/3]"
                 >
                   <LazyImage
                     src={image.url}
@@ -301,7 +301,7 @@ const CommercialServices = () => {
               <a
                 href="tel:+393333377320"
                 className="bg-greenDark text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-greenDarker transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] hover:scale-105"
-                aria-label="Chiama Edilquadro per ristrutturazione negozi Roma"
+                
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'CommercialServices - Telefono' })}
               >
                 <img src="/phone.svg" alt="Telefono" className="w-5 h-5" />
@@ -318,9 +318,9 @@ const CommercialServices = () => {
               </a>
             </div>
             <div className="text-center mt-8" role="navigation" aria-label="Link ad altri servizi edilquadro">
-              <a href="/servizi/casa" className="text-blue-400 underline hover:text-blue-200 transition-colors no-underline" aria-label="Vai ai servizi per la casa Edilquadro">{t('commercial_services_page.home_services_link')}</a>
+              <a href="/servizi/casa" className="text-blue-400 underline hover:text-blue-200 transition-colors" aria-label="Vai ai servizi per la casa Edilquadro">{t('commercial_services_page.home_services_link')}</a>
               <span className="mx-2 text-gray-400">|</span>
-              <a href="/servizi/edifici" className="text-blue-400 underline hover:text-blue-200 transition-colors no-underline" aria-label="Ristrutturazione condomini Roma">{t('commercial_services_page.condo_renovation_link')}</a>
+              <a href="/servizi/edifici" className="text-blue-400 underline hover:text-blue-200 transition-colors" >{t('commercial_services_page.condo_renovation_link')}</a>
             </div>
           </section>
         </section>

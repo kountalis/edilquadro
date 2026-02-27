@@ -366,11 +366,11 @@ const Portfolio = () => {
                 </h1>
                 <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                   <Trans i18nKey="portfolio_page.header_subtitle" components={{
-                    1: <Link to="/servizi/casa" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.home_renovation')} />,
-                    3: <Link to="/servizi/commerciale" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.shops_renovation')} />,
-                    5: <Link to="/servizi/edifici" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.buildings_renovation')} />,
+                    1: <Link to="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
+                    3: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
+                    5: <Link to="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
                     7: <strong />,
-                    9: <Link to="/contatti" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.contact')} />
+                    9: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.contact')} />
                   }} />
                 </p>
               </div>
@@ -399,8 +399,8 @@ const Portfolio = () => {
             </nav>
             <div className="text-center mb-8 text-gray-400 text-sm">
               <Trans i18nKey="portfolio_page.inspiration_text" components={{
-                1: <Link to="/portfolio" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                3: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />
+                1: <Link to="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" />,
+                3: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />
               }} />
             </div>
           </header>
@@ -417,7 +417,7 @@ const Portfolio = () => {
                     onClick={() => project.images ? openModal(project) : null}
                   >
                     <div className="absolute top-3 right-3 z-10">
-                      <div className="bg-green-600/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg border border-green-500/30">
+                      <div className="bg-green-700/95 backdrop-blur-sm px-3 py-1 rounded-full shadow-lg border border-green-500/30">
                         <span className="text-white text-sm font-medium">
                           {project.category === 'casa' && t('portfolio_page.category_home')}
                           {project.category === 'commerciale' && t('portfolio_page.category_commercial')}
@@ -454,7 +454,7 @@ const Portfolio = () => {
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="text-white font-bold text-xl mb-2">{project.title}</h3>
+                        <h2 className="text-white font-bold text-xl mb-2">{project.title}</h2>
                         <p className="text-gray-300 text-sm">{project.description}</p>
                       </div>
                     </div>
@@ -495,11 +495,11 @@ const Portfolio = () => {
                   <Trans i18nKey="portfolio_page.cta_subtitle" components={{
                     1: <strong />,
                     3: <strong />,
-                    5: <Link to="/servizi/casa" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                    7: <Link to="/servizi/commerciale" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                    9: <Link to="/servizi/edifici" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                    11: <Link to="/portfolio" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                    13: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />
+                    5: <Link to="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" />,
+                    7: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" />,
+                    9: <Link to="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" />,
+                    11: <Link to="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" />,
+                    13: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />
                   }} />
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

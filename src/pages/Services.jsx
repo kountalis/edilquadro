@@ -156,12 +156,12 @@ const Services = () => {
               </h1>
               <p className="text-xl text-white mb-6">
                 <Trans i18nKey="services_page.header_subtitle" components={{
-                  1: <Link to="/servizi/casa" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.home_renovation')} />,
-                  3: <Link to="/servizi/commerciale" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.shops_renovation')} />,
-                  5: <Link to="/servizi/edifici" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.buildings_renovation')} />,
+                  1: <Link to="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
+                  3: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
+                  5: <Link to="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
                   7: <strong />,
-                  9: <Link to="/portfolio" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.portfolio')} />,
-                  11: <Link to="/contatti" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.contact')} />
+                  9: <Link to="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.portfolio')} />,
+                  11: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.contact')} />
                 }} />
               </p>
             </div>
@@ -179,10 +179,10 @@ const Services = () => {
                     {service.icon}
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 relative">
+                <h2 className="text-2xl font-bold text-white mb-4 relative">
                   {service.title}
                   <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-green-400 to-green-600 group-hover:w-full transition-all duration-500" />
-                </h3>
+                </h2>
                 <p className="text-gray-300 mb-6">
                   {service.description}
                 </p>
@@ -243,7 +243,7 @@ const Services = () => {
                 <a
                   href="tel:+393333377320"
                   className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300"
-                  aria-label="Chiama Edilquadro per ristrutturazione Roma"
+                  
                   onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Services - Telefono' })}
                 >
                   <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
@@ -262,7 +262,7 @@ const Services = () => {
                 <a
                   href="mailto:edilquadroroma@gmail.com"
                   className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green-light transition-all duration-300"
-                  aria-label="Scrivi a Edilquadro per preventivo gratuito ristrutturazione Roma"
+                  
                   onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Services - Email' })}
                 >
                     <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
@@ -332,7 +332,7 @@ const Services = () => {
                 <span className="text-yellow-400">★★★★★</span>
               </div>
               <p className="text-gray-300 italic">{t('services_page.review1_text')}</p>
-              <div className="text-xs text-gray-500 mt-2">{t('services_page.review1_date')}</div>
+              <div className="text-xs text-gray-400 mt-2">{t('services_page.review1_date')}</div>
             </div>
             <div className="bg-black/70 rounded-xl p-6 border border-green-900">
               <div className="flex items-center mb-2">
@@ -340,7 +340,7 @@ const Services = () => {
                 <span className="text-yellow-400">★★★★★</span>
               </div>
               <p className="text-gray-300 italic">{t('services_page.review2_text')}</p>
-              <div className="text-xs text-gray-500 mt-2">{t('services_page.review2_date')}</div>
+              <div className="text-xs text-gray-400 mt-2">{t('services_page.review2_date')}</div>
             </div>
           </div>
         </section>

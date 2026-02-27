@@ -300,7 +300,7 @@ const HomeSecondarySections = ({ galleryReady }) => {
               <a
                 href="tel:+393333377320"
                 role="button"
-                aria-label="Chiama Edilquadro al numero +39 333 337 7320"
+                
                 className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300 cta-action-btn"
                 onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Home - Telefono' })}
               >
@@ -342,7 +342,7 @@ const HomeSecondarySections = ({ galleryReady }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 role="button"
-                aria-label="Chatta con Edilquadro su WhatsApp"
+                
                 className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-whatsappDark to-whatsapp transition-all duration-300 cta-action-btn"
                 onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Home - WhatsApp' })}
               >

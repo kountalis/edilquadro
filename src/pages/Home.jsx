@@ -236,13 +236,13 @@ const Home = () => {
                       components={{
                         0: <strong />,
                         1: <br />,
-                        2: <Link to="/servizi/casa" className="text-emerald-600 underline hover:text-emerald-600 no-underline" title="Ristrutturazione casa Roma" />,
-                        4: <Link to="/servizi/commerciale" className="text-emerald-600 underline hover:text-emerald-600 no-underline" title="Ristrutturazione negozi Roma" />,
-                        6: <Link to="/servizi/edifici" className="text-emerald-600 underline hover:text-emerald-600 no-underline" title="Ristrutturazione edifici e condomini Roma" />,
-                        8: <Link to="/portfolio" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                        10: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                        2: <Link to="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" title="Ristrutturazione casa Roma" />,
+                        4: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" title="Ristrutturazione negozi Roma" />,
+                        6: <Link to="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" title="Ristrutturazione edifici e condomini Roma" />,
+                        8: <Link to="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" />,
+                        10: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
                         12: <strong />,
-                        14: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                        14: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
                       }}
                     />
                   </p>
@@ -336,15 +336,15 @@ const Home = () => {
                 <p className="text-xl text-white">
                   <Trans i18nKey="home.services.description" components={{ 
                       0: <strong />,
-                      1: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                      2: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                      3: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                      4: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                      5: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                      6: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                      7: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                      8: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                      9: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                      1: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
+                      2: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
+                      3: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
+                      4: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
+                      5: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
+                      6: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
+                      7: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
+                      8: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
+                      9: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
                   }} />
                 </p>
               </div>
@@ -355,7 +355,7 @@ const Home = () => {
             <div className="container mx-auto px-4">
               <ProjectGallery projects={featuredProjects} />
               <div className="text-center mt-8 text-gray-200 text-lg">
-                <Trans i18nKey="home.featured_projects.explore_portfolio" components={{ 0: <strong />, 2: <Link to="/portfolio" className="text-emerald-600 underline hover:text-emerald-600 no-underline" /> }} />
+                <Trans i18nKey="home.featured_projects.explore_portfolio" components={{ 0: <strong />, 2: <Link to="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" /> }} />
               </div>
             </div>
           </section>
@@ -367,7 +367,7 @@ const Home = () => {
                   {t('home.shops_renovation.title')}
                 </h2>
                 <p className="text-xl text-gray-200 mb-6">
-                  <Trans i18nKey="home.shops_renovation.description" components={{ 0: <strong />, 1: <Link to="/servizi/commerciale" className="text-emerald-600 underline hover:text-emerald-600 no-underline" /> }} />
+                  <Trans i18nKey="home.shops_renovation.description" components={{ 0: <strong />, 1: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" /> }} />
                 </p>
                 <Link
                   to="/servizi/commerciale"
@@ -507,9 +507,9 @@ const Home = () => {
                 <p
                   className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
                 >
-                  <Trans i18nKey="home.cta.description" components={{ 0: <strong />, 1: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                      2: <Link to="/contatti" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
-                      3: <Link to="/servizi" className="text-emerald-600 underline hover:text-emerald-600 no-underline" />,
+                  <Trans i18nKey="home.cta.description" components={{ 0: <strong />, 1: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
+                      2: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
+                      3: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
                       4: <strong /> 
                   }} />
                 </p>
@@ -517,7 +517,7 @@ const Home = () => {
                   <a
                     href="tel:+393333377320"
                     role="button"
-                    aria-label="Chiama Edilquadro al numero +39 333 337 7320"
+                    
                     className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-greenDark to-green-600 transition-all duration-300 hover:scale-102 hover:-translate-y-1 cta-action-btn"
                     onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Home - Telefono' })}
                   >
@@ -559,7 +559,7 @@ const Home = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     role="button"
-                    aria-label="Chatta con Edilquadro su WhatsApp"
+                    
                     className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-whatsapp to-green-500 transition-all duration-300 hover:scale-102 hover:-translate-y-1 cta-action-btn"
                     onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Home - WhatsApp' })}
                   >

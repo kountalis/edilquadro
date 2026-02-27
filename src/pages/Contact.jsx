@@ -144,13 +144,13 @@ const Contact = () => {
                 <p className="text-xl md:text-2xl text-gray-200 text-center max-w-2xl">
                   <Trans i18nKey="contact_page.header_subtitle" components={{
                     1: <strong />,
-                    3: <a href="/servizi/casa" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.home_renovation')} />,
-                    5: <a href="/servizi/commerciale" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.shops_renovation')} />,
-                    7: <a href="/servizi/edifici" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.buildings_renovation')} />,
-                    9: <a href="/portfolio" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.footer_nav.portfolio')} />,
-                    11: <a href="/contatti" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('home.cta.free_quote')} />,
+                    3: <a href="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
+                    5: <a href="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
+                    7: <a href="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
+                    9: <a href="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.portfolio')} />,
+                    11: <a href="/contatti" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.cta.free_quote')} />,
                     13: <strong />,
-                    15: <a href="/contatti" className="text-emerald-600 hover:text-emerald-600 no-underline" title={t('nav.contact')} />
+                    15: <a href="/contatti" className="text-emerald-400 underline hover:text-emerald-300" title={t('nav.contact')} />
                   }} />
                 </p>
               </div>
@@ -182,7 +182,7 @@ const Contact = () => {
                 style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
               />
               <div className="text-left flex-1 min-w-0">
-                <h3 className="text-white font-bold text-lg">{t('contact_page.phone')}</h3>
+                <h2 className="text-white font-bold text-lg">{t('contact_page.phone')}</h2>
                 <p className="text-gray-200 text-base font-semibold">+39 333 337 7320</p>
               </div>
             </a>
@@ -199,7 +199,7 @@ const Contact = () => {
                 style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
               />
               <div className="text-left flex-1 min-w-0">
-                <h3 className="text-white font-bold text-lg">{t('contact_page.email')}</h3>
+                <h2 className="text-white font-bold text-lg">{t('contact_page.email')}</h2>
                 <p className="text-gray-200 break-all text-base font-semibold">edilquadroroma@gmail.com</p>
               </div>
             </a>
@@ -218,7 +218,7 @@ const Contact = () => {
                 style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
               />
               <div className="text-left flex-1 min-w-0">
-                <h3 className="text-white font-bold text-lg">{t('contact_page.cta_whatsapp_label')}</h3>
+                <h2 className="text-white font-bold text-lg">{t('contact_page.cta_whatsapp_label')}</h2>
                 <p className="text-gray-200 break-all text-base font-semibold">+39 333 337 7320</p>
               </div>
             </a>
@@ -237,7 +237,7 @@ const Contact = () => {
                 style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
               />
               <div className="text-left flex-1 min-w-0">
-                <h3 className="text-white font-bold text-lg">{t('contact_page.cta_viber_label')}</h3>
+                <h2 className="text-white font-bold text-lg">{t('contact_page.cta_viber_label')}</h2>
                 <p className="text-gray-200 break-all text-base font-semibold">+39 333 337 7320</p>
               </div>
             </a>

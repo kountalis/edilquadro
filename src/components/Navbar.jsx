@@ -111,7 +111,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           to="/"
           className="flex-shrink-0 flex items-center gap-2 md:gap-3 group"
           style={{ textDecoration: 'none' }}
-          aria-label="Vai alla home"
+          aria-label="Edilquadro - Vai alla home"
         >
             <img
               src="/logo.svg"
@@ -142,7 +142,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
               to="/"
               className="flex-shrink-0 flex items-center gap-1 group pointer-events-auto"
               style={{ textDecoration: 'none' }}
-              aria-label="Vai alla home"
+              aria-label="Edilquadro - Vai alla home"
             >
               <img
                   src="/logo.svg"

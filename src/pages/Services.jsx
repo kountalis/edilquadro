@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 
 // Rimosso import icone React, usiamo solo SVG public
 import { Helmet } from 'react-helmet-async';
@@ -156,12 +156,12 @@ const Services = () => {
               </h1>
               <p className="text-xl text-white mb-6">
                 <Trans i18nKey="services_page.header_subtitle" components={{
-                  1: <Link to="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
-                  3: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
-                  5: <Link to="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
+                  1: <Link to="/servizi/casa" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
+                  3: <Link to="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
+                  5: <Link to="/servizi/edifici" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
                   7: <strong />,
-                  9: <Link to="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.portfolio')} />,
-                  11: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.contact')} />
+                  9: <Link to="/portfolio" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.portfolio')} />,
+                  11: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.contact')} />
                 }} />
               </p>
             </div>

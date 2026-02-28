@@ -1,6 +1,7 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { trackGAEvent } from '../utils/gaEvents';
+import { Conversions } from '../hooks/useAnalytics';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
@@ -79,7 +80,7 @@ const Footer = () => {
               <a
                 href="tel:+393333377320"
                 className="inline-flex items-center gap-2 bg-cta-green text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-cta-green-dark transition-all hover:shadow-[0_0_15px_rgba(15,76,47,0.5)] hover:scale-105 active:scale-95"
-                onClick={() => trackGAEvent({ action: 'click_phone', category: 'Contatto', label: 'Footer - Chiama' })}
+                onClick={() => { trackGAEvent({ action: 'click_phone', category: 'Contatto', label: 'Footer - Chiama' }); Conversions.PHONE_CALL('Footer'); }}
               >
                 <img
                   src="/phone.svg"
@@ -94,7 +95,7 @@ const Footer = () => {
               <a
                 href="mailto:edilquadroroma@gmail.com"
                 className="inline-flex items-center gap-2 bg-teal-700 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-teal-800 transition-all hover:shadow-[0_0_15px_rgba(20,184,166,0.5)] hover:scale-105 active:scale-95"
-                onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Footer - Email' })}
+                onClick={() => { trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Footer - Email' }); Conversions.EMAIL_SENT('Footer'); }}
               >
                 <img
                   src="/envelope.svg"
@@ -111,7 +112,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-emerald-700 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-emerald-800 transition-all hover:shadow-[0_0_15px_rgba(34,197,94,0.5)] hover:scale-105 active:scale-95"
-                onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Footer - WhatsApp' })}
+                onClick={() => { trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Footer - WhatsApp' }); Conversions.WHATSAPP_CLICK('Footer'); }}
               >
                 <img
                   src="/Whatsapp.svg"
@@ -128,7 +129,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-purple-700 transition-all hover:shadow-[0_0_15px_rgba(147,51,234,0.5)] hover:scale-105 active:scale-95"
-                onClick={() => trackGAEvent({ action: 'click_viber', category: 'Contatto', label: 'Footer - Viber' })}
+                onClick={() => { trackGAEvent({ action: 'click_viber', category: 'Contatto', label: 'Footer - Viber' }); trackGAEvent({ action: 'viber_contact', category: 'Conversione', label: 'Footer' }); }}
               >
                 <img
                   src="/viber.svg"

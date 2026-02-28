@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 // Rimosso MenuIcon e XIcon, usiamo SVG public
 
 import { trackGAEvent } from '../utils/gaEvents';
+import { Conversions } from '../hooks/useAnalytics';
 import MobileMenuPortal from './MobileMenuPortal';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -189,7 +190,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                   href="mailto:edilquadroroma@gmail.com"
                   className="bg-cta-green text-white px-6 h-12 rounded-full text-lg font-medium hover:bg-cta-green-dark transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(34,197,94,0.5)]"
                   style={{ textDecoration: 'none' }}
-                  onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Navbar - Email' })}
+                  onClick={() => { trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Navbar - Email' }); Conversions.EMAIL_SENT('Navbar'); }}
                 >
                   <img src="/envelope.svg" alt="Email" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
                   <span className="hidden sm:inline">{t('free_quote')}</span>
@@ -199,7 +200,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-whatsapp text-white h-12 w-12 rounded-full hover:bg-whatsappDark transition-colors hover:shadow-[0_0_15px_rgba(37,211,102,0.5)] flex items-center justify-center"
-                  onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Navbar - WhatsApp' })}
+                  onClick={() => { trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Navbar - WhatsApp' }); Conversions.WHATSAPP_CLICK('Navbar'); }}
                 >
                   <img src="/Whatsapp.svg" alt="WhatsApp" className="w-6 h-6" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
                 </a>

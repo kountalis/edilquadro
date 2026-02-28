@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+﻿import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { trackGAEvent } from '../utils/gaEvents';
+import { Conversions } from '../hooks/useAnalytics';
 import { generateLocalBusinessSchema } from "../utils/seo";
 import { useTranslation, Trans } from 'react-i18next';
 // Rimosso import icone, usiamo solo SVG public
@@ -19,6 +20,8 @@ const Contact = () => {
   useEffect(() => {
     if (sent && window.gtag) {
       window.gtag('event', 'conversion', {'send_to': 'AW-17331965831/FVh8CPCEuO0aEIefw8hA'});
+      Conversions.FORM_SUBMIT(true);
+      Conversions.QUOTE_REQUEST('Contact Page Form');
     }
   }, [sent]);
 
@@ -144,13 +147,13 @@ const Contact = () => {
                 <p className="text-xl md:text-2xl text-gray-200 text-center max-w-2xl">
                   <Trans i18nKey="contact_page.header_subtitle" components={{
                     1: <strong />,
-                    3: <a href="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
-                    5: <a href="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
-                    7: <a href="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
-                    9: <a href="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.portfolio')} />,
-                    11: <a href="/contatti" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.cta.free_quote')} />,
+                    3: <a href="/servizi/casa" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
+                    5: <a href="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
+                    7: <a href="/servizi/edifici" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
+                    9: <a href="/portfolio" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.portfolio')} />,
+                    11: <a href="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.cta.free_quote')} />,
                     13: <strong />,
-                    15: <a href="/contatti" className="text-emerald-400 underline hover:text-emerald-300" title={t('nav.contact')} />
+                    15: <a href="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('nav.contact')} />
                   }} />
                 </p>
               </div>
@@ -172,7 +175,7 @@ const Contact = () => {
             <a
               href="tel:+393333377320"
               className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px]"
-              onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Contact - Telefono' })}
+              onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Contact - Telefono' }); Conversions.PHONE_CALL('Contact Page'); }}
             >
               <img
                 src="/phone.svg"
@@ -189,7 +192,7 @@ const Contact = () => {
             <a
               href="mailto:edilquadroroma@gmail.com"
               className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px]"
-              onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Contact - Email' })}
+              onClick={() => { trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Contact - Email' }); Conversions.EMAIL_SENT('Contact Page'); }}
             >
               <img
                 src="/envelope.svg"
@@ -208,7 +211,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px]"
-              onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Contact - WhatsApp' })}
+              onClick={() => { trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Contact - WhatsApp' }); Conversions.WHATSAPP_CLICK('Contact Page'); }}
             >
               <img
                 src="/Whatsapp.svg"
@@ -227,7 +230,7 @@ const Contact = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-white/20 hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px] shadow"
-              onClick={() => trackGAEvent({ action: 'click_viber', category: 'Contatto', label: 'Contact - Viber' })}
+              onClick={() => { trackGAEvent({ action: 'click_viber', category: 'Contatto', label: 'Contact - Viber' }); trackGAEvent({ action: 'viber_contact', category: 'Conversione', label: 'Contact Page' }); }}
             >
               <img
                 src="/viber.svg"

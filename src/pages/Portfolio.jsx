@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 // Rimosso import icone React, usiamo solo SVG public
 import { useProject } from '../context/ProjectContext';
 import ProjectModal from '../components/ProjectModal';
@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
+import { Conversions } from '../hooks/useAnalytics';
 import { useTranslation, Trans } from 'react-i18next';
 
 const Portfolio = () => {
@@ -366,11 +367,11 @@ const Portfolio = () => {
                 </h1>
                 <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                   <Trans i18nKey="portfolio_page.header_subtitle" components={{
-                    1: <Link to="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
-                    3: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
-                    5: <Link to="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
+                    1: <Link to="/servizi/casa" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
+                    3: <Link to="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
+                    5: <Link to="/servizi/edifici" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
                     7: <strong />,
-                    9: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.contact')} />
+                    9: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.contact')} />
                   }} />
                 </p>
               </div>
@@ -399,8 +400,8 @@ const Portfolio = () => {
             </nav>
             <div className="text-center mb-8 text-gray-400 text-sm">
               <Trans i18nKey="portfolio_page.inspiration_text" components={{
-                1: <Link to="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" />,
-                3: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />
+                1: <Link to="/portfolio" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                3: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />
               }} />
             </div>
           </header>
@@ -495,11 +496,11 @@ const Portfolio = () => {
                   <Trans i18nKey="portfolio_page.cta_subtitle" components={{
                     1: <strong />,
                     3: <strong />,
-                    5: <Link to="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" />,
-                    7: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" />,
-                    9: <Link to="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" />,
-                    11: <Link to="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" />,
-                    13: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />
+                    5: <Link to="/servizi/casa" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                    7: <Link to="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                    9: <Link to="/servizi/edifici" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                    11: <Link to="/portfolio" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                    13: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />
                   }} />
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -507,7 +508,7 @@ const Portfolio = () => {
                     href="tel:+393333377320"
                     className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300 hover:scale-102 hover:-translate-y-1 active:scale-98"
                     style={{ animation: 'fadeIn 1s ease-out 0.6s both', minHeight: '100px' }}
-                    onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Portfolio - Telefono' })}
+                    onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Portfolio - Telefono' }); Conversions.PHONE_CALL('Portfolio'); }}
                   >
                     <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">
@@ -526,7 +527,7 @@ const Portfolio = () => {
                     href="mailto:edilquadroroma@gmail.com"
                     className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300 hover:scale-102 hover:-translate-y-1 active:scale-98"
                     style={{ animation: 'fadeIn 1s ease-out 0.8s both', minHeight: '100px' }}
-                    onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Portfolio - Email' })}
+                    onClick={() => { trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Portfolio - Email' }); Conversions.EMAIL_SENT('Portfolio'); }}
                   >
                     <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">
@@ -547,7 +548,7 @@ const Portfolio = () => {
                     rel="noopener noreferrer"
                     className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-whatsappDark to-whatsapp transition-all duration-300 hover:scale-102 hover:-translate-y-1 active:scale-98"
                     style={{ animation: 'fadeIn 1s ease-out 1s both', minHeight: '100px' }}
-                    onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Portfolio - WhatsApp' })}
+                    onClick={() => { trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Portfolio - WhatsApp' }); Conversions.WHATSAPP_CLICK('Portfolio'); }}
                   >
                     <div className="absolute inset-0 rounded-2xl bg-whatsapp opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">

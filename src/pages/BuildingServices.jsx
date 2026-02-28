@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import LazyImage from '../components/LazyImage';
@@ -226,9 +226,9 @@ const BuildingServices = () => {
               </h1>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 <Trans i18nKey="building_services_page.header_subtitle" components={{
-                  1: <Link to="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
-                  3: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
-                  5: <Link to="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />
+                  1: <Link to="/servizi/casa" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
+                  3: <Link to="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
+                  5: <Link to="/servizi/edifici" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />
                 }} />
               </p>
             </div>
@@ -245,7 +245,7 @@ const BuildingServices = () => {
                 </div>
                 <h2 className="text-2xl font-bold mb-4 text-white">{service.title}</h2>
                 <p className="text-gray-300 mb-6">
-                  {service.description} <a href="/contatti" className="text-emerald-400 underline hover:text-emerald-300 transition-colors" >{t('building_services_page.request_quote')}</a>
+                  {service.description} <a href="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300 transition-colors" >{t('building_services_page.request_quote')}</a>
                 </p>
                 <ul className="text-gray-300 space-y-2">
                   {service.details.map((detail, idx) => (
@@ -317,9 +317,9 @@ const BuildingServices = () => {
               </a>
             </div>
             <div className="text-center mt-8">
-              <a href="/servizi/casa" className="text-blue-400 underline hover:text-blue-200 transition-colors" >{t('building_services_page.home_services_link')}</a>
+              <a href="/servizi/casa" className="text-blue-400 underline decoration-blue-400/50 hover:text-blue-200 transition-colors" >{t('building_services_page.home_services_link')}</a>
               <span className="mx-2 text-gray-400">|</span>
-              <a href="/servizi/commerciale" className="text-blue-400 underline hover:text-blue-200 transition-colors" >{t('building_services_page.commercial_services_link')}</a>
+              <a href="/servizi/commerciale" className="text-blue-400 underline decoration-blue-400/50 hover:text-blue-200 transition-colors" >{t('building_services_page.commercial_services_link')}</a>
             </div>
           </section>
         </section>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import ProjectModal from '../components/ProjectModal';
 import { useProject } from '../context/ProjectContext';
 
@@ -236,13 +236,13 @@ const Home = () => {
                       components={{
                         0: <strong />,
                         1: <br />,
-                        2: <Link to="/servizi/casa" className="text-emerald-400 underline hover:text-emerald-300" title="Ristrutturazione casa Roma" />,
-                        4: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" title="Ristrutturazione negozi Roma" />,
-                        6: <Link to="/servizi/edifici" className="text-emerald-400 underline hover:text-emerald-300" title="Ristrutturazione edifici e condomini Roma" />,
-                        8: <Link to="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" />,
-                        10: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
+                        2: <Link to="/servizi/casa" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title="Ristrutturazione casa Roma" />,
+                        4: <Link to="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title="Ristrutturazione negozi Roma" />,
+                        6: <Link to="/servizi/edifici" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title="Ristrutturazione edifici e condomini Roma" />,
+                        8: <Link to="/portfolio" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                        10: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
                         12: <strong />,
-                        14: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
+                        14: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
                       }}
                     />
                   </p>
@@ -336,15 +336,15 @@ const Home = () => {
                 <p className="text-xl text-white">
                   <Trans i18nKey="home.services.description" components={{ 
                       0: <strong />,
-                      1: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
-                      2: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
-                      3: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
-                      4: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
-                      5: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
-                      6: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
-                      7: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
-                      8: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
-                      9: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
+                      1: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      2: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      3: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      4: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      5: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      6: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      7: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      8: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      9: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
                   }} />
                 </p>
               </div>
@@ -355,7 +355,7 @@ const Home = () => {
             <div className="container mx-auto px-4">
               <ProjectGallery projects={featuredProjects} />
               <div className="text-center mt-8 text-gray-200 text-lg">
-                <Trans i18nKey="home.featured_projects.explore_portfolio" components={{ 0: <strong />, 2: <Link to="/portfolio" className="text-emerald-400 underline hover:text-emerald-300" /> }} />
+                <Trans i18nKey="home.featured_projects.explore_portfolio" components={{ 0: <strong />, 2: <Link to="/portfolio" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" /> }} />
               </div>
             </div>
           </section>
@@ -367,7 +367,7 @@ const Home = () => {
                   {t('home.shops_renovation.title')}
                 </h2>
                 <p className="text-xl text-gray-200 mb-6">
-                  <Trans i18nKey="home.shops_renovation.description" components={{ 0: <strong />, 1: <Link to="/servizi/commerciale" className="text-emerald-400 underline hover:text-emerald-300" /> }} />
+                  <Trans i18nKey="home.shops_renovation.description" components={{ 0: <strong />, 1: <Link to="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" /> }} />
                 </p>
                 <Link
                   to="/servizi/commerciale"
@@ -507,9 +507,9 @@ const Home = () => {
                 <p
                   className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
                 >
-                  <Trans i18nKey="home.cta.description" components={{ 0: <strong />, 1: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
-                      2: <Link to="/contatti" className="text-emerald-400 underline hover:text-emerald-300" />,
-                      3: <Link to="/servizi" className="text-emerald-400 underline hover:text-emerald-300" />,
+                  <Trans i18nKey="home.cta.description" components={{ 0: <strong />, 1: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      2: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      3: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
                       4: <strong /> 
                   }} />
                 </p>

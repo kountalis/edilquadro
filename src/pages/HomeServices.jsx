@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
@@ -243,7 +243,7 @@ const HomeServices = () => {
                 </div>
                 <h2 className="text-2xl font-bold mb-4 text-white">{service.title}</h2>
                 <p className="text-gray-300 mb-6">
-                  {service.description} <a href="/contatti" className="text-emerald-400 underline hover:text-emerald-300 transition-colors" aria-label="Richiedi un preventivo ristrutturazione casa Roma">{t('home_services_page.request_quote')}</a>
+                  {service.description} <a href="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300 transition-colors" aria-label="Richiedi un preventivo ristrutturazione casa Roma">{t('home_services_page.request_quote')}</a>
                 </p>
                 <ul className="text-gray-300 space-y-2">
                   {service.details.map((detail, idx) => (
@@ -288,9 +288,9 @@ const HomeServices = () => {
               ))}
             </div>
             <div className="text-center mt-8" role="navigation" aria-label="Link ad altri servizi edilquadro">
-              <a href="/servizi/commerciale" className="text-blue-400 underline hover:text-blue-200 transition-colors" >{t('home_services_page.commercial_services_link')}</a>
+              <a href="/servizi/commerciale" className="text-blue-400 underline decoration-blue-400/50 hover:text-blue-200 transition-colors" >{t('home_services_page.commercial_services_link')}</a>
               <span className="mx-2 text-gray-400">|</span>
-              <a href="/servizi/edifici" className="text-blue-400 underline hover:text-blue-200 transition-colors" >{t('home_services_page.condo_renovation_link')}</a>
+              <a href="/servizi/edifici" className="text-blue-400 underline decoration-blue-400/50 hover:text-blue-200 transition-colors" >{t('home_services_page.condo_renovation_link')}</a>
             </div>
           </section>
 

@@ -44,7 +44,11 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-E5F0QNCJQS');
+      gtag('config', 'G-E5F0QNCJQS', {
+        send_page_view: false,
+        cookie_flags: 'SameSite=None;Secure'
+      });
+      gtag('config', 'AW-17331965831');
     </script>
     <!--head-outlet-->
   </head>

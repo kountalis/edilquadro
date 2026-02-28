@@ -1,9 +1,10 @@
-import { useState, Suspense } from 'react';
+﻿import { useState, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { Trans, useTranslation } from 'react-i18next';
 import ProjectGallery from '../components/ProjectGallery';
 import AnimatedCounter from '../components/AnimatedCounter';
 import { trackGAEvent } from '../utils/gaEvents';
+import { Conversions } from '../hooks/useAnalytics';
 // Rimosso import icone React, usiamo solo SVG public
 
 const HomeSecondarySections = ({ galleryReady }) => {
@@ -302,7 +303,7 @@ const HomeSecondarySections = ({ galleryReady }) => {
                 role="button"
                 
                 className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300 cta-action-btn"
-                onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Home - Telefono' })}
+                onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Home - Telefono' }); Conversions.PHONE_CALL('Home'); }}
               >
                 <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                 <div className="relative flex items-center justify-center gap-3">
@@ -322,7 +323,7 @@ const HomeSecondarySections = ({ galleryReady }) => {
                 role="button"
                 aria-label="Invia una email a Edilquadro per un preventivo gratuito"
                 className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green-light transition-all duration-300 cta-action-btn"
-                onClick={() => trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Home - Email' })}
+                onClick={() => { trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'Home - Email' }); Conversions.EMAIL_SENT('Home'); }}
               >
                 <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                 <div className="relative flex items-center justify-center gap-3">
@@ -344,7 +345,7 @@ const HomeSecondarySections = ({ galleryReady }) => {
                 role="button"
                 
                 className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-whatsappDark to-whatsapp transition-all duration-300 cta-action-btn"
-                onClick={() => trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Home - WhatsApp' })}
+                onClick={() => { trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Home - WhatsApp' }); Conversions.WHATSAPP_CLICK('Home'); }}
               >
                 <div className="absolute inset-0 rounded-2xl bg-whatsapp opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                 <div className="relative flex items-center justify-center gap-3">

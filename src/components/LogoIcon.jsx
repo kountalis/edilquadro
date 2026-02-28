@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const LogoIcon = ({ className = 'h-10 w-10', ...props }) => (
   <svg

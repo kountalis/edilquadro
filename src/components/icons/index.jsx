@@ -1,4 +1,4 @@
-// ===================================================================
+﻿// ===================================================================
 // NOTA: Tutte le icone React sono state rimosse.
 // Il sito ora utilizza SOLO icone SVG dalla cartella /public/
 // 

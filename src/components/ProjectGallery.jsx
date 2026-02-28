@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 import { useProject } from '../context/ProjectContext';
 import LazyImage from './LazyImage';

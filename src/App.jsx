@@ -1,7 +1,8 @@
-import { Routes, Route } from 'react-router-dom';
+﻿import { Routes, Route } from 'react-router-dom';
 import { ProjectProvider } from './context/ProjectContext';
 import { HelmetProvider } from 'react-helmet-async';
 import React, { Suspense, useState } from 'react';
+import { useAnalytics } from './hooks/useAnalytics';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -21,6 +22,7 @@ const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 function App({ helmetContext } = {}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  useAnalytics(); // Auto-track: page views, scroll depth, time on page
   return (
     <HelmetProvider context={helmetContext}>
       <ProjectProvider>

@@ -11,7 +11,7 @@
     <link rel="preload" as="video" href="/hero-video.mp4" />
     <link rel="preconnect" href="https://maps.googleapis.com" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <!-- Google Consent Mode v2 - MUST be before gtag.js -->
+    <!-- Google Consent Mode v2 - Set default consent state BEFORE gtag.js loads -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -20,17 +20,25 @@
         'analytics_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
-        'wait_for_update': 500
+        'wait_for_update': 500,
+        'region': ['IT', 'FR', 'DE', 'ES', 'SE', 'PL', 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'GR', 'HU', 'IE', 'LV', 'LT', 'LU', 'MT', 'NL', 'PT', 'RO', 'SI', 'SK']
       });
       
-      // Check if user has already accepted cookies
-      const consentStatus = localStorage.getItem('edilquadro_consent_status');
-      if (consentStatus === 'accepted') {
+      // Check if user has already given consent
+      const savedConsent = localStorage.getItem('edilquadro_consent_status');
+      if (savedConsent === 'accepted') {
         gtag('consent', 'update', {
           'ad_storage': 'granted',
           'analytics_storage': 'granted',
           'ad_user_data': 'granted',
           'ad_personalization': 'granted'
+        });
+      } else if (savedConsent === 'denied') {
+        gtag('consent', 'update', {
+          'ad_storage': 'denied',
+          'analytics_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied'
         });
       }
     </script>
@@ -40,15 +48,38 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+      
+      // GA4 Configuration
       gtag('config', 'G-E5F0QNCJQS', {
         'page_path': window.location.pathname,
         'page_title': document.title,
         'send_page_view': true,
-        'transport_url': window.location.origin + '/analytics-proxy'
+        'transport_url': window.location.origin + '/analytics-proxy',
+        'anonymize_ip': true
       });
+      
       // Google Ads conversion tracking
       gtag('config', 'AW-17331965831', {
         'transport_url': window.location.origin + '/analytics-proxy'
+      });
+      
+      // Listen for consent updates from the banner
+      window.addEventListener('consent-updated', function(event) {
+        if (event.detail.status === 'accepted') {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
+          });
+        } else if (event.detail.status === 'denied') {
+          gtag('consent', 'update', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied'
+          });
+        }
       });
     </script>
     <!-- SEO e dati strutturati qui -->

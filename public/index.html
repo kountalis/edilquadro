@@ -11,36 +11,53 @@
     <link rel="preload" as="video" href="/hero-video.mp4" />
     <link rel="preconnect" href="https://maps.googleapis.com" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <!-- Google Consent Mode v2 - Set default consent state BEFORE gtag.js loads -->
+    <!-- Google Consent Mode v2 - CRITICAL: Must be BEFORE gtag.js -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied',
-        'wait_for_update': 500,
-        'region': ['IT', 'FR', 'DE', 'ES', 'SE', 'PL', 'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'GR', 'HU', 'IE', 'LV', 'LT', 'LU', 'MT', 'NL', 'PT', 'RO', 'SI', 'SK']
-      });
-      
-      // Check if user has already given consent
-      const savedConsent = localStorage.getItem('edilquadro_consent_status');
-      if (savedConsent === 'accepted') {
-        gtag('consent', 'update', {
-          'ad_storage': 'granted',
-          'analytics_storage': 'granted',
-          'ad_user_data': 'granted',
-          'ad_personalization': 'granted'
-        });
-      } else if (savedConsent === 'denied') {
-        gtag('consent', 'update', {
+      (function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        
+        // Set default consent state (most restrictive)
+        gtag('consent', 'default', {
           'ad_storage': 'denied',
           'analytics_storage': 'denied',
           'ad_user_data': 'denied',
-          'ad_personalization': 'denied'
+          'ad_personalization': 'denied',
+          'wait_for_update': 500,
+          'region': ['IT']
         });
-      }
+        
+        // Check localStorage for saved consent
+        try {
+          var savedConsent = localStorage.getItem('edilquadro_consent_status');
+          if (savedConsent === 'accepted') {
+            gtag('consent', 'update', {
+              'ad_storage': 'granted',
+              'analytics_storage': 'granted',
+              'ad_user_data': 'granted',
+              'ad_personalization': 'granted'
+            });
+            console.log('✅ Consent loaded: accepted');
+          } else if (savedConsent === 'denied') {
+            console.log('❌ Consent loaded: denied');
+          } else {
+            console.log('⏳ Consent not yet decided');
+          }
+        } catch(e) {
+          console.warn('Could not read localStorage:', e);
+        }
+        
+        // Listen for consent updates from React component
+        window.addEventListener('consent-updated', function(e) {
+          gtag('consent', 'update', {
+            'ad_storage': e.detail.status === 'accepted' ? 'granted' : 'denied',
+            'analytics_storage': e.detail.status === 'accepted' ? 'granted' : 'denied',
+            'ad_user_data': e.detail.status === 'accepted' ? 'granted' : 'denied',
+            'ad_personalization': e.detail.status === 'accepted' ? 'granted' : 'denied'
+          });
+          console.log('🔄 Consent updated:', e.detail.status);
+        });
+      })();
     </script>
     <!-- Google Analytics 4 + Google Ads Conversion Tracking -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5F0QNCJQS"></script>
@@ -61,25 +78,6 @@
       // Google Ads conversion tracking
       gtag('config', 'AW-17331965831', {
         'transport_url': window.location.origin + '/analytics-proxy'
-      });
-      
-      // Listen for consent updates from the banner
-      window.addEventListener('consent-updated', function(event) {
-        if (event.detail.status === 'accepted') {
-          gtag('consent', 'update', {
-            'ad_storage': 'granted',
-            'analytics_storage': 'granted',
-            'ad_user_data': 'granted',
-            'ad_personalization': 'granted'
-          });
-        } else if (event.detail.status === 'denied') {
-          gtag('consent', 'update', {
-            'ad_storage': 'denied',
-            'analytics_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied'
-          });
-        }
       });
     </script>
     <!-- SEO e dati strutturati qui -->

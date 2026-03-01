@@ -1,18 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { acceptAllCookies, denyCookies, hasUserConsentedToCookies } from '../utils/consentManager';
+import { acceptAllCookies, denyCookies, getConsentStatus } from '../utils/consentManager';
 import { Link } from 'react-router-dom';
 
 export default function CookieBanner() {
-  const [showBanner, setShowBanner] = useState(false);
+  const [showBanner, setShowBanner] = useState(true); // Mostra per default
   const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
-    // Mostra il banner solo se l'utente non ha già dato/negato il consenso
-    if (!hasUserConsentedToCookies()) {
-      const timer = setTimeout(() => {
-        setShowBanner(true);
-      }, 500); // Ritardo di 500ms per evitare flash iniziale
-      return () => clearTimeout(timer);
+    // Controlla se l'utente ha già dato il consenso
+    const consentStatus = getConsentStatus();
+    
+    // Nasconde il banner se l'utente ha già deciso
+    if (consentStatus === 'accepted' || consentStatus === 'denied') {
+      setShowBanner(false);
+    } else {
+      // Mostra il banner se il consenso non è stato ancora deciso
+      setShowBanner(true);
     }
   }, []);
 
@@ -39,12 +42,13 @@ export default function CookieBanner() {
       className={`fixed bottom-0 left-0 right-0 z-50 transition-transform duration-300 ${
         isClosing ? 'translate-y-full' : 'translate-y-0'
       }`}
+      role="region"
+      aria-label="Cookie consent banner"
     >
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"
-        style={{ opacity: isClosing ? 0 : 1 }}
-        onClick={handleDeny}
+        style={{ opacity: isClosing ? 0 : 1, pointerEvents: isClosing ? 'none' : 'auto' }}
       />
       
       {/* Banner */}
@@ -53,34 +57,35 @@ export default function CookieBanner() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
             {/* Testo */}
             <div className="flex-1 text-white">
-              <h3 className="text-lg font-semibold mb-2">Utilizziamo i cookie</h3>
+              <h2 className="text-lg font-semibold mb-2">Utilizziamo i cookie</h2>
               <p className="text-sm text-gray-300 leading-relaxed">
                 Utilizziamo cookie e tecnologie simili per migliorare la tua esperienza, personalizzare contenuti, analizzare il traffico e per scopi pubblicitari. 
-                Per saperne di più, leggi la nostra{' '}
+                Accettando, consenti a Google Analytics e Google Ads di trattare i tuoi dati.{' '}
                 <Link to="/cookie-policy" className="text-emerald-400 hover:text-emerald-300 underline">
                   Cookie Policy
                 </Link>
-                {' '}e la{' '}
+                {' '}•{' '}
                 <Link to="/privacy" className="text-emerald-400 hover:text-emerald-300 underline">
                   Privacy Policy
                 </Link>
-                .
               </p>
             </div>
 
             {/* Pulsanti */}
-            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto sm:flex-shrink-0">
+            <div className="flex gap-3 w-full sm:w-auto sm:flex-shrink-0">
               <button
                 onClick={handleDeny}
-                className="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors duration-200 text-center"
+                className="flex-1 sm:flex-none px-6 py-2 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-colors duration-200 text-center"
+                aria-label="Rifiuta i cookie"
               >
                 Rifiuta
               </button>
               <button
                 onClick={handleAccept}
-                className="px-6 py-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-lg transition-colors duration-200 text-center shadow-lg"
+                className="flex-1 sm:flex-none px-6 py-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-lg transition-colors duration-200 text-center shadow-lg"
+                aria-label="Accetta tutti i cookie"
               >
-                Accetta tutto
+                Accetta
               </button>
             </div>
           </div>

@@ -12,7 +12,10 @@ const CONSENT_TIMESTAMP_KEY = 'edilquadro_consent_timestamp';
  */
 export function getConsentStatus() {
   try {
-    return localStorage.getItem(CONSENT_KEY);
+    if (typeof window === 'undefined' || !window.localStorage) {
+      return null;
+    }
+    return window.localStorage.getItem(CONSENT_KEY);
   } catch (e) {
     console.warn('localStorage non disponibile:', e);
     return null;
@@ -33,11 +36,16 @@ export function hasUserConsentedToCookies() {
  */
 export function acceptAllCookies() {
   try {
-    localStorage.setItem(CONSENT_KEY, 'accepted');
-    localStorage.setItem(CONSENT_TIMESTAMP_KEY, new Date().toISOString());
+    if (typeof window === 'undefined' || !window.localStorage) {
+      console.warn('localStorage non disponibile');
+      return false;
+    }
+    
+    window.localStorage.setItem(CONSENT_KEY, 'accepted');
+    window.localStorage.setItem(CONSENT_TIMESTAMP_KEY, new Date().toISOString());
     
     // Aggiorna Google Consent Mode v2
-    if (window.gtag) {
+    if (window.gtag && typeof window.gtag === 'function') {
       window.gtag('consent', 'update', {
         'ad_storage': 'granted',
         'analytics_storage': 'granted',
@@ -51,6 +59,7 @@ export function acceptAllCookies() {
       detail: { status: 'accepted' } 
     }));
     
+    console.log('✅ Cookie consent accepted');
     return true;
   } catch (e) {
     console.error('Errore nell\'aggiornamento del consenso:', e);
@@ -64,11 +73,16 @@ export function acceptAllCookies() {
  */
 export function denyCookies() {
   try {
-    localStorage.setItem(CONSENT_KEY, 'denied');
-    localStorage.setItem(CONSENT_TIMESTAMP_KEY, new Date().toISOString());
+    if (typeof window === 'undefined' || !window.localStorage) {
+      console.warn('localStorage non disponibile');
+      return false;
+    }
+    
+    window.localStorage.setItem(CONSENT_KEY, 'denied');
+    window.localStorage.setItem(CONSENT_TIMESTAMP_KEY, new Date().toISOString());
     
     // Google Consent Mode rimane su 'denied' (valore di default)
-    if (window.gtag) {
+    if (window.gtag && typeof window.gtag === 'function') {
       window.gtag('consent', 'update', {
         'ad_storage': 'denied',
         'analytics_storage': 'denied',
@@ -82,6 +96,7 @@ export function denyCookies() {
       detail: { status: 'denied' } 
     }));
     
+    console.log('❌ Cookie consent denied');
     return true;
   } catch (e) {
     console.error('Errore nel rifiuto del consenso:', e);
@@ -95,11 +110,15 @@ export function denyCookies() {
  */
 export function resetConsentStatus() {
   try {
-    localStorage.removeItem(CONSENT_KEY);
-    localStorage.removeItem(CONSENT_TIMESTAMP_KEY);
+    if (typeof window === 'undefined' || !window.localStorage) {
+      return false;
+    }
+    
+    window.localStorage.removeItem(CONSENT_KEY);
+    window.localStorage.removeItem(CONSENT_TIMESTAMP_KEY);
     
     // Riporta Consent Mode allo stato di default (denied)
-    if (window.gtag) {
+    if (window.gtag && typeof window.gtag === 'function') {
       window.gtag('consent', 'default', {
         'ad_storage': 'denied',
         'analytics_storage': 'denied',
@@ -112,6 +131,7 @@ export function resetConsentStatus() {
       detail: { status: 'reset' } 
     }));
     
+    console.log('🔄 Cookie consent reset');
     return true;
   } catch (e) {
     console.error('Errore nel reset del consenso:', e);
@@ -125,7 +145,10 @@ export function resetConsentStatus() {
  */
 export function getConsentTimestamp() {
   try {
-    return localStorage.getItem(CONSENT_TIMESTAMP_KEY);
+    if (typeof window === 'undefined' || !window.localStorage) {
+      return null;
+    }
+    return window.localStorage.getItem(CONSENT_TIMESTAMP_KEY);
   } catch (e) {
     return null;
   }

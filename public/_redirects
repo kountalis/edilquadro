@@ -4,6 +4,24 @@ https://www.edilquadro.it/* https://edilquadro.it/:splat 301!
 # Google Search Console verification file (must be served as-is)
 /google2bc1297c3f4bc24f.html /google2bc1297c3f4bc24f.html 200!
 
-# Always serve the SPA entrypoint
+# Serve prerendered static pages (BEFORE SPA fallback!)
+/servizi /servizi/index.html 200
+/en/services /en/services/index.html 200
+/portfolio /portfolio/index.html 200
+/en/portfolio /en/portfolio/index.html 200
+/servizi/casa /servizi/casa/index.html 200
+/en/services/home /en/services/home/index.html 200
+/servizi/commerciale /servizi/commerciale/index.html 200
+/en/services/commercial /en/services/commercial/index.html 200
+/servizi/edifici /servizi/edifici/index.html 200
+/en/services/buildings /en/services/buildings/index.html 200
+/contatti /contatti/index.html 200
+/en/contact /en/contact/index.html 200
+/privacy /privacy/index.html 200
+/en/privacy /en/privacy/index.html 200
+/cookie-policy /cookie-policy/index.html 200
+/en/cookie-policy /en/cookie-policy/index.html 200
+
+# SPA fallback for client-side routes (must be last!)
 / /index.html 200
 /* /index.html 200

@@ -1,4 +1,5 @@
-# Redirect www to non-www (canonicalize domain)
+# Redirect www to non-www (canonicalize domain) - BUT NOT for root (important for SEO)
+https://www.edilquadro.it /  301!
 https://www.edilquadro.it/* https://edilquadro.it/:splat 301!
 
 # Google Search Console verification file (must be served as-is)

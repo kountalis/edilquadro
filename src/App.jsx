@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import ScrollRestoration from './components/ScrollRestoration';
+import CookieBanner from './components/CookieBanner';
 import Contact from './pages/Contact';
 
 const Home = React.lazy(() => import('./pages/Home'));
@@ -52,6 +53,7 @@ function App({ helmetContext } = {}) {
           </Routes>
         </Suspense>
         <Footer />
+        <CookieBanner />
       </ProjectProvider>
     </HelmetProvider>
   );

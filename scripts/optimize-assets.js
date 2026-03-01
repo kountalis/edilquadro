@@ -9,7 +9,7 @@ const heroSource = join(projectRoot, 'public', 'hero-video-thumb.jpg');
 const heroAvif = join(projectRoot, 'public', 'hero-video-thumb.avif');
 const heroWebp = join(projectRoot, 'public', 'hero-video-thumb.webp');
 const portfolioSource = join(projectRoot, 'public', 'portfolio-bg.jpg');
-const portfolioAvif = join(projectRoot, 'public', 'portfolio-bg.avif');
+const portfolioAvif = join(projectRoot, 'public', 'portfolio-bg-lcp.avif');
 const portfolioWebp = join(projectRoot, 'public', 'portfolio-bg.webp');
 const logoSource = join(projectRoot, 'src', 'assets', 'logo.png');
 const logoTemp = join(projectRoot, 'src', 'assets', 'logo-optimized.png');
@@ -36,8 +36,8 @@ async function optimizePortfolioBackground() {
   const metadata = await sharp(portfolioSource).metadata();
   const originalSize = fs.statSync(portfolioSource).size;
   
-  await sharp(portfolioSource).avif({ quality: 40 }).toFile(portfolioAvif);
-  await sharp(portfolioSource).webp({ quality: 80 }).toFile(portfolioWebp);
+  await sharp(portfolioSource).avif({ quality: 28 }).toFile(portfolioAvif);
+  await sharp(portfolioSource).webp({ quality: 75 }).toFile(portfolioWebp);
   
   const avifSize = fs.statSync(portfolioAvif).size;
   const webpSize = fs.statSync(portfolioWebp).size;

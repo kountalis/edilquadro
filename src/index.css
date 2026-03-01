@@ -1,4 +1,7 @@
 /* Google Fonts are loaded through App.jsx <Helmet> to allow preconnect and preload hints */
+/* Import optimized Visby CF font with font-display: swap */
+@import './visby-font.css';
+
 /* Inject Tailwind's base, components, and utilities styles */
 @tailwind base;
 @tailwind components;

@@ -12,7 +12,7 @@ const Services = () => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
   const services = [{
@@ -129,6 +129,7 @@ const Services = () => {
         <meta name="twitter:title" content={t('services_page.meta_title')} />
         <meta name="twitter:description" content={t('services_page.meta_description')} />
         <meta name="twitter:image" content="https://edilquadro.it/servizi-og.jpg" />
+        <meta name="twitter:site" content="@edilquadro" />
         <meta name="keywords" content={t('services_page.meta_keywords')} />
         <meta name="author" content="Edilquadro" />
         <meta name="robots" content="index, follow" />

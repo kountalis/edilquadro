@@ -90,11 +90,8 @@ export function useAnalytics() {
  */
 export function trackConversion(conversionName, params = {}) {
   if (window.gtag) {
-    // GA4 custom conversion
-    window.gtag('event', conversionName, {
-      ...params,
-      send_to: 'G-E5F0QNCJQS',
-    });
+    // Google Ads conversion tracking
+    window.gtag('event', conversionName, params);
   }
 }
 

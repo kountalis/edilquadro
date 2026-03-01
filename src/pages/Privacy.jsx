@@ -17,6 +17,9 @@ export default function Privacy() {
           <title>{t('privacy_page.meta_title')}</title>
           <meta name="description" content={t('privacy_page.meta_description')} />
           <link rel="canonical" href="https://edilquadro.it/privacy" />
+          <meta name="keywords" content="privacy, protezione dati, GDPR, Edilquadro" />
+          <meta name="author" content="Edilquadro" />
+          <meta name="robots" content="index, follow" />
           <meta property="og:title" content={t('privacy_page.meta_title')} />
           <meta property="og:description" content={t('privacy_page.meta_description')} />
           <meta property="og:image" content="https://edilquadro.it/logo192.png" />

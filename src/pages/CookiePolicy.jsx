@@ -16,6 +16,9 @@ export default function CookiePolicy() {
           <title>{t('cookie_policy_page.meta_title')}</title>
           <meta name="description" content={t('cookie_policy_page.meta_description')} />
           <link rel="canonical" href="https://edilquadro.it/cookie-policy" />
+          <meta name="keywords" content="cookie policy, cookie, tracciamento, Edilquadro" />
+          <meta name="author" content="Edilquadro" />
+          <meta name="robots" content="index, follow" />
           <meta property="og:title" content={t('cookie_policy_page.meta_title')} />
           <meta property="og:description" content={t('cookie_policy_page.meta_description')} />
           <meta property="og:image" content="https://edilquadro.it/logo192.png" />

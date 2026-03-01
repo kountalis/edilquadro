@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
+
 export default defineConfig(({ command }) => ({
   plugins: [
     react(),
@@ -11,12 +12,35 @@ export default defineConfig(({ command }) => ({
   build: {
     sourcemap: false, // Disable sourcemaps in production for better performance
     chunkSizeWarningLimit: 1000,
+    minify: 'terser', // Use terser for better minification
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console.logs in production
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'], // Remove specific console methods
+      },
+    },
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'react-core': ['react', 'react-dom'],
+          'react-router': ['react-router-dom'],
+          'react-helmet': ['react-helmet-async'],
           'ui-vendor': ['@headlessui/react'],
           'i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
+          'emailjs': ['@emailjs/browser'],
+        },
+        // Optimize asset file names for better caching
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(woff|woff2|ttf|otf|eot)$/.test(assetInfo.name)) {
+            return `assets/fonts/[name]-[hash][extname]`;
+          }
+          if (/\.(png|jpe?g|svg|gif|webp|avif)$/.test(assetInfo.name)) {
+            return `assets/images/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
         }
       }
     }

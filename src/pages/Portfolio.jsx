@@ -13,7 +13,7 @@ const Portfolio = () => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
   const [selectedFilter, setSelectedFilter] = useState('all');
@@ -325,6 +325,10 @@ const Portfolio = () => {
         <title>{t('portfolio_page.meta_title')}</title>
         <meta name="description" content={t('portfolio_page.meta_description')} />
         <link rel="canonical" href="https://edilquadro.it/portfolio" />
+        <link rel="preload" as="image" href="/portfolio-bg-lcp.avif" />
+        <meta name="keywords" content="portfolio ristrutturazioni roma, lavori edilizi roma, fotografie progetti" />
+        <meta name="author" content="Edilquadro" />
+        <meta name="robots" content="index, follow" />
         <meta property="og:title" content={t('portfolio_page.meta_title')} />
         <meta property="og:description" content={t('portfolio_page.meta_description')} />
         <meta property="og:image" content="https://edilquadro.it/portfolio-bg.jpg" />
@@ -340,7 +344,7 @@ const Portfolio = () => {
       </Helmet>
       <div className="relative min-h-screen flex flex-col overflow-hidden">
         <picture>
-          <source srcSet="/portfolio-bg.avif" type="image/avif" />
+          <source srcSet="/portfolio-bg-lcp.avif" type="image/avif" />
           <source srcSet="/portfolio-bg.webp" type="image/webp" />
           <img
             src="/portfolio-bg.jpg"

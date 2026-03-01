@@ -1,3 +1,9 @@
-/# Always serve the SPA entrypoint
+# Redirect www to non-www (canonicalize domain)
+https://www.edilquadro.it/* https://edilquadro.it/:splat 301!
+
+# Google Search Console verification file (must be served as-is)
+/google2bc1297c3f4bc24f.html /google2bc1297c3f4bc24f.html 200!
+
+# Always serve the SPA entrypoint
 / /index.html 200
 /* /index.html 200

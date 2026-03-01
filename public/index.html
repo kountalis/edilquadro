@@ -11,6 +11,23 @@
     <link rel="preload" as="video" href="/hero-video.mp4" />
     <link rel="preconnect" href="https://maps.googleapis.com" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <!-- Google Analytics 4 + Google Ads Conversion Tracking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5F0QNCJQS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E5F0QNCJQS', {
+        'page_path': window.location.pathname,
+        'page_title': document.title,
+        'send_page_view': true,
+        'transport_url': window.location.origin + '/analytics-proxy'
+      });
+      // Google Ads conversion tracking
+      gtag('config', 'AW-17331965831', {
+        'transport_url': window.location.origin + '/analytics-proxy'
+      });
+    </script>
     <!-- SEO e dati strutturati qui -->
     <script type="application/ld+json">
     {

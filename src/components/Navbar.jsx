@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 // Rimosso MenuIcon e XIcon, usiamo SVG public
@@ -45,7 +45,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     };
   }, [isOpen]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (location.pathname === '/') {
       document.body.classList.remove('has-navbar-offset');
     } else {

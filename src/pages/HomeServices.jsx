@@ -10,7 +10,7 @@ const HomeServices = () => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
   const services = [

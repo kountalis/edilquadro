@@ -79,7 +79,7 @@ const Home = () => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
   const services = [
@@ -178,6 +178,9 @@ const Home = () => {
           <title>{t('home.meta_title')}</title>
           <meta name="description" content={t('home.meta_description')} />
           <link rel="canonical" href="https://edilquadro.it/" />
+          <meta name="keywords" content="ristrutturazioni roma, edilizia roma, lavori casa roma" />
+          <meta name="author" content="Edilquadro" />
+          <meta name="robots" content="index, follow" />
           <meta property="og:title" content={t('home.meta_title')} />
           <meta property="og:description" content={t('home.meta_description')} />
           <meta property="og:image" content="https://edilquadro.it/logo192.png" />
@@ -187,6 +190,7 @@ const Home = () => {
           <meta name="twitter:title" content={t('home.meta_title')} />
           <meta name="twitter:description" content={t('home.meta_description')} />
           <meta name="twitter:image" content="https://edilquadro.it/logo192.png" />
+          <meta name="twitter:site" content="@edilquadro" />
           <html lang={i18n.language} />
           <script type="application/ld+json">{JSON.stringify(generateLocalBusinessSchema())}</script>
         </Helmet>
@@ -230,7 +234,7 @@ const Home = () => {
                     />
                   </h1>
                   <p
-                    className="text-xl md:text-2xl mb-12 font-visby text-gray-200"
+                    className="text-xl md:text-2xl mb-12 text-gray-200"
                   >
                     <Trans i18nKey="home.hero_subtitle"
                       components={{

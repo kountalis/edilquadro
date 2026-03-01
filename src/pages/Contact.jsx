@@ -4,6 +4,7 @@ import { trackGAEvent } from '../utils/gaEvents';
 import { Conversions } from '../hooks/useAnalytics';
 import { generateLocalBusinessSchema } from "../utils/seo";
 import { useTranslation, Trans } from 'react-i18next';
+import LazyGoogleMaps from '../components/LazyGoogleMaps';
 // Rimosso import icone, usiamo solo SVG public
 
 const Contact = () => {
@@ -14,7 +15,7 @@ const Contact = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }, []);
 
   useEffect(() => {
@@ -96,18 +97,19 @@ const Contact = () => {
         <title>{t('contact_page.meta_title')}</title>
         <meta name="description" content={t('contact_page.meta_description')} />
         <link rel="canonical" href="https://edilquadro.it/contatti" />
+        <link rel="preload" as="image" href="/hero-video-thumb.avif" />
         <meta name="keywords" content={t('contact_page.meta_keywords')} />
         <meta name="author" content="Edilquadro" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content={t('contact_page.meta_title')} />
         <meta property="og:description" content={t('contact_page.meta_description')} />
-        <meta property="og:image" content="https://edilquadro.it/logo192.png" />
+        <meta property="og:image" content="https://edilquadro.it/hero-contact-og.jpg" />
         <meta property="og:url" content="https://edilquadro.it/contatti" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('contact_page.meta_title')} />
         <meta name="twitter:description" content={t('contact_page.meta_description')} />
-        <meta name="twitter:image" content="https://edilquadro.it/logo192.png" />
+        <meta name="twitter:image" content="https://edilquadro.it/hero-contact-og.jpg" />
         <meta name="twitter:site" content="@edilquadro" />
         <html lang={i18n.language} />
         <script type="application/ld+json">{JSON.stringify(contactPageSchema)}</script>
@@ -127,8 +129,9 @@ const Contact = () => {
                   loop
                   muted
                   playsInline
-                  poster="/portfolio-bg.avif"
+                  poster="/hero-video-thumb.avif"
                   preload="none"
+                  fetchPriority="high"
                   className="w-full h-full object-cover"
                 >
                   <source src="/cinemtic2.mp4" type="video/mp4" />
@@ -254,20 +257,13 @@ const Contact = () => {
               <h2 className="text-2xl font-bold text-white">{t('contact_page.location_title')}</h2>
             </div>
             <p className="text-gray-300 mb-6">{t('contact_page.location_subtitle')}</p>
-            <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps?q=Via+Egerio+Levio+13,+Roma,+Italia&output=embed"
-                width="100%"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-xl"
-                title="Mappa sede Edilquadro Roma"
-                aria-label="Mappa sede Edilquadro Roma"
-              ></iframe>
-            </div>
+            <LazyGoogleMaps
+              src="https://www.google.com/maps?q=Via+Egerio+Levio+13,+Roma,+Italia&output=embed"
+              width="100%"
+              height="450"
+              title="Mappa sede Edilquadro Roma"
+              ariaLabel="Mappa sede Edilquadro Roma"
+            />
           </div>
 
           <section className="container mx-auto px-4 py-16">

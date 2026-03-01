@@ -32,7 +32,6 @@ export function hasUserConsentedToCookies() {
 
 /**
  * Accetta tutti i cookie e aggiorna Google Consent Mode
- * Questa funzione deve essere chiamata quando l'utente accetta i cookie
  */
 export function acceptAllCookies() {
   try {
@@ -59,7 +58,7 @@ export function acceptAllCookies() {
       detail: { status: 'accepted' } 
     }));
     
-    console.log('✅ Cookie consent accepted');
+    console.log('✅ [CONSENT] User accepted - all tracking enabled');
     return true;
   } catch (e) {
     console.error('Errore nell\'aggiornamento del consenso:', e);
@@ -69,7 +68,6 @@ export function acceptAllCookies() {
 
 /**
  * Nega i cookie di tracciamento
- * Questa funzione può essere chiamata se l'utente nega esplicitamente il consenso
  */
 export function denyCookies() {
   try {
@@ -81,7 +79,7 @@ export function denyCookies() {
     window.localStorage.setItem(CONSENT_KEY, 'denied');
     window.localStorage.setItem(CONSENT_TIMESTAMP_KEY, new Date().toISOString());
     
-    // Google Consent Mode rimane su 'denied' (valore di default)
+    // Aggiorna Google Consent Mode v2
     if (window.gtag && typeof window.gtag === 'function') {
       window.gtag('consent', 'update', {
         'ad_storage': 'denied',
@@ -96,7 +94,7 @@ export function denyCookies() {
       detail: { status: 'denied' } 
     }));
     
-    console.log('❌ Cookie consent denied');
+    console.log('❌ [CONSENT] User denied - tracking disabled');
     return true;
   } catch (e) {
     console.error('Errore nel rifiuto del consenso:', e);
@@ -105,8 +103,7 @@ export function denyCookies() {
 }
 
 /**
- * Pulisce il consenso memorizzato (riporta lo stato a zero)
- * Utile per testare o dare all'utente la possibilità di riconsiderare
+ * Pulisce il consenso memorizzato
  */
 export function resetConsentStatus() {
   try {
@@ -117,7 +114,7 @@ export function resetConsentStatus() {
     window.localStorage.removeItem(CONSENT_KEY);
     window.localStorage.removeItem(CONSENT_TIMESTAMP_KEY);
     
-    // Riporta Consent Mode allo stato di default (denied)
+    // Riporta Consent Mode allo stato di default
     if (window.gtag && typeof window.gtag === 'function') {
       window.gtag('consent', 'default', {
         'ad_storage': 'denied',
@@ -131,7 +128,7 @@ export function resetConsentStatus() {
       detail: { status: 'reset' } 
     }));
     
-    console.log('🔄 Cookie consent reset');
+    console.log('🔄 [CONSENT] Reset - back to pending state');
     return true;
   } catch (e) {
     console.error('Errore nel reset del consenso:', e);

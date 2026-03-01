@@ -11,74 +11,71 @@
     <link rel="preload" as="video" href="/hero-video.mp4" />
     <link rel="preconnect" href="https://maps.googleapis.com" />
     <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <!-- Google Consent Mode v2 - CRITICAL: Must be BEFORE gtag.js -->
+    
+    <!-- CRITICAL: Google Consent Mode v2 - MUST be BEFORE ANY Google script -->
     <script>
-      (function() {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        window.gtag = gtag; // Expose gtag globally
-        
-        // Set default consent state (most restrictive)
-        gtag('consent', 'default', {
-          'ad_storage': 'denied',
-          'analytics_storage': 'denied',
-          'ad_user_data': 'denied',
-          'ad_personalization': 'denied',
-          'wait_for_update': 500,
-          'region': ['IT']
-        });
-        
-        // Check localStorage for saved consent
-        try {
-          var savedConsent = localStorage.getItem('edilquadro_consent_status');
-          if (savedConsent === 'accepted') {
-            gtag('consent', 'update', {
-              'ad_storage': 'granted',
-              'analytics_storage': 'granted',
-              'ad_user_data': 'granted',
-              'ad_personalization': 'granted'
-            });
-            console.log('✅ Consent loaded from storage: ACCEPTED');
-          } else if (savedConsent === 'denied') {
-            console.log('❌ Consent loaded from storage: DENIED');
-          } else {
-            console.log('⏳ No consent saved - waiting for user choice');
-          }
-        } catch(e) {
-          console.warn('Could not read localStorage:', e);
-        }
-        
-        // Listen for consent updates from React component
-        window.addEventListener('consent-updated', function(e) {
-          console.log('🔄 Consent event received:', e.detail.status);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Set consent to DENIED by default - blocks ALL tracking until user consents
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 1000,  // Wait up to 1 second for consent decision
+        'region': ['IT']
+      });
+      
+      console.log('[CONSENT] Default: ALL DENIED - waiting for user choice');
+      
+      // Check for previously saved consent
+      try {
+        var consent = localStorage.getItem('edilquadro_consent_status');
+        if (consent === 'accepted') {
           gtag('consent', 'update', {
-            'ad_storage': e.detail.status === 'accepted' ? 'granted' : 'denied',
-            'analytics_storage': e.detail.status === 'accepted' ? 'granted' : 'denied',
-            'ad_user_data': e.detail.status === 'accepted' ? 'granted' : 'denied',
-            'ad_personalization': e.detail.status === 'accepted' ? 'granted' : 'denied'
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
           });
+          console.log('[CONSENT] Loaded: ACCEPTED');
+        } else if (consent === 'denied') {
+          console.log('[CONSENT] Loaded: DENIED');
+        }
+      } catch(e) {
+        console.warn('[CONSENT] localStorage error:', e);
+      }
+      
+      // Listen for consent updates from banner
+      window.addEventListener('consent-updated', function(event) {
+        const status = event.detail.status === 'accepted' ? 'granted' : 'denied';
+        gtag('consent', 'update', {
+          'ad_storage': status,
+          'analytics_storage': status,
+          'ad_user_data': status,
+          'ad_personalization': status
         });
-      })();
+        console.log('[CONSENT] Updated:', event.detail.status.toUpperCase());
+      }, false);
     </script>
-    <!-- Google Analytics 4 + Google Ads Conversion Tracking -->
+    
+    <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5F0QNCJQS"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      window.gtag = gtag;
-      
       gtag('js', new Date());
-      
-      // GA4 Configuration - NO transport_url to avoid errors
       gtag('config', 'G-E5F0QNCJQS', {
-        'page_path': window.location.pathname,
-        'page_title': document.title,
-        'send_page_view': true,
-        'anonymize_ip': true
+        'anonymize_ip': true,
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false
       });
-      
-      // Google Ads conversion tracking
-      gtag('config', 'AW-17331965831', {});
+    </script>
+    
+    <!-- Google Ads Config -->
+    <script>
+      gtag('config', 'AW-17331965831');
     </script>
     <!-- SEO e dati strutturati qui -->
     <script type="application/ld+json">

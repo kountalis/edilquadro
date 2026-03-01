@@ -8,6 +8,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import PAGE_METADATA from '../METADATI_PAGINE.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '..');
@@ -125,6 +126,52 @@ function generateStaticHTML(route) {
   try {
     const templatePath = path.resolve(distDir, 'index.html');
     let html = fs.readFileSync(templatePath, 'utf-8');
+
+    // Get metadata for this route
+    const metadata = PAGE_METADATA[route.path];
+    if (!metadata) {
+      console.warn(`⚠️  No metadata found for ${route.path}, using template defaults`);
+    } else {
+      // Replace page-specific metadata in the HTML
+      // Title: <title>...</title>
+      html = html.replace(
+        /<title>.*?<\/title>/,
+        `<title>${metadata.title}</title>`
+      );
+
+      // Meta description: <meta name="description" content="...">
+      html = html.replace(
+        /<meta name="description" content="[^"]*">/,
+        `<meta name="description" content="${metadata.description}">`
+      );
+
+      // Canonical URL: <link rel="canonical" href="..."> (if exists, or add it)
+      if (html.includes('<link rel="canonical"')) {
+        html = html.replace(
+          /<link rel="canonical" href="[^"]*">/,
+          `<link rel="canonical" href="${metadata.canonical}">`
+        );
+      } else {
+        // Add canonical tag in <head>
+        html = html.replace(
+          /<\/head>/,
+          `    <link rel="canonical" href="${metadata.canonical}">\n  </head>`
+        );
+      }
+
+      // OG Image (for social sharing)
+      if (html.includes('property="og:image"')) {
+        html = html.replace(
+          /property="og:image" content="[^"]*"/,
+          `property="og:image" content="${metadata.ogImage}"`
+        );
+      } else {
+        html = html.replace(
+          /<\/head>/,
+          `    <meta property="og:image" content="${metadata.ogImage}">\n  </head>`
+        );
+      }
+    }
 
     // Add data attribute to help client-side router know the initial route
     html = html.replace(

@@ -16,6 +16,7 @@
       (function() {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag; // Expose gtag globally
         
         // Set default consent state (most restrictive)
         gtag('consent', 'default', {
@@ -37,11 +38,11 @@
               'ad_user_data': 'granted',
               'ad_personalization': 'granted'
             });
-            console.log('✅ Consent loaded: accepted');
+            console.log('✅ Consent loaded from storage: ACCEPTED');
           } else if (savedConsent === 'denied') {
-            console.log('❌ Consent loaded: denied');
+            console.log('❌ Consent loaded from storage: DENIED');
           } else {
-            console.log('⏳ Consent not yet decided');
+            console.log('⏳ No consent saved - waiting for user choice');
           }
         } catch(e) {
           console.warn('Could not read localStorage:', e);
@@ -49,13 +50,13 @@
         
         // Listen for consent updates from React component
         window.addEventListener('consent-updated', function(e) {
+          console.log('🔄 Consent event received:', e.detail.status);
           gtag('consent', 'update', {
             'ad_storage': e.detail.status === 'accepted' ? 'granted' : 'denied',
             'analytics_storage': e.detail.status === 'accepted' ? 'granted' : 'denied',
             'ad_user_data': e.detail.status === 'accepted' ? 'granted' : 'denied',
             'ad_personalization': e.detail.status === 'accepted' ? 'granted' : 'denied'
           });
-          console.log('🔄 Consent updated:', e.detail.status);
         });
       })();
     </script>
@@ -64,21 +65,20 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      
       gtag('js', new Date());
       
-      // GA4 Configuration
+      // GA4 Configuration - NO transport_url to avoid errors
       gtag('config', 'G-E5F0QNCJQS', {
         'page_path': window.location.pathname,
         'page_title': document.title,
         'send_page_view': true,
-        'transport_url': window.location.origin + '/analytics-proxy',
         'anonymize_ip': true
       });
       
       // Google Ads conversion tracking
-      gtag('config', 'AW-17331965831', {
-        'transport_url': window.location.origin + '/analytics-proxy'
-      });
+      gtag('config', 'AW-17331965831', {});
     </script>
     <!-- SEO e dati strutturati qui -->
     <script type="application/ld+json">

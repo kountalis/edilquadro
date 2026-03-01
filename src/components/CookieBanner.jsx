@@ -3,23 +3,24 @@ import { acceptAllCookies, denyCookies, getConsentStatus } from '../utils/consen
 import { Link } from 'react-router-dom';
 
 export default function CookieBanner() {
-  const [showBanner, setShowBanner] = useState(true); // Mostra per default
+  const [showBanner, setShowBanner] = useState(true);
   const [isClosing, setIsClosing] = useState(false);
 
   useEffect(() => {
-    // Controlla se l'utente ha già dato il consenso
+    // Check if user has already made a choice
     const consentStatus = getConsentStatus();
+    console.log('CookieBanner mounted - Consent status:', consentStatus);
     
-    // Nasconde il banner se l'utente ha già deciso
     if (consentStatus === 'accepted' || consentStatus === 'denied') {
       setShowBanner(false);
     } else {
-      // Mostra il banner se il consenso non è stato ancora deciso
+      // Force show banner if no decision made
       setShowBanner(true);
     }
   }, []);
 
   const handleAccept = () => {
+    console.log('User clicked ACCEPT');
     setIsClosing(true);
     acceptAllCookies();
     setTimeout(() => {
@@ -28,6 +29,7 @@ export default function CookieBanner() {
   };
 
   const handleDeny = () => {
+    console.log('User clicked DENY');
     setIsClosing(true);
     denyCookies();
     setTimeout(() => {
@@ -39,51 +41,62 @@ export default function CookieBanner() {
 
   return (
     <div 
-      className={`fixed bottom-0 left-0 right-0 z-50 transition-transform duration-300 ${
-        isClosing ? 'translate-y-full' : 'translate-y-0'
+      className={`fixed bottom-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isClosing ? 'opacity-0 translate-y-full' : 'opacity-100 translate-y-0'
       }`}
+      style={{
+        pointerEvents: isClosing ? 'none' : 'auto'
+      }}
       role="region"
       aria-label="Cookie consent banner"
+      aria-live="polite"
     >
-      {/* Backdrop */}
+      {/* Semi-transparent backdrop */}
       <div 
-        className="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300"
-        style={{ opacity: isClosing ? 0 : 1, pointerEvents: isClosing ? 'none' : 'auto' }}
+        className="fixed inset-0 bg-black bg-opacity-40 z-40"
+        style={{
+          opacity: isClosing ? 0 : 0.4,
+          transition: 'opacity 300ms ease-in-out',
+          pointerEvents: isClosing ? 'none' : 'auto'
+        }}
       />
       
-      {/* Banner */}
-      <div className="relative bg-slate-900 border-t border-emerald-500 shadow-2xl">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-            {/* Testo */}
-            <div className="flex-1 text-white">
-              <h2 className="text-lg font-semibold mb-2">Utilizziamo i cookie</h2>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                Utilizziamo cookie e tecnologie simili per migliorare la tua esperienza, personalizzare contenuti, analizzare il traffico e per scopi pubblicitari. 
-                Accettando, consenti a Google Analytics e Google Ads di trattare i tuoi dati.{' '}
-                <Link to="/cookie-policy" className="text-emerald-400 hover:text-emerald-300 underline">
-                  Cookie Policy
-                </Link>
-                {' '}•{' '}
+      {/* Banner container */}
+      <div className="relative z-50 bg-slate-900 border-t-2 border-emerald-500 shadow-2xl">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col gap-6 sm:gap-4">
+            {/* Text content */}
+            <div className="text-white">
+              <h2 className="text-xl font-bold mb-3">🍪 Utilizziamo i cookie</h2>
+              <p className="text-sm text-gray-200 leading-relaxed">
+                Utilizziamo cookie e altre tecnologie simili per migliorare la tua esperienza, personalizzare i contenuti, analizzare il traffico e mostrarti annunci pubblicitari pertinenti.
+              </p>
+              <p className="text-xs text-gray-400 mt-3">
                 <Link to="/privacy" className="text-emerald-400 hover:text-emerald-300 underline">
                   Privacy Policy
+                </Link>
+                {' '}•{' '}
+                <Link to="/cookie-policy" className="text-emerald-400 hover:text-emerald-300 underline">
+                  Cookie Policy
                 </Link>
               </p>
             </div>
 
-            {/* Pulsanti */}
-            <div className="flex gap-3 w-full sm:w-auto sm:flex-shrink-0">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:justify-end">
               <button
                 onClick={handleDeny}
-                className="flex-1 sm:flex-none px-6 py-2 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-colors duration-200 text-center"
+                className="order-2 sm:order-1 px-6 py-3 bg-gray-700 hover:bg-gray-600 active:bg-gray-800 text-white font-medium rounded-lg transition-all duration-200 text-center cursor-pointer"
                 aria-label="Rifiuta i cookie"
+                type="button"
               >
                 Rifiuta
               </button>
               <button
                 onClick={handleAccept}
-                className="flex-1 sm:flex-none px-6 py-2 bg-emerald-500 hover:bg-emerald-600 text-white font-bold rounded-lg transition-colors duration-200 text-center shadow-lg"
+                className="order-1 sm:order-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white font-bold rounded-lg transition-all duration-200 text-center shadow-lg cursor-pointer"
                 aria-label="Accetta tutti i cookie"
+                type="button"
               >
                 Accetta
               </button>

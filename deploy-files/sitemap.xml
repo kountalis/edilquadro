@@ -67,55 +67,55 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/en</loc>
+    <loc>https://edilquadro.it/en/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/en/services</loc>
+    <loc>https://edilquadro.it/en/services/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/en/services/home</loc>
+    <loc>https://edilquadro.it/en/services/home/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/en/services/commercial</loc>
+    <loc>https://edilquadro.it/en/services/commercial/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/en/services/buildings</loc>
+    <loc>https://edilquadro.it/en/services/buildings/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/en/portfolio</loc>
+    <loc>https://edilquadro.it/en/portfolio/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/en/contact</loc>
+    <loc>https://edilquadro.it/en/contact/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/en/privacy</loc>
+    <loc>https://edilquadro.it/en/privacy/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://edilquadro.it/en/cookie-policy</loc>
+    <loc>https://edilquadro.it/en/cookie-policy/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>

@@ -15,7 +15,7 @@ const PAGE_METADATA = {
     lang: 'en',
     title: 'Edilquadro - Renovations in Rome - Building Company',
     description: 'Rome-based building company specialized in home, commercial and residential renovations. Free quote, turnkey solutions, 24/7 consultation.',
-    canonical: 'https://edilquadro.it/en',
+    canonical: 'https://edilquadro.it/en/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/servizi': {
@@ -29,7 +29,7 @@ const PAGE_METADATA = {
     lang: 'en',
     title: 'Renovation Services - Edilquadro Rome',
     description: 'Explore Edilquadro\'s renovation services: houses, shops, commercial and residential buildings in Rome. Free quote and professional consultation.',
-    canonical: 'https://edilquadro.it/en/services',
+    canonical: 'https://edilquadro.it/en/services/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/portfolio': {
@@ -43,7 +43,7 @@ const PAGE_METADATA = {
     lang: 'en',
     title: 'Portfolio - Edilquadro Rome',
     description: 'Discover renovation projects completed by Edilquadro in Rome. Houses, shops, and buildings successfully renovated.',
-    canonical: 'https://edilquadro.it/en/portfolio',
+    canonical: 'https://edilquadro.it/en/portfolio/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/servizi/casa': {
@@ -57,7 +57,7 @@ const PAGE_METADATA = {
     lang: 'en',
     title: 'Home Renovation - Edilquadro Rome',
     description: 'Complete home renovations in Rome: systems, plaster, flooring, bathrooms, kitchens. Free quote and guaranteed work.',
-    canonical: 'https://edilquadro.it/en/services/home',
+    canonical: 'https://edilquadro.it/en/services/home/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/servizi/commerciale': {
@@ -71,7 +71,7 @@ const PAGE_METADATA = {
     lang: 'en',
     title: 'Commercial Renovation - Shops & Offices Rome',
     description: 'Renovation of shops, bars, restaurants, offices in Rome. Fast solutions, guaranteed work, free quote.',
-    canonical: 'https://edilquadro.it/en/services/commercial',
+    canonical: 'https://edilquadro.it/en/services/commercial/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/servizi/edifici': {
@@ -85,7 +85,7 @@ const PAGE_METADATA = {
     lang: 'en',
     title: 'Building Renovation - Rome',
     description: 'Renovation of residential and commercial buildings in Rome. Thermal insulation, window replacement, facades. Free quote.',
-    canonical: 'https://edilquadro.it/en/services/buildings',
+    canonical: 'https://edilquadro.it/en/services/buildings/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/contatti': {
@@ -99,7 +99,7 @@ const PAGE_METADATA = {
     lang: 'en',
     title: 'Contact - Edilquadro',
     description: 'Contact Edilquadro for a free consultation. Call +39 333 377 320 or fill the contact form. We are in Rome.',
-    canonical: 'https://edilquadro.it/en/contact',
+    canonical: 'https://edilquadro.it/en/contact/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/privacy': {
@@ -113,7 +113,7 @@ const PAGE_METADATA = {
     lang: 'en',
     title: 'Privacy Policy - Edilquadro',
     description: 'Edilquadro privacy policy. How we handle your personal data and your rights.',
-    canonical: 'https://edilquadro.it/en/privacy',
+    canonical: 'https://edilquadro.it/en/privacy/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/cookie-policy': {
@@ -127,7 +127,7 @@ const PAGE_METADATA = {
     lang: 'en',
     title: 'Cookie Policy - Edilquadro',
     description: 'Edilquadro cookie policy. How we use cookies and how to manage your preferences.',
-    canonical: 'https://edilquadro.it/en/cookie-policy',
+    canonical: 'https://edilquadro.it/en/cookie-policy/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   }
 };

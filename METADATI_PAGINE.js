@@ -22,7 +22,7 @@ const PAGE_METADATA = {
     lang: 'it',
     title: 'Servizi di Ristrutturazione - Edilquadro Roma',
     description: 'Scopri tutti i servizi di ristrutturazione di Edilquadro: case, negozi, edifici commerciali e condominiali a Roma. Preventivo gratuito e consulenza professionale.',
-    canonical: 'https://edilquadro.it/servizi',
+    canonical: 'https://edilquadro.it/servizi/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/en/services': {
@@ -36,7 +36,7 @@ const PAGE_METADATA = {
     lang: 'it',
     title: 'Portfolio Lavori - Edilquadro Roma',
     description: 'Scopri i lavori di ristrutturazione realizzati da Edilquadro a Roma e provincia. Case, negozi, edifici completati con successo.',
-    canonical: 'https://edilquadro.it/portfolio',
+    canonical: 'https://edilquadro.it/portfolio/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/en/portfolio': {
@@ -50,7 +50,7 @@ const PAGE_METADATA = {
     lang: 'it',
     title: 'Ristrutturazione Casa - Edilquadro Roma',
     description: 'Ristrutturazioni complete di case a Roma: rifacimento impianti, intonaci, pavimenti, bagni, cucine. Preventivo gratuito e lavori garantiti.',
-    canonical: 'https://edilquadro.it/servizi/casa',
+    canonical: 'https://edilquadro.it/servizi/casa/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/en/services/home': {
@@ -64,7 +64,7 @@ const PAGE_METADATA = {
     lang: 'it',
     title: 'Ristrutturazione Negozi Locali Commerciali - Roma',
     description: 'Ristrutturazione di negozi, bar, ristoranti, studi professionali a Roma. Soluzioni rapide, lavori garantiti, preventivo gratuito.',
-    canonical: 'https://edilquadro.it/servizi/commerciale',
+    canonical: 'https://edilquadro.it/servizi/commerciale/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/en/services/commercial': {
@@ -78,7 +78,7 @@ const PAGE_METADATA = {
     lang: 'it',
     title: 'Ristrutturazione Edifici Condominiali - Roma',
     description: 'Ristrutturazione di edifici, condomini e palazzine a Roma. Isolamento termico, sostituzione infissi, facciate. Preventivo gratuito.',
-    canonical: 'https://edilquadro.it/servizi/edifici',
+    canonical: 'https://edilquadro.it/servizi/edifici/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/en/services/buildings': {
@@ -92,7 +92,7 @@ const PAGE_METADATA = {
     lang: 'it',
     title: 'Contatti - Edilquadro Roma',
     description: 'Contatta Edilquadro per una consulenza gratuita. Chiama +39 333 377 320 oppure compila il form di contatto online. Siamo a Roma.',
-    canonical: 'https://edilquadro.it/contatti',
+    canonical: 'https://edilquadro.it/contatti/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/en/contact': {
@@ -106,7 +106,7 @@ const PAGE_METADATA = {
     lang: 'it',
     title: 'Privacy Policy - Edilquadro',
     description: 'Informativa privacy di Edilquadro. Come trattiamo i tuoi dati personali e i tuoi diritti.',
-    canonical: 'https://edilquadro.it/privacy',
+    canonical: 'https://edilquadro.it/privacy/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/en/privacy': {
@@ -120,7 +120,7 @@ const PAGE_METADATA = {
     lang: 'it',
     title: 'Cookie Policy - Edilquadro',
     description: 'Informativa sui cookie di Edilquadro. Come utilizziamo i cookie e come puoi gestire le tue preferenze.',
-    canonical: 'https://edilquadro.it/cookie-policy',
+    canonical: 'https://edilquadro.it/cookie-policy/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/en/cookie-policy': {

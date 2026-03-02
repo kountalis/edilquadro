@@ -122,10 +122,10 @@ function ensureDirectoryExists(filePath) {
 /**
  * Generate static HTML by reading and modifying the template
  */
-function generateStaticHTML(route) {
+function generateStaticHTML(route, originalTemplate) {
   try {
-    const templatePath = path.resolve(distDir, 'index.html');
-    let html = fs.readFileSync(templatePath, 'utf-8');
+    // Always use the ORIGINAL unmodified template, not the potentially modified dist/index.html
+    let html = originalTemplate;
 
     // Get metadata for this route
     const metadata = PAGE_METADATA[route.path];
@@ -214,11 +214,15 @@ async function prerender() {
     process.exit(1);
   }
 
+  // Read the original template ONCE before any modifications
+  const templatePath = path.resolve(distDir, 'index.html');
+  const originalTemplate = fs.readFileSync(templatePath, 'utf-8');
+
   let successful = 0;
   let failed = 0;
 
   for (const route of routes) {
-    if (generateStaticHTML(route)) {
+    if (generateStaticHTML(route, originalTemplate)) {
       successful++;
     } else {
       failed++;

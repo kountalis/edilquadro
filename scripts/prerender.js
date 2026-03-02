@@ -132,6 +132,12 @@ function generateStaticHTML(route) {
     if (!metadata) {
       console.warn(`⚠️  No metadata found for ${route.path}, using template defaults`);
     } else {
+      // Set correct page language at document level
+      html = html.replace(
+        /<html lang="[^"]+">/,
+        `<html lang="${metadata.lang}">`
+      );
+
       // Replace page-specific metadata in the HTML
       // Title: <title>...</title>
       html = html.replace(

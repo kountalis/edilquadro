@@ -78,32 +78,73 @@
     <div id="root"><!--ssr-outlet--></div>
     <script type="module" src="/src/main.jsx"></script>
     
-    <!-- Google tag (gtag.js) - Loaded AFTER page fully loaded + 3s delay (eliminates LCP blocking!) -->
+    <!-- CRITICAL: Google Consent Mode v2 - MUST be BEFORE any Google script -->
     <script>
-      // Initialize dataLayer immediately (for tracking continuity)
+      // Initialize dataLayer immediately
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      
+      // Set consent DENIED by default (GDPR Italy)
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 1000,
+        'region': ['IT']
+      });
+      
+      // Check for previously saved consent
+      try {
+        var consent = localStorage.getItem('edilquadro_consent_status');
+        if (consent === 'accepted') {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted'
+          });
+        }
+      } catch(e) {}
+      
+      // Listen for consent updates from CookieBanner
+      window.addEventListener('consent-updated', function(event) {
+        var status = event.detail.status === 'accepted' ? 'granted' : 'denied';
+        gtag('consent', 'update', {
+          'ad_storage': status,
+          'analytics_storage': status,
+          'ad_user_data': status,
+          'ad_personalization': status
+        });
+      }, false);
+    </script>
+    
+    <!-- Google tag (gtag.js) - GA4 + Google Ads - Loaded after page load + 3s delay -->
+    <script>
       gtag('js', new Date());
       
-      // Load GTM ONLY after page is fully loaded + 3s delay (outside LCP window)
       function loadGTM() {
-        const script = document.createElement('script');
+        var script = document.createElement('script');
         script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17331965831';
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-E5F0QNCJQS';
         document.head.appendChild(script);
         
         script.onload = function() {
+          // GA4 config
+          gtag('config', 'G-E5F0QNCJQS', {
+            'anonymize_ip': true,
+            'send_page_view': false
+          });
+          // Google Ads config
           gtag('config', 'AW-17331965831', {
-            send_page_view: false,
-            cookie_flags: 'SameSite=None;Secure',
-            transport_url: window.location.origin + '/analytics-proxy'
+            'send_page_view': false
           });
         };
       }
       
-      // Wait for complete page load + 3s delay (ensures LCP is already painted)
+      // Wait for page load + 3s delay (outside LCP window)
       window.addEventListener('load', function() {
-        setTimeout(loadGTM, 3000); // 3s after load event = ~5-6s total
+        setTimeout(loadGTM, 3000);
       });
     </script>
   </body>

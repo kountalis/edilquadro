@@ -424,5 +424,10 @@
     "cta_title": "Ready to Start?",
     "cta_subtitle": "Contact us for a free quote and find out how we can improve your building.",
     "cta_call": "Call Now"
+  },
+  "not_found_page": {
+    "title": "Page not found",
+    "subtitle": "The page you are looking for does not exist or has been moved.<br />Check the address or go back to the homepage.",
+    "go_home": "Go to Homepage"
   }
 }

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { acceptAllCookies, denyCookies, getConsentStatus } from '../utils/consentManager';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(true);
   const [isClosing, setIsClosing] = useState(false);
+  const location = useLocation();
+  const isEN = location.pathname.startsWith('/en');
 
   useEffect(() => {
     // Check if user has already made a choice
@@ -67,16 +69,18 @@ export default function CookieBanner() {
           <div className="flex flex-col gap-6 sm:gap-4">
             {/* Text content */}
             <div className="text-white">
-              <h2 className="text-xl font-bold mb-3">🍪 Utilizziamo i cookie</h2>
+              <h2 className="text-xl font-bold mb-3">{isEN ? '🍪 We use cookies' : '🍪 Utilizziamo i cookie'}</h2>
               <p className="text-sm text-gray-200 leading-relaxed">
-                Utilizziamo cookie e altre tecnologie simili per migliorare la tua esperienza, personalizzare i contenuti, analizzare il traffico e mostrarti annunci pubblicitari pertinenti.
+                {isEN
+                  ? 'We use cookies and similar technologies to improve your experience, personalize content, analyze traffic and show you relevant ads.'
+                  : 'Utilizziamo cookie e altre tecnologie simili per migliorare la tua esperienza, personalizzare i contenuti, analizzare il traffico e mostrarti annunci pubblicitari pertinenti.'}
               </p>
               <p className="text-xs text-gray-400 mt-3">
-                <Link to="/privacy" className="text-emerald-400 hover:text-emerald-300 underline">
+                <Link to={isEN ? '/en/privacy' : '/privacy'} className="text-emerald-400 hover:text-emerald-300 underline">
                   Privacy Policy
                 </Link>
                 {' '}•{' '}
-                <Link to="/cookie-policy" className="text-emerald-400 hover:text-emerald-300 underline">
+                <Link to={isEN ? '/en/cookie-policy' : '/cookie-policy'} className="text-emerald-400 hover:text-emerald-300 underline">
                   Cookie Policy
                 </Link>
               </p>
@@ -87,18 +91,18 @@ export default function CookieBanner() {
               <button
                 onClick={handleDeny}
                 className="order-2 sm:order-1 px-6 py-3 bg-gray-700 hover:bg-gray-600 active:bg-gray-800 text-white font-medium rounded-lg transition-all duration-200 text-center cursor-pointer"
-                aria-label="Rifiuta i cookie"
+                aria-label={isEN ? 'Reject cookies' : 'Rifiuta i cookie'}
                 type="button"
               >
-                Rifiuta
+                {isEN ? 'Reject' : 'Rifiuta'}
               </button>
               <button
                 onClick={handleAccept}
                 className="order-1 sm:order-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white font-bold rounded-lg transition-all duration-200 text-center shadow-lg cursor-pointer"
-                aria-label="Accetta tutti i cookie"
+                aria-label={isEN ? 'Accept all cookies' : 'Accetta tutti i cookie'}
                 type="button"
               >
-                Accetta
+                {isEN ? 'Accept' : 'Accetta'}
               </button>
             </div>
           </div>

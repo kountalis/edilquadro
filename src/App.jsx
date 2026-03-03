@@ -40,6 +40,7 @@ function App({ helmetContext } = {}) {
           </div>
         }>
           <Routes>
+            {/* Italian routes */}
             <Route path="/" element={<Home />} />
             <Route path="/servizi" element={<Services />} />
             <Route path="/portfolio" element={<Portfolio />} />
@@ -49,6 +50,16 @@ function App({ helmetContext } = {}) {
             <Route path="/servizi/casa" element={<HomeServices />} />
             <Route path="/servizi/commerciale" element={<CommercialServices />} />
             <Route path="/servizi/edifici" element={<BuildingServices />} />
+            {/* English routes - same components, i18n handles translation */}
+            <Route path="/en" element={<Home />} />
+            <Route path="/en/services" element={<Services />} />
+            <Route path="/en/portfolio" element={<Portfolio />} />
+            <Route path="/en/contact" element={<Contact />} />
+            <Route path="/en/privacy" element={<Privacy />} />
+            <Route path="/en/cookie-policy" element={<CookiePolicy />} />
+            <Route path="/en/services/home" element={<HomeServices />} />
+            <Route path="/en/services/commercial" element={<CommercialServices />} />
+            <Route path="/en/services/buildings" element={<BuildingServices />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

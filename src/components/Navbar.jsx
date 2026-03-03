@@ -47,7 +47,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   }, [isOpen]);
 
   useLayoutEffect(() => {
-    if (location.pathname === '/') {
+    if (location.pathname === '/' || location.pathname === '/en') {
       document.body.classList.remove('has-navbar-offset');
     } else {
       document.body.classList.add('has-navbar-offset');

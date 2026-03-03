@@ -13,6 +13,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   const { t } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const isEN = location.pathname.startsWith('/en');
   const [isMobileView, setIsMobileView] = useState(
     typeof window !== 'undefined' ? window.innerWidth < 768 : false
   );
@@ -57,7 +58,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
   }, [location.pathname]);
 
   const handleServiziClick = (e) => {
-    if (location.pathname === '/servizi') {
+    if (location.pathname === '/servizi' || location.pathname === '/en/services') {
       e.preventDefault();
       const ctaSection = document.getElementById('cta');
       if (ctaSection) {
@@ -66,7 +67,12 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     }
   };
 
-  const navItems = [
+  const navItems = isEN ? [
+    { name: t('nav.home'), path: '/en' },
+    { name: t('nav.portfolio'), path: '/en/portfolio' },
+    { name: t('nav.services'), path: '/en/services', onClick: handleServiziClick },
+    { name: t('nav.contact'), path: '/en/contact' },
+  ] : [
     { name: t('nav.home'), path: '/' },
     { name: t('nav.portfolio'), path: '/portfolio' },
     { name: t('nav.services'), path: '/servizi', onClick: handleServiziClick },
@@ -109,7 +115,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           {/* Desktop Logo positioned absolute to left */}
             <div className="hidden md:flex items-center absolute left-12 top-1/2 transform -translate-y-1/2" style={{ left: '3rem' }}>
         <Link
-          to="/"
+          to={isEN ? '/en' : '/'}
           className="flex-shrink-0 flex items-center gap-2 md:gap-3 group"
           style={{ textDecoration: 'none' }}
           aria-label="Edilquadro - Vai alla home"
@@ -140,7 +146,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
           <div className="md:hidden absolute inset-0 flex justify-center items-center pointer-events-none">
             {/* Mobile Logo (centered, non-interactive area) */}
             <Link
-              to="/"
+              to={isEN ? '/en' : '/'}
               className="flex-shrink-0 flex items-center gap-1 group pointer-events-auto"
               style={{ textDecoration: 'none' }}
               aria-label="Edilquadro - Vai alla home"

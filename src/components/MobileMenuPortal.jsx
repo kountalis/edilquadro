@@ -6,6 +6,7 @@ import { trackGAEvent } from '../utils/gaEvents';
 
 export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
   const { t } = useTranslation();
+  const freeQuote = t('free_quote', 'Preventivo gratuito');
   if (!isOpen) return null;
 
   return ReactDOM.createPortal(
@@ -61,7 +62,7 @@ export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
                 style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
               />
             <div className="flex-1 text-left">
-              <span className="block">Preventivo gratuito</span>
+              <span className="block">{freeQuote}</span>
             </div>
           </a>
 
@@ -80,7 +81,7 @@ export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
                 style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
               />
             <div className="flex-1 text-left">
-              <span className="block">Preventivo gratuito</span>
+              <span className="block">{freeQuote}</span>
             </div>
           </a>
         </div>

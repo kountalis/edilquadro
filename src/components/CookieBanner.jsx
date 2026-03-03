@@ -85,7 +85,7 @@ export default function CookieBanner() {
                   aria-label={bannerEN ? 'Passa all\'italiano' : 'Switch to English'}
                   type="button"
                 >
-                  {bannerEN ? <ItalyFlag className="w-8 h-5 rounded-sm" /> : <UKFlag className="w-8 h-5 rounded-sm" />}
+                  {bannerEN ? <UKFlag className="w-8 h-5 rounded-sm" /> : <ItalyFlag className="w-8 h-5 rounded-sm" />}
                 </button>
               </div>
               <p className="text-sm text-gray-200 leading-relaxed">

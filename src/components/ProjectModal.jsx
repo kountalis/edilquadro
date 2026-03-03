@@ -2,6 +2,7 @@
 import { createPortal } from 'react-dom';
 
 import LazyImage from './LazyImage';
+import { getWebpSource } from '../utils/seo';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -161,13 +162,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
     if (swipeDistance < -100) {
       prevImage();
     }
-  };
-  
-  const getWebpSource = (imageSrc) => {
-    if (imageSrc && imageSrc.match(/\.(jpg|jpeg|png)$/i)) {
-      return imageSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-    }
-    return null;
   };
   
   return createPortal(

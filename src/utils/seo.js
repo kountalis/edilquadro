@@ -2,6 +2,17 @@
  * SEO utility functions for Edilquadro website
  */
 
+/**
+ * Convert image path to WebP equivalent.
+ * Returns the .webp path if the source is .jpg/.jpeg/.png, else null.
+ */
+export const getWebpSource = (imageSrc) => {
+  if (imageSrc && imageSrc.match(/\.(jpg|jpeg|png)$/i)) {
+    return imageSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+  }
+  return null;
+};
+
 // Generate structured data for LocalBusiness
 export const generateLocalBusinessSchema = () => {
   return {

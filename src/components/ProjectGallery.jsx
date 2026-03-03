@@ -3,16 +3,12 @@
 import { useProject } from '../context/ProjectContext';
 import LazyImage from './LazyImage';
 import { ArrowRightIcon } from './icons';
+import { getWebpSource } from '../utils/seo';
 
 const categoryLabels = {
   casa: 'Casa',
   commerciale: 'Commerciale',
   edifici: 'Edifici'
-};
-
-const getWebpSource = (image) => {
-  if (!image) return null;
-  return image.match(/\.(jpg|jpeg|png)$/i) ? image.replace(/\.(jpg|jpeg|png)$/i, '.webp') : null;
 };
 
 const ProjectGallery = ({ projects = [] }) => {

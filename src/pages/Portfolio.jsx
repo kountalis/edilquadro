@@ -6,6 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
+import { getWebpSource } from '../utils/seo';
 import { Conversions } from '../hooks/useAnalytics';
 import { useTranslation, Trans } from 'react-i18next';
 
@@ -429,11 +430,7 @@ const Portfolio = () => {
 
                     <LazyImage
                       src={project.images ? project.images[0] : project.image}
-                      webpSrc={
-                        project.images && project.images[0] && project.images[0].match(/\.(jpg|jpeg|png)$/i)
-                          ? project.images[0].replace(/\.(jpg|jpeg|png)$/i, '.webp')
-                          : undefined
-                      }
+                      webpSrc={getWebpSource(project.images ? project.images[0] : project.image) || undefined}
                       srcSet={generateResponsiveAvifSrcSet(project.images ? project.images[0] : project.image) || generateResponsiveSrcSet(project.images ? project.images[0] : project.image)}
                       sizes={imageSizes}
                       alt={project.title + (project.location ? `, ${project.location}` : '') + ' - Edilquadro Portfolio'}

@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation, Trans } from 'react-i18next';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
-import { generateLocalBusinessSchema } from "../utils/seo";
+import { generateLocalBusinessSchema, getWebpSource } from "../utils/seo";
 import AnimatedCounter from '../components/AnimatedCounter';
 
 const ProjectGallery = ({ projects }) => {
@@ -19,11 +19,8 @@ const ProjectGallery = ({ projects }) => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {projects.map((project, index) => {
         // Fix: Only add srcSet if .webp file exists and add descriptor
-        let webpSrcSet = undefined;
-        if (project.images && project.images[0] && project.images[0].match(/\.(jpg|jpeg|png)$/i)) {
-          const webpPath = project.images[0].replace(/\.(jpg|jpeg|png)$/i, '.webp');
-          webpSrcSet = `${encodeURI(webpPath)} 1x`;
-        }
+        const webpPath = project.images && project.images[0] ? getWebpSource(project.images[0]) : null;
+        const webpSrcSet = webpPath ? `${encodeURI(webpPath)} 1x` : undefined;
         return (
           <div
             key={project.id}
@@ -35,11 +32,7 @@ const ProjectGallery = ({ projects }) => {
               <LazyImage
                 className="h-full"
                 src={project.images ? project.images[0] : project.image}
-                webpSrc={
-                  project.images && project.images[0] && project.images[0].match(/\.(jpg|jpeg|png)$/i)
-                    ? project.images[0].replace(/\.(jpg|jpeg|png)$/i, '.webp')
-                    : undefined
-                }
+                webpSrc={webpPath || undefined}
                 alt={project.title + (project.location ? `, ${project.location}` : '') + ' - Edilquadro Home'}
                 imageClassName="w-full h-full object-cover"
                 imageStyle={project.title && project.title.toLowerCase().includes('abbigliamento') ? { objectPosition: '50% 30%', transform: 'scale(1.05)' } : { objectPosition: '50% 30%' }}

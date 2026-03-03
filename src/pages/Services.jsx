@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
-import { generateLocalBusinessSchema } from "../utils/seo";
+import { generateLocalBusinessSchema, getWebpSource } from "../utils/seo";
 import { useTranslation, Trans } from 'react-i18next';
 
 const Services = () => {
@@ -197,11 +197,7 @@ const Services = () => {
                 {service.image && (
                   <LazyImage
                     src={service.image}
-                    webpSrc={
-                      service.image && service.image.match(/\.(jpg|jpeg|png)$/i)
-                        ? service.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')
-                        : undefined
-                    }
+                    webpSrc={getWebpSource(service.image) || undefined}
                     alt={service.title + ' - Edilquadro Servizi'}
                     className="w-full h-full object-cover"
                     width="600"

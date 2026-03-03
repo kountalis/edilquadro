@@ -1,12 +1,46 @@
 import React, { useState, useEffect } from 'react';
 import { acceptAllCookies, denyCookies, getConsentStatus } from '../utils/consentManager';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
+// Route mapping IT ↔ EN
+const ROUTE_MAP = {
+  '/':                      '/en',
+  '/en':                    '/',
+  '/servizi':               '/en/services',
+  '/en/services':           '/servizi',
+  '/portfolio':             '/en/portfolio',
+  '/en/portfolio':          '/portfolio',
+  '/contatti':              '/en/contact',
+  '/en/contact':            '/contatti',
+  '/privacy':               '/en/privacy',
+  '/en/privacy':            '/privacy',
+  '/cookie-policy':         '/en/cookie-policy',
+  '/en/cookie-policy':      '/cookie-policy',
+  '/servizi/casa':          '/en/services/home',
+  '/en/services/home':      '/servizi/casa',
+  '/servizi/commerciale':   '/en/services/commercial',
+  '/en/services/commercial':'/servizi/commerciale',
+  '/servizi/edifici':       '/en/services/buildings',
+  '/en/services/buildings': '/servizi/edifici',
+};
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(true);
   const [isClosing, setIsClosing] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
+  const { i18n } = useTranslation();
   const isEN = location.pathname.startsWith('/en');
+
+  const handleLanguageSwitch = () => {
+    const currentPath = location.pathname.replace(/\/$/, '') || '/';
+    const targetPath = ROUTE_MAP[currentPath] || (isEN ? '/' : '/en');
+    const targetLang = isEN ? 'it' : 'en';
+    i18n.changeLanguage(targetLang);
+    localStorage.setItem('i18nextLng', targetLang);
+    navigate(targetPath);
+  };
 
   useEffect(() => {
     // Check if user has already made a choice
@@ -69,7 +103,18 @@ export default function CookieBanner() {
           <div className="flex flex-col gap-6 sm:gap-4">
             {/* Text content */}
             <div className="text-white">
-              <h2 className="text-xl font-bold mb-3">{isEN ? '🍪 We use cookies' : '🍪 Utilizziamo i cookie'}</h2>
+              <div className="flex items-center justify-between mb-3">
+                <h2 className="text-xl font-bold">{isEN ? '🍪 We use cookies' : '🍪 Utilizziamo i cookie'}</h2>
+                <button
+                  onClick={handleLanguageSwitch}
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-white/10 hover:bg-white/20 rounded-full text-sm font-medium text-gray-200 transition-colors cursor-pointer"
+                  aria-label={isEN ? 'Passa all\'italiano' : 'Switch to English'}
+                  type="button"
+                >
+                  <span>{isEN ? '🇮🇹' : '🇬🇧'}</span>
+                  <span>{isEN ? 'Italiano' : 'English'}</span>
+                </button>
+              </div>
               <p className="text-sm text-gray-200 leading-relaxed">
                 {isEN
                   ? 'We use cookies and similar technologies to improve your experience, personalize content, analyze traffic and show you relevant ads.'

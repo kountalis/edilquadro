@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+﻿import React, { useState } from 'react';
 // Rimosso import icone React, usiamo solo SVG public
 import { useProject } from '../context/ProjectContext';
 import ProjectModal from '../components/ProjectModal';
@@ -11,10 +11,6 @@ import { useTranslation, Trans } from 'react-i18next';
 
 const Portfolio = () => {
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
-  }, []);
 
   const [selectedFilter, setSelectedFilter] = useState('all');
   const { openModal, closeModal, isModalOpen, selectedProject } = useProject();

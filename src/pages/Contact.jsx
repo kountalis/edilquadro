@@ -15,10 +15,6 @@ const Contact = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
-  }, []);
-
-  useEffect(() => {
     if (sent && window.gtag) {
       window.gtag('event', 'conversion', {'send_to': 'AW-17331965831/FVh8CPCEuO0aEIefw8hA'});
       Conversions.FORM_SUBMIT(true);

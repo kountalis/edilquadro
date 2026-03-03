@@ -1,13 +1,9 @@
-﻿import React, { useEffect } from "react";
+﻿import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useTranslation, Trans } from 'react-i18next';
 
 export default function CookiePolicy() {
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
-  }, []);
 
   return (
     <div className="min-h-screen bg-gray-900">

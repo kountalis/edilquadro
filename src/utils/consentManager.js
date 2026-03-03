@@ -22,13 +22,6 @@ export function getConsentStatus() {
   }
 }
 
-/**
- * Verifica se l'utente ha già dato il consenso
- * @returns {boolean}
- */
-export function hasUserConsentedToCookies() {
-  return getConsentStatus() === 'accepted';
-}
 
 /**
  * Accetta tutti i cookie e aggiorna Google Consent Mode
@@ -99,54 +92,5 @@ export function denyCookies() {
   } catch (e) {
     console.error('Errore nel rifiuto del consenso:', e);
     return false;
-  }
-}
-
-/**
- * Pulisce il consenso memorizzato
- */
-export function resetConsentStatus() {
-  try {
-    if (typeof window === 'undefined' || !window.localStorage) {
-      return false;
-    }
-    
-    window.localStorage.removeItem(CONSENT_KEY);
-    window.localStorage.removeItem(CONSENT_TIMESTAMP_KEY);
-    
-    // Riporta Consent Mode allo stato di default
-    if (window.gtag && typeof window.gtag === 'function') {
-      window.gtag('consent', 'default', {
-        'ad_storage': 'denied',
-        'analytics_storage': 'denied',
-        'ad_user_data': 'denied',
-        'ad_personalization': 'denied'
-      });
-    }
-    
-    window.dispatchEvent(new CustomEvent('consent-updated', { 
-      detail: { status: 'reset' } 
-    }));
-    
-    console.log('🔄 [CONSENT] Reset - back to pending state');
-    return true;
-  } catch (e) {
-    console.error('Errore nel reset del consenso:', e);
-    return false;
-  }
-}
-
-/**
- * Ottiene il timestamp dell'ultimo aggiornamento del consenso
- * @returns {string|null} ISO timestamp o null
- */
-export function getConsentTimestamp() {
-  try {
-    if (typeof window === 'undefined' || !window.localStorage) {
-      return null;
-    }
-    return window.localStorage.getItem(CONSENT_TIMESTAMP_KEY);
-  } catch (e) {
-    return null;
   }
 }

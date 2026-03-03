@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+﻿import React, { useState } from 'react';
 import ProjectModal from '../components/ProjectModal';
 import { useProject } from '../context/ProjectContext';
 
@@ -77,10 +77,6 @@ const ProjectGallery = ({ projects }) => {
 
 const Home = () => {
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
-  }, []);
 
   const services = [
     {

@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from 'react';
+﻿import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
@@ -8,10 +8,6 @@ import { useTranslation } from 'react-i18next';
 
 const HomeServices = () => {
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
-  }, []);
 
   const services = [
     {

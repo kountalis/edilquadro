@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from 'react';
+﻿import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -10,10 +10,6 @@ import { useTranslation, Trans } from 'react-i18next';
 
 const CommercialServices = () => {
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
-  }, []);
 
   const services = [
     {

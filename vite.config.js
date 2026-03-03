@@ -6,8 +6,6 @@ export default defineConfig(({ command }) => ({
   plugins: [
     react(),
     ...(command === 'build' ? [visualizer({ open: false, filename: 'bundle-report.html' })] : [])
-    // PWA plugin would be added here after installing vite-plugin-pwa
-    // Compression plugin would be added here after installing vite-plugin-compression2
   ],
   build: {
     sourcemap: false, // Disable sourcemaps in production for better performance
@@ -26,9 +24,7 @@ export default defineConfig(({ command }) => ({
           'react-core': ['react', 'react-dom'],
           'react-router': ['react-router-dom'],
           'react-helmet': ['react-helmet-async'],
-          'ui-vendor': ['@headlessui/react'],
           'i18n': ['i18next', 'react-i18next', 'i18next-http-backend'],
-          'emailjs': ['@emailjs/browser'],
         },
         // Optimize asset file names for better caching
         assetFileNames: (assetInfo) => {

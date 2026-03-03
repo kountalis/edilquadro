@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from 'react';
+﻿import React from 'react';
 
 // Rimosso import icone React, usiamo solo SVG public
 import { Helmet } from 'react-helmet-async';
@@ -10,10 +10,6 @@ import { useTranslation, Trans } from 'react-i18next';
 
 const Services = () => {
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
-  }, []);
 
   const services = [{
     icon: <img src="/home.svg" alt="Casa" className="w-12 h-12" />,

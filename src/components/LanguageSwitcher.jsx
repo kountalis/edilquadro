@@ -1,89 +1,68 @@
-﻿import React, { useState, useEffect, useRef } from 'react';
+﻿import React from 'react';
 import { useTranslation } from 'react-i18next';
-
+import { useLocation, useNavigate } from 'react-router-dom';
 import ItalyFlag from './icons/ItalyFlag';
 import UKFlag from './icons/UKFlag';
 
+// Route mapping IT ↔ EN
+const ROUTE_MAP = {
+  '/':                      '/en',
+  '/en':                    '/',
+  '/servizi':               '/en/services',
+  '/en/services':           '/servizi',
+  '/portfolio':             '/en/portfolio',
+  '/en/portfolio':          '/portfolio',
+  '/contatti':              '/en/contact',
+  '/en/contact':            '/contatti',
+  '/privacy':               '/en/privacy',
+  '/en/privacy':            '/privacy',
+  '/cookie-policy':         '/en/cookie-policy',
+  '/en/cookie-policy':      '/cookie-policy',
+  '/servizi/casa':          '/en/services/home',
+  '/en/services/home':      '/servizi/casa',
+  '/servizi/commerciale':   '/en/services/commercial',
+  '/en/services/commercial':'/servizi/commerciale',
+  '/servizi/edifici':       '/en/services/buildings',
+  '/en/services/buildings': '/servizi/edifici',
+};
+
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const currentLanguage = i18n.language || 'it';
-  const menuId = 'language-switcher-menu';
-  const ariaLabel = currentLanguage.startsWith('en')
-    ? 'Switch language to Italian'
-    : 'Switch language to English';
+  const isEN = location.pathname.startsWith('/en');
+  const ariaLabel = isEN
+    ? 'Passa all\'italiano'
+    : 'Switch to English';
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    localStorage.setItem('i18nextLng', lng);
-    setIsOpen(false);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
-  const flags = {
-    it: <ItalyFlag className="w-8 h-5 rounded-sm" />,
-    en: <UKFlag className="w-8 h-5 rounded-sm" />,
+  const handleToggle = () => {
+    const currentPath = location.pathname.replace(/\/$/, '') || '/';
+    const targetPath = ROUTE_MAP[currentPath] || (isEN ? '/' : '/en');
+    const targetLang = isEN ? 'it' : 'en';
+    i18n.changeLanguage(targetLang);
+    localStorage.setItem('i18nextLng', targetLang);
+    navigate(targetPath);
   };
 
   return (
-    <div className="relative pointer-events-auto" ref={dropdownRef}>
+    <div className="pointer-events-auto">
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center p-2 rounded-full transition-colors hover:scale-110 active:scale-95"
-        aria-haspopup="menu"
-        aria-expanded={isOpen}
-        aria-controls={menuId}
+        onClick={handleToggle}
+        className="flex items-center justify-center p-2 rounded-full transition-transform hover:scale-110 active:scale-95 cursor-pointer"
         aria-label={ariaLabel}
+        type="button"
       >
-        {flags[currentLanguage.split('-')[0]]}
+        {isEN
+          ? <ItalyFlag className="w-8 h-5 rounded-sm" />
+          : <UKFlag className="w-8 h-5 rounded-sm" />
+        }
       </button>
-
-      {isOpen && (
-        <div id={menuId} className="absolute top-full right-0 mt-2 w-36 rounded-md shadow-lg bg-dark/95 backdrop-blur-lg ring-1 ring-white/10 z-[9999]">
-          <div className="py-1" role="menu" aria-orientation="vertical" aria-label="Language options">
-            <button
-              onClick={() => changeLanguage('it')}
-              className="flex items-center w-full px-4 py-2 text-sm text-white hover:bg-green-600/50"
-              role="menuitem"
-            >
-              <ItalyFlag className="w-8 h-5 mr-3 rounded-sm" />
-              <span>Italiano</span>
-            </button>
-            <button
-              onClick={() => changeLanguage('en')}
-              className="flex items-center w-full px-4 py-2 text-sm text-white hover:bg-green-600/50"
-              role="menuitem"
-            >
-              <UKFlag className="w-8 h-5 mr-3 rounded-sm" />
-              <span>English</span>
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
 
 export default LanguageSwitcher;
-
-
-
-
-
 
 
 

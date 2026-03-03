@@ -54,8 +54,8 @@ const LanguageSwitcher = () => {
         type="button"
       >
         {isEN
-          ? <ItalyFlag className="w-8 h-5 rounded-sm" />
-          : <UKFlag className="w-8 h-5 rounded-sm" />
+          ? <UKFlag className="w-8 h-5 rounded-sm" />
+          : <ItalyFlag className="w-8 h-5 rounded-sm" />
         }
       </button>
     </div>

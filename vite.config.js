@@ -27,7 +27,7 @@ export default defineConfig(({ command }) => ({
           'react-router': ['react-router-dom'],
           'react-helmet': ['react-helmet-async'],
           'ui-vendor': ['@headlessui/react'],
-          'i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
+          'i18n': ['i18next', 'react-i18next', 'i18next-http-backend'],
           'emailjs': ['@emailjs/browser'],
         },
         // Optimize asset file names for better caching

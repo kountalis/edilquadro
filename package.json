@@ -30,7 +30,6 @@
     "@headlessui/react": "^1.7.18",
     "glob": "^11.0.3",
     "i18next": "^25.8.0",
-    "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
     "puppeteer": "^24.36.1",
     "react": "18.2.0",

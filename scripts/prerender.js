@@ -16,6 +16,7 @@ import { fileURLToPath } from 'url';
 import { spawn } from 'child_process';
 import puppeteer from 'puppeteer';
 import PAGE_METADATA from '../METADATI_PAGINE.js';
+import { HREFLANG_PAIRS } from '../METADATI_PAGINE.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, '..');
@@ -178,6 +179,40 @@ function injectMetadata(html, route) {
   } else {
     html = html.replace('</head>', `    <meta property="og:image" content="${metadata.ogImage}">\n  </head>`);
   }
+
+  // --- Add hreflang tags ---
+  // Remove any existing hreflang tags first
+  html = html.replace(/<link rel="alternate" hreflang="[^"]*" href="[^"]*"[^>]*>\s*/g, '');
+
+  const alternatePath = HREFLANG_PAIRS[route.path];
+  if (alternatePath) {
+    const altMeta = PAGE_METADATA[alternatePath];
+    if (altMeta) {
+      const hreflangTags = [
+        `<link rel="alternate" hreflang="${metadata.lang}" href="${metadata.canonical}">`,
+        `<link rel="alternate" hreflang="${altMeta.lang}" href="${altMeta.canonical}">`,
+        `<link rel="alternate" hreflang="x-default" href="https://edilquadro.it/">`,
+      ].join('\n    ');
+      html = html.replace('</head>', `    ${hreflangTags}\n  </head>`);
+    }
+  }
+
+  // --- Fix JSON-LD structured data for language ---
+  // Replace the hardcoded Italian JSON-LD description with language-appropriate one
+  if (metadata.lang === 'en') {
+    html = html.replace(
+      /"description":\s*"Impresa edile a Roma specializzata in ristrutturazione casa, negozi, bar, ristoranti, edifici e condomini\. Soluzioni chiavi in mano, preventivo gratuito, portfolio lavori realizzati\."/,
+      `"description": "Rome-based building company specialized in renovations of homes, shops, bars, restaurants, and residential buildings. Turnkey solutions, free quotation, portfolio of completed work."`
+    );
+    // Also update the URL in JSON-LD for EN pages
+    html = html.replace(
+      /"url":\s*"https:\/\/edilquadro\.it\/"/,
+      `"url": "${metadata.canonical}"`
+    );
+  }
+
+  // --- Remove hidden H1 outside #root (legacy SEO fix, now unnecessary) ---
+  html = html.replace(/<h1 style="position: absolute; width: 1px; height: 1px;[^"]*">[^<]*<\/h1>\s*/g, '');
 
   return html;
 }

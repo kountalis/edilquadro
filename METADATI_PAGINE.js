@@ -3,6 +3,28 @@
  * Assicura che ogni pagina abbia titolo e description unici per SEO
  */
 
+// Hreflang pairs: maps each route to its alternate language version
+const HREFLANG_PAIRS = {
+  '/':                      '/en',
+  '/en':                    '/',
+  '/servizi':               '/en/services',
+  '/en/services':           '/servizi',
+  '/portfolio':             '/en/portfolio',
+  '/en/portfolio':          '/portfolio',
+  '/contatti':              '/en/contact',
+  '/en/contact':            '/contatti',
+  '/privacy':               '/en/privacy',
+  '/en/privacy':            '/privacy',
+  '/cookie-policy':         '/en/cookie-policy',
+  '/en/cookie-policy':      '/cookie-policy',
+  '/servizi/casa':          '/en/services/home',
+  '/en/services/home':      '/servizi/casa',
+  '/servizi/commerciale':   '/en/services/commercial',
+  '/en/services/commercial':'/servizi/commerciale',
+  '/servizi/edifici':       '/en/services/buildings',
+  '/en/services/buildings': '/servizi/edifici',
+};
+
 const PAGE_METADATA = {
   '/': {
     lang: 'it',
@@ -133,3 +155,4 @@ const PAGE_METADATA = {
 };
 
 export default PAGE_METADATA;
+export { HREFLANG_PAIRS };

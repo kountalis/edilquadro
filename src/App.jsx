@@ -1,7 +1,7 @@
 ﻿import { Routes, Route } from 'react-router-dom';
 import { ProjectProvider } from './context/ProjectContext';
 import { HelmetProvider } from 'react-helmet-async';
-import React, { Suspense, useState } from 'react';
+import React, { useState } from 'react';
 import { useAnalytics } from './hooks/useAnalytics';
 
 import Navbar from './components/Navbar';
@@ -10,16 +10,15 @@ import ScrollToTop from './components/ScrollToTop';
 import ScrollRestoration from './components/ScrollRestoration';
 import CookieBanner from './components/CookieBanner';
 import Contact from './pages/Contact';
-
-const Home = React.lazy(() => import('./pages/Home'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Portfolio = React.lazy(() => import('./pages/Portfolio'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const CookiePolicy = React.lazy(() => import('./pages/CookiePolicy'));
-const HomeServices = React.lazy(() => import('./pages/HomeServices'));
-const CommercialServices = React.lazy(() => import('./pages/CommercialServices'));
-const BuildingServices = React.lazy(() => import('./pages/BuildingServices'));
-const NotFound = React.lazy(() => import('./pages/NotFound'));
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Portfolio from './pages/Portfolio';
+import Privacy from './pages/Privacy';
+import CookiePolicy from './pages/CookiePolicy';
+import HomeServices from './pages/HomeServices';
+import CommercialServices from './pages/CommercialServices';
+import BuildingServices from './pages/BuildingServices';
+import NotFound from './pages/NotFound';
 
 function App({ helmetContext } = {}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,15 +29,6 @@ function App({ helmetContext } = {}) {
         <ScrollRestoration />
         <Navbar isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />
         <ScrollToTop />
-        <Suspense fallback={
-          <div className="min-h-screen flex flex-col items-center justify-center bg-slate-950 text-white">
-            <svg className="animate-spin h-12 w-12 text-emerald-400 mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
-            </svg>
-            <p className="text-lg font-semibold">Caricamento contenuti...</p>
-          </div>
-        }>
           <Routes>
             {/* Italian routes */}
             <Route path="/" element={<Home />} />
@@ -62,7 +52,6 @@ function App({ helmetContext } = {}) {
             <Route path="/en/services/buildings" element={<BuildingServices />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </Suspense>
         <Footer />
         <CookieBanner />
       </ProjectProvider>

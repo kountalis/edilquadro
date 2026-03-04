@@ -58,7 +58,7 @@ const LazyImage = ({
           )}
           {webpSrc && webpSrc.endsWith('.webp') && (
             <source 
-              srcSet={srcSet && srcSet.includes('.avif') ? srcSet.replace(/\.avif/g, '.webp') : encodeURI(webpSrc)}
+              srcSet={srcSet && srcSet.includes('.avif') ? srcSet.replace(/\.avif/g, '.webp') : `${encodeURI(webpSrc)} 1x`}
               sizes={sizes}
               type="image/webp" 
             />

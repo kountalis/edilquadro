@@ -295,14 +295,13 @@ const Portfolio = () => {
   const generateResponsiveAvifSrcSet = (imagePath) => {
     if (!imagePath || !imagePath.endsWith('.webp')) return null;
     const nameWithoutExt = imagePath.substring(0, imagePath.lastIndexOf('.'));
-    // Varianti AVIF + fallback WebP full-size per browser senza AVIF
-    return `${nameWithoutExt}-380.avif 380w, ${nameWithoutExt}-600.avif 600w, ${imagePath} 1200w`;
+    return `${encodeURI(nameWithoutExt)}-380.avif 380w, ${encodeURI(nameWithoutExt)}-600.avif 600w, ${encodeURI(imagePath)} 1200w`;
   };
 
   const generateResponsiveSrcSet = (imagePath) => {
     if (!imagePath || !imagePath.endsWith('.webp')) return null;
     const nameWithoutExt = imagePath.substring(0, imagePath.lastIndexOf('.'));
-    return `${nameWithoutExt}-380.webp 380w, ${nameWithoutExt}-600.webp 600w, ${imagePath} 1200w`;
+    return `${encodeURI(nameWithoutExt)}-380.webp 380w, ${encodeURI(nameWithoutExt)}-600.webp 600w, ${encodeURI(imagePath)} 1200w`;
   };
 
   const imageSizes = "(max-width: 480px) 380px, (max-width: 768px) 600px, 1200px";

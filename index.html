@@ -119,32 +119,28 @@
       }, false);
     </script>
     
-    <!-- Google tag (gtag.js) - GA4 + Google Ads - Loaded after page load + 3s delay -->
+    <!-- Google tag (gtag.js) - GA4 + Google Ads -->
     <script>
+      // Queue config calls immediately (processed when gtag.js loads)
       gtag('js', new Date());
+      gtag('config', 'G-E5F0QNCJQS', {
+        'anonymize_ip': true,
+        'send_page_view': false
+      });
+      gtag('config', 'AW-17331965831', {
+        'send_page_view': false
+      });
       
+      // Load gtag.js after page load + 2s delay (outside LCP window)
       function loadGTM() {
         var script = document.createElement('script');
         script.async = true;
         script.src = 'https://www.googletagmanager.com/gtag/js?id=G-E5F0QNCJQS';
         document.head.appendChild(script);
-        
-        script.onload = function() {
-          // GA4 config
-          gtag('config', 'G-E5F0QNCJQS', {
-            'anonymize_ip': true,
-            'send_page_view': false
-          });
-          // Google Ads config
-          gtag('config', 'AW-17331965831', {
-            'send_page_view': false
-          });
-        };
       }
       
-      // Wait for page load + 3s delay (outside LCP window)
       window.addEventListener('load', function() {
-        setTimeout(loadGTM, 3000);
+        setTimeout(loadGTM, 2000);
       });
     </script>
   </body>

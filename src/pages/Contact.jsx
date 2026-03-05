@@ -174,7 +174,7 @@ const Contact = () => {
             <a
               href="tel:+393333377320"
               className="group p-4 md:p-5 bg-[#23272b] backdrop-blur-sm rounded-2xl border border-green-900 shadow-lg hover:bg-[#2d3237] transition-all duration-300 no-underline flex items-center gap-3 md:gap-4 min-h-[74px] md:min-h-[80px]"
-              onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Contact - Telefono' }); Conversions.PHONE_CALL('Contact Page'); }}
+              onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Contact - Telefono' }); Conversions.PHONE_CALL('Contact Page'); if (typeof gtag_report_conversion === 'function') gtag_report_conversion(); }}
             >
               <img
                 src="/phone.svg"

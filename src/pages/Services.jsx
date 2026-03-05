@@ -237,7 +237,7 @@ const Services = () => {
                   href="tel:+393333377320"
                   className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300"
                   
-                  onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Services - Telefono' })}
+                  onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Services - Telefono' }); if (typeof gtag_report_conversion === 'function') gtag_report_conversion(); }}
                 >
                   <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                   <div className="relative flex items-center justify-center gap-3">

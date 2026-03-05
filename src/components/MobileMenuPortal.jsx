@@ -53,6 +53,7 @@ export default function MobileMenuPortal({ isOpen, onClose, navItems }) {
             onClick={() => {
               onClose();
               trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Mobile - Telefono' });
+              if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
             }}
           >
             <img

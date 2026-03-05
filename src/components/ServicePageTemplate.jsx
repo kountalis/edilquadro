@@ -248,7 +248,7 @@ const ServicePageTemplate = ({
               <a
                 href="tel:+393333377320"
                 className="bg-greenDark text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-greenDarker transition-colors flex items-center gap-2 hover:shadow-[0_0_15px_rgba(0,100,0,0.5)] hover:scale-105"
-                onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: `${gaLabel} - Telefono` })}
+                onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: `${gaLabel} - Telefono` }); if (typeof gtag_report_conversion === 'function') gtag_report_conversion(); }}
               >
                 <img src="/phone.svg" alt="Telefono" className="w-5 h-5" />
                 {tp('cta_call')}

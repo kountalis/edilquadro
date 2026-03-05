@@ -504,7 +504,7 @@ const Portfolio = () => {
                     href="tel:+393333377320"
                     className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-cta-green-dark to-cta-green transition-all duration-300 hover:scale-102 hover:-translate-y-1 active:scale-98"
                     style={{ animation: 'fadeIn 1s ease-out 0.6s both', minHeight: '100px' }}
-                    onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Portfolio - Telefono' }); Conversions.PHONE_CALL('Portfolio'); }}
+                    onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Portfolio - Telefono' }); Conversions.PHONE_CALL('Portfolio'); if (typeof gtag_report_conversion === 'function') gtag_report_conversion(); }}
                   >
                     <div className="absolute inset-0 rounded-2xl bg-cta-green opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">

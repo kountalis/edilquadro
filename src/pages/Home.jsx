@@ -512,7 +512,7 @@ const Home = () => {
                     role="button"
                     
                     className="group relative px-8 py-5 rounded-2xl bg-gradient-to-r from-greenDark to-green-600 transition-all duration-300 hover:scale-102 hover:-translate-y-1 cta-action-btn"
-                    onClick={() => trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Home - Telefono' })}
+                    onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Home - Telefono' }); if (typeof gtag_report_conversion === 'function') gtag_report_conversion(); }}
                   >
                     <div className="absolute inset-0 rounded-2xl bg-green-600 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
                     <div className="relative flex items-center justify-center gap-3">

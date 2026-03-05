@@ -80,7 +80,7 @@ const Footer = () => {
               <a
                 href="tel:+393333377320"
                 className="inline-flex items-center gap-2 bg-cta-green text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-cta-green-dark transition-all hover:shadow-[0_0_15px_rgba(15,76,47,0.5)] hover:scale-105 active:scale-95"
-                onClick={() => { trackGAEvent({ action: 'click_phone', category: 'Contatto', label: 'Footer - Chiama' }); Conversions.PHONE_CALL('Footer'); }}
+                onClick={() => { trackGAEvent({ action: 'click_phone', category: 'Contatto', label: 'Footer - Chiama' }); Conversions.PHONE_CALL('Footer'); if (typeof gtag_report_conversion === 'function') gtag_report_conversion(); }}
               >
                 <img
                   src="/phone.svg"

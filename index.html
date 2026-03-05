@@ -8,7 +8,8 @@
     <meta name="description" content="Impresa edile a Roma: ristrutturazioni casa, negozi, edifici. Scopri i nostri lavori e richiedi un preventivo gratuito!">
     <meta name="keywords" content="ristrutturazione roma, impresa edile roma, ristrutturazione casa roma, ristrutturazione negozi roma, architetto roma">
     
-    <!-- Performance Optimization: DNS prefetch only (GTM loads after 5s, no early preconnect needed) -->
+    <!-- Performance Optimization: DNS prefetch and preconnect for Google services -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://googleads.g.doubleclick.net">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -70,21 +71,11 @@
     }
     </script>
 
-    <!--head-outlet-->
-  </head>
-  <body>
-    <noscript>
-    </noscript>
-    <div id="root"><!--ssr-outlet--></div>
-    <script type="module" src="/src/main.jsx"></script>
-    
     <!-- CRITICAL: Google Consent Mode v2 - MUST be BEFORE any Google script -->
     <script>
-      // Initialize dataLayer immediately
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       
-      // Set consent DENIED by default (GDPR Italy)
       gtag('consent', 'default', {
         'ad_storage': 'denied',
         'analytics_storage': 'denied',
@@ -94,7 +85,6 @@
         'region': ['IT']
       });
       
-      // Check for previously saved consent
       try {
         var consent = localStorage.getItem('edilquadro_consent_status');
         if (consent === 'accepted') {
@@ -107,7 +97,6 @@
         }
       } catch(e) {}
       
-      // Listen for consent updates from CookieBanner
       window.addEventListener('consent-updated', function(event) {
         var status = event.detail.status === 'accepted' ? 'granted' : 'denied';
         gtag('consent', 'update', {
@@ -120,8 +109,8 @@
     </script>
     
     <!-- Google tag (gtag.js) - GA4 + Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5F0QNCJQS"></script>
     <script>
-      // Queue config calls immediately (processed when gtag.js loads)
       gtag('js', new Date());
       gtag('config', 'G-E5F0QNCJQS', {
         'anonymize_ip': true,
@@ -130,18 +119,14 @@
       gtag('config', 'AW-17331965831', {
         'send_page_view': false
       });
-      
-      // Load gtag.js after page load + 2s delay (outside LCP window)
-      function loadGTM() {
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-E5F0QNCJQS';
-        document.head.appendChild(script);
-      }
-      
-      window.addEventListener('load', function() {
-        setTimeout(loadGTM, 2000);
-      });
     </script>
+
+    <!--head-outlet-->
+  </head>
+  <body>
+    <noscript>
+    </noscript>
+    <div id="root"><!--ssr-outlet--></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html> 

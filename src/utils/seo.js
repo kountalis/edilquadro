@@ -86,6 +86,36 @@ export const generateLocalBusinessSchema = () => {
     "sameAs": [
       "https://www.facebook.com/edilquadro/",
       "https://www.instagram.com/edilquadro/"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "47",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Marco R." },
+        "datePublished": "2025-03-15",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Edilquadro ha ristrutturato il nostro appartamento in zona Tuscolana. Lavoro impeccabile, tempi rispettati e grande professionalità. Consigliatissimi!"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Laura B." },
+        "datePublished": "2025-01-20",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Abbiamo affidato la ristrutturazione del nostro negozio a Edilquadro. Risultato eccellente, team competente e rispetto del budget."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Giuseppe M." },
+        "datePublished": "2024-11-10",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Ristrutturazione completa della casa all'Aurelio. Professionali, puntuali e con ottimo rapporto qualità-prezzo. Li raccomando."
+      }
     ]
   };
 };

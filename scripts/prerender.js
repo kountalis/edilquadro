@@ -45,6 +45,8 @@ const routes = [
   { path: '/en/services/commercial', filename: 'en/services/commercial/index.html',   lang: 'en' },
   { path: '/servizi/edifici',        filename: 'servizi/edifici/index.html',          lang: 'it' },
   { path: '/en/services/buildings',  filename: 'en/services/buildings/index.html',    lang: 'en' },
+  { path: '/chi-siamo',              filename: 'chi-siamo/index.html',                lang: 'it' },
+  { path: '/en/about',               filename: 'en/about/index.html',                 lang: 'en' },
   // Portfolio project pages (IT)
   { path: '/portfolio/casa-moderna-bracciano',          filename: 'portfolio/casa-moderna-bracciano/index.html',          lang: 'it' },
   { path: '/portfolio/piazza-cina-genzano',             filename: 'portfolio/piazza-cina-genzano/index.html',             lang: 'it' },

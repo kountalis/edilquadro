@@ -20,6 +20,7 @@ import CommercialServices from './pages/CommercialServices';
 import BuildingServices from './pages/BuildingServices';
 import NotFound from './pages/NotFound';
 import ProjectDetail from './pages/ProjectDetail';
+import About from './pages/About';
 
 function App({ helmetContext } = {}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,6 +43,7 @@ function App({ helmetContext } = {}) {
             <Route path="/servizi/casa" element={<HomeServices />} />
             <Route path="/servizi/commerciale" element={<CommercialServices />} />
             <Route path="/servizi/edifici" element={<BuildingServices />} />
+            <Route path="/chi-siamo" element={<About />} />
             {/* English routes - same components, i18n handles translation */}
             <Route path="/en" element={<Home />} />
             <Route path="/en/services" element={<Services />} />
@@ -53,6 +55,7 @@ function App({ helmetContext } = {}) {
             <Route path="/en/services/home" element={<HomeServices />} />
             <Route path="/en/services/commercial" element={<CommercialServices />} />
             <Route path="/en/services/buildings" element={<BuildingServices />} />
+            <Route path="/en/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         <Footer />

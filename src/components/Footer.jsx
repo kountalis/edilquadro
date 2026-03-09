@@ -53,6 +53,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
+                  to="/chi-siamo" 
+                  className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                  onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: 'Chi Siamo' })}
+                >
+                  {t('nav.about')}
+                </Link>
+              </li>
+              <li>
+                <Link 
                   to="/contatti" 
                   className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
                   onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: 'Contatti' })}

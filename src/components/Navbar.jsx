@@ -71,11 +71,13 @@ const Navbar = ({ isOpen, setIsOpen }) => {
     { name: t('nav.home'), path: '/en' },
     { name: t('nav.portfolio'), path: '/en/portfolio' },
     { name: t('nav.services'), path: '/en/services', onClick: handleServiziClick },
+    { name: t('nav.about'), path: '/en/about' },
     { name: t('nav.contact'), path: '/en/contact' },
   ] : [
     { name: t('nav.home'), path: '/' },
     { name: t('nav.portfolio'), path: '/portfolio' },
     { name: t('nav.services'), path: '/servizi', onClick: handleServiziClick },
+    { name: t('nav.about'), path: '/chi-siamo' },
     { name: t('nav.contact'), path: '/contatti' },
   ];
 

@@ -20,10 +20,10 @@ const About = () => {
     "mainEntity": {
       "@type": "Organization",
       "name": "Edilquadro",
-      "foundingDate": "2010",
+      "foundingDate": "1998",
       "founder": {
         "@type": "Person",
-        "name": "Stiliano Kountalis"
+        "name": "Stylianos Kountalis"
       },
       "numberOfEmployees": {
         "@type": "QuantitativeValue",
@@ -151,7 +151,7 @@ const About = () => {
               </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div>
-                  <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">15+</div>
+                  <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">25+</div>
                   <div className="text-gray-400 text-sm">{t('about_page.stat_years')}</div>
                 </div>
                 <div>

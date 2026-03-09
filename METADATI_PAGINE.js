@@ -188,14 +188,14 @@ const PAGE_METADATA = {
   '/chi-siamo': {
     lang: 'it',
     title: 'Chi Siamo - Edilquadro | Impresa Edile Roma Tuscolana',
-    description: 'Scopri chi è Edilquadro: impresa edile a Roma in zona Tuscolana con oltre 15 anni di esperienza in ristrutturazioni case, negozi e edifici. Team qualificato e 200+ progetti completati.',
+    description: 'Scopri chi è Edilquadro: impresa edile a Roma in zona Tuscolana con oltre 25 anni di esperienza in ristrutturazioni case, negozi e edifici. Team qualificato e 200+ progetti completati.',
     canonical: 'https://edilquadro.it/chi-siamo/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/en/about': {
     lang: 'en',
     title: 'About Us - Edilquadro | Construction Company Rome',
-    description: 'Discover Edilquadro: a construction company in Rome\'s Tuscolana area with over 15 years of experience in home, shop, and building renovations. Qualified team and 200+ completed projects.',
+    description: 'Discover Edilquadro: a construction company in Rome\'s Tuscolana area with over 25 years of experience in home, shop, and building renovations. Qualified team and 200+ completed projects.',
     canonical: 'https://edilquadro.it/en/about/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },

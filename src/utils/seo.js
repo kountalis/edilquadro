@@ -25,8 +25,8 @@ export const generateLocalBusinessSchema = () => {
     "url": "https://edilquadro.it/",
     "telephone": "+39333377320",
     "email": "edilquadroroma@gmail.com",
-    "priceRange": "â‚¬â‚¬â‚¬",
-    "description": "Impresa edile a Roma specializzata in ristrutturazione casa, negozi, bar, ristoranti, edifici e condomini. Soluzioni chiavi in mano, preventivo gratuito, portfolio lavori realizzati.",
+    "priceRange": "€€€",
+    "description": "Impresa edile in zona Tuscolana, Roma, specializzata in ristrutturazione casa, negozi, bar, ristoranti, edifici e condomini. Operiamo in tutta Roma e provincia: Appio-Tuscolano, Cinecittà, San Giovanni, EUR, Pomezia. Soluzioni chiavi in mano, preventivo gratuito.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Via Egerio Levio 13",
@@ -37,8 +37,8 @@ export const generateLocalBusinessSchema = () => {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 41.9028,
-      "longitude": 12.4964
+      "latitude": 41.8737,
+      "longitude": 12.5338
     },
     "openingHoursSpecification": [
       {
@@ -62,7 +62,20 @@ export const generateLocalBusinessSchema = () => {
         "closes": "13:00"
       }
     ],
-    "areaServed": ["Roma", "Provincia di Roma", "Lazio"],
+    "areaServed": [
+      "Roma",
+      "Provincia di Roma",
+      "Lazio",
+      "Tuscolana",
+      "Appio-Tuscolano",
+      "Cinecittà",
+      "San Giovanni",
+      "EUR",
+      "Aurelio",
+      "Alessandrino",
+      "Pomezia",
+      "Genzano di Roma"
+    ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+39333377320",

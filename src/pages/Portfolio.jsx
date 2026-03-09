@@ -20,6 +20,7 @@ const Portfolio = () => {
     {
       id: 1,
       title: t('portfolio_page.projects.proj1_title'),
+      location: t('portfolio_page.projects.proj1_location'),
       category: "casa",
       description: t('portfolio_page.projects.proj1_desc'),
       images: [
@@ -227,6 +228,7 @@ const Portfolio = () => {
     {
       id: 14,
       title: t('portfolio_page.projects.proj14_title'),
+      location: t('portfolio_page.projects.proj14_location'),
       description: t('portfolio_page.projects.proj14_desc'),
       images: [
         "/projects/brescini-01.webp",
@@ -246,6 +248,7 @@ const Portfolio = () => {
     {
       id: 15,
       title: t('portfolio_page.projects.proj15_title'),
+      location: t('portfolio_page.projects.proj15_location'),
       description: t('portfolio_page.projects.proj15_desc'),
       images: [
         "/projects/sikinos-01.webp",

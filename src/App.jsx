@@ -22,6 +22,7 @@ import NotFound from './pages/NotFound';
 import ProjectDetail from './pages/ProjectDetail';
 import About from './pages/About';
 import ZonePage from './pages/ZonePage';
+import BonusFiscali from './pages/BonusFiscali';
 
 function App({ helmetContext } = {}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,6 +47,7 @@ function App({ helmetContext } = {}) {
             <Route path="/servizi/edifici" element={<BuildingServices />} />
             <Route path="/chi-siamo" element={<About />} />
             <Route path="/zone/:slug" element={<ZonePage />} />
+            <Route path="/bonus-fiscali" element={<BonusFiscali />} />
             {/* English routes - same components, i18n handles translation */}
             <Route path="/en" element={<Home />} />
             <Route path="/en/services" element={<Services />} />
@@ -59,6 +61,7 @@ function App({ helmetContext } = {}) {
             <Route path="/en/services/buildings" element={<BuildingServices />} />
             <Route path="/en/about" element={<About />} />
             <Route path="/en/zones/:slug" element={<ZonePage />} />
+            <Route path="/en/tax-benefits" element={<BonusFiscali />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         <Footer />

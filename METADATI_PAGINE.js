@@ -73,6 +73,9 @@ const HREFLANG_PAIRS = {
   '/en/zones/cinecitta':          '/zone/cinecitta',
   '/zone/pomezia':                '/en/zones/pomezia',
   '/en/zones/pomezia':            '/zone/pomezia',
+  // Bonus Fiscali page
+  '/bonus-fiscali':               '/en/tax-benefits',
+  '/en/tax-benefits':             '/bonus-fiscali',
 };
 
 const PAGE_METADATA = {
@@ -540,6 +543,21 @@ const PAGE_METADATA = {
     title: 'Renovations Pomezia - Edilquadro Rome',
     description: 'Construction company in Pomezia: home, nursery, and residential building renovations. Edilquadro from Rome also serves Pomezia and surrounding towns.',
     canonical: 'https://edilquadro.it/en/zones/pomezia/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  // ── Bonus Fiscali ──
+  '/bonus-fiscali': {
+    lang: 'it',
+    title: 'Bonus Fiscali Ristrutturazione 2026 Roma - Guida Edilquadro',
+    description: 'Guida completa ai bonus fiscali per ristrutturazione 2026: bonus casa 50%, ecobonus 65%, sismabonus, bonus facciate. Edilquadro ti aiuta con pratiche e lavori a Roma.',
+    canonical: 'https://edilquadro.it/bonus-fiscali/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/tax-benefits': {
+    lang: 'en',
+    title: 'Renovation Tax Benefits 2026 Rome - Edilquadro Guide',
+    description: 'Complete guide to renovation tax benefits in Italy 2026: 50% renovation bonus, 65% ecobonus, sismabonus, facade bonus. Edilquadro handles paperwork and construction in Rome.',
+    canonical: 'https://edilquadro.it/en/tax-benefits/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   }
 };

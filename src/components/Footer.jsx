@@ -5,13 +5,25 @@ import { Conversions } from '../hooks/useAnalytics';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isEn = i18n.language === 'en';
+
+  const zones = [
+    { slug: 'tuscolana', label: 'Tuscolana' },
+    { slug: 'appio-tuscolano', label: 'Appio-Tuscolano' },
+    { slug: 'san-giovanni', label: 'San Giovanni' },
+    { slug: 'eur', label: 'EUR' },
+    { slug: 'aurelio', label: 'Aurelio' },
+    { slug: 'alessandrino', label: 'Alessandrino' },
+    { slug: 'cinecitta', label: 'Cinecittà' },
+    { slug: 'pomezia', label: 'Pomezia' },
+  ];
 
   return (
     <footer className="bg-gray-900 text-white" style={{ background: '#1a1f2e' }}>
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Left Column - Edilquadro Info */}
           <div>
             <h3 className="text-xl font-bold text-blue-400 mb-4">Edilquadro</h3>
@@ -78,6 +90,24 @@ const Footer = () => {
                   {t('footer.privacy_policy')}
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Zone Column - Dove Operiamo */}
+          <div>
+            <h3 className="text-xl font-bold text-blue-400 mb-4">{t('footer.zones_title')}</h3>
+            <ul className="space-y-2">
+              {zones.map(zone => (
+                <li key={zone.slug}>
+                  <Link
+                    to={isEn ? `/en/zones/${zone.slug}` : `/zone/${zone.slug}`}
+                    className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                    onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: `Zone - ${zone.label}` })}
+                  >
+                    {zone.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

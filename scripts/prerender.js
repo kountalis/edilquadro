@@ -97,6 +97,9 @@ const routes = [
   { path: '/en/zones/alessandrino',   filename: 'en/zones/alessandrino/index.html',    lang: 'en' },
   { path: '/en/zones/cinecitta',      filename: 'en/zones/cinecitta/index.html',       lang: 'en' },
   { path: '/en/zones/pomezia',        filename: 'en/zones/pomezia/index.html',         lang: 'en' },
+  // Bonus Fiscali
+  { path: '/bonus-fiscali',            filename: 'bonus-fiscali/index.html',            lang: 'it' },
+  { path: '/en/tax-benefits',          filename: 'en/tax-benefits/index.html',           lang: 'en' },
 ];
 
 function ensureDirectoryExists(filePath) {

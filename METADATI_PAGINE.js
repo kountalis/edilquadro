@@ -56,6 +56,23 @@ const HREFLANG_PAIRS = {
   '/en/portfolio/casa-moderna-eur':             '/portfolio/casa-moderna-eur',
   '/portfolio/bar-eur':                         '/en/portfolio/bar-eur',
   '/en/portfolio/bar-eur':                      '/portfolio/bar-eur',
+  // Zone landing pages
+  '/zone/tuscolana':              '/en/zones/tuscolana',
+  '/en/zones/tuscolana':          '/zone/tuscolana',
+  '/zone/appio-tuscolano':        '/en/zones/appio-tuscolano',
+  '/en/zones/appio-tuscolano':    '/zone/appio-tuscolano',
+  '/zone/san-giovanni':           '/en/zones/san-giovanni',
+  '/en/zones/san-giovanni':       '/zone/san-giovanni',
+  '/zone/eur':                    '/en/zones/eur',
+  '/en/zones/eur':                '/zone/eur',
+  '/zone/aurelio':                '/en/zones/aurelio',
+  '/en/zones/aurelio':            '/zone/aurelio',
+  '/zone/alessandrino':           '/en/zones/alessandrino',
+  '/en/zones/alessandrino':       '/zone/alessandrino',
+  '/zone/cinecitta':              '/en/zones/cinecitta',
+  '/en/zones/cinecitta':          '/zone/cinecitta',
+  '/zone/pomezia':                '/en/zones/pomezia',
+  '/en/zones/pomezia':            '/zone/pomezia',
 };
 
 const PAGE_METADATA = {
@@ -410,6 +427,120 @@ const PAGE_METADATA = {
     description: 'Design and renovation of a modern design bar in EUR area, Rome. Project in progress.',
     canonical: 'https://edilquadro.it/en/portfolio/bar-eur/',
     ogImage: 'https://edilquadro.it/projects/Bar%20In%20Progress%201.webp'
+  },
+  // ── Zone Landing Pages (IT) ──
+  '/zone/tuscolana': {
+    lang: 'it',
+    title: 'Ristrutturazioni Zona Tuscolana Roma - Edilquadro',
+    description: 'Impresa edile in zona Tuscolana a Roma: ristrutturazioni case, negozi e edifici. Sede in Via Egerio Levio 13. Preventivo gratuito, sopralluogo in giornata.',
+    canonical: 'https://edilquadro.it/zone/tuscolana/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/zone/appio-tuscolano': {
+    lang: 'it',
+    title: 'Ristrutturazioni Appio-Tuscolano Roma - Edilquadro',
+    description: 'Ristrutturazioni case e negozi nel quartiere Appio-Tuscolano a Roma. Impresa edile locale, preventivi gratuiti e lavori garantiti.',
+    canonical: 'https://edilquadro.it/zone/appio-tuscolano/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/zone/san-giovanni': {
+    lang: 'it',
+    title: 'Ristrutturazioni San Giovanni Roma - Edilquadro',
+    description: 'Ristrutturazioni case, ristoranti e negozi nella zona San Giovanni a Roma. Impresa edile Edilquadro: qualità garantita e preventivo gratuito.',
+    canonical: 'https://edilquadro.it/zone/san-giovanni/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/zone/eur': {
+    lang: 'it',
+    title: 'Ristrutturazioni EUR Roma - Edilquadro',
+    description: 'Ristrutturazioni case e spazi commerciali nel quartiere EUR a Roma. Design moderno, materiali di qualità e preventivo gratuito. Impresa edile Edilquadro.',
+    canonical: 'https://edilquadro.it/zone/eur/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/zone/aurelio': {
+    lang: 'it',
+    title: 'Ristrutturazioni Aurelio Roma - Edilquadro',
+    description: 'Ristrutturazioni case e appartamenti nel quartiere Aurelio a Roma. Impresa edile con 25+ anni di esperienza. Preventivo gratuito.',
+    canonical: 'https://edilquadro.it/zone/aurelio/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/zone/alessandrino': {
+    lang: 'it',
+    title: 'Ristrutturazioni Alessandrino Roma - Edilquadro',
+    description: 'Ristrutturazioni case e appartamenti nel quartiere Alessandrino a Roma. Impresa edile affidabile con preventivi gratuiti.',
+    canonical: 'https://edilquadro.it/zone/alessandrino/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/zone/cinecitta': {
+    lang: 'it',
+    title: 'Ristrutturazioni Cinecittà Roma - Edilquadro',
+    description: 'Ristrutturazioni case e spazi commerciali a Cinecittà, Roma. Impresa edile Edilquadro con sede nella vicina zona Tuscolana. Preventivo gratuito.',
+    canonical: 'https://edilquadro.it/zone/cinecitta/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/zone/pomezia': {
+    lang: 'it',
+    title: 'Ristrutturazioni Pomezia - Edilquadro Roma',
+    description: 'Impresa edile a Pomezia: ristrutturazioni case, asili nido e edifici residenziali. Edilquadro da Roma opera anche a Pomezia e comuni limitrofi.',
+    canonical: 'https://edilquadro.it/zone/pomezia/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  // ── Zone Landing Pages (EN) ──
+  '/en/zones/tuscolana': {
+    lang: 'en',
+    title: 'Renovations Tuscolana Area Rome - Edilquadro',
+    description: 'Construction company in the Tuscolana area of Rome: home, shop, and building renovations. Office at Via Egerio Levio 13. Free quote, same-day visit.',
+    canonical: 'https://edilquadro.it/en/zones/tuscolana/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/zones/appio-tuscolano': {
+    lang: 'en',
+    title: 'Renovations Appio-Tuscolano Rome - Edilquadro',
+    description: 'Home and shop renovations in the Appio-Tuscolano neighborhood of Rome. Local construction company, free quotes and guaranteed work.',
+    canonical: 'https://edilquadro.it/en/zones/appio-tuscolano/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/zones/san-giovanni': {
+    lang: 'en',
+    title: 'Renovations San Giovanni Rome - Edilquadro',
+    description: 'Home, restaurant, and shop renovations in the San Giovanni area of Rome. Edilquadro construction company: guaranteed quality and free quote.',
+    canonical: 'https://edilquadro.it/en/zones/san-giovanni/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/zones/eur': {
+    lang: 'en',
+    title: 'Renovations EUR Rome - Edilquadro',
+    description: 'Home and commercial renovations in the EUR district of Rome. Modern design, quality materials, and free quote. Edilquadro construction company.',
+    canonical: 'https://edilquadro.it/en/zones/eur/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/zones/aurelio': {
+    lang: 'en',
+    title: 'Renovations Aurelio Rome - Edilquadro',
+    description: 'Home and apartment renovations in the Aurelio neighborhood of Rome. Construction company with 25+ years of experience. Free quote.',
+    canonical: 'https://edilquadro.it/en/zones/aurelio/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/zones/alessandrino': {
+    lang: 'en',
+    title: 'Renovations Alessandrino Rome - Edilquadro',
+    description: 'Home and apartment renovations in the Alessandrino neighborhood of Rome. Reliable construction company with free quotes.',
+    canonical: 'https://edilquadro.it/en/zones/alessandrino/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/zones/cinecitta': {
+    lang: 'en',
+    title: 'Renovations Cinecittà Rome - Edilquadro',
+    description: 'Home and commercial renovations in Cinecittà, Rome. Edilquadro construction company based in nearby Tuscolana area. Free quote.',
+    canonical: 'https://edilquadro.it/en/zones/cinecitta/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/zones/pomezia': {
+    lang: 'en',
+    title: 'Renovations Pomezia - Edilquadro Rome',
+    description: 'Construction company in Pomezia: home, nursery, and residential building renovations. Edilquadro from Rome also serves Pomezia and surrounding towns.',
+    canonical: 'https://edilquadro.it/en/zones/pomezia/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   }
 };
 

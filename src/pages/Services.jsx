@@ -12,7 +12,7 @@ const Services = () => {
   const { t, i18n } = useTranslation();
 
   const services = [{
-    icon: <img src="/home.svg" alt="Casa" className="w-12 h-12" />,
+    icon: <img src="/home.svg" alt="Icona ristrutturazione casa" className="w-12 h-12" />,
     title: t('services_page.card1_title'),
     description: t('services_page.card1_desc'),
     features: [
@@ -23,7 +23,7 @@ const Services = () => {
     ]
   },
   {
-    icon: <img src="/shop.svg" alt="Negozio" className="w-12 h-12" />,
+    icon: <img src="/shop.svg" alt="Icona ristrutturazione commerciale" className="w-12 h-12" />,
     title: t('services_page.card2_title'),
     description: t('services_page.card2_desc'),
     features: [
@@ -34,7 +34,7 @@ const Services = () => {
     ]
   },
   {
-    icon: <img src="/building.svg" alt="Edificio" className="w-12 h-12" />,
+    icon: <img src="/building.svg" alt="Icona ristrutturazione edifici" className="w-12 h-12" />,
     title: t('services_page.card3_title'),
     description: t('services_page.card3_desc'),
     features: [

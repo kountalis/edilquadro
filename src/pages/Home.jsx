@@ -54,7 +54,7 @@ const ProjectGallery = ({ projects }) => {
                     className="inline-flex items-center text-emerald-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300"
                   >
                     {project.images ? t('home.featured_projects.see_all_photos', { count: project.images.length }) : t('home.featured_projects.see_details')}
-                    <img src="/arrow.svg" alt="Freccia" className="ml-2 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'invert(1) sepia(1) hue-rotate(90deg) saturate(3)' }} />
+                    <img src="/arrow.svg" alt="" className="ml-2 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'invert(1) sepia(1) hue-rotate(90deg) saturate(3)' }} />
                   </span>
                 </div>
               </div>
@@ -73,19 +73,19 @@ const Home = () => {
 
   const services = [
     {
-      icon: <img src="/home.svg" alt="Casa" className="w-14 h-14" />,
+      icon: <img src="/home.svg" alt="Icona ristrutturazione casa" className="w-14 h-14" />,
       title: t('home.services.card1_title'),
       description: t('home.services.card1_desc'),
       link: "/servizi/casa"
     },
     {
-      icon: <img src="/shop.svg" alt="Negozio" className="w-14 h-14" />,
+      icon: <img src="/shop.svg" alt="Icona ristrutturazione commerciale" className="w-14 h-14" />,
       title: t('home.services.card2_title'),
       description: t('home.services.card2_desc'),
       link: "/servizi/commerciale"
     },
     {
-      icon: <img src="/building.svg" alt="Edificio" className="w-14 h-14" />,
+      icon: <img src="/building.svg" alt="Icona ristrutturazione edifici" className="w-14 h-14" />,
       title: t('home.services.card3_title'),
       description: t('home.services.card3_desc'),
       link: "/servizi/edifici"
@@ -318,7 +318,7 @@ const Home = () => {
                         <div
                           className="ml-2 w-12 h-12"
                         >
-                          <img src="/arrow.svg" alt="Avanti" className="w-full h-full transform group-hover/link:translate-x-1 transition-transform duration-300" />
+                          <img src="/arrow.svg" alt="" className="w-full h-full transform group-hover/link:translate-x-1 transition-transform duration-300" />
                         </div>
                       </Link>
                     </div>
@@ -367,7 +367,7 @@ const Home = () => {
                   className="inline-flex items-center px-8 py-4 rounded-full bg-emerald-800 text-white text-lg font-semibold shadow-lg hover:bg-green-700 transition-colors duration-300 group"
                 >
                   {t('home.shops_renovation.discover_more')}
-                  <img src="/arrow.svg" alt="Avanti" className="ml-3 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'brightness(0) saturate(100%) invert(1)', strokeWidth: '2px' }} />
+                  <img src="/arrow.svg" alt="" className="ml-3 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'brightness(0) saturate(100%) invert(1)', strokeWidth: '2px' }} />
                 </Link>
               </div>
             </div>

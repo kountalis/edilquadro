@@ -51,8 +51,27 @@ const Portfolio = () => {
     "@type": "CollectionPage",
     "name": t('portfolio_page.meta_title'),
     "description": t('portfolio_page.meta_description'),
-    "url": "https://edilquadro.it/portfolio",
+    "url": isEn ? "https://edilquadro.it/en/portfolio" : "https://edilquadro.it/portfolio",
     "image": "https://edilquadro.it/portfolio-bg.jpg"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": isEn ? "https://edilquadro.it/en" : "https://edilquadro.it/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Portfolio",
+        "item": isEn ? "https://edilquadro.it/en/portfolio" : "https://edilquadro.it/portfolio"
+      }
+    ]
   };
 
   return (
@@ -77,6 +96,7 @@ const Portfolio = () => {
         <meta name="twitter:site" content="@edilquadro" />
         <html lang={i18n.language} />
         <script type="application/ld+json">{JSON.stringify(collectionPageSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
       <div className="relative min-h-screen flex flex-col overflow-hidden">
         <picture>
@@ -91,6 +111,17 @@ const Portfolio = () => {
           />
         </picture>
         <div className="absolute inset-0 bg-black/60 z-20"></div>
+        <nav aria-label="Breadcrumb" className="relative z-30 container mx-auto px-4 pt-24 pb-2">
+          <ol className="flex items-center gap-2 text-sm text-gray-400">
+            <li>
+              <Link to={isEn ? '/en' : '/'} className="hover:text-emerald-400 transition-colors">
+                Home
+              </Link>
+            </li>
+            <li><span className="mx-1">/</span></li>
+            <li className="text-emerald-400">Portfolio</li>
+          </ol>
+        </nav>
         <main className="relative z-30">
           <header className="container mx-auto px-4 pt-8">
             <div style={{ minHeight: '200px' }}>

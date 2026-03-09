@@ -79,6 +79,24 @@ const routes = [
   { path: '/en/portfolio/casa-cicladi-sikinos',            filename: 'en/portfolio/casa-cicladi-sikinos/index.html',            lang: 'en' },
   { path: '/en/portfolio/casa-moderna-eur',                filename: 'en/portfolio/casa-moderna-eur/index.html',                lang: 'en' },
   { path: '/en/portfolio/bar-eur',                         filename: 'en/portfolio/bar-eur/index.html',                         lang: 'en' },
+  // Zone landing pages (IT)
+  { path: '/zone/tuscolana',           filename: 'zone/tuscolana/index.html',           lang: 'it' },
+  { path: '/zone/appio-tuscolano',     filename: 'zone/appio-tuscolano/index.html',     lang: 'it' },
+  { path: '/zone/san-giovanni',        filename: 'zone/san-giovanni/index.html',        lang: 'it' },
+  { path: '/zone/eur',                 filename: 'zone/eur/index.html',                 lang: 'it' },
+  { path: '/zone/aurelio',            filename: 'zone/aurelio/index.html',             lang: 'it' },
+  { path: '/zone/alessandrino',       filename: 'zone/alessandrino/index.html',        lang: 'it' },
+  { path: '/zone/cinecitta',          filename: 'zone/cinecitta/index.html',           lang: 'it' },
+  { path: '/zone/pomezia',            filename: 'zone/pomezia/index.html',             lang: 'it' },
+  // Zone landing pages (EN)
+  { path: '/en/zones/tuscolana',       filename: 'en/zones/tuscolana/index.html',       lang: 'en' },
+  { path: '/en/zones/appio-tuscolano', filename: 'en/zones/appio-tuscolano/index.html', lang: 'en' },
+  { path: '/en/zones/san-giovanni',    filename: 'en/zones/san-giovanni/index.html',    lang: 'en' },
+  { path: '/en/zones/eur',             filename: 'en/zones/eur/index.html',             lang: 'en' },
+  { path: '/en/zones/aurelio',        filename: 'en/zones/aurelio/index.html',         lang: 'en' },
+  { path: '/en/zones/alessandrino',   filename: 'en/zones/alessandrino/index.html',    lang: 'en' },
+  { path: '/en/zones/cinecitta',      filename: 'en/zones/cinecitta/index.html',       lang: 'en' },
+  { path: '/en/zones/pomezia',        filename: 'en/zones/pomezia/index.html',         lang: 'en' },
 ];
 
 function ensureDirectoryExists(filePath) {

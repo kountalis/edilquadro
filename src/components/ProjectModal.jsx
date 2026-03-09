@@ -283,7 +283,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                       <LazyImage
                         src={image || images[0]}
                         webpSrc={getWebpSource(image || images[0])}
-                        alt={`Miniatura ${index + 1}`}
+                        alt={`${project.title} - Miniatura ${index + 1}`}
                         className="w-full h-full"
                         imageClassName="object-cover object-center"
                         width="64"

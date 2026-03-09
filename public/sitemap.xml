@@ -67,4 +67,20 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
+  <!-- Portfolio project pages -->
+  <url><loc>https://edilquadro.it/portfolio/casa-moderna-bracciano/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/piazza-cina-genzano/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/centro-yoga-tuscolana/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/attico-alessandrino-roma/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/negozio-abbigliamento-tuscolana/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/villa-sul-mare-grecia/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/asilo-nido-pomezia/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/ristorante-san-giovanni/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/casa-aurelio-roma/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/complesso-residenziale-pomezia/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/ortus-artis-padula/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/appartamento-aurelio/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/casa-cicladi-sikinos/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/casa-moderna-eur/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://edilquadro.it/portfolio/bar-eur/</loc><lastmod>2025-07-21</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

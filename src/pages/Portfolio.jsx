@@ -9,286 +9,23 @@ import { trackGAEvent } from '../utils/gaEvents';
 import { getWebpSource } from '../utils/seo';
 import { Conversions } from '../hooks/useAnalytics';
 import { useTranslation, Trans } from 'react-i18next';
+import { PROJECT_DATA } from '../data/projects';
 
 const Portfolio = () => {
   const { t, i18n } = useTranslation();
+  const isEn = i18n.language === 'en';
 
   const [selectedFilter, setSelectedFilter] = useState('all');
   const { openModal, closeModal, isModalOpen, selectedProject } = useProject();
 
-  const projects = [
-    {
-      id: 1,
-      title: t('portfolio_page.projects.proj1_title'),
-      location: t('portfolio_page.projects.proj1_location'),
-      category: "casa",
-      description: t('portfolio_page.projects.proj1_desc'),
-      images: [
-        "/projects/casaleucade1.webp",
-        "/projects/casaleucade2.webp",
-        "/projects/casaleucade3.webp",
-        "/projects/casaleucade4.webp",
-        "/projects/casaleucade5.webp"
-      ]
-    },
-    {
-      id: 2,
-      title: t('portfolio_page.projects.proj2_title'),
-      location: t('portfolio_page.projects.proj2_location'),
-      description: t('portfolio_page.projects.proj2_desc'),
-      images: [
-        "/projects/piazzacina1.webp",
-        "/projects/piazzacina2.webp",
-        "/projects/piazzacina3.webp",
-        "/projects/piazzacina4.webp",
-        "/projects/piazzacina5.webp",
-        "/projects/piazzacina6.webp",
-        "/projects/piazzacina7.webp"
-      ],
-      category: "edifici"
-    },
-    {
-      id: 3,
-      title: t('portfolio_page.projects.proj3_title'),
-      location: t('portfolio_page.projects.proj3_location'),
-      description: t('portfolio_page.projects.proj3_desc'),
-      images: [
-        "/projects/Yoga Hatha 1.webp",
-        "/projects/Yoga Hatha 2.webp",
-        "/projects/Yoga Hatha 3.webp",
-        "/projects/Yoga Hatha 4.webp",
-        "/projects/Yoga Hatha 5.webp",
-        "/projects/Yoga Hatha 6.webp",
-        "/projects/Yoga Hatha 7.webp",
-        "/projects/Yoga Hatha 8.webp",
-        "/projects/Yoga Hatha 9.webp",
-        "/projects/Yoga Hatha 10.webp"
-      ],
-      category: "commerciale"
-    },
-    {
-      id: 4,
-      title: t('portfolio_page.projects.proj4_title'),
-      location: t('portfolio_page.projects.proj4_location'),
-      description: t('portfolio_page.projects.proj4_desc'),
-      images: [
-        "/projects/alessandrino1.webp",
-        "/projects/alessandrino2.webp",
-        "/projects/alessandrino3.webp",
-        "/projects/alessandrino4.webp",
-        "/projects/alessandrino5.webp",
-        "/projects/alessandrino6.webp",
-        "/projects/alessandrino7.webp",
-        "/projects/alessandrino8.webp",
-        "/projects/alessandrino9.webp",
-        "/projects/Alessandrino10.webp",
-        "/projects/Alessandrino11.webp",
-        "/projects/Alessandrino12.webp",
-        "/projects/Alessandrino13.webp",
-        "/projects/Alessandrino14.webp",
-        "/projects/Alessandrino15.webp",
-        "/projects/Alessandrino16.webp"
-      ],
-      category: "casa"
-    },
-    {
-      id: 5,
-      title: t('portfolio_page.projects.proj5_title'),
-      location: t('portfolio_page.projects.proj5_location'),
-      description: t('portfolio_page.projects.proj5_desc'),
-      images: [
-        "/projects/ABBIGLIAMENTO 1.webp",
-        "/projects/ABBIGLIAMENTO 2.webp",
-        "/projects/ABBIGLIAMENTO 3.webp",
-        "/projects/ABBIGLIAMENTO 4.webp",
-        "/projects/ABBIGLIAMENTO 5.webp",
-        "/projects/ABBIGLIAMENTO 6.webp",
-        "/projects/ABBIGLIAMENTO 7.webp",
-        "/projects/ABBIGLIAMENTO 8.webp",
-        "/projects/ABBIGLIAMENTO 9.webp"
-      ],
-      category: "commerciale"
-    },
-    {
-      id: 6,
-      title: t('portfolio_page.projects.proj6_title'),
-      location: t('portfolio_page.projects.proj6_location'),
-      description: t('portfolio_page.projects.proj6_desc'),
-      images: [
-        "/projects/project1.webp",
-        "/projects/project2.webp",
-        "/projects/project3.webp",
-        "/projects/project4.webp",
-        "/projects/project5.webp",
-        "/projects/project6.webp",
-        "/projects/project7.webp",
-        "/projects/project8.webp",
-        "/projects/project9.webp",
-        "/projects/project10.webp",
-        "/projects/project11.webp",
-        "/projects/project12.webp"
-      ],
-      category: "casa"
-    },
-    {
-      id: 7,
-      title: t('portfolio_page.projects.proj7_title'),
-      location: t('portfolio_page.projects.proj7_location'),
-      description: t('portfolio_page.projects.proj7_desc'),
-      images: [
-        "/projects/warp1.webp",
-        "/projects/warp2.webp",
-        "/projects/warp3.webp",
-        "/projects/warp4.webp",
-        "/projects/warp5.webp",
-        "/projects/warp6.webp",
-        "/projects/warp7.webp",
-        "/projects/warp8.webp",
-        "/projects/warp9.webp"
-      ],
-      category: "edifici"
-    },
-    {
-      id: 8,
-      title: t('portfolio_page.projects.proj8_title'),
-      location: t('portfolio_page.projects.proj8_location'),
-      description: t('portfolio_page.projects.proj8_desc'),
-      images: [
-        "/projects/Ristorante 1.webp",
-        "/projects/Ristorante 2.webp",
-        "/projects/Ristorante 3.webp",
-        "/projects/Ristorante 4.webp",
-        "/projects/Ristorante 5.webp"
-      ],
-      category: "commerciale"
-    },
-    {
-      id: 9,
-      title: t('portfolio_page.projects.proj9_title'),
-      location: t('portfolio_page.projects.proj9_location'),
-      description: t('portfolio_page.projects.proj9_desc'),
-      images: [
-        "/projects/Lunaduei Deluca 2.webp",
-        "/projects/Lunaduei Deluca 3.webp",
-        "/projects/Lunaduei Deluca 4.webp",
-        "/projects/Lunaduei Deluca 5.webp",
-        "/projects/Lunaduei Deluca 6.webp",
-        "/projects/Lunaduei Deluca 7.webp",
-        "/projects/Lunaduei Deluca 8.webp",
-        "/projects/Lunaduei Deluca 9.webp",
-        "/projects/Lunaduei Deluca 10.webp",
-        "/projects/Lunaduei Deluca 11.webp",
-        "/projects/Lunaduei Deluca 12.webp",
-        "/projects/Lunaduei Deluca 13.webp",
-        "/projects/Lunaduei Deluca 14.webp",
-        "/projects/Lunaduei Deluca 15.webp",
-        "/projects/Lunaduei Deluca 16.webp",
-        "/projects/Lunaduei Deluca 17.webp",
-        "/projects/Lunaduei Deluca 18.webp",
-        "/projects/Lunaduei Deluca 19.webp",
-        "/projects/Lunaduei Deluca 20.webp",
-        "/projects/Lunaduei Deluca 21.webp",
-        "/projects/Lunaduei Deluca 22.webp",
-        "/projects/Lunaduei Deluca 23.webp"
-      ],
-      category: "casa"
-    },
-    {
-      id: 10,
-      title: t('portfolio_page.projects.proj10_title'),
-      location: t('portfolio_page.projects.proj10_location'),
-      description: t('portfolio_page.projects.proj10_desc'),
-      images: [
-        "/projects/pomezia1.webp",
-        "/projects/pomezia2.webp",
-        "/projects/pomezia3.webp",
-        "/projects/pomezia4.webp",
-        "/projects/pomezia5.webp"
-      ],
-      category: "edifici"
-    },
-    {
-      id: 11,
-      title: t('portfolio_page.projects.proj11_title'),
-      location: t('portfolio_page.projects.proj11_location'),
-      description: t('portfolio_page.projects.proj11_desc'),
-      images: [
-        "/projects/padula1.webp",
-        "/projects/padula2.webp",
-        "/projects/padula3.webp",
-        "/projects/padula4.webp",
-        "/projects/padula5.webp",
-        "/projects/padula6.webp",
-        "/projects/padula9.webp",
-        "/projects/padula10.webp",
-        "/projects/padula11.webp"
-      ],
-      category: "edifici"
-    },
-    {
-      id: 14,
-      title: t('portfolio_page.projects.proj14_title'),
-      location: t('portfolio_page.projects.proj14_location'),
-      description: t('portfolio_page.projects.proj14_desc'),
-      images: [
-        "/projects/brescini-01.webp",
-        "/projects/brescini-02.webp",
-        "/projects/brescini-03.webp",
-        "/projects/brescini-04.webp",
-        "/projects/brescini-05.webp",
-        "/projects/brescini-06.webp",
-        "/projects/brescini-07.webp",
-        "/projects/brescini-08.webp",
-        "/projects/brescini-09.webp",
-        "/projects/brescini-10.webp",
-        "/projects/brescini-11.webp"
-      ],
-      category: "casa"
-    },
-    {
-      id: 15,
-      title: t('portfolio_page.projects.proj15_title'),
-      location: t('portfolio_page.projects.proj15_location'),
-      description: t('portfolio_page.projects.proj15_desc'),
-      images: [
-        "/projects/sikinos-01.webp",
-        "/projects/sikinos-02.webp",
-        "/projects/sikinos-03.webp",
-        "/projects/sikinos-04.webp",
-        "/projects/sikinos-05.webp",
-        "/projects/sikinos-06.webp",
-        "/projects/sikinos-07.webp",
-        "/projects/sikinos-08.webp",
-        "/projects/sikinos-09.webp",
-        "/projects/sikinos-10.webp",
-        "/projects/sikinos-11.webp",
-        "/projects/sikinos-12.webp"
-      ],
-      category: "casa"
-    },
-    {
-      id: 12,
-      title: t('portfolio_page.projects.proj12_title'),
-      location: t('portfolio_page.projects.proj12_location'),
-      description: t('portfolio_page.projects.proj12_desc'),
-      images: [
-        "/projects/In Progress 1.webp"
-      ],
-      category: "casa",
-      status: t('portfolio_page.status_in_progress')
-    },
-    {
-      id: 13,
-      title: t('portfolio_page.projects.proj13_title'),
-      location: t('portfolio_page.projects.proj13_location'),
-      description: t('portfolio_page.projects.proj13_desc'),
-      images: [
-        "/projects/Bar In Progress 1.webp"
-      ],
-      category: "commerciale",
-      status: t('portfolio_page.status_in_progress')
-    },
-  ];
+  // Build projects with i18n translations from shared data
+  const projects = PROJECT_DATA.map(p => ({
+    ...p,
+    title: t(`portfolio_page.projects.${p.translationKey}_title`),
+    location: t(`portfolio_page.projects.${p.translationKey}_location`),
+    description: t(`portfolio_page.projects.${p.translationKey}_desc`),
+    status: p.inProgress ? t('portfolio_page.status_in_progress') : undefined
+  }));
 
   const filteredProjects = projects.filter(
     project => selectedFilter === 'all' || project.category === selectedFilter
@@ -464,6 +201,20 @@ const Portfolio = () => {
                         {project.status}
                       </div>
                     )}
+                  </div>
+                  {/* SEO link to individual project page */}
+                  <div className="p-3 flex items-center justify-between">
+                    <div className="truncate">
+                      <h3 className="text-white font-semibold text-sm truncate">{project.title}</h3>
+                      {project.location && <p className="text-gray-400 text-xs truncate">{project.location}</p>}
+                    </div>
+                    <Link
+                      to={`${isEn ? '/en' : ''}/portfolio/${project.slug}`}
+                      className="flex-shrink-0 ml-2 text-emerald-400 hover:text-emerald-300 text-xs font-medium transition-colors"
+                      title={`${project.title} - ${project.location}`}
+                    >
+                      {isEn ? 'Details →' : 'Dettagli →'}
+                    </Link>
                   </div>
                 </article>
               ))}

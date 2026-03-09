@@ -23,6 +23,37 @@ const HREFLANG_PAIRS = {
   '/en/services/commercial':'/servizi/commerciale',
   '/servizi/edifici':       '/en/services/buildings',
   '/en/services/buildings': '/servizi/edifici',
+  // Portfolio project pages
+  '/portfolio/casa-moderna-bracciano':          '/en/portfolio/casa-moderna-bracciano',
+  '/en/portfolio/casa-moderna-bracciano':       '/portfolio/casa-moderna-bracciano',
+  '/portfolio/piazza-cina-genzano':             '/en/portfolio/piazza-cina-genzano',
+  '/en/portfolio/piazza-cina-genzano':          '/portfolio/piazza-cina-genzano',
+  '/portfolio/centro-yoga-tuscolana':           '/en/portfolio/centro-yoga-tuscolana',
+  '/en/portfolio/centro-yoga-tuscolana':        '/portfolio/centro-yoga-tuscolana',
+  '/portfolio/attico-alessandrino-roma':        '/en/portfolio/attico-alessandrino-roma',
+  '/en/portfolio/attico-alessandrino-roma':     '/portfolio/attico-alessandrino-roma',
+  '/portfolio/negozio-abbigliamento-tuscolana': '/en/portfolio/negozio-abbigliamento-tuscolana',
+  '/en/portfolio/negozio-abbigliamento-tuscolana': '/portfolio/negozio-abbigliamento-tuscolana',
+  '/portfolio/villa-sul-mare-grecia':           '/en/portfolio/villa-sul-mare-grecia',
+  '/en/portfolio/villa-sul-mare-grecia':        '/portfolio/villa-sul-mare-grecia',
+  '/portfolio/asilo-nido-pomezia':              '/en/portfolio/asilo-nido-pomezia',
+  '/en/portfolio/asilo-nido-pomezia':           '/portfolio/asilo-nido-pomezia',
+  '/portfolio/ristorante-san-giovanni':         '/en/portfolio/ristorante-san-giovanni',
+  '/en/portfolio/ristorante-san-giovanni':      '/portfolio/ristorante-san-giovanni',
+  '/portfolio/casa-aurelio-roma':               '/en/portfolio/casa-aurelio-roma',
+  '/en/portfolio/casa-aurelio-roma':            '/portfolio/casa-aurelio-roma',
+  '/portfolio/complesso-residenziale-pomezia':  '/en/portfolio/complesso-residenziale-pomezia',
+  '/en/portfolio/complesso-residenziale-pomezia': '/portfolio/complesso-residenziale-pomezia',
+  '/portfolio/ortus-artis-padula':              '/en/portfolio/ortus-artis-padula',
+  '/en/portfolio/ortus-artis-padula':           '/portfolio/ortus-artis-padula',
+  '/portfolio/appartamento-aurelio':            '/en/portfolio/appartamento-aurelio',
+  '/en/portfolio/appartamento-aurelio':         '/portfolio/appartamento-aurelio',
+  '/portfolio/casa-cicladi-sikinos':            '/en/portfolio/casa-cicladi-sikinos',
+  '/en/portfolio/casa-cicladi-sikinos':         '/portfolio/casa-cicladi-sikinos',
+  '/portfolio/casa-moderna-eur':                '/en/portfolio/casa-moderna-eur',
+  '/en/portfolio/casa-moderna-eur':             '/portfolio/casa-moderna-eur',
+  '/portfolio/bar-eur':                         '/en/portfolio/bar-eur',
+  '/en/portfolio/bar-eur':                      '/portfolio/bar-eur',
 };
 
 const PAGE_METADATA = {
@@ -151,6 +182,218 @@ const PAGE_METADATA = {
     description: 'Edilquadro cookie policy. How we use cookies and how to manage your preferences.',
     canonical: 'https://edilquadro.it/en/cookie-policy/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  // ── Portfolio Project Pages (IT) ──
+  '/portfolio/casa-moderna-bracciano': {
+    lang: 'it',
+    title: 'Casa Moderna a Lago di Bracciano - Edilquadro Roma',
+    description: 'Ristrutturazione completa di una casa residenziale con design moderno a Lago di Bracciano, Roma. Foto e dettagli del progetto.',
+    canonical: 'https://edilquadro.it/portfolio/casa-moderna-bracciano/',
+    ogImage: 'https://edilquadro.it/projects/casaleucade1.webp'
+  },
+  '/portfolio/piazza-cina-genzano': {
+    lang: 'it',
+    title: 'Piazza Cina Genzano di Roma - Edilquadro',
+    description: 'Riqualificazione completa della piazza con nuova pavimentazione e arredo urbano a Genzano di Roma. Portfolio Edilquadro.',
+    canonical: 'https://edilquadro.it/portfolio/piazza-cina-genzano/',
+    ogImage: 'https://edilquadro.it/projects/piazzacina1.webp'
+  },
+  '/portfolio/centro-yoga-tuscolana': {
+    lang: 'it',
+    title: 'Centro Yoga Zona Tuscolana Roma - Edilquadro',
+    description: 'Ristrutturazione centro yoga nella zona Tuscolana e Cinecittà, Roma. Trasformazione di uno spazio commerciale. Portfolio Edilquadro.',
+    canonical: 'https://edilquadro.it/portfolio/centro-yoga-tuscolana/',
+    ogImage: 'https://edilquadro.it/projects/Yoga%20Hatha%201.webp'
+  },
+  '/portfolio/attico-alessandrino-roma': {
+    lang: 'it',
+    title: 'Attico Quartiere Alessandrino Roma - Edilquadro',
+    description: 'Ristrutturazione attico storico con finiture di pregio nel quartiere Alessandrino, Roma. 16 foto del progetto completato.',
+    canonical: 'https://edilquadro.it/portfolio/attico-alessandrino-roma/',
+    ogImage: 'https://edilquadro.it/projects/alessandrino1.webp'
+  },
+  '/portfolio/negozio-abbigliamento-tuscolana': {
+    lang: 'it',
+    title: 'Negozio Abbigliamento Zona Tuscolana Roma - Edilquadro',
+    description: 'Ristrutturazione e ampliamento negozio di abbigliamento nella zona Tuscolana, Roma. Lavoro completo con mobili espositivi.',
+    canonical: 'https://edilquadro.it/portfolio/negozio-abbigliamento-tuscolana/',
+    ogImage: 'https://edilquadro.it/projects/ABBIGLIAMENTO%201.webp'
+  },
+  '/portfolio/villa-sul-mare-grecia': {
+    lang: 'it',
+    title: 'Villa sul Mare Lesbo Grecia - Edilquadro',
+    description: 'Realizzazione villa con vista mare sull\'isola di Lesbo, Grecia. Progetto completo da Edilquadro Roma.',
+    canonical: 'https://edilquadro.it/portfolio/villa-sul-mare-grecia/',
+    ogImage: 'https://edilquadro.it/projects/project1.webp'
+  },
+  '/portfolio/asilo-nido-pomezia': {
+    lang: 'it',
+    title: 'Asilo Nido Pomezia Roma - Edilquadro',
+    description: 'Progettazione e restauro di un complesso scolastico sostenibile e innovativo a Pomezia, Roma. Portfolio Edilquadro.',
+    canonical: 'https://edilquadro.it/portfolio/asilo-nido-pomezia/',
+    ogImage: 'https://edilquadro.it/projects/warp1.webp'
+  },
+  '/portfolio/ristorante-san-giovanni': {
+    lang: 'it',
+    title: 'Ristorante San Giovanni Roma - Edilquadro',
+    description: 'Conversione di uno spazio in palazzo storico in ristorante etnico a San Giovanni, Roma. Portfolio ristrutturazioni Edilquadro.',
+    canonical: 'https://edilquadro.it/portfolio/ristorante-san-giovanni/',
+    ogImage: 'https://edilquadro.it/projects/Ristorante%201.webp'
+  },
+  '/portfolio/casa-aurelio-roma': {
+    lang: 'it',
+    title: 'Casa Quartiere Aurelio Roma - Edilquadro',
+    description: 'Trasformazione casa residenziale con design moderno nel quartiere Aurelio, Roma. 23 foto del progetto completato.',
+    canonical: 'https://edilquadro.it/portfolio/casa-aurelio-roma/',
+    ogImage: 'https://edilquadro.it/projects/Lunaduei%20Deluca%202.webp'
+  },
+  '/portfolio/complesso-residenziale-pomezia': {
+    lang: 'it',
+    title: 'Complesso Residenziale Pomezia Roma - Edilquadro',
+    description: 'Costruzione completa di un complesso residenziale con sistemazione aree esterne a Pomezia, Roma. Portfolio Edilquadro.',
+    canonical: 'https://edilquadro.it/portfolio/complesso-residenziale-pomezia/',
+    ogImage: 'https://edilquadro.it/projects/pomezia1.webp'
+  },
+  '/portfolio/ortus-artis-padula': {
+    lang: 'it',
+    title: 'Ortus Artis Padula Salerno - Edilquadro',
+    description: 'Progetto Ortus Artis a Padula, Salerno. L\'essenzialità dello spazio come invito alla riflessione. Portfolio Edilquadro.',
+    canonical: 'https://edilquadro.it/portfolio/ortus-artis-padula/',
+    ogImage: 'https://edilquadro.it/projects/padula1.webp'
+  },
+  '/portfolio/appartamento-aurelio': {
+    lang: 'it',
+    title: 'Appartamento Quartiere Aurelio Roma - Edilquadro',
+    description: 'Restyling appartamento urbano nel quartiere Aurelio, Roma. Equilibrio perfetto tra estetica contemporanea e funzionalità.',
+    canonical: 'https://edilquadro.it/portfolio/appartamento-aurelio/',
+    ogImage: 'https://edilquadro.it/projects/brescini-01.webp'
+  },
+  '/portfolio/casa-cicladi-sikinos': {
+    lang: 'it',
+    title: 'Casa Cicladi Sikinos Grecia - Edilquadro',
+    description: 'Casa nelle Cicladi, isola di Sikinos, Grecia. Minimalismo e architettura spontanea con forme cubiche e pareti bianche.',
+    canonical: 'https://edilquadro.it/portfolio/casa-cicladi-sikinos/',
+    ogImage: 'https://edilquadro.it/projects/sikinos-01.webp'
+  },
+  '/portfolio/casa-moderna-eur': {
+    lang: 'it',
+    title: 'Casa Moderna EUR Roma - Edilquadro',
+    description: 'Progettazione di una nuova casa moderna con design innovativo nella zona EUR, Roma. Progetto in corso.',
+    canonical: 'https://edilquadro.it/portfolio/casa-moderna-eur/',
+    ogImage: 'https://edilquadro.it/projects/In%20Progress%201.webp'
+  },
+  '/portfolio/bar-eur': {
+    lang: 'it',
+    title: 'Bar EUR Roma - Edilquadro',
+    description: 'Progettazione e ristrutturazione di un bar di design moderno nella zona EUR, Roma. Progetto in corso.',
+    canonical: 'https://edilquadro.it/portfolio/bar-eur/',
+    ogImage: 'https://edilquadro.it/projects/Bar%20In%20Progress%201.webp'
+  },
+  // ── Portfolio Project Pages (EN) ──
+  '/en/portfolio/casa-moderna-bracciano': {
+    lang: 'en',
+    title: 'Modern House Lake Bracciano - Edilquadro Rome',
+    description: 'Complete renovation of a residential house with modern design at Lake Bracciano, Rome. Project photos and details.',
+    canonical: 'https://edilquadro.it/en/portfolio/casa-moderna-bracciano/',
+    ogImage: 'https://edilquadro.it/projects/casaleucade1.webp'
+  },
+  '/en/portfolio/piazza-cina-genzano': {
+    lang: 'en',
+    title: 'Piazza Cina Genzano di Roma - Edilquadro',
+    description: 'Complete redevelopment of the square with new paving and urban furniture in Genzano di Roma. Edilquadro portfolio.',
+    canonical: 'https://edilquadro.it/en/portfolio/piazza-cina-genzano/',
+    ogImage: 'https://edilquadro.it/projects/piazzacina1.webp'
+  },
+  '/en/portfolio/centro-yoga-tuscolana': {
+    lang: 'en',
+    title: 'Yoga Center Tuscolana Area Rome - Edilquadro',
+    description: 'Renovation of a yoga center in Tuscolana and Cinecittà area, Rome. Commercial space transformation.',
+    canonical: 'https://edilquadro.it/en/portfolio/centro-yoga-tuscolana/',
+    ogImage: 'https://edilquadro.it/projects/Yoga%20Hatha%201.webp'
+  },
+  '/en/portfolio/attico-alessandrino-roma': {
+    lang: 'en',
+    title: 'Penthouse Alessandrino District Rome - Edilquadro',
+    description: 'Historic penthouse renovation with premium finishes in Alessandrino district, Rome. 16 project photos.',
+    canonical: 'https://edilquadro.it/en/portfolio/attico-alessandrino-roma/',
+    ogImage: 'https://edilquadro.it/projects/alessandrino1.webp'
+  },
+  '/en/portfolio/negozio-abbigliamento-tuscolana': {
+    lang: 'en',
+    title: 'Clothing Store Tuscolana Area Rome - Edilquadro',
+    description: 'Renovation and expansion of a clothing store in Tuscolana area, Rome. Complete work with display furniture.',
+    canonical: 'https://edilquadro.it/en/portfolio/negozio-abbigliamento-tuscolana/',
+    ogImage: 'https://edilquadro.it/projects/ABBIGLIAMENTO%201.webp'
+  },
+  '/en/portfolio/villa-sul-mare-grecia': {
+    lang: 'en',
+    title: 'Seaside Villa Lesbos Greece - Edilquadro',
+    description: 'Construction of a sea-view villa on the island of Lesbos, Greece. Complete project by Edilquadro Rome.',
+    canonical: 'https://edilquadro.it/en/portfolio/villa-sul-mare-grecia/',
+    ogImage: 'https://edilquadro.it/projects/project1.webp'
+  },
+  '/en/portfolio/asilo-nido-pomezia': {
+    lang: 'en',
+    title: 'Nursery School Pomezia Rome - Edilquadro',
+    description: 'Design and restoration of a sustainable and innovative school complex in Pomezia, Rome.',
+    canonical: 'https://edilquadro.it/en/portfolio/asilo-nido-pomezia/',
+    ogImage: 'https://edilquadro.it/projects/warp1.webp'
+  },
+  '/en/portfolio/ristorante-san-giovanni': {
+    lang: 'en',
+    title: 'Restaurant San Giovanni Rome - Edilquadro',
+    description: 'Conversion of a historic building space into an ethnic restaurant in San Giovanni, Rome.',
+    canonical: 'https://edilquadro.it/en/portfolio/ristorante-san-giovanni/',
+    ogImage: 'https://edilquadro.it/projects/Ristorante%201.webp'
+  },
+  '/en/portfolio/casa-aurelio-roma': {
+    lang: 'en',
+    title: 'House Aurelio District Rome - Edilquadro',
+    description: 'Modern design transformation of a residential house in Aurelio district, Rome. 23 project photos.',
+    canonical: 'https://edilquadro.it/en/portfolio/casa-aurelio-roma/',
+    ogImage: 'https://edilquadro.it/projects/Lunaduei%20Deluca%202.webp'
+  },
+  '/en/portfolio/complesso-residenziale-pomezia': {
+    lang: 'en',
+    title: 'Residential Complex Pomezia Rome - Edilquadro',
+    description: 'Complete construction of a residential complex with outdoor areas in Pomezia, Rome.',
+    canonical: 'https://edilquadro.it/en/portfolio/complesso-residenziale-pomezia/',
+    ogImage: 'https://edilquadro.it/projects/pomezia1.webp'
+  },
+  '/en/portfolio/ortus-artis-padula': {
+    lang: 'en',
+    title: 'Ortus Artis Padula Salerno - Edilquadro',
+    description: 'Ortus Artis project in Padula, Salerno. The essentiality of space as an invitation to reflection.',
+    canonical: 'https://edilquadro.it/en/portfolio/ortus-artis-padula/',
+    ogImage: 'https://edilquadro.it/projects/padula1.webp'
+  },
+  '/en/portfolio/appartamento-aurelio': {
+    lang: 'en',
+    title: 'Apartment Aurelio District Rome - Edilquadro',
+    description: 'Urban apartment restyling in Aurelio district, Rome. Perfect balance between contemporary aesthetics and functionality.',
+    canonical: 'https://edilquadro.it/en/portfolio/appartamento-aurelio/',
+    ogImage: 'https://edilquadro.it/projects/brescini-01.webp'
+  },
+  '/en/portfolio/casa-cicladi-sikinos': {
+    lang: 'en',
+    title: 'Cyclades House Sikinos Greece - Edilquadro',
+    description: 'Cycladic house on Sikinos island, Greece. Minimalism and spontaneous architecture with cubic forms and white walls.',
+    canonical: 'https://edilquadro.it/en/portfolio/casa-cicladi-sikinos/',
+    ogImage: 'https://edilquadro.it/projects/sikinos-01.webp'
+  },
+  '/en/portfolio/casa-moderna-eur': {
+    lang: 'en',
+    title: 'Modern House EUR Rome - Edilquadro',
+    description: 'Design of a new modern house with innovative design in EUR area, Rome. Project in progress.',
+    canonical: 'https://edilquadro.it/en/portfolio/casa-moderna-eur/',
+    ogImage: 'https://edilquadro.it/projects/In%20Progress%201.webp'
+  },
+  '/en/portfolio/bar-eur': {
+    lang: 'en',
+    title: 'Bar EUR Rome - Edilquadro',
+    description: 'Design and renovation of a modern design bar in EUR area, Rome. Project in progress.',
+    canonical: 'https://edilquadro.it/en/portfolio/bar-eur/',
+    ogImage: 'https://edilquadro.it/projects/Bar%20In%20Progress%201.webp'
   }
 };
 

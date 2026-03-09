@@ -19,6 +19,7 @@ import HomeServices from './pages/HomeServices';
 import CommercialServices from './pages/CommercialServices';
 import BuildingServices from './pages/BuildingServices';
 import NotFound from './pages/NotFound';
+import ProjectDetail from './pages/ProjectDetail';
 
 function App({ helmetContext } = {}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,6 +35,7 @@ function App({ helmetContext } = {}) {
             <Route path="/" element={<Home />} />
             <Route path="/servizi" element={<Services />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/:slug" element={<ProjectDetail />} />
             <Route path="/contatti" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />
@@ -44,6 +46,7 @@ function App({ helmetContext } = {}) {
             <Route path="/en" element={<Home />} />
             <Route path="/en/services" element={<Services />} />
             <Route path="/en/portfolio" element={<Portfolio />} />
+            <Route path="/en/portfolio/:slug" element={<ProjectDetail />} />
             <Route path="/en/contact" element={<Contact />} />
             <Route path="/en/privacy" element={<Privacy />} />
             <Route path="/en/cookie-policy" element={<CookiePolicy />} />

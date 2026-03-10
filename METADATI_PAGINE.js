@@ -76,6 +76,22 @@ const HREFLANG_PAIRS = {
   // Bonus Fiscali page
   '/bonus-fiscali':               '/en/tax-benefits',
   '/en/tax-benefits':             '/bonus-fiscali',
+  // Preventivo Gratuito page
+  '/preventivo':                  '/en/free-quote',
+  '/en/free-quote':               '/preventivo',
+  // Blog pages
+  '/blog':                        '/en/blog',
+  '/en/blog':                     '/blog',
+  '/blog/quanto-costa-ristrutturare-casa-roma':          '/en/blog/quanto-costa-ristrutturare-casa-roma',
+  '/en/blog/quanto-costa-ristrutturare-casa-roma':       '/blog/quanto-costa-ristrutturare-casa-roma',
+  '/blog/ristrutturazione-bagno-roma-guida-completa':    '/en/blog/ristrutturazione-bagno-roma-guida-completa',
+  '/en/blog/ristrutturazione-bagno-roma-guida-completa': '/blog/ristrutturazione-bagno-roma-guida-completa',
+  '/blog/bonus-ristrutturazione-2025-come-funziona':     '/en/blog/bonus-ristrutturazione-2025-come-funziona',
+  '/en/blog/bonus-ristrutturazione-2025-come-funziona':  '/blog/bonus-ristrutturazione-2025-come-funziona',
+  '/blog/ristrutturazione-appartamento-roma-guida-completa':     '/en/blog/ristrutturazione-appartamento-roma-guida-completa',
+  '/en/blog/ristrutturazione-appartamento-roma-guida-completa':  '/blog/ristrutturazione-appartamento-roma-guida-completa',
+  '/blog/cappotto-termico-condominio-roma-costi-vantaggi':       '/en/blog/cappotto-termico-condominio-roma-costi-vantaggi',
+  '/en/blog/cappotto-termico-condominio-roma-costi-vantaggi':    '/blog/cappotto-termico-condominio-roma-costi-vantaggi',
 };
 
 const PAGE_METADATA = {
@@ -225,105 +241,105 @@ const PAGE_METADATA = {
     title: 'Casa Moderna a Lago di Bracciano - Edilquadro Roma',
     description: 'Ristrutturazione completa di una casa residenziale con design moderno a Lago di Bracciano, Roma. Foto e dettagli del progetto.',
     canonical: 'https://edilquadro.it/portfolio/casa-moderna-bracciano/',
-    ogImage: 'https://edilquadro.it/projects/casaleucade1.webp'
+    ogImage: 'https://edilquadro.it/projects/casa-moderna-bracciano-01.webp'
   },
   '/portfolio/piazza-cina-genzano': {
     lang: 'it',
     title: 'Piazza Cina Genzano di Roma - Edilquadro',
     description: 'Riqualificazione completa della piazza con nuova pavimentazione e arredo urbano a Genzano di Roma. Portfolio Edilquadro.',
     canonical: 'https://edilquadro.it/portfolio/piazza-cina-genzano/',
-    ogImage: 'https://edilquadro.it/projects/piazzacina1.webp'
+    ogImage: 'https://edilquadro.it/projects/ristrutturazione-condominio-genzano-01.webp'
   },
   '/portfolio/centro-yoga-tuscolana': {
     lang: 'it',
     title: 'Centro Yoga Zona Tuscolana Roma - Edilquadro',
     description: 'Ristrutturazione centro yoga nella zona Tuscolana e Cinecittà, Roma. Trasformazione di uno spazio commerciale. Portfolio Edilquadro.',
     canonical: 'https://edilquadro.it/portfolio/centro-yoga-tuscolana/',
-    ogImage: 'https://edilquadro.it/projects/Yoga%20Hatha%201.webp'
+    ogImage: 'https://edilquadro.it/projects/centro-yoga-tuscolana-roma-01.webp'
   },
   '/portfolio/attico-alessandrino-roma': {
     lang: 'it',
     title: 'Attico Quartiere Alessandrino Roma - Edilquadro',
     description: 'Ristrutturazione attico storico con finiture di pregio nel quartiere Alessandrino, Roma. 16 foto del progetto completato.',
     canonical: 'https://edilquadro.it/portfolio/attico-alessandrino-roma/',
-    ogImage: 'https://edilquadro.it/projects/alessandrino1.webp'
+    ogImage: 'https://edilquadro.it/projects/attico-alessandrino-roma-01.webp'
   },
   '/portfolio/negozio-abbigliamento-tuscolana': {
     lang: 'it',
     title: 'Negozio Abbigliamento Zona Tuscolana Roma - Edilquadro',
     description: 'Ristrutturazione e ampliamento negozio di abbigliamento nella zona Tuscolana, Roma. Lavoro completo con mobili espositivi.',
     canonical: 'https://edilquadro.it/portfolio/negozio-abbigliamento-tuscolana/',
-    ogImage: 'https://edilquadro.it/projects/ABBIGLIAMENTO%201.webp'
+    ogImage: 'https://edilquadro.it/projects/negozio-abbigliamento-tuscolana-01.webp'
   },
   '/portfolio/villa-sul-mare-grecia': {
     lang: 'it',
     title: 'Villa sul Mare Lesbo Grecia - Edilquadro',
     description: 'Realizzazione villa con vista mare sull\'isola di Lesbo, Grecia. Progetto completo da Edilquadro Roma.',
     canonical: 'https://edilquadro.it/portfolio/villa-sul-mare-grecia/',
-    ogImage: 'https://edilquadro.it/projects/project1.webp'
+    ogImage: 'https://edilquadro.it/projects/villa-sul-mare-grecia-01.webp'
   },
   '/portfolio/asilo-nido-pomezia': {
     lang: 'it',
     title: 'Asilo Nido Pomezia Roma - Edilquadro',
     description: 'Progettazione e restauro di un complesso scolastico sostenibile e innovativo a Pomezia, Roma. Portfolio Edilquadro.',
     canonical: 'https://edilquadro.it/portfolio/asilo-nido-pomezia/',
-    ogImage: 'https://edilquadro.it/projects/warp1.webp'
+    ogImage: 'https://edilquadro.it/projects/asilo-nido-pomezia-01.webp'
   },
   '/portfolio/ristorante-san-giovanni': {
     lang: 'it',
     title: 'Ristorante San Giovanni Roma - Edilquadro',
     description: 'Conversione di uno spazio in palazzo storico in ristorante etnico a San Giovanni, Roma. Portfolio ristrutturazioni Edilquadro.',
     canonical: 'https://edilquadro.it/portfolio/ristorante-san-giovanni/',
-    ogImage: 'https://edilquadro.it/projects/Ristorante%201.webp'
+    ogImage: 'https://edilquadro.it/projects/ristorante-san-giovanni-roma-01.webp'
   },
   '/portfolio/casa-aurelio-roma': {
     lang: 'it',
     title: 'Casa Quartiere Aurelio Roma - Edilquadro',
     description: 'Trasformazione casa residenziale con design moderno nel quartiere Aurelio, Roma. 23 foto del progetto completato.',
     canonical: 'https://edilquadro.it/portfolio/casa-aurelio-roma/',
-    ogImage: 'https://edilquadro.it/projects/Lunaduei%20Deluca%202.webp'
+    ogImage: 'https://edilquadro.it/projects/casa-aurelio-roma-01.webp'
   },
   '/portfolio/complesso-residenziale-pomezia': {
     lang: 'it',
     title: 'Complesso Residenziale Pomezia Roma - Edilquadro',
     description: 'Costruzione completa di un complesso residenziale con sistemazione aree esterne a Pomezia, Roma. Portfolio Edilquadro.',
     canonical: 'https://edilquadro.it/portfolio/complesso-residenziale-pomezia/',
-    ogImage: 'https://edilquadro.it/projects/pomezia1.webp'
+    ogImage: 'https://edilquadro.it/projects/complesso-residenziale-pomezia-01.webp'
   },
   '/portfolio/ortus-artis-padula': {
     lang: 'it',
     title: 'Ortus Artis Padula Salerno - Edilquadro',
     description: 'Progetto Ortus Artis a Padula, Salerno. L\'essenzialità dello spazio come invito alla riflessione. Portfolio Edilquadro.',
     canonical: 'https://edilquadro.it/portfolio/ortus-artis-padula/',
-    ogImage: 'https://edilquadro.it/projects/padula1.webp'
+    ogImage: 'https://edilquadro.it/projects/ortus-artis-padula-01.webp'
   },
   '/portfolio/appartamento-aurelio': {
     lang: 'it',
     title: 'Appartamento Quartiere Aurelio Roma - Edilquadro',
     description: 'Restyling appartamento urbano nel quartiere Aurelio, Roma. Equilibrio perfetto tra estetica contemporanea e funzionalità.',
     canonical: 'https://edilquadro.it/portfolio/appartamento-aurelio/',
-    ogImage: 'https://edilquadro.it/projects/brescini-01.webp'
+    ogImage: 'https://edilquadro.it/projects/appartamento-aurelio-roma-01.webp'
   },
   '/portfolio/casa-cicladi-sikinos': {
     lang: 'it',
     title: 'Casa Cicladi Sikinos Grecia - Edilquadro',
     description: 'Casa nelle Cicladi, isola di Sikinos, Grecia. Minimalismo e architettura spontanea con forme cubiche e pareti bianche.',
     canonical: 'https://edilquadro.it/portfolio/casa-cicladi-sikinos/',
-    ogImage: 'https://edilquadro.it/projects/sikinos-01.webp'
+    ogImage: 'https://edilquadro.it/projects/casa-cicladi-sikinos-grecia-01.webp'
   },
   '/portfolio/casa-moderna-eur': {
     lang: 'it',
     title: 'Casa Moderna EUR Roma - Edilquadro',
     description: 'Progettazione di una nuova casa moderna con design innovativo nella zona EUR, Roma. Progetto in corso.',
     canonical: 'https://edilquadro.it/portfolio/casa-moderna-eur/',
-    ogImage: 'https://edilquadro.it/projects/In%20Progress%201.webp'
+    ogImage: 'https://edilquadro.it/projects/casa-moderna-eur-roma-01.webp'
   },
   '/portfolio/bar-eur': {
     lang: 'it',
     title: 'Bar EUR Roma - Edilquadro',
     description: 'Progettazione e ristrutturazione di un bar di design moderno nella zona EUR, Roma. Progetto in corso.',
     canonical: 'https://edilquadro.it/portfolio/bar-eur/',
-    ogImage: 'https://edilquadro.it/projects/Bar%20In%20Progress%201.webp'
+    ogImage: 'https://edilquadro.it/projects/Bar%20casa-moderna-eur-roma-01.webp'
   },
   // ── Portfolio Project Pages (EN) ──
   '/en/portfolio/casa-moderna-bracciano': {
@@ -331,105 +347,105 @@ const PAGE_METADATA = {
     title: 'Modern House Lake Bracciano - Edilquadro Rome',
     description: 'Complete renovation of a residential house with modern design at Lake Bracciano, Rome. Project photos and details.',
     canonical: 'https://edilquadro.it/en/portfolio/casa-moderna-bracciano/',
-    ogImage: 'https://edilquadro.it/projects/casaleucade1.webp'
+    ogImage: 'https://edilquadro.it/projects/casa-moderna-bracciano-01.webp'
   },
   '/en/portfolio/piazza-cina-genzano': {
     lang: 'en',
     title: 'Piazza Cina Genzano di Roma - Edilquadro',
     description: 'Complete redevelopment of the square with new paving and urban furniture in Genzano di Roma. Edilquadro portfolio.',
     canonical: 'https://edilquadro.it/en/portfolio/piazza-cina-genzano/',
-    ogImage: 'https://edilquadro.it/projects/piazzacina1.webp'
+    ogImage: 'https://edilquadro.it/projects/ristrutturazione-condominio-genzano-01.webp'
   },
   '/en/portfolio/centro-yoga-tuscolana': {
     lang: 'en',
     title: 'Yoga Center Tuscolana Area Rome - Edilquadro',
     description: 'Renovation of a yoga center in Tuscolana and Cinecittà area, Rome. Commercial space transformation.',
     canonical: 'https://edilquadro.it/en/portfolio/centro-yoga-tuscolana/',
-    ogImage: 'https://edilquadro.it/projects/Yoga%20Hatha%201.webp'
+    ogImage: 'https://edilquadro.it/projects/centro-yoga-tuscolana-roma-01.webp'
   },
   '/en/portfolio/attico-alessandrino-roma': {
     lang: 'en',
     title: 'Penthouse Alessandrino District Rome - Edilquadro',
     description: 'Historic penthouse renovation with premium finishes in Alessandrino district, Rome. 16 project photos.',
     canonical: 'https://edilquadro.it/en/portfolio/attico-alessandrino-roma/',
-    ogImage: 'https://edilquadro.it/projects/alessandrino1.webp'
+    ogImage: 'https://edilquadro.it/projects/attico-alessandrino-roma-01.webp'
   },
   '/en/portfolio/negozio-abbigliamento-tuscolana': {
     lang: 'en',
     title: 'Clothing Store Tuscolana Area Rome - Edilquadro',
     description: 'Renovation and expansion of a clothing store in Tuscolana area, Rome. Complete work with display furniture.',
     canonical: 'https://edilquadro.it/en/portfolio/negozio-abbigliamento-tuscolana/',
-    ogImage: 'https://edilquadro.it/projects/ABBIGLIAMENTO%201.webp'
+    ogImage: 'https://edilquadro.it/projects/negozio-abbigliamento-tuscolana-01.webp'
   },
   '/en/portfolio/villa-sul-mare-grecia': {
     lang: 'en',
     title: 'Seaside Villa Lesbos Greece - Edilquadro',
     description: 'Construction of a sea-view villa on the island of Lesbos, Greece. Complete project by Edilquadro Rome.',
     canonical: 'https://edilquadro.it/en/portfolio/villa-sul-mare-grecia/',
-    ogImage: 'https://edilquadro.it/projects/project1.webp'
+    ogImage: 'https://edilquadro.it/projects/villa-sul-mare-grecia-01.webp'
   },
   '/en/portfolio/asilo-nido-pomezia': {
     lang: 'en',
     title: 'Nursery School Pomezia Rome - Edilquadro',
     description: 'Design and restoration of a sustainable and innovative school complex in Pomezia, Rome.',
     canonical: 'https://edilquadro.it/en/portfolio/asilo-nido-pomezia/',
-    ogImage: 'https://edilquadro.it/projects/warp1.webp'
+    ogImage: 'https://edilquadro.it/projects/asilo-nido-pomezia-01.webp'
   },
   '/en/portfolio/ristorante-san-giovanni': {
     lang: 'en',
     title: 'Restaurant San Giovanni Rome - Edilquadro',
     description: 'Conversion of a historic building space into an ethnic restaurant in San Giovanni, Rome.',
     canonical: 'https://edilquadro.it/en/portfolio/ristorante-san-giovanni/',
-    ogImage: 'https://edilquadro.it/projects/Ristorante%201.webp'
+    ogImage: 'https://edilquadro.it/projects/ristorante-san-giovanni-roma-01.webp'
   },
   '/en/portfolio/casa-aurelio-roma': {
     lang: 'en',
     title: 'House Aurelio District Rome - Edilquadro',
     description: 'Modern design transformation of a residential house in Aurelio district, Rome. 23 project photos.',
     canonical: 'https://edilquadro.it/en/portfolio/casa-aurelio-roma/',
-    ogImage: 'https://edilquadro.it/projects/Lunaduei%20Deluca%202.webp'
+    ogImage: 'https://edilquadro.it/projects/casa-aurelio-roma-01.webp'
   },
   '/en/portfolio/complesso-residenziale-pomezia': {
     lang: 'en',
     title: 'Residential Complex Pomezia Rome - Edilquadro',
     description: 'Complete construction of a residential complex with outdoor areas in Pomezia, Rome.',
     canonical: 'https://edilquadro.it/en/portfolio/complesso-residenziale-pomezia/',
-    ogImage: 'https://edilquadro.it/projects/pomezia1.webp'
+    ogImage: 'https://edilquadro.it/projects/complesso-residenziale-pomezia-01.webp'
   },
   '/en/portfolio/ortus-artis-padula': {
     lang: 'en',
     title: 'Ortus Artis Padula Salerno - Edilquadro',
     description: 'Ortus Artis project in Padula, Salerno. The essentiality of space as an invitation to reflection.',
     canonical: 'https://edilquadro.it/en/portfolio/ortus-artis-padula/',
-    ogImage: 'https://edilquadro.it/projects/padula1.webp'
+    ogImage: 'https://edilquadro.it/projects/ortus-artis-padula-01.webp'
   },
   '/en/portfolio/appartamento-aurelio': {
     lang: 'en',
     title: 'Apartment Aurelio District Rome - Edilquadro',
     description: 'Urban apartment restyling in Aurelio district, Rome. Perfect balance between contemporary aesthetics and functionality.',
     canonical: 'https://edilquadro.it/en/portfolio/appartamento-aurelio/',
-    ogImage: 'https://edilquadro.it/projects/brescini-01.webp'
+    ogImage: 'https://edilquadro.it/projects/appartamento-aurelio-roma-01.webp'
   },
   '/en/portfolio/casa-cicladi-sikinos': {
     lang: 'en',
     title: 'Cyclades House Sikinos Greece - Edilquadro',
     description: 'Cycladic house on Sikinos island, Greece. Minimalism and spontaneous architecture with cubic forms and white walls.',
     canonical: 'https://edilquadro.it/en/portfolio/casa-cicladi-sikinos/',
-    ogImage: 'https://edilquadro.it/projects/sikinos-01.webp'
+    ogImage: 'https://edilquadro.it/projects/casa-cicladi-sikinos-grecia-01.webp'
   },
   '/en/portfolio/casa-moderna-eur': {
     lang: 'en',
     title: 'Modern House EUR Rome - Edilquadro',
     description: 'Design of a new modern house with innovative design in EUR area, Rome. Project in progress.',
     canonical: 'https://edilquadro.it/en/portfolio/casa-moderna-eur/',
-    ogImage: 'https://edilquadro.it/projects/In%20Progress%201.webp'
+    ogImage: 'https://edilquadro.it/projects/casa-moderna-eur-roma-01.webp'
   },
   '/en/portfolio/bar-eur': {
     lang: 'en',
     title: 'Bar EUR Rome - Edilquadro',
     description: 'Design and renovation of a modern design bar in EUR area, Rome. Project in progress.',
     canonical: 'https://edilquadro.it/en/portfolio/bar-eur/',
-    ogImage: 'https://edilquadro.it/projects/Bar%20In%20Progress%201.webp'
+    ogImage: 'https://edilquadro.it/projects/Bar%20casa-moderna-eur-roma-01.webp'
   },
   // ── Zone Landing Pages (IT) ──
   '/zone/tuscolana': {
@@ -559,6 +575,106 @@ const PAGE_METADATA = {
     description: 'Complete guide to renovation tax benefits in Italy 2026: 50% renovation bonus, 65% ecobonus, sismabonus, facade bonus. Edilquadro handles paperwork and construction in Rome.',
     canonical: 'https://edilquadro.it/en/tax-benefits/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  // ── Preventivo Gratuito ──
+  '/preventivo': {
+    lang: 'it',
+    title: 'Preventivo Gratuito Ristrutturazione Roma - Edilquadro',
+    description: 'Richiedi un preventivo gratuito per la tua ristrutturazione a Roma. Sopralluogo in giornata, preventivo dettagliato senza impegno. Edilquadro, impresa edile dal 1998.',
+    canonical: 'https://edilquadro.it/preventivo/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/free-quote': {
+    lang: 'en',
+    title: 'Free Renovation Quote Rome - Edilquadro',
+    description: 'Request a free quote for your renovation in Rome. Same-day site visit, detailed no-obligation estimate. Edilquadro, construction company since 1998.',
+    canonical: 'https://edilquadro.it/en/free-quote/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  // ── Blog ──
+  '/blog': {
+    lang: 'it',
+    title: 'Blog Ristrutturazioni Roma - Guide e Consigli | Edilquadro',
+    description: 'Guide, consigli e novità sulle ristrutturazioni a Roma. Quanto costa? Bonus fiscali, tendenze design, progetti realizzati. Blog Edilquadro.',
+    canonical: 'https://edilquadro.it/blog/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/blog': {
+    lang: 'en',
+    title: 'Renovation Blog Rome - Guides & Tips | Edilquadro',
+    description: 'Guides, tips and news about renovations in Rome. Costs, tax benefits, design trends, completed projects. Edilquadro Blog.',
+    canonical: 'https://edilquadro.it/en/blog/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/blog/quanto-costa-ristrutturare-casa-roma': {
+    lang: 'it',
+    title: 'Quanto Costa Ristrutturare Casa a Roma nel 2025 - Guida Prezzi | Edilquadro',
+    description: 'Guida completa ai costi di ristrutturazione casa a Roma: prezzi al mq, fattori che influenzano il costo, come risparmiare con i bonus fiscali.',
+    canonical: 'https://edilquadro.it/blog/quanto-costa-ristrutturare-casa-roma/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/blog/quanto-costa-ristrutturare-casa-roma': {
+    lang: 'en',
+    title: 'House Renovation Costs Rome 2025 - Price Guide | Edilquadro',
+    description: 'Complete guide to house renovation costs in Rome: prices per sqm, factors affecting cost, how to save with tax benefits.',
+    canonical: 'https://edilquadro.it/en/blog/quanto-costa-ristrutturare-casa-roma/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/blog/ristrutturazione-bagno-roma-guida-completa': {
+    lang: 'it',
+    title: 'Ristrutturazione Bagno Roma - Costi e Guida Completa 2025 | Edilquadro',
+    description: 'Tutto quello che devi sapere sulla ristrutturazione del bagno a Roma: costi, tempistiche, tendenze 2025 e come scegliere i materiali giusti.',
+    canonical: 'https://edilquadro.it/blog/ristrutturazione-bagno-roma-guida-completa/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/blog/ristrutturazione-bagno-roma-guida-completa': {
+    lang: 'en',
+    title: 'Bathroom Renovation Rome - Costs & Complete Guide 2025 | Edilquadro',
+    description: 'Everything you need to know about renovating a bathroom in Rome: costs, timelines, 2025 trends, and how to choose the right materials.',
+    canonical: 'https://edilquadro.it/en/blog/ristrutturazione-bagno-roma-guida-completa/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/blog/bonus-ristrutturazione-2025-come-funziona': {
+    lang: 'it',
+    title: 'Bonus Ristrutturazione 2025 - Come Funziona | Edilquadro Roma',
+    description: 'Guida pratica al Bonus Ristrutturazione 2025: requisiti, importi, documenti necessari e come Edilquadro ti aiuta a ottenere la detrazione fiscale.',
+    canonical: 'https://edilquadro.it/blog/bonus-ristrutturazione-2025-come-funziona/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/en/blog/bonus-ristrutturazione-2025-come-funziona': {
+    lang: 'en',
+    title: 'Renovation Tax Bonus 2025 Italy - How It Works | Edilquadro Rome',
+    description: 'Practical guide to the 2025 Renovation Bonus in Italy: requirements, amounts, necessary documents, and how Edilquadro helps you get the tax deduction.',
+    canonical: 'https://edilquadro.it/en/blog/bonus-ristrutturazione-2025-come-funziona/',
+    ogImage: 'https://edilquadro.it/portfolio-bg.avif'
+  },
+  '/blog/ristrutturazione-appartamento-roma-guida-completa': {
+    lang: 'it',
+    title: 'Ristrutturazione Appartamento Roma - Guida Completa 2025 | Edilquadro',
+    description: 'Dalla progettazione alla consegna: guida completa alla ristrutturazione di un appartamento a Roma. Permessi, tempistiche, costi e consigli pratici.',
+    canonical: 'https://edilquadro.it/blog/ristrutturazione-appartamento-roma-guida-completa/',
+    ogImage: 'https://edilquadro.it/projects/ristrutturazione-casa-roma-03.webp'
+  },
+  '/en/blog/ristrutturazione-appartamento-roma-guida-completa': {
+    lang: 'en',
+    title: 'Apartment Renovation Rome - Complete Guide 2025 | Edilquadro',
+    description: 'From design to handover: complete guide to apartment renovation in Rome. Permits, timelines, costs and practical tips from Edilquadro.',
+    canonical: 'https://edilquadro.it/en/blog/ristrutturazione-appartamento-roma-guida-completa/',
+    ogImage: 'https://edilquadro.it/projects/ristrutturazione-casa-roma-03.webp'
+  },
+  '/blog/cappotto-termico-condominio-roma-costi-vantaggi': {
+    lang: 'it',
+    title: 'Cappotto Termico Condominio Roma - Costi e Vantaggi 2025 | Edilquadro',
+    description: 'Tutto sul cappotto termico per condomini a Roma: quanto costa, quali vantaggi offre, come accedere all Ecobonus 65% e perché scegliere Edilquadro.',
+    canonical: 'https://edilquadro.it/blog/cappotto-termico-condominio-roma-costi-vantaggi/',
+    ogImage: 'https://edilquadro.it/projects/cappotto-termico-edificio-roma.webp'
+  },
+  '/en/blog/cappotto-termico-condominio-roma-costi-vantaggi': {
+    lang: 'en',
+    title: 'External Wall Insulation Condominium Rome - Costs & Benefits 2025 | Edilquadro',
+    description: 'Everything about thermal insulation for condominiums in Rome: costs, benefits, how to access the 65% Ecobonus, and why choose Edilquadro.',
+    canonical: 'https://edilquadro.it/en/blog/cappotto-termico-condominio-roma-costi-vantaggi/',
+    ogImage: 'https://edilquadro.it/projects/cappotto-termico-edificio-roma.webp'
   }
 };
 

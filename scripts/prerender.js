@@ -100,6 +100,22 @@ const routes = [
   // Bonus Fiscali
   { path: '/bonus-fiscali',            filename: 'bonus-fiscali/index.html',            lang: 'it' },
   { path: '/en/tax-benefits',          filename: 'en/tax-benefits/index.html',           lang: 'en' },
+  // Preventivo Gratuito
+  { path: '/preventivo',              filename: 'preventivo/index.html',                lang: 'it' },
+  { path: '/en/free-quote',           filename: 'en/free-quote/index.html',             lang: 'en' },
+  // Blog
+  { path: '/blog',                                              filename: 'blog/index.html',                                              lang: 'it' },
+  { path: '/en/blog',                                           filename: 'en/blog/index.html',                                           lang: 'en' },
+  { path: '/blog/quanto-costa-ristrutturare-casa-roma',         filename: 'blog/quanto-costa-ristrutturare-casa-roma/index.html',         lang: 'it' },
+  { path: '/en/blog/quanto-costa-ristrutturare-casa-roma',      filename: 'en/blog/quanto-costa-ristrutturare-casa-roma/index.html',      lang: 'en' },
+  { path: '/blog/ristrutturazione-bagno-roma-guida-completa',   filename: 'blog/ristrutturazione-bagno-roma-guida-completa/index.html',   lang: 'it' },
+  { path: '/en/blog/ristrutturazione-bagno-roma-guida-completa',filename: 'en/blog/ristrutturazione-bagno-roma-guida-completa/index.html',lang: 'en' },
+  { path: '/blog/bonus-ristrutturazione-2025-come-funziona',    filename: 'blog/bonus-ristrutturazione-2025-come-funziona/index.html',    lang: 'it' },
+  { path: '/en/blog/bonus-ristrutturazione-2025-come-funziona', filename: 'en/blog/bonus-ristrutturazione-2025-come-funziona/index.html', lang: 'en' },
+  { path: '/blog/ristrutturazione-appartamento-roma-guida-completa', filename: 'blog/ristrutturazione-appartamento-roma-guida-completa/index.html', lang: 'it' },
+  { path: '/en/blog/ristrutturazione-appartamento-roma-guida-completa', filename: 'en/blog/ristrutturazione-appartamento-roma-guida-completa/index.html', lang: 'en' },
+  { path: '/blog/cappotto-termico-condominio-roma-costi-vantaggi', filename: 'blog/cappotto-termico-condominio-roma-costi-vantaggi/index.html', lang: 'it' },
+  { path: '/en/blog/cappotto-termico-condominio-roma-costi-vantaggi', filename: 'en/blog/cappotto-termico-condominio-roma-costi-vantaggi/index.html', lang: 'en' },
 ];
 
 function ensureDirectoryExists(filePath) {
@@ -178,8 +194,12 @@ function injectMetadata(html, route) {
     return html;
   }
 
-  // Set correct lang attribute
-  html = html.replace(/<html[^>]*lang="[^"]+"/g, `<html lang="${metadata.lang}"`);
+  // Set correct lang attribute (replace existing or add if missing)
+  if (/<html[^>]*lang="/.test(html)) {
+    html = html.replace(/<html([^>]*)lang="[^"]*"/, `<html$1lang="${metadata.lang}"`);
+  } else {
+    html = html.replace(/<html/, `<html lang="${metadata.lang}"`);
+  }
 
   // Replace title (take the first one, handle duplicates from React Helmet)
   const titleMatches = html.match(/<title>.*?<\/title>/g);
@@ -191,15 +211,15 @@ function injectMetadata(html, route) {
   }
   html = html.replace(/<title>.*?<\/title>/, `<title>${metadata.title}</title>`);
 
-  // Replace meta description (handle duplicates)
-  const descMatches = html.match(/<meta name="description" content="[^"]*">/g);
+  // Replace meta description (handle duplicates, including data-rh="true" variants)
+  const descMatches = html.match(/<meta name="description" content="[^"]*"[^>]*>/g);
   if (descMatches && descMatches.length > 1) {
     for (let i = 1; i < descMatches.length; i++) {
       html = html.replace(descMatches[i], '');
     }
   }
   html = html.replace(
-    /<meta name="description" content="[^"]*">/,
+    /<meta name="description" content="[^"]*"[^>]*>/,
     `<meta name="description" content="${metadata.description}">`
   );
 

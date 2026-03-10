@@ -47,7 +47,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/servizi" 
+                  to="/servizi/" 
                   className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
                   onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: 'Servizi' })}
                 >
@@ -56,7 +56,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/portfolio" 
+                  to="/portfolio/" 
                   className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
                   onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: 'Portfolio' })}
                 >
@@ -65,7 +65,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/chi-siamo" 
+                  to="/chi-siamo/" 
                   className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
                   onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: 'Chi Siamo' })}
                 >
@@ -74,7 +74,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/contatti" 
+                  to="/contatti/" 
                   className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
                   onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: 'Contatti' })}
                 >
@@ -83,7 +83,34 @@ const Footer = () => {
               </li>
               <li>
                 <Link 
-                  to="/privacy" 
+                  to={isEn ? '/en/tax-benefits/' : '/bonus-fiscali/'}
+                  className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                  onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: 'Bonus Fiscali' })}
+                >
+                  {t('footer.bonus_fiscali')}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to={isEn ? '/en/blog/' : '/blog/'}
+                  className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
+                  onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: 'Blog' })}
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to={isEn ? '/en/free-quote/' : '/preventivo/'}
+                  className="text-yellow-400 hover:text-yellow-300 transition-colors text-sm font-semibold"
+                  onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: 'Preventivo' })}
+                >
+                  {t('footer.preventivo')}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/privacy/" 
                   className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
                   onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: 'Privacy' })}
                 >
@@ -100,7 +127,7 @@ const Footer = () => {
               {zones.map(zone => (
                 <li key={zone.slug}>
                   <Link
-                    to={isEn ? `/en/zones/${zone.slug}` : `/zone/${zone.slug}`}
+                    to={isEn ? `/en/zones/${zone.slug}/` : `/zone/${zone.slug}/`}
                     className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
                     onClick={() => trackGAEvent({ action: 'click_footer_link', category: 'Footer', label: `Zone - ${zone.label}` })}
                   >
@@ -123,7 +150,7 @@ const Footer = () => {
               >
                 <img
                   src="/phone.svg"
-                  alt=""
+                  alt="Telefono"
                   className="w-5 h-5"
                   style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                 />
@@ -138,7 +165,7 @@ const Footer = () => {
               >
                 <img
                   src="/envelope.svg"
-                  alt=""
+                  alt="Email"
                   className="w-5 h-5"
                   style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                 />
@@ -155,7 +182,7 @@ const Footer = () => {
               >
                 <img
                   src="/Whatsapp.svg"
-                  alt=""
+                  alt="WhatsApp"
                   className="w-5 h-5"
                   style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                 />
@@ -172,7 +199,7 @@ const Footer = () => {
               >
                 <img
                   src="/viber.svg"
-                  alt=""
+                  alt="Viber"
                   className="w-5 h-5"
                   style={{ filter: 'brightness(0) saturate(100%) invert(1)' }}
                 />

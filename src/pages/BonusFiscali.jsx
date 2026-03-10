@@ -4,14 +4,16 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { trackGAEvent } from '../utils/gaEvents';
 import { Conversions } from '../hooks/useAnalytics';
+import LazyImage from '../components/LazyImage';
+import { BLOG_ARTICLES } from '../data/blogArticles';
 
 const BonusFiscali = () => {
   const { t, i18n } = useTranslation();
   const isEn = i18n.language === 'en';
 
   const canonicalUrl = isEn
-    ? 'https://edilquadro.it/en/tax-benefits'
-    : 'https://edilquadro.it/bonus-fiscali';
+    ? 'https://edilquadro.it/en/tax-benefits/'
+    : 'https://edilquadro.it/bonus-fiscali/';
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -135,11 +137,13 @@ const BonusFiscali = () => {
   return (
     <>
       <Helmet>
+        <html lang={i18n.language} />
         <title>{t('bonus_page.meta_title')}</title>
         <meta name="description" content={t('bonus_page.meta_description')} />
         <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="it" href="https://edilquadro.it/bonus-fiscali" />
-        <link rel="alternate" hrefLang="en" href="https://edilquadro.it/en/tax-benefits" />
+        <link rel="alternate" hrefLang="it" href="https://edilquadro.it/bonus-fiscali/" />
+        <link rel="alternate" hrefLang="en" href="https://edilquadro.it/en/tax-benefits/" />
+        <link rel="alternate" hrefLang="x-default" href="https://edilquadro.it/bonus-fiscali/" />
         <meta property="og:title" content={t('bonus_page.meta_title')} />
         <meta property="og:description" content={t('bonus_page.meta_description')} />
         <meta property="og:url" content={canonicalUrl} />
@@ -154,7 +158,7 @@ const BonusFiscali = () => {
         <div className="max-w-7xl mx-auto px-4">
           <ol className="flex items-center space-x-2 text-sm text-gray-600">
             <li>
-              <Link to={isEn ? '/en' : '/'} className="hover:text-blue-600">Home</Link>
+              <Link to={isEn ? '/en/' : '/'} className="hover:text-blue-600">Home</Link>
             </li>
             <li><span className="mx-1">/</span></li>
             <li className="text-gray-900 font-medium">{t('bonus_page.breadcrumb')}</li>
@@ -242,6 +246,44 @@ const BonusFiscali = () => {
         </div>
       </section>
 
+      {/* Related Blog Article */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+            {isEn ? '📚 Related Article' : '📚 Articolo Correlato'}
+          </h2>
+          {(() => {
+            const bonusArticle = BLOG_ARTICLES.find(a => a.slug === 'bonus-ristrutturazione-2025-come-funziona');
+            return bonusArticle ? (
+              <Link
+                to={isEn ? `/en/blog/${bonusArticle.slug}/` : `/blog/${bonusArticle.slug}/`}
+                className="group flex flex-col md:flex-row items-center gap-6 bg-blue-50 rounded-xl p-6 hover:bg-blue-100 transition-colors"
+              >
+                <div className="w-full md:w-48 h-32 flex-shrink-0 rounded-lg overflow-hidden">
+                  <LazyImage
+                    src={bonusArticle.image}
+                    alt={t(`${bonusArticle.translationKey}.title`)}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    width="192"
+                    height="128"
+                    loading="lazy"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-700 transition-colors">
+                    {t(`${bonusArticle.translationKey}.title`)}
+                  </h3>
+                  <p className="text-gray-600 text-sm mt-2">{t(`${bonusArticle.translationKey}.excerpt`)}</p>
+                  <span className="text-blue-600 font-medium text-sm mt-3 inline-block">
+                    {isEn ? 'Read the full guide →' : 'Leggi la guida completa →'}
+                  </span>
+                </div>
+              </Link>
+            ) : null;
+          })()}
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -253,7 +295,7 @@ const BonusFiscali = () => {
               className="inline-flex items-center gap-2 bg-cta-green text-white px-6 py-3 rounded-full font-semibold hover:bg-cta-green-dark transition-all hover:scale-105"
               onClick={() => { trackGAEvent({ action: 'click_phone', category: 'Contatto', label: 'BonusFiscali - Chiama' }); Conversions.PHONE_CALL('BonusFiscali'); }}
             >
-              <img src="/phone.svg" alt="" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
+              <img src="/phone.svg" alt="Telefono" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
               {t('bonus_page.cta_call')}
             </a>
             <a
@@ -263,7 +305,7 @@ const BonusFiscali = () => {
               className="inline-flex items-center gap-2 bg-emerald-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-emerald-800 transition-all hover:scale-105"
               onClick={() => { trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'BonusFiscali - WhatsApp' }); Conversions.WHATSAPP_CLICK('BonusFiscali'); }}
             >
-              <img src="/Whatsapp.svg" alt="" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
+              <img src="/Whatsapp.svg" alt="WhatsApp" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
               WhatsApp
             </a>
             <a
@@ -271,7 +313,7 @@ const BonusFiscali = () => {
               className="inline-flex items-center gap-2 bg-teal-700 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-800 transition-all hover:scale-105"
               onClick={() => { trackGAEvent({ action: 'click_email', category: 'Contatto', label: 'BonusFiscali - Email' }); Conversions.EMAIL_SENT('BonusFiscali'); }}
             >
-              <img src="/envelope.svg" alt="" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
+              <img src="/envelope.svg" alt="Email" className="w-5 h-5" style={{ filter: 'brightness(0) saturate(100%) invert(1)' }} />
               Email
             </a>
           </div>

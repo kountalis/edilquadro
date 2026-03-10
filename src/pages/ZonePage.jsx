@@ -8,6 +8,7 @@ import LazyImage from '../components/LazyImage';
 import { getWebpSource } from '../utils/seo';
 import { getZoneBySlug } from '../data/zones';
 import { getProjectBySlug } from '../data/projects';
+import { BLOG_ARTICLES } from '../data/blogArticles';
 
 const ZonePage = () => {
   const { slug } = useParams();
@@ -19,8 +20,8 @@ const ZonePage = () => {
 
   const zoneKey = zone.translationKey;
   const canonicalUrl = isEn
-    ? `https://edilquadro.it/en/zones/${slug}`
-    : `https://edilquadro.it/zone/${slug}`;
+    ? `https://edilquadro.it/en/zones/${slug}/`
+    : `https://edilquadro.it/zone/${slug}/`;
 
   // Get related projects with their data
   const relatedProjects = zone.relatedProjects
@@ -37,9 +38,9 @@ const ZonePage = () => {
     .filter(Boolean);
 
   const services = [
-    { key: 'casa', icon: '/home.svg', linkIt: '/servizi/casa', linkEn: '/en/services/home' },
-    { key: 'commerciale', icon: '/shop.svg', linkIt: '/servizi/commerciale', linkEn: '/en/services/commercial' },
-    { key: 'edifici', icon: '/building.svg', linkIt: '/servizi/edifici', linkEn: '/en/services/buildings' },
+    { key: 'casa', icon: '/home.svg', linkIt: '/servizi/casa/', linkEn: '/en/services/home/' },
+    { key: 'commerciale', icon: '/shop.svg', linkIt: '/servizi/commerciale/', linkEn: '/en/services/commercial/' },
+    { key: 'edifici', icon: '/building.svg', linkIt: '/servizi/edifici/', linkEn: '/en/services/buildings/' },
   ];
 
   const zoneSchema = {
@@ -92,9 +93,9 @@ const ZonePage = () => {
         <title>{t(`zones.${zoneKey}.meta_title`)}</title>
         <meta name="description" content={t(`zones.${zoneKey}.meta_description`)} />
         <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="it" href={`https://edilquadro.it/zone/${slug}`} />
-        <link rel="alternate" hrefLang="en" href={`https://edilquadro.it/en/zones/${slug}`} />
-        <link rel="alternate" hrefLang="x-default" href={`https://edilquadro.it/zone/${slug}`} />
+        <link rel="alternate" hrefLang="it" href={`https://edilquadro.it/zone/${slug}/`} />
+        <link rel="alternate" hrefLang="en" href={`https://edilquadro.it/en/zones/${slug}/`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://edilquadro.it/zone/${slug}/`} />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content={t(`zones.${zoneKey}.meta_title`)} />
         <meta property="og:description" content={t(`zones.${zoneKey}.meta_description`)} />
@@ -111,7 +112,7 @@ const ZonePage = () => {
         <nav aria-label="Breadcrumb" className="container mx-auto px-4 pt-24 pb-4">
           <ol className="flex items-center gap-2 text-sm text-gray-400">
             <li>
-              <Link to={isEn ? '/en' : '/'} className="hover:text-emerald-400 transition-colors">
+              <Link to={isEn ? '/en/' : '/'} className="hover:text-emerald-400 transition-colors">
                 Home
               </Link>
             </li>
@@ -160,7 +161,7 @@ const ZonePage = () => {
                     to={isEn ? service.linkEn : service.linkIt}
                     className="bg-gray-800/50 rounded-xl p-6 border border-gray-700/50 hover:border-emerald-700/50 transition-colors group"
                   >
-                    <img src={service.icon} alt="" className="w-12 h-12 mb-4 opacity-70 group-hover:opacity-100 transition-opacity" style={{ filter: 'invert(0.7) sepia(1) hue-rotate(100deg) saturate(2)' }} />
+                    <img src={service.icon} alt={service.name} className="w-12 h-12 mb-4 opacity-70 group-hover:opacity-100 transition-opacity" style={{ filter: 'invert(0.7) sepia(1) hue-rotate(100deg) saturate(2)' }} />
                     <h3 className="text-lg font-semibold text-emerald-400 mb-2">
                       {t(`zones.${zoneKey}.service_${service.key}`)}
                     </h3>
@@ -181,7 +182,7 @@ const ZonePage = () => {
                   {relatedProjects.map(project => (
                     <Link
                       key={project.slug}
-                      to={isEn ? `/en/portfolio/${project.slug}` : `/portfolio/${project.slug}`}
+                      to={isEn ? `/en/portfolio/${project.slug}/` : `/portfolio/${project.slug}/`}
                       className="group rounded-xl overflow-hidden border border-gray-700/50 hover:border-emerald-700/50 transition-all"
                     >
                       <div className="aspect-[16/10] overflow-hidden">
@@ -218,6 +219,42 @@ const ZonePage = () => {
                 ))}
               </ul>
             </div>
+
+            {/* Blog Articles */}
+            <div className="bg-gray-900/50 rounded-2xl p-8 md:p-10 mb-8 border border-gray-800">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                <span className="text-emerald-400 text-3xl">◆</span>
+                {isEn ? 'Useful Articles' : 'Approfondimenti dal Blog'}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {BLOG_ARTICLES.map(article => (
+                  <Link
+                    key={article.slug}
+                    to={isEn ? `/en/blog/${article.slug}/` : `/blog/${article.slug}/`}
+                    className="group rounded-xl overflow-hidden border border-gray-700/50 hover:border-emerald-700/50 transition-all bg-gray-800/30"
+                  >
+                    <div className="aspect-[16/10] overflow-hidden">
+                      <LazyImage
+                        src={article.image}
+                        alt={t(`${article.translationKey}.title`)}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        width="300"
+                        height="188"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-3">
+                      <h3 className="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors line-clamp-2">
+                        {t(`${article.translationKey}.title`)}
+                      </h3>
+                      <span className="text-emerald-400 text-xs mt-2 inline-block">
+                        {isEn ? 'Read more →' : 'Leggi di più →'}
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -248,7 +285,7 @@ const ZonePage = () => {
                 </a>
 
                 <Link
-                  to={isEn ? '/en/contact' : '/contatti'}
+                  to={isEn ? '/en/contact/' : '/contatti/'}
                   className="group relative px-6 py-4 rounded-2xl bg-gradient-to-r from-gray-700 to-gray-600 transition-all duration-300 hover:scale-102 hover:-translate-y-1"
                 >
                   <div className="relative flex items-center justify-center gap-3">

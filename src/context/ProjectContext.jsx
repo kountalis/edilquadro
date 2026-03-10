@@ -1,4 +1,4 @@
-﻿import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
+import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
 
 const ProjectContext = createContext();
 
@@ -18,11 +18,11 @@ export const ProjectProvider = ({ children }) => {
         category: "casa",
         description: "Ristrutturazione completa di una villa moderna con particolare attenzione al design degli interni e all'efficienza energetica.",
         images: [
-          "/projects/casaleucade1.webp",
-          "/projects/casaleucade2.webp",
-          "/projects/casaleucade3.webp",
-          "/projects/casaleucade4.webp",
-          "/projects/casaleucade5.webp"
+          "/projects/casa-moderna-bracciano-01.webp",
+          "/projects/casa-moderna-bracciano-02.webp",
+          "/projects/casa-moderna-bracciano-03.webp",
+          "/projects/casa-moderna-bracciano-04.webp",
+          "/projects/casa-moderna-bracciano-05.webp"
         ]
       },
       {
@@ -31,11 +31,11 @@ export const ProjectProvider = ({ children }) => {
         category: "commerciale",
         description: "Progettazione e ristrutturazione di un ristorante con un design moderno e funzionale per ottimizzare lo spazio e migliorare l'esperienza dei clienti.",
         images: [
-          "/projects/Ristorante 1.webp",
-          "/projects/Ristorante 2.webp",
-          "/projects/Ristorante 3.webp",
-          "/projects/Ristorante 4.webp",
-          "/projects/Ristorante 5.webp"
+          "/projects/ristorante-san-giovanni-roma-01.webp",
+          "/projects/ristorante-san-giovanni-roma-02.webp",
+          "/projects/ristorante-san-giovanni-roma-03.webp",
+          "/projects/ristorante-san-giovanni-roma-04.webp",
+          "/projects/ristorante-san-giovanni-roma-05.webp"
         ]
       },
       {
@@ -44,15 +44,15 @@ export const ProjectProvider = ({ children }) => {
         category: "commerciale",
         description: "Restyling completo di un negozio di abbigliamento con un design elegante e moderno per valorizzare l'esposizione dei prodotti.",
         images: [
-          "/projects/ABBIGLIAMENTO 1.webp",
-          "/projects/ABBIGLIAMENTO 2.webp",
-          "/projects/ABBIGLIAMENTO 3.webp",
-          "/projects/ABBIGLIAMENTO 4.webp",
-          "/projects/ABBIGLIAMENTO 5.webp",
-          "/projects/ABBIGLIAMENTO 6.webp",
-          "/projects/ABBIGLIAMENTO 7.webp",
-          "/projects/ABBIGLIAMENTO 8.webp",
-          "/projects/ABBIGLIAMENTO 9.webp"
+          "/projects/negozio-abbigliamento-tuscolana-01.webp",
+          "/projects/negozio-abbigliamento-tuscolana-02.webp",
+          "/projects/negozio-abbigliamento-tuscolana-03.webp",
+          "/projects/negozio-abbigliamento-tuscolana-04.webp",
+          "/projects/negozio-abbigliamento-tuscolana-05.webp",
+          "/projects/negozio-abbigliamento-tuscolana-06.webp",
+          "/projects/negozio-abbigliamento-tuscolana-07.webp",
+          "/projects/negozio-abbigliamento-tuscolana-08.webp",
+          "/projects/negozio-abbigliamento-tuscolana-09.webp"
         ]
       },
       {
@@ -61,11 +61,11 @@ export const ProjectProvider = ({ children }) => {
         category: "edifici",
         description: "Ristrutturazione di un complesso residenziale con interventi su facciate, tetti e parti comuni per migliorare l'efficienza energetica e l'estetica dell'edificio.",
         images: [
-          "/projects/pomezia1.webp",
-          "/projects/pomezia2.webp",
-          "/projects/pomezia3.webp",
-          "/projects/pomezia4.webp",
-          "/projects/pomezia5.webp"
+          "/projects/complesso-residenziale-pomezia-01.webp",
+          "/projects/complesso-residenziale-pomezia-02.webp",
+          "/projects/complesso-residenziale-pomezia-03.webp",
+          "/projects/complesso-residenziale-pomezia-04.webp",
+          "/projects/complesso-residenziale-pomezia-05.webp"
         ]
       },
       {
@@ -74,15 +74,15 @@ export const ProjectProvider = ({ children }) => {
         category: "casa",
         description: "Ristrutturazione completa di un appartamento nel quartiere Alessandrino con rifacimento di impianti, pavimenti e finiture.",
         images: [
-          "/projects/alessandrino1.webp",
-          "/projects/alessandrino2.webp",
-          "/projects/alessandrino3.webp",
-          "/projects/alessandrino4.webp",
-          "/projects/alessandrino5.webp",
-          "/projects/alessandrino6.webp",
-          "/projects/alessandrino7.webp",
-          "/projects/alessandrino8.webp",
-          "/projects/alessandrino9.webp"
+          "/projects/attico-alessandrino-roma-01.webp",
+          "/projects/attico-alessandrino-roma-02.webp",
+          "/projects/attico-alessandrino-roma-03.webp",
+          "/projects/attico-alessandrino-roma-04.webp",
+          "/projects/attico-alessandrino-roma-05.webp",
+          "/projects/attico-alessandrino-roma-06.webp",
+          "/projects/attico-alessandrino-roma-07.webp",
+          "/projects/attico-alessandrino-roma-08.webp",
+          "/projects/attico-alessandrino-roma-09.webp"
         ]
       },
       {
@@ -91,16 +91,16 @@ export const ProjectProvider = ({ children }) => {
         category: "commerciale",
         description: "Progettazione e realizzazione di un centro yoga con particolare attenzione all'atmosfera, all'illuminazione e ai materiali naturali.",
         images: [
-          "/projects/Yoga Hatha 1.webp",
-          "/projects/Yoga Hatha 2.webp",
-          "/projects/Yoga Hatha 3.webp",
-          "/projects/Yoga Hatha 4.webp",
-          "/projects/Yoga Hatha 5.webp",
-          "/projects/Yoga Hatha 6.webp",
-          "/projects/Yoga Hatha 7.webp",
-          "/projects/Yoga Hatha 8.webp",
-          "/projects/Yoga Hatha 9.webp",
-          "/projects/Yoga Hatha 10.webp"
+          "/projects/centro-yoga-tuscolana-roma-01.webp",
+          "/projects/centro-yoga-tuscolana-roma-02.webp",
+          "/projects/centro-yoga-tuscolana-roma-03.webp",
+          "/projects/centro-yoga-tuscolana-roma-04.webp",
+          "/projects/centro-yoga-tuscolana-roma-05.webp",
+          "/projects/centro-yoga-tuscolana-roma-06.webp",
+          "/projects/centro-yoga-tuscolana-roma-07.webp",
+          "/projects/centro-yoga-tuscolana-roma-08.webp",
+          "/projects/centro-yoga-tuscolana-roma-09.webp",
+          "/projects/centro-yoga-tuscolana-roma-10.webp"
         ]
       },
       {
@@ -109,11 +109,11 @@ export const ProjectProvider = ({ children }) => {
         category: "casa",
         description: "Ristrutturazione completa di una casa residenziale con design moderno",
         images: [
-          "/projects/casaleucade1.webp",
-          "/projects/casaleucade2.webp",
-          "/projects/casaleucade3.webp",
-          "/projects/casaleucade4.webp",
-          "/projects/casaleucade5.webp"
+          "/projects/casa-moderna-bracciano-01.webp",
+          "/projects/casa-moderna-bracciano-02.webp",
+          "/projects/casa-moderna-bracciano-03.webp",
+          "/projects/casa-moderna-bracciano-04.webp",
+          "/projects/casa-moderna-bracciano-05.webp"
         ]
       },
       {
@@ -122,11 +122,11 @@ export const ProjectProvider = ({ children }) => {
         category: "commerciale",
         description: "Progettazione e ristrutturazione di un ristorante con un design moderno e funzionale per ottimizzare lo spazio e migliorare l'esperienza dei clienti.",
         images: [
-          "/projects/Ristorante 1.webp",
-          "/projects/Ristorante 2.webp",
-          "/projects/Ristorante 3.webp",
-          "/projects/Ristorante 4.webp",
-          "/projects/Ristorante 5.webp"
+          "/projects/ristorante-san-giovanni-roma-01.webp",
+          "/projects/ristorante-san-giovanni-roma-02.webp",
+          "/projects/ristorante-san-giovanni-roma-03.webp",
+          "/projects/ristorante-san-giovanni-roma-04.webp",
+          "/projects/ristorante-san-giovanni-roma-05.webp"
         ]
       },
       {
@@ -135,15 +135,15 @@ export const ProjectProvider = ({ children }) => {
         category: "commerciale",
         description: "Restyling completo di un negozio di abbigliamento con un design elegante e moderno per valorizzare l'esposizione dei prodotti.",
         images: [
-          "/projects/ABBIGLIAMENTO 1.webp",
-          "/projects/ABBIGLIAMENTO 2.webp",
-          "/projects/ABBIGLIAMENTO 3.webp",
-          "/projects/ABBIGLIAMENTO 4.webp",
-          "/projects/ABBIGLIAMENTO 5.webp",
-          "/projects/ABBIGLIAMENTO 6.webp",
-          "/projects/ABBIGLIAMENTO 7.webp",
-          "/projects/ABBIGLIAMENTO 8.webp",
-          "/projects/ABBIGLIAMENTO 9.webp"
+          "/projects/negozio-abbigliamento-tuscolana-01.webp",
+          "/projects/negozio-abbigliamento-tuscolana-02.webp",
+          "/projects/negozio-abbigliamento-tuscolana-03.webp",
+          "/projects/negozio-abbigliamento-tuscolana-04.webp",
+          "/projects/negozio-abbigliamento-tuscolana-05.webp",
+          "/projects/negozio-abbigliamento-tuscolana-06.webp",
+          "/projects/negozio-abbigliamento-tuscolana-07.webp",
+          "/projects/negozio-abbigliamento-tuscolana-08.webp",
+          "/projects/negozio-abbigliamento-tuscolana-09.webp"
         ]
       },
       {
@@ -152,11 +152,11 @@ export const ProjectProvider = ({ children }) => {
         category: "edifici",
         description: "Ristrutturazione di un complesso residenziale con interventi su facciate, tetti e parti comuni per migliorare l'efficienza energetica e l'estetica dell'edificio.",
         images: [
-          "/projects/pomezia1.webp",
-          "/projects/pomezia2.webp",
-          "/projects/pomezia3.webp",
-          "/projects/pomezia4.webp",
-          "/projects/pomezia5.webp"
+          "/projects/complesso-residenziale-pomezia-01.webp",
+          "/projects/complesso-residenziale-pomezia-02.webp",
+          "/projects/complesso-residenziale-pomezia-03.webp",
+          "/projects/complesso-residenziale-pomezia-04.webp",
+          "/projects/complesso-residenziale-pomezia-05.webp"
         ]
       }
     ];

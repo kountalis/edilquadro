@@ -45,7 +45,7 @@ const ProjectDetail = () => {
   }, [currentImageIndex, project]);
 
   if (!project) {
-    return <Navigate to={isEn ? '/en/portfolio' : '/portfolio'} replace />;
+    return <Navigate to={isEn ? '/en/portfolio/' : '/portfolio/'} replace />;
   }
 
   const title = t(`portfolio_page.projects.${project.translationKey}_title`);
@@ -60,11 +60,11 @@ const ProjectDetail = () => {
       ? t('portfolio_page.category_commercial')
       : t('portfolio_page.category_buildings');
 
-  const portfolioUrl = isEn ? '/en/portfolio' : '/portfolio';
-  const canonicalPath = isEn ? `/en/portfolio/${slug}` : `/portfolio/${slug}`;
+  const portfolioUrl = isEn ? '/en/portfolio/' : '/portfolio/';
+  const canonicalPath = isEn ? `/en/portfolio/${slug}/` : `/portfolio/${slug}/`;
   const canonicalUrl = `https://edilquadro.it${canonicalPath}`;
-  const hreflangIt = `https://edilquadro.it/portfolio/${slug}`;
-  const hreflangEn = `https://edilquadro.it/en/portfolio/${slug}`;
+  const hreflangIt = `https://edilquadro.it/portfolio/${slug}/`;
+  const hreflangEn = `https://edilquadro.it/en/portfolio/${slug}/`;
 
   const pageTitle = `${title} - ${location} | Edilquadro`;
   const pageDescription = `${description} - ${categoryLabel} ${isEn ? 'in' : 'a'} ${location}. Edilquadro ${isEn ? 'renovations' : 'ristrutturazioni'} Roma.`;
@@ -178,7 +178,7 @@ const ProjectDetail = () => {
         <nav aria-label="Breadcrumb" className="container mx-auto px-4 pt-24 pb-4">
           <ol className="flex items-center gap-2 text-sm text-gray-400">
             <li>
-              <Link to={isEn ? '/en' : '/'} className="hover:text-emerald-400 transition-colors">
+              <Link to={isEn ? '/en/' : '/'} className="hover:text-emerald-400 transition-colors">
                 Home
               </Link>
             </li>
@@ -368,7 +368,7 @@ const ProjectDetail = () => {
                   onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: `Progetto ${title} - Telefono` }); Conversions.PHONE_CALL('ProjectDetail'); if (typeof gtag_report_conversion === 'function') gtag_report_conversion(); }}
                 >
                   <div className="relative flex items-center justify-center gap-3">
-                    <img src="/phone.svg" alt="" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)' }} />
+                    <img src="/phone.svg" alt="Telefono" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)' }} />
                     <div className="text-left">
                       <div className="text-xs text-gray-300">{t('home.cta.call_us')}</div>
                       <div className="text-white font-semibold text-sm">+39 333 337 7320</div>
@@ -383,7 +383,7 @@ const ProjectDetail = () => {
                   onClick={() => { trackGAEvent({ action: 'click_email', category: 'Contatto', label: `Progetto ${title} - Email` }); Conversions.EMAIL_SENT('ProjectDetail'); }}
                 >
                   <div className="relative flex items-center justify-center gap-3">
-                    <img src="/envelope.svg" alt="" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)' }} />
+                    <img src="/envelope.svg" alt="Email" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)' }} />
                     <div className="text-left">
                       <div className="text-xs text-gray-300">{isEn ? 'Email' : 'Email'}</div>
                       <div className="text-white font-semibold text-sm">{t('home.cta.free_quote')}</div>
@@ -400,7 +400,7 @@ const ProjectDetail = () => {
                   onClick={() => { trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: `Progetto ${title} - WhatsApp` }); Conversions.WHATSAPP_CLICK('ProjectDetail'); }}
                 >
                   <div className="relative flex items-center justify-center gap-3">
-                    <img src="/Whatsapp.svg" alt="" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)' }} />
+                    <img src="/Whatsapp.svg" alt="WhatsApp" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)' }} />
                     <div className="text-left">
                       <div className="text-xs text-gray-300">WhatsApp</div>
                       <div className="text-white font-semibold text-sm">{t('home.cta.chat_with_us')}</div>

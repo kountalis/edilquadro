@@ -94,11 +94,11 @@ export default function CookieBanner() {
                   : 'Utilizziamo cookie e altre tecnologie simili per migliorare la tua esperienza, personalizzare i contenuti, analizzare il traffico e mostrarti annunci pubblicitari pertinenti.'}
               </p>
               <p className="text-xs text-gray-400 mt-3">
-                <Link to={pageIsEN ? '/en/privacy' : '/privacy'} className="text-emerald-400 hover:text-emerald-300 underline">
+                <Link to={pageIsEN ? '/en/privacy/' : '/privacy/'} className="text-emerald-400 hover:text-emerald-300 underline">
                   Privacy Policy
                 </Link>
                 {' '}•{' '}
-                <Link to={pageIsEN ? '/en/cookie-policy' : '/cookie-policy'} className="text-emerald-400 hover:text-emerald-300 underline">
+                <Link to={pageIsEN ? '/en/cookie-policy/' : '/cookie-policy/'} className="text-emerald-400 hover:text-emerald-300 underline">
                   Cookie Policy
                 </Link>
               </p>

@@ -12,10 +12,10 @@ const BuildingServices = () => {
   ];
 
   const images = [
-    { src: '/projects/Cappotto Termico.jpg', captionKey: 'img1_caption' },
-    { src: '/projects/pomezia1.jpg', captionKey: 'img2_caption' },
-    { src: '/projects/Rifacimento Tetti.jpg', captionKey: 'img3_caption' },
-    { src: '/projects/Via Egerio Levio1.jpg', captionKey: 'img4_caption' },
+    { src: '/projects/cappotto-termico-edificio-roma.webp', captionKey: 'img1_caption' },
+    { src: '/projects/complesso-residenziale-pomezia-01.webp', captionKey: 'img2_caption' },
+    { src: '/projects/rifacimento-tetti-roma.webp', captionKey: 'img3_caption' },
+    { src: '/projects/sede-edilquadro-via-egerio-levio-roma.webp', captionKey: 'img4_caption' },
   ];
 
   const crossLinks = [
@@ -31,6 +31,7 @@ const BuildingServices = () => {
       images={images}
       crossLinks={crossLinks}
       breadcrumbCurrentKey="breadcrumb_building_services"
+      relatedBlogSlugs={['bonus-ristrutturazione-2025-come-funziona', 'cappotto-termico-condominio-roma-costi-vantaggi']}
       gaLabel="BuildingServices"
       useTrans
     />

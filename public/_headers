@@ -57,3 +57,12 @@
 # HTML pages - short cache
 /*.html
   Cache-Control: public, max-age=3600, must-revalidate
+
+# Sitemap & robots - daily cache
+/sitemap.xml
+  Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: application/xml
+
+/robots.txt
+  Cache-Control: public, max-age=86400, must-revalidate
+  Content-Type: text/plain

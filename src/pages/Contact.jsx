@@ -92,7 +92,7 @@ const Contact = () => {
       <Helmet>
         <title>{t('contact_page.meta_title')}</title>
         <meta name="description" content={t('contact_page.meta_description')} />
-        <link rel="canonical" href="https://edilquadro.it/contatti" />
+        <link rel="canonical" href="https://edilquadro.it/contatti/" />
         <link rel="preload" as="image" href="/hero-video-thumb.avif" />
         <meta name="keywords" content={t('contact_page.meta_keywords')} />
         <meta name="author" content="Edilquadro" />
@@ -100,7 +100,7 @@ const Contact = () => {
         <meta property="og:title" content={t('contact_page.meta_title')} />
         <meta property="og:description" content={t('contact_page.meta_description')} />
         <meta property="og:image" content="https://edilquadro.it/hero-contact-og.jpg" />
-        <meta property="og:url" content="https://edilquadro.it/contatti" />
+        <meta property="og:url" content="https://edilquadro.it/contatti/" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('contact_page.meta_title')} />
@@ -108,6 +108,9 @@ const Contact = () => {
         <meta name="twitter:image" content="https://edilquadro.it/hero-contact-og.jpg" />
         <meta name="twitter:site" content="@edilquadro" />
         <html lang={i18n.language} />
+        <link rel="alternate" hrefLang="it" href="https://edilquadro.it/contatti/" />
+        <link rel="alternate" hrefLang="en" href="https://edilquadro.it/en/contact/" />
+        <link rel="alternate" hrefLang="x-default" href="https://edilquadro.it/contatti/" />
         <script type="application/ld+json">{JSON.stringify(contactPageSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(generateLocalBusinessSchema())}</script>
@@ -146,13 +149,13 @@ const Contact = () => {
                 <p className="text-xl md:text-2xl text-gray-200 text-center max-w-2xl">
                   <Trans i18nKey="contact_page.header_subtitle" components={{
                     1: <strong />,
-                    3: <a href="/servizi/casa" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
-                    5: <a href="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
-                    7: <a href="/servizi/edifici" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
-                    9: <a href="/portfolio" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.portfolio')} />,
-                    11: <a href="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.cta.free_quote')} />,
+                    3: <a href="/servizi/casa/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
+                    5: <a href="/servizi/commerciale/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
+                    7: <a href="/servizi/edifici/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
+                    9: <a href="/portfolio/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.portfolio')} />,
+                    11: <a href="/contatti/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.cta.free_quote')} />,
                     13: <strong />,
-                    15: <a href="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('nav.contact')} />
+                    15: <a href="/contatti/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('nav.contact')} />
                   }} />
                 </p>
               </div>

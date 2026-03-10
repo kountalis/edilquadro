@@ -4,7 +4,8 @@
     "portfolio": "Portfolio",
     "services": "Services",
     "about": "About Us",
-    "contact": "Contact"
+    "contact": "Contact",
+    "blog": "Blog"
   },
   "free_quote": "Free Quote",
   "home": {
@@ -83,6 +84,8 @@
     "portfolio": "Portfolio",
     "contact": "Contact",
     "privacy_policy": "Privacy Policy",
+    "bonus_fiscali": "Tax Benefits",
+    "preventivo": "✨ Free Quote",
     "zones_title": "Areas We Serve"
   },
   "services_page": {
@@ -298,7 +301,13 @@
     "condo_renovation_link": "Condominium renovation",
     "cta_title": "Ready to Start?",
     "cta_subtitle": "Contact us for a free quote and find out how we can transform your home.",
-    "cta_call": "Call Now"
+    "cta_call": "Call Now",
+    "faq1_question": "How much does it cost to renovate a house in Rome?",
+    "faq1_answer": "The cost of a home renovation in Rome ranges from €400 to €1,200 per sqm, depending on the type of work. A complete bathroom renovation starts from around €5,000, while a full renovation of an 80sqm apartment averages between €40,000 and €80,000. Edilquadro offers free, personalized quotes.",
+    "faq2_question": "How long does it take to renovate an apartment?",
+    "faq2_answer": "Timelines depend on the scope of work: a bathroom renovation takes about 2-3 weeks, while a complete apartment renovation typically takes 2-4 months. Edilquadro guarantees adherence to agreed timelines.",
+    "faq3_question": "Does Edilquadro handle building permits?",
+    "faq3_answer": "Yes, Edilquadro offers a turnkey service that includes managing all building permits: CILA, SCIA, permits, and communications with the City of Rome. We also handle the paperwork for tax benefits."
   },
   "commercial_services_page": {
     "meta_title": "Shop Renovation Rome | Edilquadro Commercial Services",
@@ -363,7 +372,13 @@
     "condo_renovation_link": "Condominium renovation",
     "cta_title": "Ready to Start?",
     "cta_subtitle": "Contact us for a free quote and find out how we can transform your commercial space.",
-    "cta_call": "Call Now"
+    "cta_call": "Call Now",
+    "faq1_question": "How much does it cost to renovate a shop in Rome?",
+    "faq1_answer": "The cost of renovating a shop in Rome ranges from €500 to €1,500 per sqm, depending on the type of business and desired finishes. A complete restyling of a 50sqm space starts from around €25,000. Contact us for a personalized quote.",
+    "faq2_question": "Does Edilquadro renovate bars and restaurants?",
+    "faq2_answer": "Yes, Edilquadro specializes in renovating bars, restaurants, showrooms, and all types of commercial spaces in Rome. We manage the project from A to Z, including building permits and required certifications.",
+    "faq3_question": "Can I continue business operations during renovation?",
+    "faq3_answer": "In many cases, we can organize the work in phases to minimize business disruption. Edilquadro plans each commercial renovation to reduce inconvenience, also working during agreed hours."
   },
   "building_services_page": {
     "meta_title": "Building and Condo Renovation Rome | Edilquadro Services",
@@ -428,7 +443,13 @@
     "commercial_services_link": "Commercial services",
     "cta_title": "Ready to Start?",
     "cta_subtitle": "Contact us for a free quote and find out how we can improve your building.",
-    "cta_call": "Call Now"
+    "cta_call": "Call Now",
+    "faq1_question": "How much does it cost to renovate a condominium in Rome?",
+    "faq1_answer": "The cost of condominium renovation depends on the type of work: facade renovation starts from €50-80/sqm, thermal insulation from €80-120/sqm, roof renovation from €100-200/sqm. Edilquadro provides detailed quotes and support for the condominium resolution.",
+    "faq2_question": "Can tax benefits be used for condominium renovation?",
+    "faq2_answer": "Yes, condominiums can benefit from various tax incentives: the 50% renovation bonus, the 65% ecobonus for energy efficiency improvements, and the sismabonus for seismic upgrading. Edilquadro handles all the necessary documentation.",
+    "faq3_question": "Does Edilquadro manage relations with the building administrator?",
+    "faq3_answer": "Yes, Edilquadro manages relations directly with the building administrator, prepares quotes for the assembly meeting, keeps all residents updated on work progress, and ensures compliance with current regulations."
   },
   "about_page": {
     "meta_title": "About Us - Edilquadro | Construction Company Rome",
@@ -731,5 +752,96 @@
     "title": "Page not found",
     "subtitle": "The page you are looking for does not exist or has been moved.<br />Check the address or go back to the homepage.",
     "go_home": "Go to Homepage"
+  },
+  "preventivo": {
+    "meta_title": "Free Renovation Quote Rome - Edilquadro",
+    "meta_description": "Request a free quote for your renovation in Rome. Same-day site visit, detailed no-obligation estimate. Edilquadro, construction company since 1998.",
+    "breadcrumb": "Free Quote",
+    "h1": "Free Quote for Your Renovation",
+    "hero_subtitle": "Contact us for a free site visit and detailed no-obligation estimate. Since 1998, over 500 projects successfully completed in Rome and surrounding areas.",
+    "cta_phone": "Call Now",
+    "cta_whatsapp": "Write on WhatsApp",
+    "cta_email": "Request via Email",
+    "trust_years": "Since 1998 - 25+ years",
+    "trust_free": "Free quote",
+    "offer_description": "Free site visit and quote for renovations in Rome",
+    "services_title": "What We Can Quote For",
+    "service1_title": "Home Renovation",
+    "service1_desc": "Apartments, villas, penthouses: complete or partial renovation with turnkey solutions.",
+    "service2_title": "Commercial Renovation",
+    "service2_desc": "Shops, restaurants, offices, showrooms: design and renovation to elevate your business.",
+    "service3_title": "Building Works",
+    "service3_desc": "Facades, roofs, thermal insulation, stairs, elevators and common areas of buildings.",
+    "service4_title": "Systems & Maintenance",
+    "service4_desc": "Electrical, plumbing, HVAC systems. Regular and extraordinary maintenance.",
+    "how_title": "How It Works",
+    "step1_title": "Contact Us",
+    "step1_desc": "Call us, write on WhatsApp or fill in the form. Briefly describe your project.",
+    "step2_title": "Site Visit",
+    "step2_desc": "Our technician performs a free site visit to assess the work needed.",
+    "step3_title": "Quote",
+    "step3_desc": "Receive a detailed quote with transparent timelines and costs, no surprises.",
+    "step4_title": "Work Begins",
+    "step4_desc": "Once approved, we plan the work and guide you through to completion.",
+    "why_title": "Why Choose Edilquadro",
+    "trust1": "Over 25 years of experience in construction",
+    "trust2": "500+ projects completed in Rome and surroundings",
+    "trust3": "Detailed and transparent quote, no hidden costs",
+    "trust4": "Full support: permits, tax benefits, project management",
+    "trust5": "Warranty on all work performed",
+    "trust6": "4.8/5 rating on Google with 30+ reviews",
+    "faq_title": "Frequently Asked Questions",
+    "faq1_q": "Is the quote really free?",
+    "faq1_a": "Yes, the site visit and quote are completely free and with no obligation. After the visit, you will receive a detailed estimate with timelines and costs.",
+    "faq2_q": "How long does it take to receive the quote?",
+    "faq2_a": "We generally perform the site visit within 24-48 hours of contact and the quote is delivered within 3-5 business days, depending on the project complexity.",
+    "faq3_q": "Do you work outside Rome?",
+    "faq3_a": "Yes, we operate throughout Rome and its province, including Pomezia, Genzano di Roma and surrounding areas. For special projects we also work across Italy and in Greece.",
+    "faq4_q": "Do you help with tax benefit applications?",
+    "faq4_a": "Absolutely yes. Our team guides you through all procedures to access available tax benefits: 50% Renovation Bonus, Ecobonus, Sismabonus and other incentives.",
+    "final_cta_title": "Ready to Start Your Project?",
+    "final_cta_desc": "Contact us today for a free quote. The first step towards your dream home or shop is a simple call."
+  },
+  "blog": {
+    "meta_title": "Renovation Blog Rome - Guides & Tips | Edilquadro",
+    "meta_description": "Guides, tips and news about renovations in Rome. How much does it cost? Tax benefits, design trends, completed projects. Edilquadro Blog.",
+    "h1": "Edilquadro Blog",
+    "subtitle": "Practical guides, tips and news from the world of renovations in Rome",
+    "cta_title": "Have a project in mind?",
+    "cta_desc": "Contact us for a free, no-obligation quote",
+    "cta_button": "Request Free Quote",
+    "author_bio": "Construction company in Rome since 1998. Specialized in residential and commercial renovations with over 500 completed projects.",
+    "post_cta_title": "Want to bring your project to life?",
+    "post_cta_desc": "Contact us for a free site visit and detailed quote."
+  },
+  "blog_art1": {
+    "title": "How Much Does It Cost to Renovate a House in Rome in 2025",
+    "meta_title": "House Renovation Costs Rome 2025 - Price Guide | Edilquadro",
+    "excerpt": "Complete guide to house renovation costs in Rome: prices per sqm, factors affecting cost, how to save with tax benefits.",
+    "content": "Renovating a house in Rome is a major investment that requires careful planning. In this guide, we analyze real costs based on our 25+ years of experience in the industry.|||## Average Renovation Costs in Rome|||For a complete renovation in Rome, average costs in 2025 range from €600 to €1,200 per square meter. This wide range depends on several factors: the area of Rome, the condition of the property, the quality of materials chosen, and the complexity of the work.|||## Light Renovation (€400-600/sqm)|||Includes painting, floor replacement, basic bathroom renovation, and partial electrical system update. Ideal for apartments in good condition that need an aesthetic refresh.|||## Complete Renovation (€600-1,000/sqm)|||Includes internal demolitions, complete system renovation (electrical, plumbing, heating), new floors, two complete bathrooms, new windows, and painting. This is the most requested intervention by our clients.|||## Premium Renovation (€1,000-1,500/sqm)|||Premium materials, custom design, home automation, solid wood floors, designer fixtures, project lighting. Recommended for valuable properties in Rome's city center.|||## How to Save: Tax Benefits|||The 50% Renovation Bonus allows you to deduct half the expense over 10 years. For a €50,000 project, the effective saving is €25,000. The 65% Ecobonus covers energy efficiency work such as thermal insulation and boiler replacement.|||## Why Choose Edilquadro|||With over 500 completed projects in Rome, we offer transparent and detailed quotes. Our team follows you from design to key delivery, including all bureaucratic and tax paperwork. Contact us for a free site visit."
+  },
+  "blog_art2": {
+    "title": "Bathroom Renovation in Rome: Complete Guide 2025",
+    "meta_title": "Bathroom Renovation Rome - Costs & Complete Guide 2025 | Edilquadro",
+    "excerpt": "Everything you need to know about renovating a bathroom in Rome: costs, timelines, 2025 trends, mistakes to avoid, and how to choose the right materials.",
+    "content": "The bathroom is one of the most important rooms in the house, and its renovation can completely transform living comfort. Here is our complete guide based on hundreds of bathrooms renovated in Rome.|||## How Much Does a Bathroom Renovation Cost in Rome|||Costs vary based on size and finish level: a standard bathroom (4-6 sqm) costs between €5,000 and €12,000, while a designer bathroom can reach €15,000-20,000. The price includes demolition, waterproofing, systems, tiles, fixtures, and fittings.|||## 2025 Bathroom Trends|||2025 features large format tiles (120x60 cm), neutral and earthy colors, walk-in flush showers, wall-hung toilets, and integrated LED lighting. Natural stone effect porcelain stoneware is the most requested material.|||## Mistakes to Avoid|||Don't underestimate waterproofing: it's the most important phase to avoid future problems. Don't skimp on fixture and fitting quality. Always plan an electrical outlet near the mirror and adequate ventilation.|||## Timeline|||A complete bathroom requires an average of 15-20 working days. This includes: 2-3 days of demolition, 3-4 days for systems, 2 days of waterproofing, 4-5 days of tile laying, and 3-4 days for fixture installation and finishing.|||## Our Approach|||At Edilquadro we create turnkey bathrooms: from the initial site visit to material selection, from 3D design to completion. We also accompany you in choosing materials from our partner suppliers. Request a free quote for your bathroom."
+  },
+  "blog_art3": {
+    "title": "Renovation Bonus 2025: How It Works and How to Apply",
+    "meta_title": "Renovation Tax Bonus 2025 Italy - How It Works | Edilquadro Rome",
+    "excerpt": "Practical guide to the 2025 Renovation Bonus in Italy: requirements, amounts, necessary documents, and how Edilquadro helps you get the tax deduction.",
+    "content": "The Renovation Bonus is the most widely used tax incentive for construction work in Italy. Here's how it works in 2025 and how you can benefit for your renovation in Rome.|||## What Is the 2025 Renovation Bonus|||The Renovation Bonus provides a 50% IRPEF deduction on expenses for extraordinary maintenance, restoration, and renovation work. The deduction is spread over 10 equal annual installments, with a maximum spending cap of €96,000 per property unit.|||## Which Works Are Eligible|||The following are deductible: bathroom renovation, replacement of electrical and plumbing systems, floor renovation, partition demolition and reconstruction, window replacement, elevator installation, energy-saving measures, and much more. Ordinary maintenance on individual residential units is not eligible.|||## Required Documents|||To benefit from the bonus you need: ASL notification (if required), traceable payments via specific bank transfer with renovation reference, contractor invoices, and system compliance declarations. It is essential to keep all documentation for at least 15 years.|||## The Specific Bank Transfer|||Payment must be made via a specific renovation bank transfer. The transfer must contain: payment reason with legal reference, tax code of the deduction beneficiary, and tax code or VAT number of the contractor.|||## How Edilquadro Helps You|||Our team handles all bureaucratic procedures for you: from the CILA to the Rome Municipality, to preparing the specific bank transfers, to closing the works. We provide all necessary documentation for the tax deduction. With Edilquadro you don't have to worry about anything: we take care of everything."
+  },
+  "blog_art4": {
+    "title": "Apartment Renovation in Rome: Complete Step-by-Step Guide",
+    "meta_title": "Apartment Renovation Rome - Complete Guide 2025 | Edilquadro",
+    "excerpt": "From design to handover: complete guide to apartment renovation in Rome. Permits, timelines, costs and practical tips from Edilquadro.",
+    "content": "Renovating an apartment in Rome is an exciting but complex project. With over 500 completed renovations, Edilquadro guides you step by step through every phase of the process.|||## Phase 1: Design and Site Survey|||Everything starts with a free site survey at your apartment. Our technicians assess the property's condition, listen to your needs, and propose customized solutions. In this phase we define the layout, space distribution, materials, and preliminary budget.|||## Phase 2: Permits and Paperwork in Rome|||For a complete renovation in Rome you need a CILA (Certified Start of Works Communication), to be submitted to the relevant Municipality. Our technical office prepares all necessary documentation, including the qualified designer's technical report. Preparation takes approximately 7-10 days.|||## Phase 3: Demolition and Preparation|||Demolition includes removing existing floors, partitions to be modified, old systems, and wall coverings. This is an important phase that requires care to avoid damaging load-bearing structures. Average duration: 3-5 working days for an 80-100 sqm apartment.|||## Phase 4: Electrical and Plumbing Systems|||Complete system renovation is essential for safety and comfort. CEI-compliant electrical system with differential switch, LED light points, integrated USB outlets. Plumbing with multi-layer pipes, manifolds, and thermostatic mixers. Duration: 5-7 days.|||## Phase 5: Screeds and Flooring|||After systems installation, leveling screeds are laid and flooring is installed. Porcelain stoneware, parquet, resin: each material has different installation times. For a standard apartment, this phase requires 7-10 working days including drying times.|||## Phase 6: Bathrooms and Finishes|||Installation of sanitary ware, bathroom tiling, interior doors, skirting boards, and various finishes. This is the phase where the apartment takes its final shape. We schedule 5-7 days for this phase.|||## Total Timeline|||A complete apartment renovation in Rome takes an average of 45-60 working days. Edilquadro respects the timelines agreed in the contract, with penalties at our expense in case of delays. Contact us for a detailed quote and customized timeline."
+  },
+  "blog_art5": {
+    "title": "External Wall Insulation for Condominiums in Rome: Costs, Benefits and Tax Bonuses",
+    "meta_title": "External Wall Insulation Condominium Rome - Costs & Benefits 2025 | Edilquadro",
+    "excerpt": "Everything about thermal insulation for condominiums in Rome: costs, benefits, how to access the 65% Ecobonus, and why choose Edilquadro.",
+    "content": "External wall insulation (cappotto termico) is one of the most effective measures to improve the energy efficiency of a condominium in Rome. It reduces consumption, increases living comfort, and adds property value. Here's everything you need to know.|||## What Is External Wall Insulation|||External wall insulation consists of applying insulating panels to the building's exterior walls, protected by reinforced plaster and an aesthetic finish. In Rome, where summer temperatures often exceed 35°C, thermal insulation reduces both summer heat and winter cold.|||## Benefits of External Insulation|||The benefits are numerous: 30-50% reduction in energy consumption, elimination of thermal bridges and condensation, acoustic comfort improvement, property value increase of 10-15%, energy class improvement by 2-3 levels, and CO2 emission reduction.|||## Costs of External Insulation in Rome|||For a condominium in Rome, external insulation costs range between €60 and €120 per square meter, depending on the insulating material chosen and building complexity. For an average condominium with 1,000 sqm of external surface, the investment ranges between €60,000 and €120,000 including VAT.|||## Insulating Materials Compared|||EPS (expanded polystyrene): economical, good insulation, €60-80/sqm installed. Rock wool: excellent thermal and acoustic insulation, fire resistant, €80-100/sqm. Wood fiber: natural, eco-friendly, excellent summer thermal lag, €90-120/sqm. For Rome we recommend materials with good thermal lag to combat summer heat.|||## 65% Ecobonus for External Insulation|||External insulation qualifies for the Ecobonus with a 65% deduction over 10 years. For a €100,000 project, the tax savings amount to €65,000. Requirements include: pre-intervention energy diagnosis, pre and post-work energy performance certificates, and ENEA notification within 90 days of completion.|||## The Condominium Process|||The condominium assembly must approve the intervention with a majority of attendees representing at least one-third of the building's value. Edilquadro supports the building administrator in preparing technical documentation and presenting the project to the assembly.|||## Why Choose Edilquadro|||We specialize in condominium projects in Rome with compliant scaffolding, qualified and certified personnel, and complete management of all ENEA and tax procedures. Contact us for a free site survey and detailed quote for your condominium."
   }
 }

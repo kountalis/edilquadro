@@ -10,6 +10,7 @@ import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
 import { generateLocalBusinessSchema, getWebpSource } from "../utils/seo";
 import AnimatedCounter from '../components/AnimatedCounter';
+import { BLOG_ARTICLES } from '../data/blogArticles';
 
 const ProjectGallery = ({ projects }) => {
   const { openModal } = useProject();
@@ -54,7 +55,7 @@ const ProjectGallery = ({ projects }) => {
                     className="inline-flex items-center text-emerald-400 text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300"
                   >
                     {project.images ? t('home.featured_projects.see_all_photos', { count: project.images.length }) : t('home.featured_projects.see_details')}
-                    <img src="/arrow.svg" alt="" className="ml-2 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'invert(1) sepia(1) hue-rotate(90deg) saturate(3)' }} />
+                    <img src="/arrow.svg" alt="Freccia" className="ml-2 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'invert(1) sepia(1) hue-rotate(90deg) saturate(3)' }} />
                   </span>
                 </div>
               </div>
@@ -76,19 +77,19 @@ const Home = () => {
       icon: <img src="/home.svg" alt="Icona ristrutturazione casa" className="w-14 h-14" />,
       title: t('home.services.card1_title'),
       description: t('home.services.card1_desc'),
-      link: "/servizi/casa"
+      link: "/servizi/casa/"
     },
     {
       icon: <img src="/shop.svg" alt="Icona ristrutturazione commerciale" className="w-14 h-14" />,
       title: t('home.services.card2_title'),
       description: t('home.services.card2_desc'),
-      link: "/servizi/commerciale"
+      link: "/servizi/commerciale/"
     },
     {
       icon: <img src="/building.svg" alt="Icona ristrutturazione edifici" className="w-14 h-14" />,
       title: t('home.services.card3_title'),
       description: t('home.services.card3_desc'),
-      link: "/servizi/edifici"
+      link: "/servizi/edifici/"
     }
   ];
 
@@ -98,11 +99,11 @@ const Home = () => {
       title: t('home.featured_projects.project1_title'),
       category: "casa",
       images: [
-        "/projects/casaleucade1.webp",
-        "/projects/casaleucade2.webp",
-        "/projects/casaleucade3.webp",
-        "/projects/casaleucade4.webp",
-        "/projects/casaleucade5.webp"
+        "/projects/casa-moderna-bracciano-01.webp",
+        "/projects/casa-moderna-bracciano-02.webp",
+        "/projects/casa-moderna-bracciano-03.webp",
+        "/projects/casa-moderna-bracciano-04.webp",
+        "/projects/casa-moderna-bracciano-05.webp"
       ]
     },
     {
@@ -110,11 +111,11 @@ const Home = () => {
       title: t('home.featured_projects.project2_title'),
       category: "commerciale",
       images: [
-        "/projects/Ristorante 1.webp",
-        "/projects/Ristorante 2.webp",
-        "/projects/Ristorante 3.webp",
-        "/projects/Ristorante 4.webp",
-        "/projects/Ristorante 5.webp"
+        "/projects/ristorante-san-giovanni-roma-01.webp",
+        "/projects/ristorante-san-giovanni-roma-02.webp",
+        "/projects/ristorante-san-giovanni-roma-03.webp",
+        "/projects/ristorante-san-giovanni-roma-04.webp",
+        "/projects/ristorante-san-giovanni-roma-05.webp"
       ]
     },
     {
@@ -122,15 +123,15 @@ const Home = () => {
       title: t('home.featured_projects.project3_title'),
       category: "commerciale",
       images: [
-        "/projects/ABBIGLIAMENTO 1.webp",
-        "/projects/ABBIGLIAMENTO 2.webp",
-        "/projects/ABBIGLIAMENTO 3.webp",
-        "/projects/ABBIGLIAMENTO 4.webp",
-        "/projects/ABBIGLIAMENTO 5.webp",
-        "/projects/ABBIGLIAMENTO 6.webp",
-        "/projects/ABBIGLIAMENTO 7.webp",
-        "/projects/ABBIGLIAMENTO 8.webp",
-        "/projects/ABBIGLIAMENTO 9.webp"
+        "/projects/negozio-abbigliamento-tuscolana-01.webp",
+        "/projects/negozio-abbigliamento-tuscolana-02.webp",
+        "/projects/negozio-abbigliamento-tuscolana-03.webp",
+        "/projects/negozio-abbigliamento-tuscolana-04.webp",
+        "/projects/negozio-abbigliamento-tuscolana-05.webp",
+        "/projects/negozio-abbigliamento-tuscolana-06.webp",
+        "/projects/negozio-abbigliamento-tuscolana-07.webp",
+        "/projects/negozio-abbigliamento-tuscolana-08.webp",
+        "/projects/negozio-abbigliamento-tuscolana-09.webp"
       ]
     },
     {
@@ -138,11 +139,11 @@ const Home = () => {
       title: t('home.featured_projects.project4_title'),
       category: "edifici",
       images: [
-        "/projects/pomezia1.webp",
-        "/projects/pomezia2.webp",
-        "/projects/pomezia3.webp",
-        "/projects/pomezia4.webp",
-        "/projects/pomezia5.webp"
+        "/projects/complesso-residenziale-pomezia-01.webp",
+        "/projects/complesso-residenziale-pomezia-02.webp",
+        "/projects/complesso-residenziale-pomezia-03.webp",
+        "/projects/complesso-residenziale-pomezia-04.webp",
+        "/projects/complesso-residenziale-pomezia-05.webp"
       ]
     }
   ];
@@ -181,6 +182,9 @@ const Home = () => {
           <meta name="twitter:image" content="https://edilquadro.it/logo192.png" />
           <meta name="twitter:site" content="@edilquadro" />
           <html lang={i18n.language} />
+          <link rel="alternate" hrefLang="it" href="https://edilquadro.it/" />
+          <link rel="alternate" hrefLang="en" href="https://edilquadro.it/en/" />
+          <link rel="alternate" hrefLang="x-default" href="https://edilquadro.it/" />
           <script type="application/ld+json">{JSON.stringify(generateLocalBusinessSchema())}</script>
         </Helmet>
         <main className="bg-grayBg relative">
@@ -229,13 +233,13 @@ const Home = () => {
                       components={{
                         0: <strong />,
                         1: <br />,
-                        2: <Link to="/servizi/casa" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title="Ristrutturazione casa Roma" />,
-                        4: <Link to="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title="Ristrutturazione negozi Roma" />,
-                        6: <Link to="/servizi/edifici" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title="Ristrutturazione edifici e condomini Roma" />,
-                        8: <Link to="/portfolio" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
-                        10: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                        2: <Link to="/servizi/casa/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title="Ristrutturazione casa Roma" />,
+                        4: <Link to="/servizi/commerciale/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title="Ristrutturazione negozi Roma" />,
+                        6: <Link to="/servizi/edifici/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title="Ristrutturazione edifici e condomini Roma" />,
+                        8: <Link to="/portfolio/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                        10: <Link to="/contatti/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
                         12: <strong />,
-                        14: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                        14: <Link to="/contatti/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
                       }}
                     />
                   </p>
@@ -318,7 +322,7 @@ const Home = () => {
                         <div
                           className="ml-2 w-12 h-12"
                         >
-                          <img src="/arrow.svg" alt="" className="w-full h-full transform group-hover/link:translate-x-1 transition-transform duration-300" />
+                          <img src="/arrow.svg" alt="Freccia" className="w-full h-full transform group-hover/link:translate-x-1 transition-transform duration-300" />
                         </div>
                       </Link>
                     </div>
@@ -329,15 +333,15 @@ const Home = () => {
                 <p className="text-xl text-white">
                   <Trans i18nKey="home.services.description" components={{ 
                       0: <strong />,
-                      1: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
-                      2: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
-                      3: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
-                      4: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
-                      5: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
-                      6: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
-                      7: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
-                      8: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
-                      9: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      1: <Link to="/servizi/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      2: <Link to="/servizi/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      3: <Link to="/contatti/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      4: <Link to="/contatti/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      5: <Link to="/contatti/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      6: <Link to="/servizi/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      7: <Link to="/servizi/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      8: <Link to="/servizi/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      9: <Link to="/servizi/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
                   }} />
                 </p>
               </div>
@@ -348,7 +352,7 @@ const Home = () => {
             <div className="container mx-auto px-4">
               <ProjectGallery projects={featuredProjects} />
               <div className="text-center mt-8 text-gray-200 text-lg">
-                <Trans i18nKey="home.featured_projects.explore_portfolio" components={{ 0: <strong />, 2: <Link to="/portfolio" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" /> }} />
+                <Trans i18nKey="home.featured_projects.explore_portfolio" components={{ 0: <strong />, 2: <Link to="/portfolio/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" /> }} />
               </div>
             </div>
           </section>
@@ -360,14 +364,14 @@ const Home = () => {
                   {t('home.shops_renovation.title')}
                 </h2>
                 <p className="text-xl text-gray-200 mb-6">
-                  <Trans i18nKey="home.shops_renovation.description" components={{ 0: <strong />, 1: <Link to="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" /> }} />
+                  <Trans i18nKey="home.shops_renovation.description" components={{ 0: <strong />, 1: <Link to="/servizi/commerciale/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" /> }} />
                 </p>
                 <Link
-                  to="/servizi/commerciale"
+                  to="/servizi/commerciale/"
                   className="inline-flex items-center px-8 py-4 rounded-full bg-emerald-800 text-white text-lg font-semibold shadow-lg hover:bg-green-700 transition-colors duration-300 group"
                 >
                   {t('home.shops_renovation.discover_more')}
-                  <img src="/arrow.svg" alt="" className="ml-3 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'brightness(0) saturate(100%) invert(1)', strokeWidth: '2px' }} />
+                  <img src="/arrow.svg" alt="Freccia" className="ml-3 w-8 h-8 group-hover:translate-x-1 transition-transform duration-300" style={{ filter: 'brightness(0) saturate(100%) invert(1)', strokeWidth: '2px' }} />
                 </Link>
               </div>
             </div>
@@ -481,6 +485,64 @@ const Home = () => {
               </div>
             </div>
           </section>
+
+          {/* Blog Preview Section */}
+          <section className="py-16 bg-dark" aria-label="Blog">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  {i18n.language === 'en' ? '📰 From Our Blog' : '📰 Dal Nostro Blog'}
+                </h2>
+                <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+                  {i18n.language === 'en'
+                    ? 'Guides, tips and news about renovations in Rome'
+                    : 'Guide, consigli e novità sulle ristrutturazioni a Roma'}
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                {BLOG_ARTICLES.map(article => (
+                  <Link
+                    key={article.slug}
+                    to={i18n.language === 'en' ? `/en/blog/${article.slug}/` : `/blog/${article.slug}/`}
+                    className="group bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl overflow-hidden border border-gray-800 hover:border-green-500/30 transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <div className="aspect-[16/10] overflow-hidden">
+                      <LazyImage
+                        src={article.image}
+                        alt={t(`${article.translationKey}.title`)}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        width="400"
+                        height="250"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <span className="text-xs font-semibold text-green-400 uppercase tracking-wider">
+                        {article.category === 'guida' ? (i18n.language === 'en' ? 'Guide' : 'Guida') : (i18n.language === 'en' ? 'Regulations' : 'Normativa')}
+                      </span>
+                      <h3 className="text-lg font-bold text-white mt-2 mb-2 group-hover:text-green-400 transition-colors line-clamp-2">
+                        {t(`${article.translationKey}.title`)}
+                      </h3>
+                      <p className="text-gray-400 text-sm line-clamp-2">
+                        {t(`${article.translationKey}.excerpt`)}
+                      </p>
+                      <span className="text-green-400 text-sm font-medium mt-3 inline-flex items-center gap-1">
+                        {i18n.language === 'en' ? 'Read more' : 'Leggi di più'} →
+                      </span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+              <div className="text-center mt-8">
+                <Link
+                  to={i18n.language === 'en' ? '/en/blog/' : '/blog/'}
+                  className="inline-flex items-center px-6 py-3 rounded-full border border-green-500/30 text-green-400 hover:bg-green-500/10 transition-colors text-sm font-semibold"
+                >
+                  {i18n.language === 'en' ? 'View All Articles' : 'Vedi Tutti gli Articoli'} →
+                </Link>
+              </div>
+            </div>
+          </section>
   
           <section className="py-24 bg-gradient-to-b from-black to-dark relative overflow-hidden" role="region" aria-label="Contatti e call to action">
             <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ minHeight: '500px', minWidth: '500px' }}>
@@ -500,9 +562,9 @@ const Home = () => {
                 <p
                   className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
                 >
-                  <Trans i18nKey="home.cta.description" components={{ 0: <strong />, 1: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
-                      2: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
-                      3: <Link to="/servizi" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                  <Trans i18nKey="home.cta.description" components={{ 0: <strong />, 1: <Link to="/contatti/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      2: <Link to="/contatti/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
+                      3: <Link to="/servizi/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" />,
                       4: <strong /> 
                   }} />
                 </p>
@@ -580,11 +642,11 @@ const Home = () => {
             </div>
             <div className="container mx-auto px-4 relative z-10">
               <div className="flex flex-wrap justify-center gap-4 text-lg text-center">
-                <Link to="/portfolio" aria-label="Guarda il nostro portfolio di ristrutturazioni a Roma" className="text-green-300 font-bold underline underline-offset-4 decoration-green-400 hover:text-white hover:decoration-white transition-colors duration-200 shadow-lg px-4 py-2 rounded-lg bg-black/30 hover:bg-green-500/10" title="Portfolio lavori Edilquadro Roma">{t('home.footer_nav.portfolio')}</Link>
-                <Link to="/servizi/casa" aria-label="Ristrutturazione casa Roma" className="text-green-300 font-bold underline underline-offset-4 decoration-green-400 hover:text-white hover:decoration-white transition-colors duration-200 shadow-lg px-4 py-2 rounded-lg bg-black/30 hover:bg-green-500/10" title="Ristrutturazione casa Roma">{t('home.footer_nav.home_renovation')}</Link>
-                <Link to="/servizi/commerciale" aria-label="Ristrutturazione negozi Roma" className="text-green-300 font-bold underline underline-offset-4 decoration-green-400 hover:text-white hover:decoration-white transition-colors duration-200 shadow-lg px-4 py-2 rounded-lg bg-black/30 hover:bg-green-500/10" title="Ristrutturazione negozi Roma">{t('home.footer_nav.shops_renovation')}</Link>
-                <Link to="/servizi/edifici" aria-label="Ristrutturazione edifici e condomini Roma" className="text-green-300 font-bold underline underline-offset-4 decoration-green-400 hover:text-white hover:decoration-white transition-colors duration-200 shadow-lg px-4 py-2 rounded-lg bg-black/30 hover:bg-green-500/10" title="Ristrutturazione edifici e condomini Roma">{t('home.footer_nav.buildings_renovation')}</Link>
-                <Link to="/contatti" aria-label="Contatta Edilquadro" className="text-green-300 font-bold underline underline-offset-4 decoration-green-400 hover:text-white hover:decoration-white transition-colors duration-200 shadow-lg px-4 py-2 rounded-lg bg-black/30 hover:bg-green-500/10" title="Contatta impresa edile Roma">{t('home.footer_nav.contact')}</Link>
+                <Link to="/portfolio/" aria-label="Guarda il nostro portfolio di ristrutturazioni a Roma" className="text-green-300 font-bold underline underline-offset-4 decoration-green-400 hover:text-white hover:decoration-white transition-colors duration-200 shadow-lg px-4 py-2 rounded-lg bg-black/30 hover:bg-green-500/10" title="Portfolio lavori Edilquadro Roma">{t('home.footer_nav.portfolio')}</Link>
+                <Link to="/servizi/casa/" aria-label="Ristrutturazione casa Roma" className="text-green-300 font-bold underline underline-offset-4 decoration-green-400 hover:text-white hover:decoration-white transition-colors duration-200 shadow-lg px-4 py-2 rounded-lg bg-black/30 hover:bg-green-500/10" title="Ristrutturazione casa Roma">{t('home.footer_nav.home_renovation')}</Link>
+                <Link to="/servizi/commerciale/" aria-label="Ristrutturazione negozi Roma" className="text-green-300 font-bold underline underline-offset-4 decoration-green-400 hover:text-white hover:decoration-white transition-colors duration-200 shadow-lg px-4 py-2 rounded-lg bg-black/30 hover:bg-green-500/10" title="Ristrutturazione negozi Roma">{t('home.footer_nav.shops_renovation')}</Link>
+                <Link to="/servizi/edifici/" aria-label="Ristrutturazione edifici e condomini Roma" className="text-green-300 font-bold underline underline-offset-4 decoration-green-400 hover:text-white hover:decoration-white transition-colors duration-200 shadow-lg px-4 py-2 rounded-lg bg-black/30 hover:bg-green-500/10" title="Ristrutturazione edifici e condomini Roma">{t('home.footer_nav.buildings_renovation')}</Link>
+                <Link to="/contatti/" aria-label="Contatta Edilquadro" className="text-green-300 font-bold underline underline-offset-4 decoration-green-400 hover:text-white hover:decoration-white transition-colors duration-200 shadow-lg px-4 py-2 rounded-lg bg-black/30 hover:bg-green-500/10" title="Contatta impresa edile Roma">{t('home.footer_nav.contact')}</Link>
               </div>
             </div>
           </nav>

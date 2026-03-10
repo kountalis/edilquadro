@@ -12,8 +12,8 @@ const CommercialServices = () => {
   ];
 
   const images = [
-    { src: '/projects/Negozio Design.webp', captionKey: 'img1_caption' },
-    { src: '/projects/Showroom1.webp', captionKey: 'img2_caption' },
+    { src: '/projects/negozio-design-arredamento-roma.webp', captionKey: 'img1_caption' },
+    { src: '/projects/showroom-design-roma-01.webp', captionKey: 'img2_caption' },
     { src: '/projects/ufficio-moderno.webp', captionKey: 'img3_caption' },
     { src: '/projects/spazio-commerciale.webp', captionKey: 'img4_caption' },
   ];
@@ -31,6 +31,7 @@ const CommercialServices = () => {
       images={images}
       crossLinks={crossLinks}
       breadcrumbCurrentKey="breadcrumb_commercial_services"
+      relatedBlogSlugs={['quanto-costa-ristrutturare-casa-roma']}
       gaLabel="CommercialServices"
       useTrans
     />

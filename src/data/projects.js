@@ -11,11 +11,11 @@ export const PROJECT_DATA = [
     translationKey: 'proj1',
     category: 'casa',
     images: [
-      '/projects/casaleucade1.webp',
-      '/projects/casaleucade2.webp',
-      '/projects/casaleucade3.webp',
-      '/projects/casaleucade4.webp',
-      '/projects/casaleucade5.webp'
+      '/projects/casa-moderna-bracciano-01.webp',
+      '/projects/casa-moderna-bracciano-02.webp',
+      '/projects/casa-moderna-bracciano-03.webp',
+      '/projects/casa-moderna-bracciano-04.webp',
+      '/projects/casa-moderna-bracciano-05.webp'
     ]
   },
   {
@@ -24,13 +24,13 @@ export const PROJECT_DATA = [
     translationKey: 'proj2',
     category: 'edifici',
     images: [
-      '/projects/piazzacina1.webp',
-      '/projects/piazzacina2.webp',
-      '/projects/piazzacina3.webp',
-      '/projects/piazzacina4.webp',
-      '/projects/piazzacina5.webp',
-      '/projects/piazzacina6.webp',
-      '/projects/piazzacina7.webp'
+      '/projects/ristrutturazione-condominio-genzano-01.webp',
+      '/projects/ristrutturazione-condominio-genzano-02.webp',
+      '/projects/ristrutturazione-condominio-genzano-03.webp',
+      '/projects/ristrutturazione-condominio-genzano-04.webp',
+      '/projects/ristrutturazione-condominio-genzano-05.webp',
+      '/projects/ristrutturazione-condominio-genzano-06.webp',
+      '/projects/ristrutturazione-condominio-genzano-07.webp'
     ]
   },
   {
@@ -39,16 +39,16 @@ export const PROJECT_DATA = [
     translationKey: 'proj3',
     category: 'commerciale',
     images: [
-      '/projects/Yoga Hatha 1.webp',
-      '/projects/Yoga Hatha 2.webp',
-      '/projects/Yoga Hatha 3.webp',
-      '/projects/Yoga Hatha 4.webp',
-      '/projects/Yoga Hatha 5.webp',
-      '/projects/Yoga Hatha 6.webp',
-      '/projects/Yoga Hatha 7.webp',
-      '/projects/Yoga Hatha 8.webp',
-      '/projects/Yoga Hatha 9.webp',
-      '/projects/Yoga Hatha 10.webp'
+      '/projects/centro-yoga-tuscolana-roma-01.webp',
+      '/projects/centro-yoga-tuscolana-roma-02.webp',
+      '/projects/centro-yoga-tuscolana-roma-03.webp',
+      '/projects/centro-yoga-tuscolana-roma-04.webp',
+      '/projects/centro-yoga-tuscolana-roma-05.webp',
+      '/projects/centro-yoga-tuscolana-roma-06.webp',
+      '/projects/centro-yoga-tuscolana-roma-07.webp',
+      '/projects/centro-yoga-tuscolana-roma-08.webp',
+      '/projects/centro-yoga-tuscolana-roma-09.webp',
+      '/projects/centro-yoga-tuscolana-roma-10.webp'
     ]
   },
   {
@@ -57,22 +57,22 @@ export const PROJECT_DATA = [
     translationKey: 'proj4',
     category: 'casa',
     images: [
-      '/projects/alessandrino1.webp',
-      '/projects/alessandrino2.webp',
-      '/projects/alessandrino3.webp',
-      '/projects/alessandrino4.webp',
-      '/projects/alessandrino5.webp',
-      '/projects/alessandrino6.webp',
-      '/projects/alessandrino7.webp',
-      '/projects/alessandrino8.webp',
-      '/projects/alessandrino9.webp',
-      '/projects/Alessandrino10.webp',
-      '/projects/Alessandrino11.webp',
-      '/projects/Alessandrino12.webp',
-      '/projects/Alessandrino13.webp',
-      '/projects/Alessandrino14.webp',
-      '/projects/Alessandrino15.webp',
-      '/projects/Alessandrino16.webp'
+      '/projects/attico-alessandrino-roma-01.webp',
+      '/projects/attico-alessandrino-roma-02.webp',
+      '/projects/attico-alessandrino-roma-03.webp',
+      '/projects/attico-alessandrino-roma-04.webp',
+      '/projects/attico-alessandrino-roma-05.webp',
+      '/projects/attico-alessandrino-roma-06.webp',
+      '/projects/attico-alessandrino-roma-07.webp',
+      '/projects/attico-alessandrino-roma-08.webp',
+      '/projects/attico-alessandrino-roma-09.webp',
+      '/projects/attico-alessandrino-roma-10.webp',
+      '/projects/attico-alessandrino-roma-11.webp',
+      '/projects/attico-alessandrino-roma-12.webp',
+      '/projects/attico-alessandrino-roma-13.webp',
+      '/projects/attico-alessandrino-roma-14.webp',
+      '/projects/attico-alessandrino-roma-15.webp',
+      '/projects/attico-alessandrino-roma-16.webp'
     ]
   },
   {
@@ -81,15 +81,15 @@ export const PROJECT_DATA = [
     translationKey: 'proj5',
     category: 'commerciale',
     images: [
-      '/projects/ABBIGLIAMENTO 1.webp',
-      '/projects/ABBIGLIAMENTO 2.webp',
-      '/projects/ABBIGLIAMENTO 3.webp',
-      '/projects/ABBIGLIAMENTO 4.webp',
-      '/projects/ABBIGLIAMENTO 5.webp',
-      '/projects/ABBIGLIAMENTO 6.webp',
-      '/projects/ABBIGLIAMENTO 7.webp',
-      '/projects/ABBIGLIAMENTO 8.webp',
-      '/projects/ABBIGLIAMENTO 9.webp'
+      '/projects/negozio-abbigliamento-tuscolana-01.webp',
+      '/projects/negozio-abbigliamento-tuscolana-02.webp',
+      '/projects/negozio-abbigliamento-tuscolana-03.webp',
+      '/projects/negozio-abbigliamento-tuscolana-04.webp',
+      '/projects/negozio-abbigliamento-tuscolana-05.webp',
+      '/projects/negozio-abbigliamento-tuscolana-06.webp',
+      '/projects/negozio-abbigliamento-tuscolana-07.webp',
+      '/projects/negozio-abbigliamento-tuscolana-08.webp',
+      '/projects/negozio-abbigliamento-tuscolana-09.webp'
     ]
   },
   {
@@ -98,18 +98,18 @@ export const PROJECT_DATA = [
     translationKey: 'proj6',
     category: 'casa',
     images: [
-      '/projects/project1.webp',
-      '/projects/project2.webp',
-      '/projects/project3.webp',
-      '/projects/project4.webp',
-      '/projects/project5.webp',
-      '/projects/project6.webp',
-      '/projects/project7.webp',
-      '/projects/project8.webp',
-      '/projects/project9.webp',
-      '/projects/project10.webp',
-      '/projects/project11.webp',
-      '/projects/project12.webp'
+      '/projects/villa-sul-mare-grecia-01.webp',
+      '/projects/villa-sul-mare-grecia-02.webp',
+      '/projects/villa-sul-mare-grecia-03.webp',
+      '/projects/villa-sul-mare-grecia-04.webp',
+      '/projects/villa-sul-mare-grecia-05.webp',
+      '/projects/villa-sul-mare-grecia-06.webp',
+      '/projects/villa-sul-mare-grecia-07.webp',
+      '/projects/villa-sul-mare-grecia-08.webp',
+      '/projects/villa-sul-mare-grecia-09.webp',
+      '/projects/villa-sul-mare-grecia-10.webp',
+      '/projects/villa-sul-mare-grecia-11.webp',
+      '/projects/villa-sul-mare-grecia-12.webp'
     ]
   },
   {
@@ -118,15 +118,15 @@ export const PROJECT_DATA = [
     translationKey: 'proj7',
     category: 'edifici',
     images: [
-      '/projects/warp1.webp',
-      '/projects/warp2.webp',
-      '/projects/warp3.webp',
-      '/projects/warp4.webp',
-      '/projects/warp5.webp',
-      '/projects/warp6.webp',
-      '/projects/warp7.webp',
-      '/projects/warp8.webp',
-      '/projects/warp9.webp'
+      '/projects/asilo-nido-pomezia-01.webp',
+      '/projects/asilo-nido-pomezia-02.webp',
+      '/projects/asilo-nido-pomezia-03.webp',
+      '/projects/asilo-nido-pomezia-04.webp',
+      '/projects/asilo-nido-pomezia-05.webp',
+      '/projects/asilo-nido-pomezia-06.webp',
+      '/projects/asilo-nido-pomezia-07.webp',
+      '/projects/asilo-nido-pomezia-08.webp',
+      '/projects/asilo-nido-pomezia-09.webp'
     ]
   },
   {
@@ -135,11 +135,11 @@ export const PROJECT_DATA = [
     translationKey: 'proj8',
     category: 'commerciale',
     images: [
-      '/projects/Ristorante 1.webp',
-      '/projects/Ristorante 2.webp',
-      '/projects/Ristorante 3.webp',
-      '/projects/Ristorante 4.webp',
-      '/projects/Ristorante 5.webp'
+      '/projects/ristorante-san-giovanni-roma-01.webp',
+      '/projects/ristorante-san-giovanni-roma-02.webp',
+      '/projects/ristorante-san-giovanni-roma-03.webp',
+      '/projects/ristorante-san-giovanni-roma-04.webp',
+      '/projects/ristorante-san-giovanni-roma-05.webp'
     ]
   },
   {
@@ -148,28 +148,28 @@ export const PROJECT_DATA = [
     translationKey: 'proj9',
     category: 'casa',
     images: [
-      '/projects/Lunaduei Deluca 2.webp',
-      '/projects/Lunaduei Deluca 3.webp',
-      '/projects/Lunaduei Deluca 4.webp',
-      '/projects/Lunaduei Deluca 5.webp',
-      '/projects/Lunaduei Deluca 6.webp',
-      '/projects/Lunaduei Deluca 7.webp',
-      '/projects/Lunaduei Deluca 8.webp',
-      '/projects/Lunaduei Deluca 9.webp',
-      '/projects/Lunaduei Deluca 10.webp',
-      '/projects/Lunaduei Deluca 11.webp',
-      '/projects/Lunaduei Deluca 12.webp',
-      '/projects/Lunaduei Deluca 13.webp',
-      '/projects/Lunaduei Deluca 14.webp',
-      '/projects/Lunaduei Deluca 15.webp',
-      '/projects/Lunaduei Deluca 16.webp',
-      '/projects/Lunaduei Deluca 17.webp',
-      '/projects/Lunaduei Deluca 18.webp',
-      '/projects/Lunaduei Deluca 19.webp',
-      '/projects/Lunaduei Deluca 20.webp',
-      '/projects/Lunaduei Deluca 21.webp',
-      '/projects/Lunaduei Deluca 22.webp',
-      '/projects/Lunaduei Deluca 23.webp'
+      '/projects/casa-aurelio-roma-01.webp',
+      '/projects/casa-aurelio-roma-02.webp',
+      '/projects/casa-aurelio-roma-03.webp',
+      '/projects/casa-aurelio-roma-04.webp',
+      '/projects/casa-aurelio-roma-05.webp',
+      '/projects/casa-aurelio-roma-06.webp',
+      '/projects/casa-aurelio-roma-07.webp',
+      '/projects/casa-aurelio-roma-08.webp',
+      '/projects/casa-aurelio-roma-09.webp',
+      '/projects/casa-aurelio-roma-10.webp',
+      '/projects/casa-aurelio-roma-11.webp',
+      '/projects/casa-aurelio-roma-12.webp',
+      '/projects/casa-aurelio-roma-13.webp',
+      '/projects/casa-aurelio-roma-14.webp',
+      '/projects/casa-aurelio-roma-15.webp',
+      '/projects/casa-aurelio-roma-16.webp',
+      '/projects/casa-aurelio-roma-17.webp',
+      '/projects/casa-aurelio-roma-18.webp',
+      '/projects/casa-aurelio-roma-19.webp',
+      '/projects/casa-aurelio-roma-20.webp',
+      '/projects/casa-aurelio-roma-21.webp',
+      '/projects/casa-aurelio-roma-22.webp'
     ]
   },
   {
@@ -178,11 +178,11 @@ export const PROJECT_DATA = [
     translationKey: 'proj10',
     category: 'edifici',
     images: [
-      '/projects/pomezia1.webp',
-      '/projects/pomezia2.webp',
-      '/projects/pomezia3.webp',
-      '/projects/pomezia4.webp',
-      '/projects/pomezia5.webp'
+      '/projects/complesso-residenziale-pomezia-01.webp',
+      '/projects/complesso-residenziale-pomezia-02.webp',
+      '/projects/complesso-residenziale-pomezia-03.webp',
+      '/projects/complesso-residenziale-pomezia-04.webp',
+      '/projects/complesso-residenziale-pomezia-05.webp'
     ]
   },
   {
@@ -191,15 +191,15 @@ export const PROJECT_DATA = [
     translationKey: 'proj11',
     category: 'edifici',
     images: [
-      '/projects/padula1.webp',
-      '/projects/padula2.webp',
-      '/projects/padula3.webp',
-      '/projects/padula4.webp',
-      '/projects/padula5.webp',
-      '/projects/padula6.webp',
-      '/projects/padula9.webp',
-      '/projects/padula10.webp',
-      '/projects/padula11.webp'
+      '/projects/ortus-artis-padula-01.webp',
+      '/projects/ortus-artis-padula-02.webp',
+      '/projects/ortus-artis-padula-03.webp',
+      '/projects/ortus-artis-padula-04.webp',
+      '/projects/ortus-artis-padula-05.webp',
+      '/projects/ortus-artis-padula-06.webp',
+      '/projects/ortus-artis-padula-07.webp',
+      '/projects/ortus-artis-padula-08.webp',
+      '/projects/ortus-artis-padula-09.webp'
     ]
   },
   {
@@ -208,17 +208,17 @@ export const PROJECT_DATA = [
     translationKey: 'proj14',
     category: 'casa',
     images: [
-      '/projects/brescini-01.webp',
-      '/projects/brescini-02.webp',
-      '/projects/brescini-03.webp',
-      '/projects/brescini-04.webp',
-      '/projects/brescini-05.webp',
-      '/projects/brescini-06.webp',
-      '/projects/brescini-07.webp',
-      '/projects/brescini-08.webp',
-      '/projects/brescini-09.webp',
-      '/projects/brescini-10.webp',
-      '/projects/brescini-11.webp'
+      '/projects/appartamento-aurelio-roma-01.webp',
+      '/projects/appartamento-aurelio-roma-02.webp',
+      '/projects/appartamento-aurelio-roma-03.webp',
+      '/projects/appartamento-aurelio-roma-04.webp',
+      '/projects/appartamento-aurelio-roma-05.webp',
+      '/projects/appartamento-aurelio-roma-06.webp',
+      '/projects/appartamento-aurelio-roma-07.webp',
+      '/projects/appartamento-aurelio-roma-08.webp',
+      '/projects/appartamento-aurelio-roma-09.webp',
+      '/projects/appartamento-aurelio-roma-10.webp',
+      '/projects/appartamento-aurelio-roma-11.webp'
     ]
   },
   {
@@ -227,18 +227,18 @@ export const PROJECT_DATA = [
     translationKey: 'proj15',
     category: 'casa',
     images: [
-      '/projects/sikinos-01.webp',
-      '/projects/sikinos-02.webp',
-      '/projects/sikinos-03.webp',
-      '/projects/sikinos-04.webp',
-      '/projects/sikinos-05.webp',
-      '/projects/sikinos-06.webp',
-      '/projects/sikinos-07.webp',
-      '/projects/sikinos-08.webp',
-      '/projects/sikinos-09.webp',
-      '/projects/sikinos-10.webp',
-      '/projects/sikinos-11.webp',
-      '/projects/sikinos-12.webp'
+      '/projects/casa-cicladi-sikinos-grecia-01.webp',
+      '/projects/casa-cicladi-sikinos-grecia-02.webp',
+      '/projects/casa-cicladi-sikinos-grecia-03.webp',
+      '/projects/casa-cicladi-sikinos-grecia-04.webp',
+      '/projects/casa-cicladi-sikinos-grecia-05.webp',
+      '/projects/casa-cicladi-sikinos-grecia-06.webp',
+      '/projects/casa-cicladi-sikinos-grecia-07.webp',
+      '/projects/casa-cicladi-sikinos-grecia-08.webp',
+      '/projects/casa-cicladi-sikinos-grecia-09.webp',
+      '/projects/casa-cicladi-sikinos-grecia-10.webp',
+      '/projects/casa-cicladi-sikinos-grecia-11.webp',
+      '/projects/casa-cicladi-sikinos-grecia-12.webp'
     ]
   },
   {
@@ -248,7 +248,7 @@ export const PROJECT_DATA = [
     category: 'casa',
     inProgress: true,
     images: [
-      '/projects/In Progress 1.webp'
+      '/projects/casa-moderna-eur-roma-01.webp'
     ]
   },
   {
@@ -258,7 +258,7 @@ export const PROJECT_DATA = [
     category: 'commerciale',
     inProgress: true,
     images: [
-      '/projects/Bar In Progress 1.webp'
+      '/projects/bar-eur-roma-01.webp'
     ]
   }
 ];

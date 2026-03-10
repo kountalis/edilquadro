@@ -4,7 +4,8 @@
     "portfolio": "Portfolio",
     "services": "Servizi",
     "about": "Chi Siamo",
-    "contact": "Contatti"
+    "contact": "Contatti",
+    "blog": "Blog"
   },
   "free_quote": "Preventivo Gratuito",
   "home": {
@@ -83,6 +84,8 @@
     "portfolio": "Portfolio",
     "contact": "Contatti",
     "privacy_policy": "Privacy Policy",
+    "bonus_fiscali": "Bonus Fiscali",
+    "preventivo": "✨ Preventivo Gratuito",
     "contact_us": "Contatti",
     "call_button": "Chiama Ora",
     "zones_title": "Dove Operiamo"
@@ -294,7 +297,13 @@
     "condo_renovation_link": "Scopri le ristrutturazioni per edifici",
     "cta_title": "Pronto a Iniziare?",
     "cta_subtitle": "Contattaci per un preventivo gratuito e scopri come possiamo trasformare la tua casa.",
-    "cta_call": "Chiama Ora"
+    "cta_call": "Chiama Ora",
+    "faq1_question": "Quanto costa ristrutturare casa a Roma?",
+    "faq1_answer": "Il costo di una ristrutturazione casa a Roma varia da 400€ a 1.200€ al mq, a seconda del tipo di intervento. Per un bagno completo i costi partono da circa 5.000€, mentre per una ristrutturazione integrale di un appartamento di 80mq il budget medio è tra 40.000€ e 80.000€. Edilquadro offre preventivi gratuiti e personalizzati.",
+    "faq2_question": "Quanto tempo serve per ristrutturare un appartamento?",
+    "faq2_answer": "I tempi dipendono dall'entità dei lavori: una ristrutturazione bagno richiede circa 2-3 settimane, mentre la ristrutturazione completa di un appartamento richiede mediamente 2-4 mesi. Edilquadro garantisce il rispetto dei tempi concordati.",
+    "faq3_question": "Edilquadro si occupa anche delle pratiche edilizie?",
+    "faq3_answer": "Sì, Edilquadro offre un servizio chiavi in mano che include la gestione di tutte le pratiche edilizie: CILA, SCIA, permessi e comunicazioni con il Comune di Roma. Ci occupiamo anche della pratica per i bonus fiscali."
 
   },
   "commercial_services_page": {
@@ -354,7 +363,13 @@
     "condo_renovation_link": "Vai ai servizi per edifici",
     "cta_title": "Pronti a Iniziare?",
     "cta_subtitle": "Contattaci per un preventivo gratuito e scopri come possiamo trasformare il tuo spazio commerciale.",
-    "cta_call": "Chiama Ora"
+    "cta_call": "Chiama Ora",
+    "faq1_question": "Quanto costa ristrutturare un negozio a Roma?",
+    "faq1_answer": "Il costo di ristrutturazione di un negozio a Roma varia tra 500€ e 1.500€ al mq, in base alla tipologia di attività e alle finiture desiderate. Un restyling completo di un locale di 50mq parte da circa 25.000€. Contattaci per un preventivo personalizzato.",
+    "faq2_question": "Edilquadro ristruttura anche bar e ristoranti?",
+    "faq2_answer": "Sì, Edilquadro è specializzata nella ristrutturazione di bar, ristoranti, showroom e ogni tipo di spazio commerciale a Roma. Gestiamo il progetto dalla A alla Z, incluse le pratiche edilizie e le certificazioni necessarie.",
+    "faq3_question": "Posso continuare l'attività durante la ristrutturazione?",
+    "faq3_answer": "In molti casi è possibile organizzare i lavori in fasi per minimizzare l'interruzione dell'attività. Edilquadro pianifica ogni ristrutturazione commerciale per ridurre al minimo i disagi, lavorando anche in orari concordati."
   },
   "building_services_page": {
     "meta_title": "Ristrutturazione Edifici e Condomini Roma | Servizi Edilquadro",
@@ -413,7 +428,13 @@
     "commercial_services_link": "Vai ai servizi commerciali",
     "cta_title": "Pronto a Iniziare?",
     "cta_subtitle": "Contattaci per un preventivo gratuito e scopri come possiamo migliorare il tuo edificio.",
-    "cta_call": "Chiama Ora"
+    "cta_call": "Chiama Ora",
+    "faq1_question": "Quanto costa ristrutturare un condominio a Roma?",
+    "faq1_answer": "Il costo della ristrutturazione condominiale dipende dal tipo di intervento: il rifacimento facciate parte da 50-80€/mq, il cappotto termico da 80-120€/mq, il rifacimento tetto da 100-200€/mq. Edilquadro fornisce preventivi dettagliati e supporto per la delibera condominiale.",
+    "faq2_question": "Si possono usare i bonus fiscali per la ristrutturazione del condominio?",
+    "faq2_answer": "Sì, i condomini possono usufruire di diversi bonus fiscali: il bonus ristrutturazione 50%, l'ecobonus 65% per interventi di efficienza energetica, e il sismabonus per l'adeguamento antisismico. Edilquadro si occupa di tutta la documentazione necessaria.",
+    "faq3_question": "Edilquadro gestisce i rapporti con l'amministratore di condominio?",
+    "faq3_answer": "Sì, Edilquadro gestisce direttamente i rapporti con l'amministratore condominiale, prepara i preventivi per l'assemblea, tiene aggiornati tutti i condomini sull'avanzamento lavori e garantisce il rispetto delle normative vigenti."
   },
 
   "privacy_page": {
@@ -765,5 +786,96 @@
     "title": "Pagina non trovata",
     "subtitle": "La pagina che cerchi non esiste o è stata spostata.<br />Controlla l'indirizzo o torna alla home.",
     "go_home": "Torna alla Home"
+  },
+  "preventivo": {
+    "meta_title": "Preventivo Gratuito Ristrutturazione Roma - Edilquadro",
+    "meta_description": "Richiedi un preventivo gratuito per la tua ristrutturazione a Roma. Sopralluogo in giornata, preventivo dettagliato senza impegno. Edilquadro, impresa edile dal 1998.",
+    "breadcrumb": "Preventivo Gratuito",
+    "h1": "Preventivo Gratuito per la Tua Ristrutturazione",
+    "hero_subtitle": "Contattaci per un sopralluogo gratuito e un preventivo dettagliato senza impegno. Dal 1998, oltre 500 progetti completati con successo a Roma e provincia.",
+    "cta_phone": "Chiama Ora",
+    "cta_whatsapp": "Scrivici su WhatsApp",
+    "cta_email": "Richiedi via Email",
+    "trust_years": "Dal 1998 - 25+ anni",
+    "trust_free": "Preventivo gratuito",
+    "offer_description": "Sopralluogo e preventivo gratuito per ristrutturazioni a Roma",
+    "services_title": "Per Quali Lavori Puoi Richiedere un Preventivo",
+    "service1_title": "Ristrutturazione Casa",
+    "service1_desc": "Appartamenti, ville, attici: ristrutturazione completa o parziale con soluzioni chiavi in mano.",
+    "service2_title": "Ristrutturazione Negozi",
+    "service2_desc": "Negozi, ristoranti, uffici, showroom: design e ristrutturazione per esaltare il tuo business.",
+    "service3_title": "Lavori Condominiali",
+    "service3_desc": "Facciate, tetti, cappotto termico, scale, ascensori e parti comuni di edifici e condomini.",
+    "service4_title": "Impianti e Manutenzione",
+    "service4_desc": "Impianti elettrici, idraulici, climatizzazione. Manutenzione ordinaria e straordinaria.",
+    "how_title": "Come Funziona",
+    "step1_title": "Contattaci",
+    "step1_desc": "Chiamaci, scrivici su WhatsApp o compila il form. Descrivi brevemente il progetto.",
+    "step2_title": "Sopralluogo",
+    "step2_desc": "Un nostro tecnico effettua un sopralluogo gratuito per valutare i lavori necessari.",
+    "step3_title": "Preventivo",
+    "step3_desc": "Ricevi un preventivo dettagliato con tempi e costi trasparenti, senza sorprese.",
+    "step4_title": "Inizio Lavori",
+    "step4_desc": "Approvato il preventivo, pianifichiamo i lavori e ti accompagniamo fino alla consegna.",
+    "why_title": "Perché Scegliere Edilquadro",
+    "trust1": "Oltre 25 anni di esperienza nel settore edilizio",
+    "trust2": "500+ progetti completati a Roma e provincia",
+    "trust3": "Preventivo dettagliato e trasparente, senza sorprese",
+    "trust4": "Assistenza completa: pratiche comunali, bonus fiscali, direzione lavori",
+    "trust5": "Garanzia su tutti i lavori eseguiti",
+    "trust6": "Valutazione 4.8/5 su Google con oltre 30 recensioni",
+    "faq_title": "Domande Frequenti sul Preventivo",
+    "faq1_q": "Il preventivo è davvero gratuito?",
+    "faq1_a": "Sì, il sopralluogo e il preventivo sono completamente gratuiti e senza impegno. Dopo il sopralluogo riceverai un preventivo dettagliato con tempi e costi.",
+    "faq2_q": "Quanto tempo ci vuole per ricevere il preventivo?",
+    "faq2_a": "Generalmente effettuiamo il sopralluogo entro 24-48 ore dal contatto e il preventivo viene consegnato entro 3-5 giorni lavorativi, a seconda della complessità del progetto.",
+    "faq3_q": "Operate anche fuori Roma?",
+    "faq3_a": "Sì, operiamo in tutta Roma e provincia, incluse Pomezia, Genzano di Roma e zone limitrofe. Per progetti speciali lavoriamo anche in tutta Italia e in Grecia.",
+    "faq4_q": "Mi aiutate con le pratiche per i bonus fiscali?",
+    "faq4_a": "Assolutamente sì. Il nostro team ti segue in tutte le pratiche per accedere ai bonus fiscali disponibili: Bonus Ristrutturazione 50%, Ecobonus, Sismabonus e altri incentivi.",
+    "final_cta_title": "Pronto a Iniziare il Tuo Progetto?",
+    "final_cta_desc": "Contattaci oggi per un preventivo gratuito. Il primo passo verso la casa o il negozio dei tuoi sogni è una semplice chiamata."
+  },
+  "blog": {
+    "meta_title": "Blog Ristrutturazioni Roma - Guide e Consigli | Edilquadro",
+    "meta_description": "Guide, consigli e novità sulle ristrutturazioni a Roma. Quanto costa ristrutturare? Bonus fiscali, tendenze design, progetti realizzati. Blog Edilquadro.",
+    "h1": "Blog Edilquadro",
+    "subtitle": "Guide pratiche, consigli e novità dal mondo delle ristrutturazioni a Roma",
+    "cta_title": "Hai un progetto in mente?",
+    "cta_desc": "Contattaci per un preventivo gratuito e senza impegno",
+    "cta_button": "Richiedi Preventivo Gratuito",
+    "author_bio": "Impresa edile a Roma dal 1998. Specializzata in ristrutturazioni residenziali e commerciali con oltre 500 progetti completati.",
+    "post_cta_title": "Vuoi realizzare il tuo progetto?",
+    "post_cta_desc": "Contattaci per un sopralluogo gratuito e un preventivo dettagliato."
+  },
+  "blog_art1": {
+    "title": "Quanto Costa Ristrutturare Casa a Roma nel 2025",
+    "meta_title": "Quanto Costa Ristrutturare Casa a Roma nel 2025 - Guida Prezzi | Edilquadro",
+    "excerpt": "Guida completa ai costi di ristrutturazione casa a Roma: prezzi al mq, fattori che influenzano il costo, come risparmiare con i bonus fiscali.",
+    "content": "Ristrutturare casa a Roma è un investimento importante che richiede una pianificazione attenta. In questa guida analizziamo i costi reali, basati sulla nostra esperienza di oltre 25 anni nel settore.|||## Costi Medi di Ristrutturazione a Roma|||Per una ristrutturazione completa a Roma, i costi medi nel 2025 si attestano tra 600€ e 1.200€ al metro quadro. Questo range ampio dipende da diversi fattori: la zona di Roma, lo stato dell'immobile, la qualità dei materiali scelti e la complessità degli interventi.|||## Ristrutturazione Leggera (400-600€/mq)|||Comprende tinteggiatura, sostituzione pavimenti, rifacimento bagno base, aggiornamento impianto elettrico parziale. Ideale per appartamenti in buone condizioni che necessitano di un restyling estetico.|||## Ristrutturazione Completa (600-1.000€/mq)|||Include demolizioni interne, rifacimento completo impianti (elettrico, idraulico, riscaldamento), nuovi pavimenti, due bagni completi, infissi nuovi e tinteggiatura. È l'intervento più richiesto dai nostri clienti.|||## Ristrutturazione di Pregio (1.000-1.500€/mq)|||Materiali premium, design personalizzato, domotica, pavimenti in legno massello, sanitari di design, illuminazione a progetto. Consigliata per immobili di valore nel centro di Roma.|||## Come Risparmiare: Bonus Fiscali|||Il Bonus Ristrutturazione 50% permette di detrarre metà della spesa in 10 anni. Per un intervento da 50.000€, il risparmio effettivo è di 25.000€. L'Ecobonus 65% copre interventi di efficientamento energetico come cappotto termico e sostituzione caldaia.|||## Perché Scegliere Edilquadro|||Con oltre 500 progetti completati a Roma, offriamo preventivi trasparenti e dettagliati. Il nostro team ti segue dalla progettazione alla consegna delle chiavi, incluse tutte le pratiche burocratiche e fiscali. Contattaci per un sopralluogo gratuito."
+  },
+  "blog_art2": {
+    "title": "Ristrutturazione Bagno a Roma: Guida Completa 2025",
+    "meta_title": "Ristrutturazione Bagno Roma - Costi e Guida Completa 2025 | Edilquadro",
+    "excerpt": "Tutto quello che devi sapere per ristrutturare il bagno a Roma: costi, tempi, tendenze 2025, errori da evitare e come scegliere i materiali giusti.",
+    "content": "Il bagno è uno degli ambienti più importanti della casa e la sua ristrutturazione può trasformare completamente il comfort abitativo. Ecco la nostra guida completa basata su centinaia di bagni ristrutturati a Roma.|||## Quanto Costa Ristrutturare un Bagno a Roma|||I costi variano in base alla dimensione e al livello di finitura: un bagno standard (4-6 mq) costa tra 5.000€ e 12.000€, mentre un bagno di design può arrivare a 15.000-20.000€. Il prezzo include demolizioni, impermeabilizzazione, impianti, piastrelle, sanitari e rubinetteria.|||## Le Tendenze Bagno 2025|||Il 2025 vede protagonisti i grandi formati di piastrelle (120x60 cm), i colori neutri e terrosi, le docce walk-in a filo pavimento, i sanitari sospesi e l'illuminazione LED integrata. Il gres porcellanato effetto pietra naturale è il materiale più richiesto.|||## Errori da Evitare|||Non sottovalutare l'impermeabilizzazione: è la fase più importante per evitare problemi futuri. Non risparmiare sulla qualità dei sanitari e della rubinetteria. Prevedi sempre una presa elettrica vicino allo specchio e un'adeguata ventilazione.|||## Tempi di Realizzazione|||Un bagno completo richiede in media 15-20 giorni lavorativi. Questo include: 2-3 giorni di demolizione, 3-4 giorni per impianti, 2 giorni di impermeabilizzazione, 4-5 giorni di posa piastrelle e 3-4 giorni per montaggio sanitari e finiture.|||## Il Nostro Approccio|||In Edilquadro realizziamo bagni chiavi in mano: dal sopralluogo iniziale alla scelta dei materiali, dalla progettazione 3D alla realizzazione. Ti accompagniamo anche nella scelta dei materiali presso i nostri fornitori partner. Richiedi un preventivo gratuito per il tuo bagno."
+  },
+  "blog_art3": {
+    "title": "Bonus Ristrutturazione 2025: Come Funziona e Come Richiederlo",
+    "meta_title": "Bonus Ristrutturazione 2025 - Come Funziona | Guida Edilquadro Roma",
+    "excerpt": "Guida pratica al Bonus Ristrutturazione 2025: requisiti, importi, documenti necessari e come Edilquadro ti aiuta a ottenere la detrazione fiscale.",
+    "content": "Il Bonus Ristrutturazione è l'incentivo fiscale più utilizzato per i lavori edili in Italia. Ecco come funziona nel 2025 e come puoi beneficiarne per la tua ristrutturazione a Roma.|||## Cos'è il Bonus Ristrutturazione 2025|||Il Bonus Ristrutturazione prevede una detrazione IRPEF del 50% sulle spese sostenute per interventi di manutenzione straordinaria, restauro e ristrutturazione edilizia. La detrazione viene ripartita in 10 quote annuali di pari importo, con un tetto massimo di spesa di 96.000€ per unità immobiliare.|||## Quali Lavori Sono Ammessi|||Sono detraibili: rifacimento bagni, sostituzione impianti elettrici e idraulici, rifacimento pavimenti, demolizione e ricostruzione tramezzi, sostituzione infissi, installazione ascensori, interventi per il risparmio energetico e molto altro. Non sono ammessi i lavori di manutenzione ordinaria su singole unità abitative.|||## Documenti Necessari|||Per usufruire del bonus servono: comunicazione all'ASL (se prevista), pagamenti tracciabili tramite bonifico parlante con causale specifica, fatture delle imprese esecutrici e dichiarazione di conformità degli impianti. È fondamentale conservare tutta la documentazione per almeno 15 anni.|||## Il Bonifico Parlante|||Il pagamento deve avvenire tramite bonifico bancario o postale specifico per ristrutturazione edilizia. Il bonifico deve contenere: causale del versamento con riferimento alla norma, codice fiscale del beneficiario della detrazione e codice fiscale o P.IVA dell'impresa.|||## Come Edilquadro Ti Aiuta|||Il nostro team gestisce per te tutte le pratiche burocratiche: dalla CILA al Comune di Roma, alla predisposizione dei bonifici parlanti, fino alla chiusura dei lavori. Ti forniamo tutta la documentazione necessaria per la detrazione fiscale. Con Edilquadro non devi preoccuparti di nulla: pensiamo a tutto noi."
+  },
+  "blog_art4": {
+    "title": "Ristrutturazione Appartamento a Roma: Guida Completa Passo dopo Passo",
+    "meta_title": "Ristrutturazione Appartamento Roma - Guida Completa 2025 | Edilquadro",
+    "excerpt": "Dalla progettazione alla consegna: guida completa alla ristrutturazione di un appartamento a Roma. Permessi, tempistiche, costi e consigli pratici.",
+    "content": "Ristrutturare un appartamento a Roma è un progetto entusiasmante ma complesso. Con oltre 500 ristrutturazioni completate, Edilquadro ti guida passo dopo passo in ogni fase del processo.|||## Fase 1: Progettazione e Sopralluogo|||Tutto inizia con un sopralluogo gratuito presso il tuo appartamento. I nostri tecnici valutano lo stato dell'immobile, ascoltano le tue esigenze e propongono soluzioni personalizzate. In questa fase definiamo il layout, la distribuzione degli spazi, i materiali e il budget preliminare.|||## Fase 2: Pratiche e Permessi a Roma|||Per una ristrutturazione completa a Roma serve la CILA (Comunicazione Inizio Lavori Asseverata), da presentare al Municipio competente. Il nostro ufficio tecnico prepara tutta la documentazione necessaria, inclusa la relazione tecnica del progettista abilitato. I tempi di preparazione sono di circa 7-10 giorni.|||## Fase 3: Demolizioni e Preparazione|||Le demolizioni includono la rimozione di pavimenti esistenti, tramezzi da modificare, vecchi impianti e rivestimenti. È una fase importante che richiede attenzione per non danneggiare le strutture portanti. Durata media: 3-5 giorni lavorativi per un appartamento di 80-100 mq.|||## Fase 4: Impianti Elettrici e Idraulici|||Il rifacimento completo degli impianti è fondamentale per la sicurezza e il comfort. Impianto elettrico a norma CEI con interruttore differenziale, punti luce LED, prese USB integrate. Impianto idraulico con tubazioni in multistrato, collettori e miscelatori termostatici. Durata: 5-7 giorni.|||## Fase 5: Massetti e Pavimenti|||Dopo gli impianti si realizzano i massetti livellanti e si procede con la posa dei pavimenti. Gres porcellanato, parquet, resina: ogni materiale ha tempi di posa diversi. Per un appartamento standard, questa fase richiede 7-10 giorni lavorativi inclusi i tempi di asciugatura.|||## Fase 6: Bagni e Finiture|||Il montaggio dei sanitari, la posa delle piastrelle nei bagni, l'installazione di porte interne, battiscopa e finiture varie. È la fase in cui l'appartamento prende forma definitiva. Prevediamo 5-7 giorni per questa fase.|||## Tempistiche Totali|||Una ristrutturazione completa di un appartamento a Roma richiede mediamente 45-60 giorni lavorativi. Edilquadro rispetta le tempistiche concordate nel contratto, con penali a nostro carico in caso di ritardi. Contattaci per un preventivo dettagliato e un cronoprogramma personalizzato."
+  },
+  "blog_art5": {
+    "title": "Cappotto Termico Condominio a Roma: Costi, Vantaggi e Bonus",
+    "meta_title": "Cappotto Termico Condominio Roma - Costi e Vantaggi 2025 | Edilquadro",
+    "excerpt": "Tutto sul cappotto termico per condomini a Roma: quanto costa, quali vantaggi offre, come accedere all'Ecobonus 65% e perché scegliere Edilquadro.",
+    "content": "Il cappotto termico è uno degli interventi più efficaci per migliorare l'efficienza energetica di un condominio a Roma. Riduce i consumi, aumenta il comfort abitativo e valorizza l'immobile. Ecco tutto quello che devi sapere.|||## Cos'è il Cappotto Termico|||Il cappotto termico (o isolamento a cappotto) consiste nell'applicazione di pannelli isolanti sulle pareti esterne dell'edificio, protetti da un intonaco armato e da una finitura estetica. A Roma, dove le temperature estive superano spesso i 35°C, il cappotto termico riduce sia il caldo estivo che il freddo invernale.|||## Vantaggi del Cappotto Termico|||I benefici sono molteplici: riduzione dei consumi energetici del 30-50%, eliminazione dei ponti termici e della condensa, miglioramento del comfort acustico, valorizzazione dell'immobile fino al 10-15%, miglioramento della classe energetica di 2-3 livelli e riduzione delle emissioni di CO2.|||## Costi del Cappotto Termico a Roma|||Per un condominio a Roma, il costo del cappotto termico varia tra 60€ e 120€ al metro quadro, a seconda del materiale isolante scelto e della complessità dell'edificio. Per un condominio medio di 1.000 mq di superficie esterna, l'investimento si aggira tra 60.000€ e 120.000€ IVA inclusa.|||## Materiali Isolanti a Confronto|||EPS (polistirene espanso): economico, buon isolamento, 60-80€/mq installato. Lana di roccia: ottimo isolamento termico e acustico, resistente al fuoco, 80-100€/mq. Fibra di legno: naturale, ecologico, ottimo sfasamento termico estivo, 90-120€/mq. Per Roma consigliamo materiali con buono sfasamento termico per contrastare il caldo estivo.|||## Ecobonus 65% per il Cappotto Termico|||Il cappotto termico rientra nell'Ecobonus con detrazione del 65% in 10 anni. Per un intervento da 100.000€, il risparmio fiscale è di 65.000€. Servono: diagnosi energetica pre-intervento, APE pre e post lavori, e comunicazione ENEA entro 90 giorni dalla fine lavori.|||## Il Processo per il Condominio|||L'assemblea condominiale deve approvare l'intervento con la maggioranza degli intervenuti che rappresenti almeno un terzo del valore dell'edificio. Edilquadro supporta l'amministratore nella preparazione della documentazione tecnica e nella presentazione del progetto all'assemblea.|||## Perché Scegliere Edilquadro|||Siamo specializzati in interventi condominiali a Roma con ponteggi a norma, personale qualificato e certificato, e gestione completa di tutte le pratiche ENEA e fiscali. Contattaci per un sopralluogo gratuito e un preventivo dettagliato per il tuo condominio."
   }
 }

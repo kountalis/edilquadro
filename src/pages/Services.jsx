@@ -7,6 +7,7 @@ import LazyImage from '../components/LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
 import { generateLocalBusinessSchema, getWebpSource } from "../utils/seo";
 import { useTranslation, Trans } from 'react-i18next';
+import { BLOG_ARTICLES } from '../data/blogArticles';
 
 const Services = () => {
   const { t, i18n } = useTranslation();
@@ -118,9 +119,9 @@ const Services = () => {
         <meta property="og:title" content={t('services_page.meta_title')} />
         <meta property="og:description" content={t('services_page.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://edilquadro.it/servizi" />
+        <meta property="og:url" content="https://edilquadro.it/servizi/" />
         <meta property="og:image" content="https://edilquadro.it/servizi-og.jpg" />
-        <link rel="canonical" href="https://edilquadro.it/servizi" />
+        <link rel="canonical" href="https://edilquadro.it/servizi/" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('services_page.meta_title')} />
         <meta name="twitter:description" content={t('services_page.meta_description')} />
@@ -129,6 +130,9 @@ const Services = () => {
         <meta name="keywords" content={t('services_page.meta_keywords')} />
         <meta name="author" content="Edilquadro" />
         <meta name="robots" content="index, follow" />
+        <link rel="alternate" hrefLang="it" href="https://edilquadro.it/servizi/" />
+        <link rel="alternate" hrefLang="en" href="https://edilquadro.it/en/services/" />
+        <link rel="alternate" hrefLang="x-default" href="https://edilquadro.it/servizi/" />
         <html lang={i18n.language} />
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -136,7 +140,15 @@ const Services = () => {
       </Helmet>
       <header className="absolute inset-0 w-full h-full z-0" style={{ background: '#222831' }}></header>
       <main className="flex-grow relative z-10" role="main" aria-label="Sezione principale servizi edilquadro">
-        <section className="container mx-auto px-4 pt-8">
+        {/* Breadcrumb */}
+        <nav aria-label="Breadcrumb" className="container mx-auto px-4 pt-24 pb-2">
+          <ol className="flex items-center gap-2 text-sm text-gray-400">
+            <li><Link to={i18n.language === 'en' ? '/en/' : '/'} className="hover:text-emerald-400 transition-colors">Home</Link></li>
+            <li><span className="mx-1">/</span></li>
+            <li className="text-emerald-400">{t('services_page.breadcrumb_services')}</li>
+          </ol>
+        </nav>
+        <section className="container mx-auto px-4 pt-4">
           <header>
             <div
               className="text-center mb-16"
@@ -153,12 +165,12 @@ const Services = () => {
               </h1>
               <p className="text-xl text-white mb-6">
                 <Trans i18nKey="services_page.header_subtitle" components={{
-                  1: <Link to="/servizi/casa" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
-                  3: <Link to="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
-                  5: <Link to="/servizi/edifici" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
+                  1: <Link to="/servizi/casa/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
+                  3: <Link to="/servizi/commerciale/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
+                  5: <Link to="/servizi/edifici/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
                   7: <strong />,
-                  9: <Link to="/portfolio" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.portfolio')} />,
-                  11: <Link to="/contatti" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.contact')} />
+                  9: <Link to="/portfolio/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.portfolio')} />,
+                  11: <Link to="/contatti/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.contact')} />
                 }} />
               </p>
             </div>
@@ -316,6 +328,42 @@ const Services = () => {
             </div>
           </div>
         </section>
+        {/* Blog Articles */}
+        <section className="container mx-auto px-4 py-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
+            {i18n.language === 'en' ? '📚 From Our Blog' : '📚 Approfondisci sul Blog'}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {BLOG_ARTICLES.map(article => (
+              <Link
+                key={article.slug}
+                to={i18n.language === 'en' ? `/en/blog/${article.slug}/` : `/blog/${article.slug}/`}
+                className="group bg-black/70 rounded-xl overflow-hidden border border-green-900 hover:border-green-500/40 transition-all"
+              >
+                <div className="aspect-[16/10] overflow-hidden">
+                  <LazyImage
+                    src={article.image}
+                    alt={t(`${article.translationKey}.title`)}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    width="350"
+                    height="219"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors line-clamp-2">
+                    {t(`${article.translationKey}.title`)}
+                  </h3>
+                  <p className="text-gray-400 text-sm mt-2 line-clamp-2">{t(`${article.translationKey}.excerpt`)}</p>
+                  <span className="text-emerald-400 text-sm font-medium mt-3 inline-block">
+                    {i18n.language === 'en' ? 'Read more →' : 'Leggi di più →'}
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         <section className="container mx-auto px-4 py-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">{t('services_page.reviews_title')}</h2>
           <div className="grid md:grid-cols-2 gap-8">

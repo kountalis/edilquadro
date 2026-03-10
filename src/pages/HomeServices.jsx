@@ -12,10 +12,10 @@ const HomeServices = () => {
   ];
 
   const images = [
-    { src: '/projects/Casa1.webp', fallback: '/projects/Casa1.jpg', captionKey: 'img1_caption' },
-    { src: '/projects/Casa2.webp', fallback: '/projects/Casa2.jpg', captionKey: 'img2_caption' },
-    { src: '/projects/Casa3.webp', fallback: '/projects/Casa3.jpg', captionKey: 'img3_caption' },
-    { src: '/projects/Casa4.webp', fallback: '/projects/Casa4.jpg', captionKey: 'img4_caption' },
+    { src: '/projects/ristrutturazione-casa-roma-01.webp', captionKey: 'img1_caption' },
+    { src: '/projects/ristrutturazione-casa-roma-02.webp', captionKey: 'img2_caption' },
+    { src: '/projects/ristrutturazione-casa-roma-03.webp', captionKey: 'img3_caption' },
+    { src: '/projects/ristrutturazione-casa-roma-04.webp', captionKey: 'img4_caption' },
   ];
 
   const crossLinks = [
@@ -31,6 +31,7 @@ const HomeServices = () => {
       images={images}
       crossLinks={crossLinks}
       breadcrumbCurrentKey="breadcrumb_home_services"
+      relatedBlogSlugs={['quanto-costa-ristrutturare-casa-roma', 'ristrutturazione-bagno-roma-guida-completa', 'ristrutturazione-appartamento-roma-guida-completa']}
       gaLabel="HomeServices"
     />
   );

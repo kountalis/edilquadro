@@ -1,9 +1,7 @@
 # robots.txt for edilquadro.it
 User-agent: *
 Allow: /
+Disallow: /assets/
+Disallow: /locales/
 
 Sitemap: https://edilquadro.it/sitemap.xml
-
-# Optional: block admin or private folders (se esistono)
-# Disallow: /admin/
-# Disallow: /private/

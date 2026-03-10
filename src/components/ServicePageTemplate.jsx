@@ -5,6 +5,7 @@ import { Trans, useTranslation } from 'react-i18next';
 import LazyImage from './LazyImage';
 import { trackGAEvent } from '../utils/gaEvents';
 import { generateLocalBusinessSchema, getWebpSource } from '../utils/seo';
+import { BLOG_ARTICLES } from '../data/blogArticles';
 
 /**
  * Shared template for service pages (Home/Commercial/Building).
@@ -26,12 +27,13 @@ const ServicePageTemplate = ({
   images,
   breadcrumbCurrentKey,
   crossLinks = [],
+  relatedBlogSlugs = [],
   gaLabel,
   useTrans = false,
 }) => {
   const { t, i18n } = useTranslation();
   const tp = (key) => t(`${translationPrefix}.${key}`);
-  const canonicalUrl = `https://edilquadro.it${canonicalPath}`;
+  const canonicalUrl = `https://edilquadro.it${canonicalPath}/`;
 
   // Build service data from translation keys
   const serviceItems = services.map((s) => ({
@@ -159,9 +161,9 @@ const ServicePageTemplate = ({
                   <Trans
                     i18nKey={`${translationPrefix}.header_subtitle`}
                     components={{
-                      1: <Link to="/servizi/casa" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
-                      3: <Link to="/servizi/commerciale" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
-                      5: <Link to="/servizi/edifici" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
+                      1: <Link to="/servizi/casa/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.home_renovation')} />,
+                      3: <Link to="/servizi/commerciale/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.shops_renovation')} />,
+                      5: <Link to="/servizi/edifici/" className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300" title={t('home.footer_nav.buildings_renovation')} />,
                     }}
                   />
                 ) : (
@@ -180,7 +182,7 @@ const ServicePageTemplate = ({
                 <p className="text-gray-300 mb-6">
                   {service.description}{' '}
                   <a
-                    href="/contatti"
+                    href="/contatti/"
                     className="text-emerald-400 underline decoration-emerald-400/50 hover:text-emerald-300 transition-colors"
                   >
                     {tp('request_quote')}
@@ -239,6 +241,70 @@ const ServicePageTemplate = ({
               </div>
             )}
           </section>
+
+          {/* FAQ Section */}
+          <section className="mb-20 max-w-4xl mx-auto px-4" aria-label="FAQ">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              {i18n.language === 'en' ? 'Frequently Asked Questions' : 'Domande Frequenti'}
+            </h2>
+            <div className="space-y-4">
+              {[1, 2, 3].map(n => (
+                <details key={n} className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden">
+                  <summary className="flex items-center justify-between p-5 cursor-pointer text-white font-semibold hover:bg-white/5 transition-colors list-none">
+                    <span>{tp(`faq${n}_question`)}</span>
+                    <span className="text-green-400 text-xl ml-4 group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <div className="px-5 pb-5 text-gray-300 leading-relaxed border-t border-white/5 pt-4">
+                    {tp(`faq${n}_answer`)}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          {/* Related Blog Articles */}
+          {relatedBlogSlugs.length > 0 && (() => {
+            const relatedArticles = BLOG_ARTICLES.filter(a => relatedBlogSlugs.includes(a.slug));
+            const isEn = i18n.language === 'en';
+            return relatedArticles.length > 0 ? (
+              <section className="mb-20" aria-label={isEn ? 'Related Articles' : 'Articoli Correlati'}>
+                <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                  {isEn ? '📚 Read More on Our Blog' : '📚 Approfondisci sul Blog'}
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto px-4">
+                  {relatedArticles.map(article => (
+                    <Link
+                      key={article.slug}
+                      to={isEn ? `/en/blog/${article.slug}/` : `/blog/${article.slug}/`}
+                      className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 transition-colors"
+                    >
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <LazyImage
+                          src={article.image}
+                          alt={t(`${article.translationKey}.title`)}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          width="400"
+                          height="225"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <h3 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">
+                          {t(`${article.translationKey}.title`)}
+                        </h3>
+                        <p className="text-gray-400 text-sm mt-2 line-clamp-2">
+                          {t(`${article.translationKey}.excerpt`)}
+                        </p>
+                        <span className="text-blue-400 text-sm font-medium mt-3 inline-block">
+                          {isEn ? 'Read more →' : 'Leggi di più →'}
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            ) : null;
+          })()}
 
           {/* CTA */}
           <section className="text-center pb-20">

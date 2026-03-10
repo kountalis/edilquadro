@@ -9,7 +9,7 @@ const About = () => {
   const { t, i18n } = useTranslation();
   const isEn = i18n.language === 'en';
 
-  const canonicalUrl = isEn ? 'https://edilquadro.it/en/about' : 'https://edilquadro.it/chi-siamo';
+  const canonicalUrl = isEn ? 'https://edilquadro.it/en/about/' : 'https://edilquadro.it/chi-siamo/';
 
   const aboutSchema = {
     "@context": "https://schema.org",
@@ -70,9 +70,9 @@ const About = () => {
         <title>{t('about_page.meta_title')}</title>
         <meta name="description" content={t('about_page.meta_description')} />
         <link rel="canonical" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="it" href="https://edilquadro.it/chi-siamo" />
-        <link rel="alternate" hrefLang="en" href="https://edilquadro.it/en/about" />
-        <link rel="alternate" hrefLang="x-default" href="https://edilquadro.it/chi-siamo" />
+        <link rel="alternate" hrefLang="it" href="https://edilquadro.it/chi-siamo/" />
+        <link rel="alternate" hrefLang="en" href="https://edilquadro.it/en/about/" />
+        <link rel="alternate" hrefLang="x-default" href="https://edilquadro.it/chi-siamo/" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content={t('about_page.meta_title')} />
         <meta property="og:description" content={t('about_page.meta_description')} />
@@ -89,7 +89,7 @@ const About = () => {
         <nav aria-label="Breadcrumb" className="container mx-auto px-4 pt-24 pb-4">
           <ol className="flex items-center gap-2 text-sm text-gray-400">
             <li>
-              <Link to={isEn ? '/en' : '/'} className="hover:text-emerald-400 transition-colors">
+              <Link to={isEn ? '/en/' : '/'} className="hover:text-emerald-400 transition-colors">
                 Home
               </Link>
             </li>
@@ -206,7 +206,7 @@ const About = () => {
                   onClick={() => { trackGAEvent({ action: 'click_tel', category: 'Contatto', label: 'Chi Siamo - Telefono' }); Conversions.PHONE_CALL('About'); if (typeof gtag_report_conversion === 'function') gtag_report_conversion(); }}
                 >
                   <div className="relative flex items-center justify-center gap-3">
-                    <img src="/phone.svg" alt="" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)' }} />
+                    <img src="/phone.svg" alt="Telefono" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)' }} />
                     <div className="text-left">
                       <div className="text-xs text-gray-300">{t('home.cta.call_us')}</div>
                       <div className="text-white font-semibold text-sm">+39 333 337 7320</div>
@@ -216,7 +216,7 @@ const About = () => {
                 </a>
 
                 <Link
-                  to={isEn ? '/en/portfolio' : '/portfolio'}
+                  to={isEn ? '/en/portfolio/' : '/portfolio/'}
                   className="group relative px-6 py-4 rounded-2xl bg-gradient-to-r from-gray-700 to-gray-600 transition-all duration-300 hover:scale-102 hover:-translate-y-1"
                 >
                   <div className="relative flex items-center justify-center gap-3">
@@ -237,7 +237,7 @@ const About = () => {
                   onClick={() => { trackGAEvent({ action: 'click_whatsapp', category: 'Contatto', label: 'Chi Siamo - WhatsApp' }); Conversions.WHATSAPP_CLICK('About'); }}
                 >
                   <div className="relative flex items-center justify-center gap-3">
-                    <img src="/Whatsapp.svg" alt="" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)' }} />
+                    <img src="/Whatsapp.svg" alt="WhatsApp" className="w-5 h-5" style={{ filter: 'brightness(0) invert(1)' }} />
                     <div className="text-left">
                       <div className="text-xs text-gray-300">WhatsApp</div>
                       <div className="text-white font-semibold text-sm">{t('home.cta.chat_with_us')}</div>

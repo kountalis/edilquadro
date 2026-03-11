@@ -198,7 +198,7 @@ const BlogPost = () => {
                   </Link>
                 </>
               )}
-              {article.slug === 'bonus-ristrutturazione-2025-come-funziona' && (
+              {article.slug === 'bonus-ristrutturazione-2026-come-funziona' && (
                 <>
                   <Link to={isEn ? '/en/tax-benefits/' : '/bonus-fiscali/'} className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
                     <span className="text-2xl">💰</span>

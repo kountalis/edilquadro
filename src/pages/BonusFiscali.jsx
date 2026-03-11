@@ -261,7 +261,7 @@ const BonusFiscali = () => {
             {isEn ? '📚 Related Article' : '📚 Articolo Correlato'}
           </h2>
           {(() => {
-            const bonusArticle = BLOG_ARTICLES.find(a => a.slug === 'bonus-ristrutturazione-2025-come-funziona');
+            const bonusArticle = BLOG_ARTICLES.find(a => a.slug === 'bonus-ristrutturazione-2026-come-funziona');
             return bonusArticle ? (
               <Link
                 to={isEn ? `/en/blog/${bonusArticle.slug}/` : `/blog/${bonusArticle.slug}/`}

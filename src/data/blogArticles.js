@@ -9,7 +9,7 @@ export const BLOG_ARTICLES = [
     slug: 'quanto-costa-ristrutturare-casa-roma',
     translationKey: 'blog_art1',
     category: 'guida',
-    date: '2025-07-22',
+    date: '2026-07-22',
     readTime: 8,
     image: '/projects/ristrutturazione-casa-roma-01.webp'
   },
@@ -18,16 +18,16 @@ export const BLOG_ARTICLES = [
     slug: 'ristrutturazione-bagno-roma-guida-completa',
     translationKey: 'blog_art2',
     category: 'guida',
-    date: '2025-07-22',
+    date: '2026-07-22',
     readTime: 6,
     image: '/projects/casa-aurelio-roma-05.webp'
   },
   {
     id: 3,
-    slug: 'bonus-ristrutturazione-2025-come-funziona',
+    slug: 'bonus-ristrutturazione-2026-come-funziona',
     translationKey: 'blog_art3',
     category: 'normativa',
-    date: '2025-07-22',
+    date: '2026-07-22',
     readTime: 7,
     image: '/projects/complesso-residenziale-pomezia-01.webp'
   },

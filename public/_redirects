@@ -1,6 +1,12 @@
 # Google Search Console verification file (must be served as-is)
 /google2bc1297c3f4bc24f.html /google2bc1297c3f4bc24f.html 200!
 
+# Redirect old blog slug (2025 → 2026)
+/blog/bonus-ristrutturazione-2025-come-funziona/ /blog/bonus-ristrutturazione-2026-come-funziona/ 301
+/blog/bonus-ristrutturazione-2025-come-funziona /blog/bonus-ristrutturazione-2026-come-funziona/ 301
+/en/blog/bonus-ristrutturazione-2025-come-funziona/ /en/blog/bonus-ristrutturazione-2026-come-funziona/ 301
+/en/blog/bonus-ristrutturazione-2025-come-funziona /en/blog/bonus-ristrutturazione-2026-come-funziona/ 301
+
 # Prerendered static pages exist as files in dist/ (e.g., servizi/index.html)
 # Cloudflare Pages automatically serves them - no rewrite rules needed.
 # Cloudflare auto-redirects /servizi → /servizi/ (308) when servizi/index.html exists.

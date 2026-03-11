@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Metadati specifici per ogni pagina - Usati dal prerendering per iniettare nel HTML
  * Assicura che ogni pagina abbia titolo e description unici per SEO
  */
@@ -86,8 +86,8 @@ const HREFLANG_PAIRS = {
   '/en/blog/quanto-costa-ristrutturare-casa-roma':       '/blog/quanto-costa-ristrutturare-casa-roma',
   '/blog/ristrutturazione-bagno-roma-guida-completa':    '/en/blog/ristrutturazione-bagno-roma-guida-completa',
   '/en/blog/ristrutturazione-bagno-roma-guida-completa': '/blog/ristrutturazione-bagno-roma-guida-completa',
-  '/blog/bonus-ristrutturazione-2025-come-funziona':     '/en/blog/bonus-ristrutturazione-2025-come-funziona',
-  '/en/blog/bonus-ristrutturazione-2025-come-funziona':  '/blog/bonus-ristrutturazione-2025-come-funziona',
+  '/blog/bonus-ristrutturazione-2026-come-funziona':     '/en/blog/bonus-ristrutturazione-2026-come-funziona',
+  '/en/blog/bonus-ristrutturazione-2026-come-funziona':  '/blog/bonus-ristrutturazione-2026-come-funziona',
   '/blog/ristrutturazione-appartamento-roma-guida-completa':     '/en/blog/ristrutturazione-appartamento-roma-guida-completa',
   '/en/blog/ristrutturazione-appartamento-roma-guida-completa':  '/blog/ristrutturazione-appartamento-roma-guida-completa',
   '/blog/cappotto-termico-condominio-roma-costi-vantaggi':       '/en/blog/cappotto-termico-condominio-roma-costi-vantaggi',
@@ -608,70 +608,70 @@ const PAGE_METADATA = {
   },
   '/blog/quanto-costa-ristrutturare-casa-roma': {
     lang: 'it',
-    title: 'Quanto Costa Ristrutturare Casa a Roma nel 2025 - Guida Prezzi | Edilquadro',
+    title: 'Quanto Costa Ristrutturare Casa a Roma nel 2026 - Guida Prezzi | Edilquadro',
     description: 'Guida completa ai costi di ristrutturazione casa a Roma: prezzi al mq, fattori che influenzano il costo, come risparmiare con i bonus fiscali.',
     canonical: 'https://edilquadro.it/blog/quanto-costa-ristrutturare-casa-roma/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/en/blog/quanto-costa-ristrutturare-casa-roma': {
     lang: 'en',
-    title: 'House Renovation Costs Rome 2025 - Price Guide | Edilquadro',
+    title: 'House Renovation Costs Rome 2026 - Price Guide | Edilquadro',
     description: 'Complete guide to house renovation costs in Rome: prices per sqm, factors affecting cost, how to save with tax benefits.',
     canonical: 'https://edilquadro.it/en/blog/quanto-costa-ristrutturare-casa-roma/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/blog/ristrutturazione-bagno-roma-guida-completa': {
     lang: 'it',
-    title: 'Ristrutturazione Bagno Roma - Costi e Guida Completa 2025 | Edilquadro',
-    description: 'Tutto quello che devi sapere sulla ristrutturazione del bagno a Roma: costi, tempistiche, tendenze 2025 e come scegliere i materiali giusti.',
+    title: 'Ristrutturazione Bagno Roma - Costi e Guida Completa 2026 | Edilquadro',
+    description: 'Tutto quello che devi sapere sulla ristrutturazione del bagno a Roma: costi, tempistiche, tendenze 2026 e come scegliere i materiali giusti.',
     canonical: 'https://edilquadro.it/blog/ristrutturazione-bagno-roma-guida-completa/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/en/blog/ristrutturazione-bagno-roma-guida-completa': {
     lang: 'en',
-    title: 'Bathroom Renovation Rome - Costs & Complete Guide 2025 | Edilquadro',
-    description: 'Everything you need to know about renovating a bathroom in Rome: costs, timelines, 2025 trends, and how to choose the right materials.',
+    title: 'Bathroom Renovation Rome - Costs & Complete Guide 2026 | Edilquadro',
+    description: 'Everything you need to know about renovating a bathroom in Rome: costs, timelines, 2026 trends, and how to choose the right materials.',
     canonical: 'https://edilquadro.it/en/blog/ristrutturazione-bagno-roma-guida-completa/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
-  '/blog/bonus-ristrutturazione-2025-come-funziona': {
+  '/blog/bonus-ristrutturazione-2026-come-funziona': {
     lang: 'it',
-    title: 'Bonus Ristrutturazione 2025 - Come Funziona | Edilquadro Roma',
-    description: 'Guida pratica al Bonus Ristrutturazione 2025: requisiti, importi, documenti necessari e come Edilquadro ti aiuta a ottenere la detrazione fiscale.',
-    canonical: 'https://edilquadro.it/blog/bonus-ristrutturazione-2025-come-funziona/',
+    title: 'Bonus Ristrutturazione 2026 - Come Funziona | Edilquadro Roma',
+    description: 'Guida pratica al Bonus Ristrutturazione 2026: requisiti, importi, documenti necessari e come Edilquadro ti aiuta a ottenere la detrazione fiscale.',
+    canonical: 'https://edilquadro.it/blog/bonus-ristrutturazione-2026-come-funziona/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
-  '/en/blog/bonus-ristrutturazione-2025-come-funziona': {
+  '/en/blog/bonus-ristrutturazione-2026-come-funziona': {
     lang: 'en',
-    title: 'Renovation Tax Bonus 2025 Italy - How It Works | Edilquadro Rome',
-    description: 'Practical guide to the 2025 Renovation Bonus in Italy: requirements, amounts, necessary documents, and how Edilquadro helps you get the tax deduction.',
-    canonical: 'https://edilquadro.it/en/blog/bonus-ristrutturazione-2025-come-funziona/',
+    title: 'Renovation Tax Bonus 2026 Italy - How It Works | Edilquadro Rome',
+    description: 'Practical guide to the 2026 Renovation Bonus in Italy: requirements, amounts, necessary documents, and how Edilquadro helps you get the tax deduction.',
+    canonical: 'https://edilquadro.it/en/blog/bonus-ristrutturazione-2026-come-funziona/',
     ogImage: 'https://edilquadro.it/portfolio-bg.avif'
   },
   '/blog/ristrutturazione-appartamento-roma-guida-completa': {
     lang: 'it',
-    title: 'Ristrutturazione Appartamento Roma - Guida Completa 2025 | Edilquadro',
+    title: 'Ristrutturazione Appartamento Roma - Guida Completa 2026 | Edilquadro',
     description: 'Dalla progettazione alla consegna: guida completa alla ristrutturazione di un appartamento a Roma. Permessi, tempistiche, costi e consigli pratici.',
     canonical: 'https://edilquadro.it/blog/ristrutturazione-appartamento-roma-guida-completa/',
     ogImage: 'https://edilquadro.it/projects/ristrutturazione-casa-roma-03.webp'
   },
   '/en/blog/ristrutturazione-appartamento-roma-guida-completa': {
     lang: 'en',
-    title: 'Apartment Renovation Rome - Complete Guide 2025 | Edilquadro',
+    title: 'Apartment Renovation Rome - Complete Guide 2026 | Edilquadro',
     description: 'From design to handover: complete guide to apartment renovation in Rome. Permits, timelines, costs and practical tips from Edilquadro.',
     canonical: 'https://edilquadro.it/en/blog/ristrutturazione-appartamento-roma-guida-completa/',
     ogImage: 'https://edilquadro.it/projects/ristrutturazione-casa-roma-03.webp'
   },
   '/blog/cappotto-termico-condominio-roma-costi-vantaggi': {
     lang: 'it',
-    title: 'Cappotto Termico Condominio Roma - Costi e Vantaggi 2025 | Edilquadro',
+    title: 'Cappotto Termico Condominio Roma - Costi e Vantaggi 2026 | Edilquadro',
     description: 'Tutto sul cappotto termico per condomini a Roma: quanto costa, quali vantaggi offre, come accedere all Ecobonus 65% e perché scegliere Edilquadro.',
     canonical: 'https://edilquadro.it/blog/cappotto-termico-condominio-roma-costi-vantaggi/',
     ogImage: 'https://edilquadro.it/projects/cappotto-termico-edificio-roma.webp'
   },
   '/en/blog/cappotto-termico-condominio-roma-costi-vantaggi': {
     lang: 'en',
-    title: 'External Wall Insulation Condominium Rome - Costs & Benefits 2025 | Edilquadro',
+    title: 'External Wall Insulation Condominium Rome - Costs & Benefits 2026 | Edilquadro',
     description: 'Everything about thermal insulation for condominiums in Rome: costs, benefits, how to access the 65% Ecobonus, and why choose Edilquadro.',
     canonical: 'https://edilquadro.it/en/blog/cappotto-termico-condominio-roma-costi-vantaggi/',
     ogImage: 'https://edilquadro.it/projects/cappotto-termico-edificio-roma.webp'

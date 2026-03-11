@@ -32,7 +32,7 @@ const BuildingServices = () => {
       images={images}
       crossLinks={crossLinks}
       breadcrumbCurrentKey="breadcrumb_building_services"
-      relatedBlogSlugs={['bonus-ristrutturazione-2025-come-funziona', 'cappotto-termico-condominio-roma-costi-vantaggi']}
+      relatedBlogSlugs={['bonus-ristrutturazione-2026-come-funziona', 'cappotto-termico-condominio-roma-costi-vantaggi']}
       gaLabel="BuildingServices"
       useTrans
     />

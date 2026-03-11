@@ -20,7 +20,7 @@ export const BLOG_ARTICLES = [
     category: 'guida',
     date: '2026-07-22',
     readTime: 6,
-    image: '/projects/casa-aurelio-roma-05.webp'
+    image: '/projects/appartamento-aurelio-roma-11.webp'
   },
   {
     id: 3,

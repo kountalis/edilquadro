@@ -62,9 +62,18 @@ const ServicePageTemplate = ({
     provider: {
       '@type': 'LocalBusiness',
       name: 'Edilquadro',
+      image: 'https://edilquadro.it/portfolio-bg.avif',
       areaServed: 'Roma e provincia',
       telephone: '+393333377320',
+      priceRange: '€€€',
       url: 'https://edilquadro.it/',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Via Egerio Levio 13',
+        addressLocality: 'Roma',
+        postalCode: '00174',
+        addressCountry: 'IT',
+      },
     },
     areaServed: {
       '@type': 'Place',

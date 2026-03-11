@@ -86,6 +86,7 @@ const BonusFiscali = () => {
     "@type": "Article",
     "headline": t('bonus_page.h1'),
     "description": t('bonus_page.meta_description'),
+    "image": "https://edilquadro.it/portfolio-bg.avif",
     "author": {
       "@type": "Organization",
       "name": "Edilquadro",
@@ -94,10 +95,14 @@ const BonusFiscali = () => {
     "publisher": {
       "@type": "Organization",
       "name": "Edilquadro",
-      "url": "https://edilquadro.it"
+      "url": "https://edilquadro.it",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://edilquadro.it/portfolio-bg.avif"
+      }
     },
-    "datePublished": "2026-03-09",
-    "dateModified": "2026-03-09",
+    "datePublished": "2026-03-09T00:00:00+01:00",
+    "dateModified": "2026-03-11T00:00:00+01:00",
     "mainEntityOfPage": canonicalUrl
   };
 

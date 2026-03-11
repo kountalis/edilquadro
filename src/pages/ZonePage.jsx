@@ -52,7 +52,9 @@ const ZonePage = () => {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Edilquadro",
+      "image": "https://edilquadro.it/portfolio-bg.avif",
       "telephone": "+393333377320",
+      "priceRange": "€€€",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Egerio Levio 13",

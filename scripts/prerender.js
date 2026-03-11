@@ -263,10 +263,11 @@ function injectMetadata(html, route) {
   if (alternatePath) {
     const altMeta = PAGE_METADATA[alternatePath];
     if (altMeta) {
+      const itCanonical = metadata.lang === 'it' ? metadata.canonical : altMeta.canonical;
       const hreflangTags = [
         `<link rel="alternate" hreflang="${metadata.lang}" href="${metadata.canonical}">`,
         `<link rel="alternate" hreflang="${altMeta.lang}" href="${altMeta.canonical}">`,
-        `<link rel="alternate" hreflang="x-default" href="https://edilquadro.it/">`,
+        `<link rel="alternate" hreflang="x-default" href="${itCanonical}">`,
       ].join('\n    ');
       html = html.replace('</head>', `    ${hreflangTags}\n  </head>`);
     }

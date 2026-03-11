@@ -68,8 +68,10 @@ const PreventivoGratuito = () => {
     "provider": {
       "@type": "LocalBusiness",
       "name": "Edilquadro",
+      "image": "https://edilquadro.it/portfolio-bg.avif",
       "url": "https://edilquadro.it",
-      "telephone": "+393387262,675",
+      "telephone": "+393333377320",
+      "priceRange": "€€€",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Egerio Levio 13",
@@ -139,6 +141,9 @@ const PreventivoGratuito = () => {
         <meta property="og:description" content={t('preventivo.meta_description')} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://edilquadro.it/portfolio-bg.avif" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://edilquadro.it/portfolio-bg.avif" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
@@ -167,14 +172,14 @@ const PreventivoGratuito = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a
-                href="tel:+393387262675"
+                href="tel:+393333377320"
                 onClick={() => handleCTA('phone_hero')}
                 className="inline-flex items-center justify-center px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold rounded-lg text-lg transition-colors shadow-lg"
               >
                 📞 {t('preventivo.cta_phone')}
               </a>
               <a
-                href="https://wa.me/393387262675"
+                href="https://wa.me/393333377320"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {
@@ -293,14 +298,14 @@ const PreventivoGratuito = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+393387262675"
+                href="tel:+393333377320"
                 onClick={() => handleCTA('phone_bottom')}
                 className="inline-flex items-center justify-center px-8 py-4 bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-bold rounded-lg text-lg transition-colors shadow-lg"
               >
                 📞 {t('preventivo.cta_phone')}
               </a>
               <a
-                href="https://wa.me/393387262675"
+                href="https://wa.me/393333377320"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => {

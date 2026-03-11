@@ -79,20 +79,20 @@ const Portfolio = () => {
       <Helmet>
         <title>{t('portfolio_page.meta_title')}</title>
         <meta name="description" content={t('portfolio_page.meta_description')} />
-        <link rel="canonical" href="https://edilquadro.it/portfolio/" />
+        <link rel="canonical" href={isEn ? 'https://edilquadro.it/en/portfolio/' : 'https://edilquadro.it/portfolio/'} />
         <link rel="preload" as="image" href="/portfolio-bg-lcp.avif" />
         <meta name="keywords" content="portfolio ristrutturazioni roma, lavori edilizi roma, fotografie progetti" />
         <meta name="author" content="Edilquadro" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content={t('portfolio_page.meta_title')} />
         <meta property="og:description" content={t('portfolio_page.meta_description')} />
-        <meta property="og:image" content="https://edilquadro.it/portfolio-bg.jpg" />
-        <meta property="og:url" content="https://edilquadro.it/portfolio/" />
+        <meta property="og:image" content="https://edilquadro.it/portfolio-bg.avif" />
+        <meta property="og:url" content={isEn ? 'https://edilquadro.it/en/portfolio/' : 'https://edilquadro.it/portfolio/'} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('portfolio_page.meta_title')} />
         <meta name="twitter:description" content={t('portfolio_page.meta_description')} />
-        <meta name="twitter:image" content="https://edilquadro.it/portfolio-bg.jpg" />
+        <meta name="twitter:image" content="https://edilquadro.it/portfolio-bg.avif" />
         <meta name="twitter:site" content="@edilquadro" />
         <html lang={i18n.language} />
         <link rel="alternate" hrefLang="it" href="https://edilquadro.it/portfolio/" />

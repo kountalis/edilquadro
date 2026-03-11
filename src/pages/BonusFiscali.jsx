@@ -148,6 +148,9 @@ const BonusFiscali = () => {
         <meta property="og:description" content={t('bonus_page.meta_description')} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://edilquadro.it/portfolio-bg.avif" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://edilquadro.it/portfolio-bg.avif" />
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>

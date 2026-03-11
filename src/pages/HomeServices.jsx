@@ -27,6 +27,7 @@ const HomeServices = () => {
     <ServicePageTemplate
       translationPrefix="home_services_page"
       canonicalPath="/servizi/casa"
+      canonicalPathAlt="/en/services/home"
       services={services}
       images={images}
       crossLinks={crossLinks}

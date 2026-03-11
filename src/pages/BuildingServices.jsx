@@ -27,6 +27,7 @@ const BuildingServices = () => {
     <ServicePageTemplate
       translationPrefix="building_services_page"
       canonicalPath="/servizi/edifici"
+      canonicalPathAlt="/en/services/buildings"
       services={services}
       images={images}
       crossLinks={crossLinks}

@@ -23,6 +23,7 @@ import { BLOG_ARTICLES } from '../data/blogArticles';
 const ServicePageTemplate = ({
   translationPrefix,
   canonicalPath,
+  canonicalPathAlt,
   services,
   images,
   breadcrumbCurrentKey,
@@ -32,8 +33,11 @@ const ServicePageTemplate = ({
   useTrans = false,
 }) => {
   const { t, i18n } = useTranslation();
+  const isEn = i18n.language === 'en';
   const tp = (key) => t(`${translationPrefix}.${key}`);
-  const canonicalUrl = `https://edilquadro.it${canonicalPath}/`;
+  const canonicalUrl = `https://edilquadro.it${isEn && canonicalPathAlt ? canonicalPathAlt : canonicalPath}/`;
+  const itUrl = `https://edilquadro.it${canonicalPath}/`;
+  const enUrl = `https://edilquadro.it${canonicalPathAlt || canonicalPath}/`;
 
   // Build service data from translation keys
   const serviceItems = services.map((s) => ({
@@ -131,15 +135,18 @@ const ServicePageTemplate = ({
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content={tp('meta_title')} />
         <meta property="og:description" content={tp('meta_description')} />
-        <meta property="og:image" content="https://edilquadro.it/logo192.png" />
+        <meta property="og:image" content="https://edilquadro.it/portfolio-bg.avif" />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={tp('meta_title')} />
         <meta name="twitter:description" content={tp('meta_description')} />
-        <meta name="twitter:image" content="https://edilquadro.it/logo192.png" />
+        <meta name="twitter:image" content="https://edilquadro.it/portfolio-bg.avif" />
         <meta name="twitter:site" content="@edilquadro" />
         <html lang={i18n.language} />
+        <link rel="alternate" hrefLang="it" href={itUrl} />
+        <link rel="alternate" hrefLang="en" href={enUrl} />
+        <link rel="alternate" hrefLang="x-default" href={itUrl} />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>

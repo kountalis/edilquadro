@@ -12,19 +12,19 @@ export default function Privacy() {
         <Helmet>
           <title>{t('privacy_page.meta_title')}</title>
           <meta name="description" content={t('privacy_page.meta_description')} />
-          <link rel="canonical" href="https://edilquadro.it/privacy/" />
+          <link rel="canonical" href={i18n.language === 'en' ? 'https://edilquadro.it/en/privacy/' : 'https://edilquadro.it/privacy/'} />
           <meta name="keywords" content="privacy, protezione dati, GDPR, Edilquadro" />
           <meta name="author" content="Edilquadro" />
           <meta name="robots" content="index, follow" />
           <meta property="og:title" content={t('privacy_page.meta_title')} />
           <meta property="og:description" content={t('privacy_page.meta_description')} />
-          <meta property="og:image" content="https://edilquadro.it/logo192.png" />
-          <meta property="og:url" content="https://edilquadro.it/privacy/" />
+          <meta property="og:image" content="https://edilquadro.it/portfolio-bg.avif" />
+          <meta property="og:url" content={i18n.language === 'en' ? 'https://edilquadro.it/en/privacy/' : 'https://edilquadro.it/privacy/'} />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={t('privacy_page.meta_title')} />
           <meta name="twitter:description" content={t('privacy_page.meta_description')} />
-          <meta name="twitter:image" content="https://edilquadro.it/logo192.png" />
+          <meta name="twitter:image" content="https://edilquadro.it/portfolio-bg.avif" />
           <meta name="twitter:site" content="@edilquadro" />
           <html lang={i18n.language} />
           <link rel="alternate" hrefLang="it" href="https://edilquadro.it/privacy/" />

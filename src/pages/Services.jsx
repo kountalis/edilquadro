@@ -119,13 +119,13 @@ const Services = () => {
         <meta property="og:title" content={t('services_page.meta_title')} />
         <meta property="og:description" content={t('services_page.meta_description')} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://edilquadro.it/servizi/" />
-        <meta property="og:image" content="https://edilquadro.it/servizi-og.jpg" />
-        <link rel="canonical" href="https://edilquadro.it/servizi/" />
+        <meta property="og:url" content={i18n.language === 'en' ? 'https://edilquadro.it/en/services/' : 'https://edilquadro.it/servizi/'} />
+        <meta property="og:image" content="https://edilquadro.it/portfolio-bg.avif" />
+        <link rel="canonical" href={i18n.language === 'en' ? 'https://edilquadro.it/en/services/' : 'https://edilquadro.it/servizi/'} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('services_page.meta_title')} />
         <meta name="twitter:description" content={t('services_page.meta_description')} />
-        <meta name="twitter:image" content="https://edilquadro.it/servizi-og.jpg" />
+        <meta name="twitter:image" content="https://edilquadro.it/portfolio-bg.avif" />
         <meta name="twitter:site" content="@edilquadro" />
         <meta name="keywords" content={t('services_page.meta_keywords')} />
         <meta name="author" content="Edilquadro" />

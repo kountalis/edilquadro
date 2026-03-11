@@ -92,20 +92,20 @@ const Contact = () => {
       <Helmet>
         <title>{t('contact_page.meta_title')}</title>
         <meta name="description" content={t('contact_page.meta_description')} />
-        <link rel="canonical" href="https://edilquadro.it/contatti/" />
+        <link rel="canonical" href={i18n.language === 'en' ? 'https://edilquadro.it/en/contact/' : 'https://edilquadro.it/contatti/'} />
         <link rel="preload" as="image" href="/hero-video-thumb.avif" />
         <meta name="keywords" content={t('contact_page.meta_keywords')} />
         <meta name="author" content="Edilquadro" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content={t('contact_page.meta_title')} />
         <meta property="og:description" content={t('contact_page.meta_description')} />
-        <meta property="og:image" content="https://edilquadro.it/hero-contact-og.jpg" />
-        <meta property="og:url" content="https://edilquadro.it/contatti/" />
+        <meta property="og:image" content="https://edilquadro.it/portfolio-bg.avif" />
+        <meta property="og:url" content={i18n.language === 'en' ? 'https://edilquadro.it/en/contact/' : 'https://edilquadro.it/contatti/'} />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t('contact_page.meta_title')} />
         <meta name="twitter:description" content={t('contact_page.meta_description')} />
-        <meta name="twitter:image" content="https://edilquadro.it/hero-contact-og.jpg" />
+        <meta name="twitter:image" content="https://edilquadro.it/portfolio-bg.avif" />
         <meta name="twitter:site" content="@edilquadro" />
         <html lang={i18n.language} />
         <link rel="alternate" hrefLang="it" href="https://edilquadro.it/contatti/" />

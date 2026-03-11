@@ -23,7 +23,7 @@ export const generateLocalBusinessSchema = () => {
     "image": "https://edilquadro.it/logo192.png",
     "logo": "https://edilquadro.it/logo192.png",
     "url": "https://edilquadro.it/",
-    "telephone": "+39333377320",
+    "telephone": "+393333377320",
     "email": "edilquadroroma@gmail.com",
     "priceRange": "€€€",
     "description": "Impresa edile in zona Tuscolana, Roma, specializzata in ristrutturazione casa, negozi, bar, ristoranti, edifici e condomini. Operiamo in tutta Roma e provincia: Appio-Tuscolano, Cinecittà, San Giovanni, EUR, Pomezia. Soluzioni chiavi in mano, preventivo gratuito.",
@@ -78,7 +78,7 @@ export const generateLocalBusinessSchema = () => {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+39333377320",
+      "telephone": "+393333377320",
       "contactType": "customer service",
       "areaServed": "IT",
       "availableLanguage": ["Italian", "English"]

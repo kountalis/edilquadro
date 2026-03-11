@@ -162,24 +162,27 @@ const Home = () => {
 
   const { isModalOpen, selectedProject, closeModal } = useProject();
 
+    const isEn = i18n.language === 'en';
+    const canonicalUrl = isEn ? 'https://edilquadro.it/en/' : 'https://edilquadro.it/';
+
     return (
       <>
         <Helmet>
           <title>{t('home.meta_title')}</title>
           <meta name="description" content={t('home.meta_description')} />
-          <link rel="canonical" href="https://edilquadro.it/" />
+          <link rel="canonical" href={canonicalUrl} />
           <meta name="keywords" content="ristrutturazioni roma, edilizia roma, lavori casa roma" />
           <meta name="author" content="Edilquadro" />
           <meta name="robots" content="index, follow" />
           <meta property="og:title" content={t('home.meta_title')} />
           <meta property="og:description" content={t('home.meta_description')} />
-          <meta property="og:image" content="https://edilquadro.it/logo192.png" />
-          <meta property="og:url" content="https://edilquadro.it/" />
+          <meta property="og:image" content="https://edilquadro.it/portfolio-bg.avif" />
+          <meta property="og:url" content={canonicalUrl} />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={t('home.meta_title')} />
           <meta name="twitter:description" content={t('home.meta_description')} />
-          <meta name="twitter:image" content="https://edilquadro.it/logo192.png" />
+          <meta name="twitter:image" content="https://edilquadro.it/portfolio-bg.avif" />
           <meta name="twitter:site" content="@edilquadro" />
           <html lang={i18n.language} />
           <link rel="alternate" hrefLang="it" href="https://edilquadro.it/" />

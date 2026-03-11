@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
 export default function NotFound() {
@@ -7,6 +8,11 @@ export default function NotFound() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-slate-100 px-2">
+      <Helmet>
+        <title>404 - Pagina non trovata | Edilquadro</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="description" content="La pagina cercata non esiste. Torna alla homepage di Edilquadro." />
+      </Helmet>
       <img
         src="/logo.svg"
         alt="Logo EDILQUADRO - Edilizia e ristrutturazioni"

@@ -1,10 +1,13 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://edilquadro.it/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/" />
     <video:video>
       <video:content_loc>https://edilquadro.it/hero-video.mp4</video:content_loc>
       <video:title>Video di Sottofondo</video:title>
@@ -14,39 +17,57 @@
   </url>
   <url>
     <loc>https://edilquadro.it/servizi/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/servizi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/services/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/servizi/" />
   </url>
   <url>
     <loc>https://edilquadro.it/servizi/casa/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/servizi/casa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/services/home/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/servizi/casa/" />
   </url>
   <url>
     <loc>https://edilquadro.it/servizi/commerciale/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/servizi/commerciale/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/services/commercial/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/servizi/commerciale/" />
   </url>
   <url>
     <loc>https://edilquadro.it/servizi/edifici/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/servizi/edifici/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/services/buildings/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/servizi/edifici/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/" />
   </url>
   <url>
     <loc>https://edilquadro.it/contatti/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/contatti/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/contatti/" />
     <video:video>
       <video:content_loc>https://edilquadro.it/cinemtic2.mp4</video:content_loc>
       <video:title>Video di Contatto</video:title>
@@ -56,459 +77,677 @@
   </url>
   <url>
     <loc>https://edilquadro.it/privacy/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/privacy/" />
   </url>
   <url>
     <loc>https://edilquadro.it/cookie-policy/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/cookie-policy/" />
   </url>
   <url>
     <loc>https://edilquadro.it/chi-siamo/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/chi-siamo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/chi-siamo/" />
   </url>
-  <url>
-    <loc>https://edilquadro.it/en/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/services/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/services/home/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/services/commercial/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/services/buildings/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/contact/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/privacy/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/cookie-policy/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/about/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <!-- Portfolio project pages (IT) -->
   <url>
     <loc>https://edilquadro.it/portfolio/casa-moderna-bracciano/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/casa-moderna-bracciano/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/casa-moderna-bracciano/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/casa-moderna-bracciano/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/piazza-cina-genzano/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/piazza-cina-genzano/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/piazza-cina-genzano/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/piazza-cina-genzano/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/centro-yoga-tuscolana/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/centro-yoga-tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/centro-yoga-tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/centro-yoga-tuscolana/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/attico-alessandrino-roma/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/attico-alessandrino-roma/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/attico-alessandrino-roma/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/attico-alessandrino-roma/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/negozio-abbigliamento-tuscolana/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/negozio-abbigliamento-tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/negozio-abbigliamento-tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/negozio-abbigliamento-tuscolana/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/villa-sul-mare-grecia/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/villa-sul-mare-grecia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/villa-sul-mare-grecia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/villa-sul-mare-grecia/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/asilo-nido-pomezia/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/asilo-nido-pomezia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/asilo-nido-pomezia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/asilo-nido-pomezia/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/ristorante-san-giovanni/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/ristorante-san-giovanni/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/ristorante-san-giovanni/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/ristorante-san-giovanni/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/casa-aurelio-roma/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/casa-aurelio-roma/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/casa-aurelio-roma/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/casa-aurelio-roma/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/complesso-residenziale-pomezia/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/complesso-residenziale-pomezia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/complesso-residenziale-pomezia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/complesso-residenziale-pomezia/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/ortus-artis-padula/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/ortus-artis-padula/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/ortus-artis-padula/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/ortus-artis-padula/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/appartamento-aurelio/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/appartamento-aurelio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/appartamento-aurelio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/appartamento-aurelio/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/casa-cicladi-sikinos/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/casa-cicladi-sikinos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/casa-cicladi-sikinos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/casa-cicladi-sikinos/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/casa-moderna-eur/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/casa-moderna-eur/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/casa-moderna-eur/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/casa-moderna-eur/" />
   </url>
   <url>
     <loc>https://edilquadro.it/portfolio/bar-eur/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/bar-eur/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/bar-eur/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/bar-eur/" />
   </url>
-  <!-- Portfolio project pages (EN) -->
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/casa-moderna-bracciano/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/piazza-cina-genzano/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/centro-yoga-tuscolana/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/attico-alessandrino-roma/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/negozio-abbigliamento-tuscolana/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/villa-sul-mare-grecia/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/asilo-nido-pomezia/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/ristorante-san-giovanni/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/casa-aurelio-roma/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/complesso-residenziale-pomezia/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/ortus-artis-padula/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/appartamento-aurelio/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/casa-cicladi-sikinos/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/casa-moderna-eur/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/portfolio/bar-eur/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <!-- Zone landing pages (IT) -->
   <url>
     <loc>https://edilquadro.it/zone/tuscolana/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/tuscolana/" />
   </url>
   <url>
     <loc>https://edilquadro.it/zone/appio-tuscolano/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/appio-tuscolano/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/appio-tuscolano/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/appio-tuscolano/" />
   </url>
   <url>
     <loc>https://edilquadro.it/zone/san-giovanni/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/san-giovanni/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/san-giovanni/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/san-giovanni/" />
   </url>
   <url>
     <loc>https://edilquadro.it/zone/eur/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/eur/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/eur/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/eur/" />
   </url>
   <url>
     <loc>https://edilquadro.it/zone/aurelio/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/aurelio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/aurelio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/aurelio/" />
   </url>
   <url>
     <loc>https://edilquadro.it/zone/alessandrino/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/alessandrino/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/alessandrino/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/alessandrino/" />
   </url>
   <url>
     <loc>https://edilquadro.it/zone/cinecitta/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/cinecitta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/cinecitta/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/cinecitta/" />
   </url>
   <url>
     <loc>https://edilquadro.it/zone/pomezia/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/pomezia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/pomezia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/pomezia/" />
   </url>
-  <!-- Zone landing pages (EN) -->
-  <url>
-    <loc>https://edilquadro.it/en/zones/tuscolana/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/zones/appio-tuscolano/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/zones/san-giovanni/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/zones/eur/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/zones/aurelio/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/zones/alessandrino/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/zones/cinecitta/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/zones/pomezia/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <!-- Bonus Fiscali -->
   <url>
     <loc>https://edilquadro.it/bonus-fiscali/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/bonus-fiscali/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/tax-benefits/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/bonus-fiscali/" />
   </url>
-  <url>
-    <loc>https://edilquadro.it/en/tax-benefits/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <!-- Preventivo Gratuito -->
   <url>
     <loc>https://edilquadro.it/preventivo/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/preventivo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/free-quote/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/preventivo/" />
   </url>
-  <url>
-    <loc>https://edilquadro.it/en/free-quote/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Blog -->
   <url>
     <loc>https://edilquadro.it/blog/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/blog/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/" />
   </url>
   <url>
     <loc>https://edilquadro.it/blog/quanto-costa-ristrutturare-casa-roma/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/blog/quanto-costa-ristrutturare-casa-roma/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/quanto-costa-ristrutturare-casa-roma/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/quanto-costa-ristrutturare-casa-roma/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/quanto-costa-ristrutturare-casa-roma/" />
   </url>
   <url>
     <loc>https://edilquadro.it/blog/ristrutturazione-bagno-roma-guida-completa/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/blog/ristrutturazione-bagno-roma-guida-completa/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/ristrutturazione-bagno-roma-guida-completa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/ristrutturazione-bagno-roma-guida-completa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/ristrutturazione-bagno-roma-guida-completa/" />
   </url>
   <url>
     <loc>https://edilquadro.it/blog/bonus-ristrutturazione-2025-come-funziona/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/blog/bonus-ristrutturazione-2025-come-funziona/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/bonus-ristrutturazione-2025-come-funziona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/bonus-ristrutturazione-2025-come-funziona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/bonus-ristrutturazione-2025-come-funziona/" />
   </url>
   <url>
     <loc>https://edilquadro.it/blog/ristrutturazione-appartamento-roma-guida-completa/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://edilquadro.it/en/blog/ristrutturazione-appartamento-roma-guida-completa/</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/ristrutturazione-appartamento-roma-guida-completa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/ristrutturazione-appartamento-roma-guida-completa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/ristrutturazione-appartamento-roma-guida-completa/" />
   </url>
   <url>
     <loc>https://edilquadro.it/blog/cappotto-termico-condominio-roma-costi-vantaggi/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/cappotto-termico-condominio-roma-costi-vantaggi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/cappotto-termico-condominio-roma-costi-vantaggi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/cappotto-termico-condominio-roma-costi-vantaggi/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/services/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/servizi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/services/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/servizi/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/services/home/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/servizi/casa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/services/home/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/servizi/casa/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/services/commercial/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/servizi/commerciale/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/services/commercial/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/servizi/commerciale/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/services/buildings/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/servizi/edifici/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/services/buildings/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/servizi/edifici/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/contact/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/contatti/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/contatti/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/privacy/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/privacy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/privacy/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/cookie-policy/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/cookie-policy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/cookie-policy/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/about/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/chi-siamo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/chi-siamo/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/casa-moderna-bracciano/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/casa-moderna-bracciano/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/casa-moderna-bracciano/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/casa-moderna-bracciano/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/piazza-cina-genzano/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/piazza-cina-genzano/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/piazza-cina-genzano/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/piazza-cina-genzano/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/centro-yoga-tuscolana/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/centro-yoga-tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/centro-yoga-tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/centro-yoga-tuscolana/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/attico-alessandrino-roma/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/attico-alessandrino-roma/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/attico-alessandrino-roma/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/attico-alessandrino-roma/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/negozio-abbigliamento-tuscolana/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/negozio-abbigliamento-tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/negozio-abbigliamento-tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/negozio-abbigliamento-tuscolana/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/villa-sul-mare-grecia/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/villa-sul-mare-grecia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/villa-sul-mare-grecia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/villa-sul-mare-grecia/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/asilo-nido-pomezia/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/asilo-nido-pomezia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/asilo-nido-pomezia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/asilo-nido-pomezia/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/ristorante-san-giovanni/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/ristorante-san-giovanni/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/ristorante-san-giovanni/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/ristorante-san-giovanni/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/casa-aurelio-roma/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/casa-aurelio-roma/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/casa-aurelio-roma/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/casa-aurelio-roma/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/complesso-residenziale-pomezia/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/complesso-residenziale-pomezia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/complesso-residenziale-pomezia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/complesso-residenziale-pomezia/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/ortus-artis-padula/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/ortus-artis-padula/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/ortus-artis-padula/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/ortus-artis-padula/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/appartamento-aurelio/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/appartamento-aurelio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/appartamento-aurelio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/appartamento-aurelio/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/casa-cicladi-sikinos/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/casa-cicladi-sikinos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/casa-cicladi-sikinos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/casa-cicladi-sikinos/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/casa-moderna-eur/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/casa-moderna-eur/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/casa-moderna-eur/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/casa-moderna-eur/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/portfolio/bar-eur/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/portfolio/bar-eur/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/portfolio/bar-eur/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/portfolio/bar-eur/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/zones/tuscolana/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/tuscolana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/tuscolana/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/zones/appio-tuscolano/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/appio-tuscolano/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/appio-tuscolano/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/appio-tuscolano/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/zones/san-giovanni/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/san-giovanni/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/san-giovanni/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/san-giovanni/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/zones/eur/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/eur/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/eur/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/eur/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/zones/aurelio/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/aurelio/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/aurelio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/aurelio/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/zones/alessandrino/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/alessandrino/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/alessandrino/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/alessandrino/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/zones/cinecitta/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/cinecitta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/cinecitta/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/cinecitta/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/zones/pomezia/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/zone/pomezia/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/zones/pomezia/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/zone/pomezia/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/tax-benefits/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/bonus-fiscali/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/tax-benefits/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/bonus-fiscali/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/free-quote/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/preventivo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/free-quote/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/preventivo/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/blog/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/blog/quanto-costa-ristrutturare-casa-roma/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/quanto-costa-ristrutturare-casa-roma/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/quanto-costa-ristrutturare-casa-roma/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/quanto-costa-ristrutturare-casa-roma/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/blog/ristrutturazione-bagno-roma-guida-completa/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/ristrutturazione-bagno-roma-guida-completa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/ristrutturazione-bagno-roma-guida-completa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/ristrutturazione-bagno-roma-guida-completa/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/blog/bonus-ristrutturazione-2025-come-funziona/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/bonus-ristrutturazione-2025-come-funziona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/bonus-ristrutturazione-2025-come-funziona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/bonus-ristrutturazione-2025-come-funziona/" />
+  </url>
+  <url>
+    <loc>https://edilquadro.it/en/blog/ristrutturazione-appartamento-roma-guida-completa/</loc>
+    <lastmod>2026-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/ristrutturazione-appartamento-roma-guida-completa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/ristrutturazione-appartamento-roma-guida-completa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/ristrutturazione-appartamento-roma-guida-completa/" />
   </url>
   <url>
     <loc>https://edilquadro.it/en/blog/cappotto-termico-condominio-roma-costi-vantaggi/</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://edilquadro.it/blog/cappotto-termico-condominio-roma-costi-vantaggi/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://edilquadro.it/en/blog/cappotto-termico-condominio-roma-costi-vantaggi/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://edilquadro.it/blog/cappotto-termico-condominio-roma-costi-vantaggi/" />
   </url>
 </urlset>

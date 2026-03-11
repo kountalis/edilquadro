@@ -11,19 +11,19 @@ export default function CookiePolicy() {
         <Helmet>
           <title>{t('cookie_policy_page.meta_title')}</title>
           <meta name="description" content={t('cookie_policy_page.meta_description')} />
-          <link rel="canonical" href="https://edilquadro.it/cookie-policy/" />
+          <link rel="canonical" href={i18n.language === 'en' ? 'https://edilquadro.it/en/cookie-policy/' : 'https://edilquadro.it/cookie-policy/'} />
           <meta name="keywords" content="cookie policy, cookie, tracciamento, Edilquadro" />
           <meta name="author" content="Edilquadro" />
           <meta name="robots" content="index, follow" />
           <meta property="og:title" content={t('cookie_policy_page.meta_title')} />
           <meta property="og:description" content={t('cookie_policy_page.meta_description')} />
-          <meta property="og:image" content="https://edilquadro.it/logo192.png" />
-          <meta property="og:url" content="https://edilquadro.it/cookie-policy/" />
+          <meta property="og:image" content="https://edilquadro.it/portfolio-bg.avif" />
+          <meta property="og:url" content={i18n.language === 'en' ? 'https://edilquadro.it/en/cookie-policy/' : 'https://edilquadro.it/cookie-policy/'} />
           <meta property="og:type" content="website" />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={t('cookie_policy_page.meta_title')} />
           <meta name="twitter:description" content={t('cookie_policy_page.meta_description')} />
-          <meta name="twitter:image" content="https://edilquadro.it/logo192.png" />
+          <meta name="twitter:image" content="https://edilquadro.it/portfolio-bg.avif" />
           <meta name="twitter:site" content="@edilquadro" />
           <html lang={i18n.language} />
           <link rel="alternate" hrefLang="it" href="https://edilquadro.it/cookie-policy/" />

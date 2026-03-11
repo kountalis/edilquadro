@@ -27,6 +27,7 @@ const CommercialServices = () => {
     <ServicePageTemplate
       translationPrefix="commercial_services_page"
       canonicalPath="/servizi/commerciale"
+      canonicalPathAlt="/en/services/commercial"
       services={services}
       images={images}
       crossLinks={crossLinks}
